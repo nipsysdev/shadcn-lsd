@@ -27,12 +27,14 @@ export default function ButtonFixture() {
           code={`<div className="lsd:flex lsd:gap-4">
   <Button variant="filled">Filled</Button>
   <Button variant="outlined">Outlined</Button>
+  <Button variant="ghost">Ghost</Button>
   <Button variant="link">Link</Button>
 </div>`}
         >
           <div className="lsd:flex lsd:gap-4">
             <Button variant="filled">Filled</Button>
             <Button variant="outlined">Outlined</Button>
+            <Button variant="ghost">Ghost</Button>
             <Button variant="link">Link</Button>
           </div>
         </CodeExample>
@@ -127,19 +129,31 @@ export default function ButtonFixture() {
         <CodeExample
           title="Icon Button Variants"
           code={`<div className="lsd:flex lsd:gap-4 lsd:items-center">
+  <Button variant="filled-icon" size="icon-xs" aria-label="Add">
+    <Plus size={12} />
+  </Button>
   <Button variant="filled-icon" size="icon-md" aria-label="Add">
     <Plus />
   </Button>
   <Button variant="outlined-icon" size="icon-md" aria-label="Add">
     <Plus />
   </Button>
+  <Button variant="ghost-icon" size="icon-md" aria-label="Add">
+    <Plus />
+  </Button>
 </div>`}
         >
           <div className="lsd:flex lsd:gap-4 lsd:items-center">
+            <Button variant="filled-icon" size="icon-xs" aria-label="Add">
+              <Plus size={12} />
+            </Button>
             <Button variant="filled-icon" size="icon-md" aria-label="Add">
               <Plus />
             </Button>
             <Button variant="outlined-icon" size="icon-md" aria-label="Add">
+              <Plus />
+            </Button>
+            <Button variant="ghost-icon" size="icon-md" aria-label="Add">
               <Plus />
             </Button>
           </div>
@@ -151,6 +165,9 @@ export default function ButtonFixture() {
         <CodeExample
           title="Icon Button Sizes"
           code={`<div className="lsd:flex lsd:gap-4 lsd:items-center">
+  <Button variant="filled-icon" size="icon-xs" aria-label="Add">
+    <Plus size={12} />
+  </Button>
   <Button variant="filled-icon" size="icon-sm" aria-label="Add">
     <Plus size={14} />
   </Button>
@@ -166,6 +183,9 @@ export default function ButtonFixture() {
 </div>`}
         >
           <div className="lsd:flex lsd:gap-4 lsd:items-center">
+            <Button variant="filled-icon" size="icon-xs" aria-label="Add">
+              <Plus size={12} />
+            </Button>
             <Button variant="filled-icon" size="icon-sm" aria-label="Add">
               <Plus size={14} />
             </Button>
@@ -223,6 +243,9 @@ export default function ButtonFixture() {
   <Button variant="outlined" loading>
     Loading...
   </Button>
+  <Button variant="ghost" loading>
+    Loading...
+  </Button>
   <Button variant="link" loading>
     Loading...
   </Button>
@@ -234,6 +257,9 @@ export default function ButtonFixture() {
           <div className="lsd:flex lsd:gap-4">
             <Button loading>Loading...</Button>
             <Button variant="outlined" loading>
+              Loading...
+            </Button>
+            <Button variant="ghost" loading>
               Loading...
             </Button>
             <Button variant="link" loading>
@@ -255,12 +281,18 @@ export default function ButtonFixture() {
   <Button variant="outlined" fullWidth>
     Full Width Outlined
   </Button>
+  <Button variant="ghost" fullWidth>
+    Full Width Ghost
+  </Button>
 </div>`}
         >
           <div className="lsd:w-full lsd:space-y-2">
             <Button fullWidth>Full Width Button</Button>
             <Button variant="outlined" fullWidth>
               Full Width Outlined
+            </Button>
+            <Button variant="ghost" fullWidth>
+              Full Width Ghost
             </Button>
           </div>
         </CodeExample>
