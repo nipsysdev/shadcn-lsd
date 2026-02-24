@@ -62,9 +62,7 @@ describe('TabsTrigger', () => {
     );
     const trigger = screen.getByRole('tab', { name: 'Tab 1' });
     expect(trigger).toHaveAttribute('data-state', 'active');
-    expect(trigger).toHaveClass(
-      'lsd:data-[state=active]:border-lsd-text-primary',
-    );
+    expect(trigger).toHaveClass('lsd:data-[state=active]:border-lsd-border');
     expect(trigger).toHaveClass('lsd:data-[state=active]:bg-lsd-surface');
     expect(trigger).toHaveClass('lsd:data-[state=active]:font-medium');
   });
