@@ -230,6 +230,100 @@ export default function TypographyFixture() {
           </CodeExample>
         </div>
 
+        {/* Semantic Color Variants */}
+        <div className="lsd:border lsd:border-lsd-border lsd:p-6 lsd:rounded-lg">
+          <Typography
+            variant="h3"
+            className="lsd:mb-4 lsd:pb-2 lsd:border-b lsd:border-lsd-border"
+          >
+            Semantic Color Variants
+          </Typography>
+          <CodeExample
+            title="Semantic Color Variants"
+            code={`<div className="lsd:flex lsd:flex-col lsd:gap-2">
+  <Typography variant="body1" color="destructive">
+    Destructive - Error or danger message
+  </Typography>
+  <Typography variant="body1" color="success">
+    Success - Operation completed successfully
+  </Typography>
+  <Typography variant="body1" color="warning">
+    Warning - Cautionary message
+  </Typography>
+  <Typography variant="body1" color="info">
+    Info - Informational message
+  </Typography>
+</div>`}
+          >
+            <div className="lsd:flex lsd:flex-col lsd:gap-2">
+              <Typography variant="body1" color="destructive">
+                Destructive - Error or danger message
+              </Typography>
+              <Typography variant="body1" color="success">
+                Success - Operation completed successfully
+              </Typography>
+              <Typography variant="body1" color="warning">
+                Warning - Cautionary message
+              </Typography>
+              <Typography variant="body1" color="info">
+                Info - Informational message
+              </Typography>
+            </div>
+          </CodeExample>
+        </div>
+
+        {/* Multi-Color Text */}
+        <div className="lsd:border lsd:border-lsd-border lsd:p-6 lsd:rounded-lg">
+          <Typography
+            variant="h3"
+            className="lsd:mb-4 lsd:pb-2 lsd:border-b lsd:border-lsd-border"
+          >
+            Multi-Color Text
+          </Typography>
+          <CodeExample
+            title="Multi-Color Text"
+            code={`<Typography variant="body1">
+  <Typography as="span" color="primary">Primary</Typography>
+  {' and '}
+  <Typography as="span" color="success">success</Typography>
+  {' text together'}
+</Typography>
+
+<Typography variant="body1">
+  Status: <Typography as="span" color="success">Completed</Typography>
+</Typography>
+
+<Typography variant="body1">
+  <Typography as="span" color="destructive">Error:</Typography> Something went wrong
+</Typography>`}
+          >
+            <div className="lsd:flex lsd:flex-col lsd:gap-4">
+              <Typography variant="body1">
+                <Typography as="span" color="primary">
+                  Primary
+                </Typography>
+                {' and '}
+                <Typography as="span" color="success">
+                  success
+                </Typography>
+                {' text together'}
+              </Typography>
+              <Typography variant="body1">
+                Status:{' '}
+                <Typography as="span" color="success">
+                  Completed
+                </Typography>
+              </Typography>
+              <Typography variant="body1">
+                <Typography as="span" color="destructive">
+                  Error:
+                </Typography>{' '}
+                Something went wrong
+              </Typography>
+            </div>
+          </CodeExample>
+        </div>
+
         {/* Font Family Variants */}
         <div className="lsd:border lsd:border-lsd-border lsd:p-6 lsd:rounded-lg">
           <Typography

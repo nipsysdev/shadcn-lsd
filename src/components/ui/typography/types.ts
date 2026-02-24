@@ -62,6 +62,10 @@ export const typographyVariants = cva('', {
     color: {
       primary: 'lsd:text-lsd-text-primary',
       secondary: 'lsd:text-lsd-text-secondary',
+      destructive: 'lsd:text-lsd-destructive-text',
+      success: 'lsd:text-lsd-success-text',
+      warning: 'lsd:text-lsd-warning-text',
+      info: 'lsd:text-lsd-info-text',
     },
   },
   defaultVariants: {
