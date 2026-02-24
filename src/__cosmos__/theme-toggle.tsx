@@ -2,6 +2,13 @@
 
 import { Moon, Sun } from 'lucide-react';
 import { useState } from 'react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 export function ThemeToggle() {
@@ -43,58 +50,50 @@ export function ThemeToggle() {
   );
 }
 
+const Themes = ['monochrome', 'teal'] as const;
+
+type Theme = (typeof Themes)[number];
+
 export function ThemeAccentToggle() {
-  const [theme, setTheme] = useState<'monochrome' | 'teal'>(() => {
+  const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      return document.documentElement.classList.contains('theme-teal')
-        ? 'teal'
-        : 'monochrome';
+      for (const t of Themes) {
+        if (t === 'monochrome') continue;
+        if (document.documentElement.classList.contains(`theme-${t}`)) {
+          return t;
+        }
+      }
     }
     return 'monochrome';
   });
 
-  const toggleAccentTheme = (value: string | undefined) => {
-    // Prevent untoggling - ignore undefined values
-    if (!value) return;
-
+  const toggleAccentTheme = (value: string) => {
     const root = document.documentElement;
 
-    // Remove existing theme classes
-    root.classList.remove('theme-teal');
-
-    // Add new theme class if not monochrome
-    if (value === 'teal') {
-      root.classList.add('theme-teal');
+    for (const t of Themes) {
+      if (t !== 'monochrome') {
+        root.classList.remove(`theme-${t}`);
+      }
     }
-    setTheme(value as 'monochrome' | 'teal');
+
+    if (value !== 'monochrome') {
+      root.classList.add(`theme-${value}`);
+    }
+    setTheme(value as Theme);
   };
 
   return (
-    <ToggleGroup
-      type="single"
-      value={theme}
-      onValueChange={toggleAccentTheme}
-      aria-label="Accent theme toggle"
-    >
-      <ToggleGroupItem
-        value="monochrome"
-        aria-label="Monochrome theme"
-        className="lsd:group"
-      >
-        <div className="lsd:flex lsd:gap-1 lsd:items-center">
-          <div className="lsd:w-3 lsd:h-3 lsd:bg-black dark:lsd:bg-white lsd:rounded-full lsd:border lsd:group-aria-checked:border-lsd-surface" />
-          <div className="lsd:w-3 lsd:h-3 lsd:bg-white dark:lsd:bg-black lsd:rounded-full lsd:border lsd:border-black lsd:group-aria-checked:border-lsd-surface" />
-        </div>
-      </ToggleGroupItem>
-      <ToggleGroupItem
-        value="teal"
-        aria-label="Teal theme"
-        className="lsd:group"
-      >
-        <div className="lsd:flex lsd:gap-1 lsd:items-center">
-          <div className="lsd:w-3 lsd:h-3 lsd:bg-lsd-theme-teal lsd:rounded-full lsd:border lsd:border-lsd-theme-teal lsd:group-aria-checked:border-lsd-theme-teal-border" />
-        </div>
-      </ToggleGroupItem>
-    </ToggleGroup>
+    <Select value={theme} onValueChange={toggleAccentTheme}>
+      <SelectTrigger className="lsd:w-[180px]">
+        <SelectValue placeholder="Select theme" />
+      </SelectTrigger>
+      <SelectContent>
+        {Themes.map((t) => (
+          <SelectItem key={t} value={t}>
+            {t.charAt(0).toUpperCase() + t.slice(1)}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   );
 }

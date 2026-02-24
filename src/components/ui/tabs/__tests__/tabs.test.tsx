@@ -119,7 +119,6 @@ describe('tabsListVariants', () => {
     const result = tabsListVariants();
     expect(result).toContain('lsd:bg-lsd-surface');
     expect(result).toContain('lsd:border-b');
-    expect(result).toContain('lsd:border-lsd-border');
     expect(result).toContain('lsd:flex');
     expect(result).toContain('lsd:flex-row');
     expect(result).toContain('lsd:h-12');

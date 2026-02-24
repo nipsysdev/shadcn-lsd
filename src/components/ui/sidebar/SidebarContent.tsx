@@ -106,16 +106,16 @@ export function SidebarTrigger({
     <Button
       data-sidebar="trigger"
       data-slot="sidebar-trigger"
-      variant="outlined"
-      size="icon-md"
-      className={cn('lsd:size-7', className)}
+      variant="ghost"
+      size="icon-xs"
+      className={className}
       onClick={(event) => {
         onClick?.(event);
         toggleSidebar();
       }}
       {...props}
     >
-      <PanelLeftIcon />
+      <PanelLeftIcon className="lsd:size-full" />
       <span className="lsd:sr-only">Toggle Sidebar</span>
     </Button>
   );

@@ -7,6 +7,8 @@ export type ButtonVariant =
   | 'filled-icon'
   | 'outlined-icon'
   | 'link'
+  | 'ghost'
+  | 'ghost-icon'
   | 'destructive'
   | 'destructive-icon'
   | 'success'
@@ -24,6 +26,10 @@ export const buttonVariants = cva(
         'outlined-icon':
           'lsd:bg-transparent lsd:text-foreground lsd:rounded-full',
         link: 'lsd:bg-transparent lsd:border-0 lsd:text-foreground lsd:hover:underline',
+        ghost:
+          'lsd:bg-transparent lsd:text-foreground lsd:border-0 lsd:hover:bg-accent lsd:hover:text-accent-foreground',
+        'ghost-icon':
+          'lsd:bg-transparent lsd:text-foreground lsd:border-0 lsd:rounded-full lsd:hover:bg-accent lsd:hover:text-accent-foreground',
         destructive:
           'lsd:bg-lsd-destructive lsd:text-white lsd:border-lsd-destructive lsd:hover:bg-lsd-destructive/90',
         'destructive-icon':
@@ -39,6 +45,7 @@ export const buttonVariants = cva(
         md: 'lsd:h-[34px] lsd:px-6 lsd:py-2 lsd:text-base',
         lg: 'lsd:h-12 lsd:px-8 lsd:py-[10px] lsd:text-lg',
         xl: 'lsd:h-14 lsd:px-10 lsd:py-3 lsd:text-xl',
+        'icon-xs': 'lsd:w-6 lsd:h-6',
         'icon-sm': 'lsd:w-8 lsd:h-8',
         'icon-md': 'lsd:w-10 lsd:h-10',
         'icon-lg': 'lsd:w-12 lsd:h-12',

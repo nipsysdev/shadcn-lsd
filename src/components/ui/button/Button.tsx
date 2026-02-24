@@ -14,6 +14,8 @@ const LoadingSpinner = ({ size }: { size?: string }) => {
   const getSpinnerSize = () => {
     switch (size) {
       case 'xs':
+      case 'icon-xs':
+        return 'lsd:w-3 lsd:h-3';
       case 'icon-sm':
         return 'lsd:w-3 lsd:h-3';
       case 'sm':
@@ -72,6 +74,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const isLinkVariant = variant === 'link';
+    const isGhostVariant = variant === 'ghost' || variant === 'ghost-icon';
 
     return (
       <button
@@ -79,7 +82,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           'lsd:text-foreground lsd:border lsd:hover:underline lsd:disabled:opacity-34 lsd:disabled:cursor-not-allowed lsd:disabled:no-underline',
           buttonVariants({ variant, size }),
           fullWidth && 'lsd:w-full',
-          isLinkVariant && 'lsd:border-0',
+          (isLinkVariant || isGhostVariant) && 'lsd:border-0',
           className,
         )}
         ref={ref}

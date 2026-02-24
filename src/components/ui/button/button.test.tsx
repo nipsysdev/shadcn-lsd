@@ -50,6 +50,27 @@ describe('Button', () => {
     expect(button).toHaveClass('lsd:hover:underline');
   });
 
+  it('applies ghost variant classes correctly', () => {
+    render(<Button variant="ghost">Ghost</Button>);
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('lsd:bg-transparent');
+    expect(button).toHaveClass('lsd:text-foreground');
+    expect(button).toHaveClass('lsd:border-0');
+    expect(button).toHaveClass('lsd:hover:bg-accent');
+    expect(button).toHaveClass('lsd:hover:text-accent-foreground');
+  });
+
+  it('applies ghost-icon variant classes correctly', () => {
+    render(<Button variant="ghost-icon">Icon</Button>);
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('lsd:bg-transparent');
+    expect(button).toHaveClass('lsd:text-foreground');
+    expect(button).toHaveClass('lsd:border-0');
+    expect(button).toHaveClass('lsd:rounded-full');
+    expect(button).toHaveClass('lsd:hover:bg-accent');
+    expect(button).toHaveClass('lsd:hover:text-accent-foreground');
+  });
+
   it('applies destructive variant classes correctly', () => {
     render(<Button variant="destructive">Delete</Button>);
     const button = screen.getByRole('button');
@@ -127,6 +148,13 @@ describe('Button', () => {
     const button = screen.getByRole('button');
     expect(button).toHaveClass('lsd:w-8');
     expect(button).toHaveClass('lsd:h-8');
+  });
+
+  it('applies icon-xs size classes correctly', () => {
+    render(<Button size="icon-xs">Icon</Button>);
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('lsd:w-6');
+    expect(button).toHaveClass('lsd:h-6');
   });
 
   it('applies icon-lg size classes correctly', () => {
@@ -307,6 +335,41 @@ describe('buttonVariants', () => {
     );
   });
 
+  it('returns correct classes for ghost variant', () => {
+    expect(buttonVariants({ variant: 'ghost' })).toContain(
+      'lsd:bg-transparent',
+    );
+    expect(buttonVariants({ variant: 'ghost' })).toContain(
+      'lsd:text-foreground',
+    );
+    expect(buttonVariants({ variant: 'ghost' })).toContain('lsd:border-0');
+    expect(buttonVariants({ variant: 'ghost' })).toContain(
+      'lsd:hover:bg-accent',
+    );
+    expect(buttonVariants({ variant: 'ghost' })).toContain(
+      'lsd:hover:text-accent-foreground',
+    );
+  });
+
+  it('returns correct classes for ghost-icon variant', () => {
+    expect(buttonVariants({ variant: 'ghost-icon' })).toContain(
+      'lsd:bg-transparent',
+    );
+    expect(buttonVariants({ variant: 'ghost-icon' })).toContain(
+      'lsd:text-foreground',
+    );
+    expect(buttonVariants({ variant: 'ghost-icon' })).toContain('lsd:border-0');
+    expect(buttonVariants({ variant: 'ghost-icon' })).toContain(
+      'lsd:rounded-full',
+    );
+    expect(buttonVariants({ variant: 'ghost-icon' })).toContain(
+      'lsd:hover:bg-accent',
+    );
+    expect(buttonVariants({ variant: 'ghost-icon' })).toContain(
+      'lsd:hover:text-accent-foreground',
+    );
+  });
+
   it('returns correct classes for destructive variant', () => {
     expect(buttonVariants({ variant: 'destructive' })).toContain(
       'lsd:bg-lsd-destructive',
@@ -388,6 +451,11 @@ describe('buttonVariants', () => {
   it('returns correct classes for icon-sm size', () => {
     expect(buttonVariants({ size: 'icon-sm' })).toContain('lsd:w-8');
     expect(buttonVariants({ size: 'icon-sm' })).toContain('lsd:h-8');
+  });
+
+  it('returns correct classes for icon-xs size', () => {
+    expect(buttonVariants({ size: 'icon-xs' })).toContain('lsd:w-6');
+    expect(buttonVariants({ size: 'icon-xs' })).toContain('lsd:h-6');
   });
 
   it('returns correct classes for icon-lg size', () => {

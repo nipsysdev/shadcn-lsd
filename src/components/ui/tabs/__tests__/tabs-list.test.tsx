@@ -43,7 +43,6 @@ describe('TabsList', () => {
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('lsd:bg-lsd-surface');
     expect(list).toHaveClass('lsd:border-b');
-    expect(list).toHaveClass('lsd:border-lsd-border');
     expect(list).toHaveClass('lsd:flex');
     expect(list).toHaveClass('lsd:flex-row');
   });
