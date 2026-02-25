@@ -2,30 +2,26 @@ name: Publish
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*"
   workflow_dispatch:
 
 permissions:
   id-token: write
-  contents: write
+  contents: read
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       id-token: write
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Check version changes
-        uses: EndBug/version-check@v2
-        id: check
 
       - name: Set up Node.js and pnpm using mise
         uses: jdx/mise-action@v3
@@ -56,25 +52,22 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Create Git Tag
-        if: steps.check.outputs.changed == 'true'
+      - name: Get version from tag
+        id: get_version
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git tag -a "v${{ steps.check.outputs.version }}" -m "Release v${{ steps.check.outputs.version }}"
-          git push origin "v${{ steps.check.outputs.version }}"
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          echo "tag=$TAG_NAME" >> $GITHUB_OUTPUT
+          echo "version=${TAG_NAME#v}" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
-        if: steps.check.outputs.changed == 'true'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.check.outputs.version }}
-          name: Release v${{ steps.check.outputs.version }}
+          tag_name: ${{ steps.get_version.outputs.tag }}
+          name: Release ${{ steps.get_version.outputs.tag }}
           generate_release_notes: true
           fail_on_unmatched_files: true
 
       - name: Publish to npm
-        if: steps.check.outputs.changed == 'true'
         run: |
           pnpm config set registry 'https://registry.npmjs.org'
           pnpm publish --provenance --access public
