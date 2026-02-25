@@ -13,6 +13,9 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Checkout Code
@@ -72,4 +75,6 @@ jobs:
 
       - name: Publish to npm
         if: steps.check.outputs.changed == 'true'
-        run: pnpm publish --provenance --access public --no-git-checks
+        run: |
+          pnpm config set registry 'https://registry.npmjs.org'
+          pnpm publish --provenance --access public
