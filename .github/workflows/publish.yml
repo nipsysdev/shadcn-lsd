@@ -70,4 +70,4 @@ jobs:
       - name: Publish to npm
         run: |
           pnpm config set registry 'https://registry.npmjs.org'
-          pnpm publish --provenance --access public
+          pnpm publish --provenance --access public --no-git-checks
