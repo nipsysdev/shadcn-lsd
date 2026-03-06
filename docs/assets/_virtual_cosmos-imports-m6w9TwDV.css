@@ -3126,6 +3126,13 @@
 
 :root {
   --radius: .625rem;
+  --lsd-spacing-smallest: .25rem;
+  --lsd-spacing-smaller: .5rem;
+  --lsd-spacing-small: .75rem;
+  --lsd-spacing-base: 1rem;
+  --lsd-spacing-large: 1.25rem;
+  --lsd-spacing-larger: 1.5rem;
+  --lsd-spacing-largest: 1.875rem;
   --lsd-primary: #000;
   --lsd-primary-foreground: #fff;
   --lsd-text-primary: #000;
