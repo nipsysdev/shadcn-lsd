@@ -12,12 +12,12 @@ export function SelectScrollUpButton({
     <SelectPrimitive.ScrollUpButton
       data-slot="select-scroll-up-button"
       className={cn(
-        'lsd:flex lsd:cursor-default lsd:items-center lsd:justify-center lsd:py-1 lsd:text-lsd-icon-primary',
+        'lsd:flex lsd:cursor-default lsd:items-center lsd:justify-center lsd:py-(--lsd-spacing-smallest) lsd:text-lsd-icon-primary',
         className,
       )}
       {...props}
     >
-      <ChevronUpIcon className="lsd:size-4" />
+      <ChevronUpIcon className="lsd:size-(--lsd-spacing-base)" />
     </SelectPrimitive.ScrollUpButton>
   );
 }

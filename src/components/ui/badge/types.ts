@@ -25,11 +25,9 @@ export const badgeVariants = cva(
         dot: 'lsd:rounded-full lsd:w-fit lsd:h-fit lsd:p-0',
       },
       size: {
-        xs: 'lsd:h-[20px] lsd:px-[5px] lsd:py-[3px] lsd:gap-[4px] lsd:text-[0.625rem] [&>svg]:size-[10px]',
-        sm: 'lsd:h-[24px] lsd:px-[7px] lsd:py-[3px] lsd:gap-[4px] lsd:text-[0.75rem] [&>svg]:size-3',
-        md: 'lsd:h-[28px] lsd:px-[11px] lsd:py-[3px] lsd:gap-[6px] lsd:text-[0.875rem] [&>svg]:size-3',
-        lg: 'lsd:h-[32px] lsd:px-[13px] lsd:py-[3px] lsd:gap-[8px] lsd:text-[1rem] [&>svg]:size-[14px]',
-        xl: 'lsd:h-[36px] lsd:px-[15px] lsd:py-[3px] lsd:gap-[10px] lsd:text-[1.125rem] [&>svg]:size-[16px]',
+        sm: 'lsd:h-[var(--lsd-spacing-larger)] lsd:px-[var(--lsd-spacing-smaller)] lsd:py-[var(--lsd-spacing-smallest)] lsd:gap-[var(--lsd-spacing-smallest)] lsd:text-[0.75rem] [&>svg]:size-3',
+        md: 'lsd:h-[var(--lsd-spacing-largest)] lsd:px-[var(--lsd-spacing-small)] lsd:py-[var(--lsd-spacing-smallest)] lsd:gap-[var(--lsd-spacing-smaller)] lsd:text-[0.875rem] [&>svg]:size-3',
+        lg: 'lsd:h-8 lsd:px-[var(--lsd-spacing-small)] lsd:py-[var(--lsd-spacing-smallest)] lsd:gap-[var(--lsd-spacing-smaller)] lsd:text-[1rem] [&>svg]:size-[14px]',
       },
     },
     defaultVariants: {

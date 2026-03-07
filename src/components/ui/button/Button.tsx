@@ -12,25 +12,21 @@ export interface ButtonProps
 
 const LoadingSpinner = ({ size }: { size?: string }) => {
   const getSpinnerSize = () => {
+    const md =
+      'lsd:w-[var(--lsd-spacing-large)] lsd:h-[var(--lsd-spacing-large)]';
     switch (size) {
-      case 'xs':
-      case 'icon-xs':
-        return 'lsd:w-3 lsd:h-3';
       case 'icon-sm':
-        return 'lsd:w-3 lsd:h-3';
+        return 'lsd:w-[var(--lsd-spacing-small)] lsd:h-[var(--lsd-spacing-small)]';
       case 'sm':
-        return 'lsd:w-4 lsd:h-4';
+        return 'lsd:w-[var(--lsd-spacing-base)] lsd:h-[var(--lsd-spacing-base)]';
       case 'md':
       case 'icon-md':
-        return 'lsd:w-5 lsd:h-5';
+        return md;
       case 'lg':
       case 'icon-lg':
-        return 'lsd:w-6 lsd:h-6';
-      case 'xl':
-      case 'icon-xl':
-        return 'lsd:w-7 lsd:h-7';
+        return 'lsd:w-[var(--lsd-spacing-larger)] lsd:h-[var(--lsd-spacing-larger)]';
       default:
-        return 'lsd:w-5 lsd:h-5';
+        return md;
     }
   };
 
@@ -90,7 +86,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading ? (
-          <span className="lsd:flex lsd:items-center lsd:justify-center lsd:gap-2">
+          <span className="lsd:flex lsd:items-center lsd:justify-center lsd:gap-(--lsd-spacing-smaller)">
             <LoadingSpinner size={size} />
             {children && <span className="lsd:opacity-50">{children}</span>}
           </span>

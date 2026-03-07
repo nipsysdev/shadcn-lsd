@@ -15,7 +15,7 @@ interface CodeExampleProps {
 
 export function CodeExample({ children, code }: CodeExampleProps) {
   return (
-    <div className="lsd:space-y-4">
+    <div className="lsd:space-y-(--lsd-spacing-base)">
       <div>{children}</div>
       <Accordion type="single" collapsible>
         <AccordionItem value="code">

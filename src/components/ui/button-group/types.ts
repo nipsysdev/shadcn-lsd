@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 
 export const buttonGroupVariants = cva(
-  "lsd:flex lsd:w-fit lsd:items-stretch lsd:[&>*]:focus-visible:z-10 lsd:[&>*]:focus-visible:relative lsd:[&>[data-slot=select-trigger]:not([class*='w-'])]:w-fit lsd:[&>input]:flex-1 has-[select[aria-hidden=true]:last-child]:lsd:[&>[data-slot=select-trigger]:last-of-type]:rounded-r-md has-[>[data-slot=button-group]]:lsd:gap-2",
+  "lsd:flex lsd:w-fit lsd:items-stretch lsd:[&>*]:focus-visible:z-10 lsd:[&>*]:focus-visible:relative lsd:[&>[data-slot=select-trigger]:not([class*='w-'])]:w-fit lsd:[&>input]:flex-1 has-[select[aria-hidden=true]:last-child]:lsd:[&>[data-slot=select-trigger]:last-of-type]:rounded-r-md has-[>[data-slot=button-group]]:lsd:gap-[var(--lsd-spacing-smaller)]",
   {
     variants: {
       orientation: {

@@ -18,19 +18,20 @@ export function getTextSizeClasses(size: SizeVariant): string {
 }
 
 export function getVerticalPaddingClasses(size: SizeVariant): string {
+  const md = 'lsd:py-[var(--lsd-spacing-small)]';
   switch (size) {
     case 'xs':
-      return 'lsd:py-1';
+      return 'lsd:py-[var(--lsd-spacing-smallest)]';
     case 'sm':
-      return 'lsd:py-2';
+      return 'lsd:py-[var(--lsd-spacing-smaller)]';
     case 'md':
-      return 'lsd:py-3';
+      return md;
     case 'lg':
-      return 'lsd:py-4';
+      return 'lsd:py-[var(--lsd-spacing-base)]';
     case 'xl':
-      return 'lsd:py-5';
+      return 'lsd:py-[var(--lsd-spacing-large)]';
     default:
-      return 'lsd:py-3';
+      return md;
   }
 }
 

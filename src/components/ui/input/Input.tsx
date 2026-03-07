@@ -51,7 +51,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             id={finalId}
             className={cn(
               'file:lsd:text-lsd-text-primary placeholder:lsd:text-lsd-text-primary placeholder:lsd:opacity-30 selection:lsd:bg-lsd-primary selection:lsd:text-lsd-surface lsd:border-none lsd:outline-none lsd:bg-transparent lsd:text-lsd-text-primary lsd:w-full lsd:h-full file:lsd:inline-flex file:lsd:h-7 file:lsd:border-0 file:lsd:bg-transparent file:lsd:font-medium lsd:disabled:pointer-events-none lsd:disabled:cursor-not-allowed lsd:disabled:opacity-34',
-              'focus-visible:lsd:outline-none lsd:px-4',
+              'focus-visible:lsd:outline-none lsd:px-(--lsd-spacing-base)',
               getTextSizeClasses(size),
               getVerticalPaddingClasses(size),
             )}
@@ -59,7 +59,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           />
         </div>
         {supportingText && (
-          <div className="lsd:pt-1.5 lsd:w-fit">
+          <div className="lsd:pt-(--lsd-spacing-smaller) lsd:w-fit">
             <p
               className={cn(
                 'lsd:text-sm',

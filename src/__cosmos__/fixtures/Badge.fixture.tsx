@@ -129,19 +129,15 @@ export default function BadgeFixture() {
         <CodeExample
           title="Badge Sizes"
           code={`<div className="lsd:flex lsd:gap-4 lsd:items-center">
-  <Badge size="xs">Extra Small</Badge>
   <Badge size="sm">Small</Badge>
   <Badge size="md">Medium</Badge>
   <Badge size="lg">Large</Badge>
-  <Badge size="xl">Extra Large</Badge>
 </div>`}
         >
           <div className="lsd:flex lsd:gap-4 lsd:items-center">
-            <Badge size="xs">Extra Small</Badge>
             <Badge size="sm">Small</Badge>
             <Badge size="md">Medium</Badge>
             <Badge size="lg">Large</Badge>
-            <Badge size="xl">Extra Large</Badge>
           </div>
         </CodeExample>
       </div>
@@ -162,7 +158,6 @@ export default function BadgeFixture() {
   <div className="lsd:flex lsd:gap-4 lsd:items-center">
     <Badge variant="warning" size="sm">Warning Small</Badge>
     <Badge variant="info" size="sm">Info Small</Badge>
-    <Badge variant="filled" size="xs">XS Filled</Badge>
     <Badge variant="outlined" size="lg">LG Outlined</Badge>
   </div>
 </div>`}
@@ -188,9 +183,6 @@ export default function BadgeFixture() {
               </Badge>
               <Badge variant="info" size="sm">
                 Info Small
-              </Badge>
-              <Badge variant="filled" size="xs">
-                XS Filled
               </Badge>
               <Badge variant="outlined" size="lg">
                 LG Outlined
@@ -319,19 +311,15 @@ export default function BadgeFixture() {
         <CodeExample
           title="Dot Badges"
           code={`<div className="lsd:flex lsd:gap-4 lsd:items-center">
-  <Badge variant="dot" size="xs" />
   <Badge variant="dot" size="sm" />
   <Badge variant="dot" size="md" />
   <Badge variant="dot" size="lg" />
-  <Badge variant="dot" size="xl" />
 </div>`}
         >
           <div className="lsd:flex lsd:gap-4 lsd:items-center">
-            <Badge variant="dot" size="xs" />
             <Badge variant="dot" size="sm" />
             <Badge variant="dot" size="md" />
             <Badge variant="dot" size="lg" />
-            <Badge variant="dot" size="xl" />
           </div>
         </CodeExample>
       </div>

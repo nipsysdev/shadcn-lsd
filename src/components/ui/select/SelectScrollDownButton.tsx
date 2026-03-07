@@ -12,12 +12,12 @@ export function SelectScrollDownButton({
     <SelectPrimitive.ScrollDownButton
       data-slot="select-scroll-down-button"
       className={cn(
-        'lsd:flex lsd:cursor-default lsd:items-center lsd:justify-center lsd:py-1 lsd:text-lsd-icon-primary',
+        'lsd:flex lsd:cursor-default lsd:items-center lsd:justify-center lsd:py-(--lsd-spacing-smallest) lsd:text-lsd-icon-primary',
         className,
       )}
       {...props}
     >
-      <ChevronDownIcon className="lsd:size-4" />
+      <ChevronDownIcon className="lsd:size-(--lsd-spacing-base)" />
     </SelectPrimitive.ScrollDownButton>
   );
 }

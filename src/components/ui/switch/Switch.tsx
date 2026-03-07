@@ -9,9 +9,9 @@ const switchVariants = cva(
   {
     variants: {
       size: {
-        sm: 'lsd:h-[14px] lsd:w-7',
-        md: 'lsd:h-[18px] lsd:w-9',
-        lg: 'lsd:h-[24px] lsd:w-12',
+        sm: 'lsd:h-[var(--lsd-spacing-base)] lsd:w-[var(--lsd-spacing-largest)]',
+        md: 'lsd:h-[var(--lsd-spacing-large)] lsd:w-9',
+        lg: 'lsd:h-[var(--lsd-spacing-larger)] lsd:w-12',
       },
     },
     defaultVariants: {
@@ -25,9 +25,9 @@ const thumbVariants = cva(
   {
     variants: {
       size: {
-        sm: 'lsd:size-3 lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
-        md: 'lsd:size-5 lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
-        lg: 'lsd:size-6 lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
+        sm: 'lsd:size-[var(--lsd-spacing-small)] lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
+        md: 'lsd:size-[var(--lsd-spacing-large)] lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
+        lg: 'lsd:size-[var(--lsd-spacing-larger)] lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
       },
     },
     defaultVariants: {

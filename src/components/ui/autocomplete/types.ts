@@ -47,38 +47,47 @@ export const AUTOCOMPLETE_SIZE_CLASSES: Record<
 > = {
   xs: {
     container: 'lsd:w-[140px]',
-    label: 'lsd:mb-1.5 lsd:ml-[10px]',
-    inputContainer: 'lsd:h-[24px]',
-    input: 'lsd:px-[9px] lsd:py-[4px]',
-    icon: 'lsd:px-[7px] lsd:py-[5px]',
+    label:
+      'lsd:mb-[var(--lsd-spacing-smaller)] lsd:ml-[var(--lsd-spacing-small)]',
+    inputContainer: 'lsd:h-[var(--lsd-spacing-larger)]',
+    input:
+      'lsd:px-[var(--lsd-spacing-smaller)] lsd:py-[var(--lsd-spacing-smallest)]',
+    icon: 'lsd:px-[var(--lsd-spacing-smaller)] lsd:py-[var(--lsd-spacing-smaller)]',
   },
   sm: {
     container: 'lsd:w-[164px]',
-    label: 'lsd:mb-1.5 lsd:ml-[12px]',
-    inputContainer: 'lsd:h-[28px]',
-    input: 'lsd:px-[11px] lsd:py-[5px]',
-    icon: 'lsd:px-[9px] lsd:py-[6px]',
+    label:
+      'lsd:mb-[var(--lsd-spacing-smaller)] lsd:ml-[var(--lsd-spacing-small)]',
+    inputContainer: 'lsd:h-[var(--lsd-spacing-largest)]',
+    input:
+      'lsd:px-[var(--lsd-spacing-small)] lsd:py-[var(--lsd-spacing-smaller)]',
+    icon: 'lsd:px-[var(--lsd-spacing-smaller)] lsd:py-[var(--lsd-spacing-smaller)]',
   },
   md: {
     container: 'lsd:w-[188px]',
-    label: 'lsd:mb-1.5 lsd:ml-[14px]',
-    inputContainer: 'lsd:h-[32px]',
-    input: 'lsd:px-[13px] lsd:py-[5px]',
-    icon: 'lsd:px-[11px] lsd:py-[8px]',
+    label:
+      'lsd:mb-[var(--lsd-spacing-smaller)] lsd:ml-[var(--lsd-spacing-base)]',
+    inputContainer: 'lsd:h-8',
+    input:
+      'lsd:px-[var(--lsd-spacing-base)] lsd:py-[var(--lsd-spacing-smaller)]',
+    icon: 'lsd:px-[var(--lsd-spacing-small)] lsd:py-[var(--lsd-spacing-smaller)]',
   },
   lg: {
     container: 'lsd:w-[208px]',
-    label: 'lsd:mb-1.5 lsd:ml-[14px]',
-    inputContainer: 'lsd:h-[40px]',
-    input: 'lsd:px-[17px] lsd:py-[9px]',
-    icon: 'lsd:px-[13px] lsd:py-[12px]',
+    label:
+      'lsd:mb-[var(--lsd-spacing-smaller)] lsd:ml-[var(--lsd-spacing-base)]',
+    inputContainer: 'lsd:h-10',
+    input: 'lsd:px-[var(--lsd-spacing-base)] lsd:py-[var(--lsd-spacing-small)]',
+    icon: 'lsd:px-[var(--lsd-spacing-base)] lsd:py-[var(--lsd-spacing-small)]',
   },
   xl: {
     container: 'lsd:w-[240px]',
-    label: 'lsd:mb-1.5 lsd:ml-[16px]',
-    inputContainer: 'lsd:h-[48px]',
-    input: 'lsd:px-[20px] lsd:py-[12px]',
-    icon: 'lsd:px-[15px] lsd:py-[14px]',
+    label:
+      'lsd:mb-[var(--lsd-spacing-smaller)] lsd:ml-[var(--lsd-spacing-base)]',
+    inputContainer: 'lsd:h-12',
+    input:
+      'lsd:px-[var(--lsd-spacing-large)] lsd:py-[var(--lsd-spacing-small)]',
+    icon: 'lsd:px-[var(--lsd-spacing-base)] lsd:py-[var(--lsd-spacing-base)]',
   },
 };
 

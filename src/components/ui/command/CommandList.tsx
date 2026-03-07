@@ -11,7 +11,7 @@ export function CommandList({
     <CommandPrimitive.List
       data-slot="command-list"
       className={cn(
-        'lsd:max-h-[300px] lsd:scroll-py-1 lsd:overflow-x-hidden lsd:overflow-y-auto',
+        'lsd:max-h-[300px] lsd:scroll-py-(--lsd-spacing-smallest) lsd:overflow-x-hidden lsd:overflow-y-auto',
         className,
       )}
       {...props}

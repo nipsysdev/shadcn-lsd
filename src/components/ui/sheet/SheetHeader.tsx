@@ -9,7 +9,10 @@ export function SheetHeader({
   return (
     <div
       data-slot="sheet-header"
-      className={cn('lsd:flex lsd:flex-col lsd:gap-1.5 lsd:p-4', className)}
+      className={cn(
+        'lsd:flex lsd:flex-col lsd:gap-(--lsd-spacing-smaller) lsd:p-(--lsd-spacing-base)',
+        className,
+      )}
       {...props}
     />
   );

@@ -33,9 +33,9 @@ const Progress = React.forwardRef<
 
     // Size mapping
     const sizeClasses = {
-      sm: 'lsd:h-2',
-      md: 'lsd:h-3',
-      lg: 'lsd:h-4',
+      sm: 'lsd:h-[var(--lsd-spacing-smaller)]',
+      md: 'lsd:h-[var(--lsd-spacing-small)]',
+      lg: 'lsd:h-[var(--lsd-spacing-base)]',
     };
 
     // Animation classes for indeterminate state
@@ -55,7 +55,7 @@ const Progress = React.forwardRef<
     return (
       <div className="lsd:w-full">
         {showLabel && labelText && labelPosition === 'top' && (
-          <div className="lsd:mb-0.5 lsd:text-sm lsd:font-medium lsd:text-lsd-text-primary lsd:text-center">
+          <div className="lsd:mb-(--lsd-spacing-smallest) lsd:text-sm lsd:font-medium lsd:text-lsd-text-primary lsd:text-center">
             {labelText}
           </div>
         )}
@@ -85,7 +85,7 @@ const Progress = React.forwardRef<
           />
         </ProgressPrimitive.Root>
         {showLabel && labelText && labelPosition === 'bottom' && (
-          <div className="lsd:mt-0.5 lsd:text-sm lsd:font-medium lsd:text-lsd-text-primary lsd:text-center">
+          <div className="lsd:mt-(--lsd-spacing-smallest) lsd:text-sm lsd:font-medium lsd:text-lsd-text-primary lsd:text-center">
             {labelText}
           </div>
         )}

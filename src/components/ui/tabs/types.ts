@@ -45,9 +45,9 @@ export const tabsTriggerVariants = cva(
   {
     variants: {
       size: {
-        sm: 'lsd:px-3 lsd:py-1.5 lsd:text-sm lsd:[&>svg]:ml-2 lsd:[&>svg]:h-4 lsd:[&>svg]:w-4',
-        md: 'lsd:px-4 lsd:py-2 lsd:text-base lsd:[&>svg]:ml-3 lsd:[&>svg]:h-5 lsd:[&>svg]:w-5',
-        lg: 'lsd:px-5 lsd:py-2.5 lsd:text-lg lsd:[&>svg]:ml-3.5 lsd:[&>svg]:h-6 lsd:[&>svg]:w-6',
+        sm: 'lsd:px-[var(--lsd-spacing-small)] lsd:py-[var(--lsd-spacing-smaller)] lsd:text-sm lsd:[&>svg]:ml-[var(--lsd-spacing-smaller)] lsd:[&>svg]:h-[var(--lsd-spacing-base)] lsd:[&>svg]:w-[var(--lsd-spacing-base)]',
+        md: 'lsd:px-[var(--lsd-spacing-base)] lsd:py-[var(--lsd-spacing-smaller)] lsd:text-base lsd:[&>svg]:ml-[var(--lsd-spacing-small)] lsd:[&>svg]:h-[var(--lsd-spacing-large)] lsd:[&>svg]:w-[var(--lsd-spacing-large)]',
+        lg: 'lsd:px-[var(--lsd-spacing-large)] lsd:py-[var(--lsd-spacing-small)] lsd:text-lg lsd:[&>svg]:ml-[var(--lsd-spacing-base)] lsd:[&>svg]:h-[var(--lsd-spacing-larger)] lsd:[&>svg]:w-[var(--lsd-spacing-larger)]',
       },
       fullWidth: {
         true: 'lsd:flex-1',

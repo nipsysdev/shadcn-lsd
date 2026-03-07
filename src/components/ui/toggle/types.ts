@@ -6,9 +6,9 @@ export const toggleVariants = cva(
   {
     variants: {
       size: {
-        sm: 'lsd:h-8 lsd:min-w-8 lsd:px-2 lsd:py-[6px] lsd:text-[0.75rem]',
-        md: 'lsd:h-10 lsd:min-w-10 lsd:px-3 lsd:py-[6px]',
-        lg: 'lsd:h-12 lsd:min-w-12 lsd:px-4 lsd:py-[10px] lsd:text-[0.875rem]',
+        sm: 'lsd:h-8 lsd:min-w-8 lsd:px-[var(--lsd-spacing-smaller)] lsd:py-[var(--lsd-spacing-smaller)] lsd:text-[0.75rem]',
+        md: 'lsd:h-10 lsd:min-w-10 lsd:px-[var(--lsd-spacing-small)] lsd:py-[var(--lsd-spacing-smaller)]',
+        lg: 'lsd:h-12 lsd:min-w-12 lsd:px-[var(--lsd-spacing-base)] lsd:py-[var(--lsd-spacing-small)] lsd:text-[0.875rem]',
       },
     },
     defaultVariants: {

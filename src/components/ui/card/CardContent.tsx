@@ -10,7 +10,10 @@ const CardContent = React.forwardRef<
     <div
       ref={ref}
       data-slot="card-content"
-      className={cn('lsd:px-6 lsd:py-6', className)}
+      className={cn(
+        'lsd:px-(--lsd-spacing-larger) lsd:py-(--lsd-spacing-larger)',
+        className,
+      )}
       {...props}
     />
   );

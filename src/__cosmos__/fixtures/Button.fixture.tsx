@@ -129,8 +129,8 @@ export default function ButtonFixture() {
         <CodeExample
           title="Icon Button Variants"
           code={`<div className="lsd:flex lsd:gap-4 lsd:items-center">
-  <Button variant="filled-icon" size="icon-xs" aria-label="Add">
-    <Plus size={12} />
+  <Button variant="filled-icon" size="icon-sm" aria-label="Add">
+    <Plus size={14} />
   </Button>
   <Button variant="filled-icon" size="icon-md" aria-label="Add">
     <Plus />
@@ -144,8 +144,8 @@ export default function ButtonFixture() {
 </div>`}
         >
           <div className="lsd:flex lsd:gap-4 lsd:items-center">
-            <Button variant="filled-icon" size="icon-xs" aria-label="Add">
-              <Plus size={12} />
+            <Button variant="filled-icon" size="icon-sm" aria-label="Add">
+              <Plus size={14} />
             </Button>
             <Button variant="filled-icon" size="icon-md" aria-label="Add">
               <Plus />
@@ -165,9 +165,6 @@ export default function ButtonFixture() {
         <CodeExample
           title="Icon Button Sizes"
           code={`<div className="lsd:flex lsd:gap-4 lsd:items-center">
-  <Button variant="filled-icon" size="icon-xs" aria-label="Add">
-    <Plus size={12} />
-  </Button>
   <Button variant="filled-icon" size="icon-sm" aria-label="Add">
     <Plus size={14} />
   </Button>
@@ -177,15 +174,9 @@ export default function ButtonFixture() {
   <Button variant="filled-icon" size="icon-lg" aria-label="Add">
     <Plus size={24} />
   </Button>
-  <Button variant="filled-icon" size="icon-xl" aria-label="Add">
-    <Plus size={32} />
-  </Button>
 </div>`}
         >
           <div className="lsd:flex lsd:gap-4 lsd:items-center">
-            <Button variant="filled-icon" size="icon-xs" aria-label="Add">
-              <Plus size={12} />
-            </Button>
             <Button variant="filled-icon" size="icon-sm" aria-label="Add">
               <Plus size={14} />
             </Button>
@@ -194,9 +185,6 @@ export default function ButtonFixture() {
             </Button>
             <Button variant="filled-icon" size="icon-lg" aria-label="Add">
               <Plus size={30} />
-            </Button>
-            <Button variant="filled-icon" size="icon-xl" aria-label="Add">
-              <Plus size={32} />
             </Button>
           </div>
         </CodeExample>

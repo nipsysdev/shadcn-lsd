@@ -32,7 +32,7 @@ function MenubarSubTrigger({
       <span className="lsd:group-hover:underline lsd:group-focus:underline">
         {children}
       </span>
-      <ChevronRightIcon className="lsd:ml-auto lsd:h-4 lsd:w-4" />
+      <ChevronRightIcon className="lsd:ml-auto lsd:h-(--lsd-spacing-base) lsd:w-(--lsd-spacing-base)" />
     </MenubarPrimitive.SubTrigger>
   );
 }

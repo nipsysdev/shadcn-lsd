@@ -17,11 +17,11 @@ function AccordionContent({
   const getPaddingBottom = () => {
     switch (size) {
       case 'sm':
-        return 'lsd:pb-2';
+        return 'lsd:pb-[var(--lsd-spacing-smaller)]';
       case 'lg':
-        return 'lsd:pb-6';
+        return 'lsd:pb-[var(--lsd-spacing-larger)]';
       default:
-        return 'lsd:pb-4';
+        return 'lsd:pb-[var(--lsd-spacing-base)]';
     }
   };
 

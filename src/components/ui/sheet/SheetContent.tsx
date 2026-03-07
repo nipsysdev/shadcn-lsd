@@ -23,7 +23,7 @@ export function SheetContent({
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
-          'lsd:bg-background lsd:data-[state=open]:animate-in lsd:data-[state=closed]:animate-out lsd:fixed lsd:z-50 lsd:flex lsd:flex-col lsd:gap-4 lsd:shadow-lg lsd:transition lsd:ease-in-out lsd:data-[state=closed]:duration-300 lsd:data-[state=open]:duration-500',
+          'lsd:bg-background lsd:data-[state=open]:animate-in lsd:data-[state=closed]:animate-out lsd:fixed lsd:z-50 lsd:flex lsd:flex-col lsd:gap-(--lsd-spacing-base) lsd:shadow-lg lsd:transition lsd:ease-in-out lsd:data-[state=closed]:duration-300 lsd:data-[state=open]:duration-500',
           side === 'right' &&
             'lsd:data-[state=closed]:slide-out-to-right lsd:data-[state=open]:slide-in-from-right lsd:inset-y-0 lsd:right-0 lsd:h-full lsd:w-3/4 lsd:border-l lsd:sm:max-w-sm',
           side === 'left' &&
@@ -37,8 +37,8 @@ export function SheetContent({
         {...props}
       >
         {children}
-        <SheetPrimitive.Close className="lsd:data-[state=open]:bg-secondary lsd:absolute lsd:top-4 lsd:right-4 lsd:rounded-xs lsd:opacity-70 lsd:transition-opacity lsd:hover:opacity-100 lsd:p-2 lsd:cursor-pointer lsd:disabled:pointer-events-none">
-          <XIcon className="lsd:size-4" />
+        <SheetPrimitive.Close className="lsd:data-[state=open]:bg-secondary lsd:absolute lsd:top-(--lsd-spacing-base) lsd:right-(--lsd-spacing-base) lsd:rounded-xs lsd:opacity-70 lsd:transition-opacity lsd:hover:opacity-100 lsd:p-(--lsd-spacing-smaller) lsd:cursor-pointer lsd:disabled:pointer-events-none">
+          <XIcon className="lsd:size-(--lsd-spacing-base)" />
           <span className="lsd:sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>

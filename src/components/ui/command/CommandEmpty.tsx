@@ -7,7 +7,7 @@ export function CommandEmpty({
   return (
     <CommandPrimitive.Empty
       data-slot="command-empty"
-      className="lsd:py-6 lsd:text-center lsd:text-sm"
+      className="lsd:py-(--lsd-spacing-larger) lsd:text-center lsd:text-sm"
       {...props}
     />
   );

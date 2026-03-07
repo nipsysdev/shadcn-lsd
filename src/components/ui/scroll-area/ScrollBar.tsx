@@ -15,9 +15,9 @@ function ScrollBar({
       className={cn(
         'lsd:flex lsd:touch-none lsd:p-px lsd:transition-colors lsd:select-none',
         orientation === 'vertical' &&
-          'lsd:h-full lsd:w-2.5 lsd:border-l lsd:border-l-transparent',
+          'lsd:h-full lsd:w-(--lsd-spacing-small) lsd:border-l lsd:border-l-transparent',
         orientation === 'horizontal' &&
-          'lsd:h-2.5 lsd:flex-col lsd:border-t lsd:border-t-transparent',
+          'lsd:h-(--lsd-spacing-small) lsd:flex-col lsd:border-t lsd:border-t-transparent',
         className,
       )}
       {...props}

@@ -64,19 +64,17 @@ function Badge({
 
   // Get dot size based on size prop
   const getDotSize = () => {
+    const md =
+      'lsd:w-[var(--lsd-spacing-small)] lsd:h-[var(--lsd-spacing-small)]';
     switch (size) {
-      case 'xs':
-        return 'lsd:w-[8px] lsd:h-[8px]';
       case 'sm':
-        return 'lsd:w-[10px] lsd:h-[10px]';
+        return 'lsd:w-[var(--lsd-spacing-smaller)] lsd:h-[var(--lsd-spacing-smaller)]';
       case 'md':
-        return 'lsd:w-[12px] lsd:h-[12px]';
+        return md;
       case 'lg':
-        return 'lsd:w-[14px] lsd:h-[14px]';
-      case 'xl':
-        return 'lsd:w-[16px] lsd:h-[16px]';
+        return 'lsd:w-[var(--lsd-spacing-base)] lsd:h-[var(--lsd-spacing-base)]';
       default:
-        return 'lsd:w-[12px] lsd:h-[12px]';
+        return md;
     }
   };
 

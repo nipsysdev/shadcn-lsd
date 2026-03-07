@@ -94,7 +94,7 @@ export function Sidebar({
             : 'lsd:right-0 lsd:group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',
           // Adjust the padding for floating and inset variants.
           variant === 'floating' || variant === 'inset'
-            ? 'lsd:p-2 lsd:group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]'
+            ? 'lsd:p-(--lsd-spacing-smaller) lsd:group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]'
             : 'lsd:group-data-[collapsible=icon]:w-(--sidebar-width-icon) lsd:group-data-[side=left]:border-r lsd:group-data-[side=right]:border-l',
           className,
         )}

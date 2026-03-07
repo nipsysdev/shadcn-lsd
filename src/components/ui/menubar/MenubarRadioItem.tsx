@@ -19,9 +19,9 @@ function MenubarRadioItem({
       className={cn(menubarRadioItemVariants(), 'lsd:group', className)}
       {...props}
     >
-      <span className="lsd:pointer-events-none lsd:absolute lsd:left-2 lsd:flex lsd:size-3.5 lsd:items-center lsd:justify-center">
+      <span className="lsd:pointer-events-none lsd:absolute lsd:left-(--lsd-spacing-smaller) lsd:flex lsd:size-(--lsd-spacing-base) lsd:items-center lsd:justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <CircleIcon className="lsd:size-2 lsd:fill-current" />
+          <CircleIcon className="lsd:size-(--lsd-spacing-smaller) lsd:fill-current" />
         </MenubarPrimitive.ItemIndicator>
       </span>
       <span className="lsd:group-hover:underline lsd:group-focus:underline">

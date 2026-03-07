@@ -21,9 +21,9 @@ function MenubarCheckboxItem({
       checked={checked}
       {...props}
     >
-      <span className="lsd:pointer-events-none lsd:absolute lsd:left-2 lsd:flex lsd:size-3.5 lsd:items-center lsd:justify-center">
+      <span className="lsd:pointer-events-none lsd:absolute lsd:left-(--lsd-spacing-smaller) lsd:flex lsd:size-(--lsd-spacing-base) lsd:items-center lsd:justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <CheckIcon className="lsd:size-4" />
+          <CheckIcon className="lsd:size-(--lsd-spacing-base)" />
         </MenubarPrimitive.ItemIndicator>
       </span>
       <span className="lsd:group-hover:underline lsd:group-focus:underline">

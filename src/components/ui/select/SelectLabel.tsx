@@ -11,7 +11,7 @@ export function SelectLabel({
     <SelectPrimitive.Label
       data-slot="select-label"
       className={cn(
-        'lsd:text-lsd-text-secondary lsd:px-2 lsd:py-1.5 lsd:text-xs',
+        'lsd:text-lsd-text-secondary lsd:px-(--lsd-spacing-smaller) lsd:py-(--lsd-spacing-smaller) lsd:text-xs',
         className,
       )}
       {...props}

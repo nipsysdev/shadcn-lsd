@@ -31,9 +31,9 @@ export function SelectContent({
         <SelectScrollUpButton />
         <SelectPrimitive.Viewport
           className={cn(
-            'lsd:p-1',
+            'lsd:p-(--lsd-spacing-smallest)',
             position === 'popper' &&
-              'lsd:h-[var(--radix-select-trigger-height)] lsd:w-full lsd:min-w-[var(--radix-select-trigger-width)] lsd:scroll-my-1',
+              'lsd:h-(--radix-select-trigger-height) lsd:w-full lsd:min-w-(--radix-select-trigger-width) lsd:scroll-my-(--lsd-spacing-smallest)',
           )}
         >
           {children}

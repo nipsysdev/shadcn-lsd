@@ -33,7 +33,7 @@ export function CommandDialog({
         className={cn('lsd:overflow-hidden lsd:p-0', className)}
         showCloseButton={showCloseButton}
       >
-        <Command className="lsd:[&_[cmdk-group-heading]]:text-lsd-text-primary lsd:[&_[cmdk-group-heading]]:px-2 lsd:[&_[cmdk-group-heading]]:font-medium lsd:[&_[cmdk-group]]:px-2 lsd:[&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 lsd:[&_[cmdk-input-wrapper]_svg]:h-5 lsd:[&_[cmdk-input-wrapper]_svg]:w-5 lsd:[&_[cmdk-input]]:h-12 lsd:[&_[cmdk-item]]:px-2 lsd:[&_[cmdk-item]]:py-3 lsd:[&_[cmdk-item]_svg]:h-5 lsd:[&_[cmdk-item]_svg]:w-5">
+        <Command className="lsd:**:[[cmdk-group-heading]]:text-lsd-text-primary lsd:**:[[cmdk-group-heading]]:px-(--lsd-spacing-smaller) lsd:**:[[cmdk-group-heading]]:font-medium lsd:**:[[cmdk-group]]:px-(--lsd-spacing-smaller) lsd:[&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 lsd:[&_[cmdk-input-wrapper]_svg]:h-(--lsd-spacing-large) lsd:[&_[cmdk-input-wrapper]_svg]:w-(--lsd-spacing-large) lsd:**:[[cmdk-input]]:h-12 lsd:**:[[cmdk-item]]:px-(--lsd-spacing-smaller) lsd:**:[[cmdk-item]]:py-(--lsd-spacing-small) lsd:[&_[cmdk-item]_svg]:h-(--lsd-spacing-large) lsd:[&_[cmdk-item]_svg]:w-(--lsd-spacing-large)">
           {children}
         </Command>
       </DialogContent>

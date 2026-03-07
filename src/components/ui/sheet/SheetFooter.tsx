@@ -10,7 +10,7 @@ export function SheetFooter({
     <div
       data-slot="sheet-footer"
       className={cn(
-        'lsd:mt-auto lsd:flex lsd:flex-col lsd:gap-2 lsd:p-4',
+        'lsd:mt-auto lsd:flex lsd:flex-col lsd:gap-(--lsd-spacing-smaller) lsd:p-(--lsd-spacing-base)',
         className,
       )}
       {...props}

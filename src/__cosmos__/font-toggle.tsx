@@ -11,7 +11,7 @@ export function FontToggle() {
   }, [font]);
 
   return (
-    <div className="lsd:flex lsd:items-center lsd:space-x-2">
+    <div className="lsd:flex lsd:items-center lsd:space-x-(--lsd-spacing-smaller)">
       <span className="lsd:text-sm">Font:</span>
       <ToggleGroup
         type="single"
