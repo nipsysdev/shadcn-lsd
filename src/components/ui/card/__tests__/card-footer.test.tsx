@@ -24,11 +24,11 @@ describe('CardFooter', () => {
     const footer = queryByDataSlot(container, 'card-footer');
     expect(footer).toHaveClass('lsd:flex');
     expect(footer).toHaveClass('lsd:items-center');
-    expect(footer).toHaveClass('lsd:px-6');
-    expect(footer).toHaveClass('lsd:py-6');
+    expect(footer).toHaveClass('lsd:px-(--lsd-spacing-larger)');
+    expect(footer).toHaveClass('lsd:py-(--lsd-spacing-larger)');
     expect(footer).toHaveClass('lsd:border-t');
     expect(footer).toHaveClass('lsd:border-lsd-border');
-    expect(footer).toHaveClass('lsd:pt-6');
+    expect(footer).toHaveClass('lsd:pt-(--lsd-spacing-larger)');
   });
 
   it('renders children', () => {

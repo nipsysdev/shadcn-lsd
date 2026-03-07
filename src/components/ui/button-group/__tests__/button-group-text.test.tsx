@@ -19,10 +19,10 @@ describe('ButtonGroupText', () => {
     expect(text).toHaveClass('lsd:bg-secondary');
     expect(text).toHaveClass('lsd:flex');
     expect(text).toHaveClass('lsd:items-center');
-    expect(text).toHaveClass('lsd:gap-2');
+    expect(text).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
     expect(text).toHaveClass('lsd:rounded-md');
     expect(text).toHaveClass('lsd:border');
-    expect(text).toHaveClass('lsd:px-4');
+    expect(text).toHaveClass('lsd:px-(--lsd-spacing-base)');
     expect(text).toHaveClass('lsd:text-sm');
     expect(text).toHaveClass('lsd:font-medium');
     expect(text).toHaveClass('lsd:shadow-xs');

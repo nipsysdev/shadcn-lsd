@@ -29,7 +29,7 @@ describe('PopoverContent', () => {
     expect(content).toHaveClass('lsd:w-72');
     expect(content).toHaveClass('lsd:border');
     expect(content).toHaveClass('lsd:border-lsd-border');
-    expect(content).toHaveClass('lsd:p-4');
+    expect(content).toHaveClass('lsd:p-(--lsd-spacing-base)');
     expect(content).toHaveClass('lsd:shadow-md');
   });
 

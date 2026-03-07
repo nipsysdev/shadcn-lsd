@@ -77,8 +77,8 @@ describe('TabsTrigger', () => {
       </Tabs>,
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
-    expect(trigger).toHaveClass('lsd:px-5');
-    expect(trigger).toHaveClass('lsd:py-2.5');
+    expect(trigger).toHaveClass('lsd:px-[var(--lsd-spacing-large)]');
+    expect(trigger).toHaveClass('lsd:py-[var(--lsd-spacing-small)]');
     expect(trigger).toHaveClass('lsd:text-lg');
   });
 
@@ -94,8 +94,8 @@ describe('TabsTrigger', () => {
       </Tabs>,
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
-    expect(trigger).toHaveClass('lsd:px-3');
-    expect(trigger).toHaveClass('lsd:py-1.5');
+    expect(trigger).toHaveClass('lsd:px-[var(--lsd-spacing-small)]');
+    expect(trigger).toHaveClass('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(trigger).toHaveClass('lsd:text-sm');
   });
 
@@ -111,8 +111,8 @@ describe('TabsTrigger', () => {
       </Tabs>,
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
-    expect(trigger).toHaveClass('lsd:px-4');
-    expect(trigger).toHaveClass('lsd:py-2');
+    expect(trigger).toHaveClass('lsd:px-[var(--lsd-spacing-base)]');
+    expect(trigger).toHaveClass('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(trigger).toHaveClass('lsd:text-base');
   });
 

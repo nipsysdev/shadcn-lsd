@@ -32,7 +32,7 @@ describe('AlertDialogFooter', () => {
     const footer = document.querySelector('[data-slot="alert-dialog-footer"]');
     expect(footer).toHaveClass('lsd:flex');
     expect(footer).toHaveClass('lsd:flex-col-reverse');
-    expect(footer).toHaveClass('lsd:gap-2');
+    expect(footer).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
   });
 
   it('applies data-slot attribute', () => {

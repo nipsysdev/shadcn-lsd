@@ -53,7 +53,7 @@ describe('Menubar', () => {
     expect(menubar).toHaveClass('lsd:flex');
     expect(menubar).toHaveClass('lsd:h-9');
     expect(menubar).toHaveClass('lsd:items-center');
-    expect(menubar).toHaveClass('lsd:gap-1');
+    expect(menubar).toHaveClass('lsd:gap-[var(--lsd-spacing-smallest)]');
     expect(menubar).toHaveClass('lsd:border');
     expect(menubar).toHaveClass('lsd:bg-lsd-surface');
   });

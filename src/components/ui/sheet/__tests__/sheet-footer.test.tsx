@@ -33,8 +33,8 @@ describe('SheetFooter', () => {
     expect(footer).toHaveClass('lsd:mt-auto');
     expect(footer).toHaveClass('lsd:flex');
     expect(footer).toHaveClass('lsd:flex-col');
-    expect(footer).toHaveClass('lsd:gap-2');
-    expect(footer).toHaveClass('lsd:p-4');
+    expect(footer).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
+    expect(footer).toHaveClass('lsd:p-(--lsd-spacing-base)');
   });
 
   it('applies data-slot attribute', () => {

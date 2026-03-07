@@ -52,8 +52,8 @@ describe('MenubarTrigger', () => {
     const trigger = screen.getByRole('menuitem', { name: 'File' });
     expect(trigger).toHaveClass('lsd:flex');
     expect(trigger).toHaveClass('lsd:items-center');
-    expect(trigger).toHaveClass('lsd:px-2');
-    expect(trigger).toHaveClass('lsd:py-1');
+    expect(trigger).toHaveClass('lsd:px-[var(--lsd-spacing-smaller)]');
+    expect(trigger).toHaveClass('lsd:py-[var(--lsd-spacing-smallest)]');
     expect(trigger).toHaveClass('lsd:text-sm');
     expect(trigger).toHaveClass('lsd:font-medium');
     expect(trigger).toHaveClass('lsd:cursor-pointer');

@@ -45,9 +45,9 @@ describe('Badge', () => {
       </Badge>,
     );
     const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:h-[28px]');
-    expect(badge).toHaveClass('lsd:px-[11px]');
-    expect(badge).toHaveClass('lsd:py-[3px]');
+    expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-largest)]');
+    expect(badge).toHaveClass('lsd:px-[var(--lsd-spacing-small)]');
+    expect(badge).toHaveClass('lsd:py-[var(--lsd-spacing-smallest)]');
     expect(badge).toHaveClass('lsd:text-[0.875rem]');
   });
 
@@ -58,8 +58,8 @@ describe('Badge', () => {
       </Badge>,
     );
     const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:h-[24px]');
-    expect(badge).toHaveClass('lsd:px-[7px]');
+    expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-larger)]');
+    expect(badge).toHaveClass('lsd:px-[var(--lsd-spacing-smaller)]');
     expect(badge).toHaveClass('lsd:text-[0.75rem]');
   });
 
@@ -72,7 +72,7 @@ describe('Badge', () => {
   it('uses default size when not specified', () => {
     render(<Badge data-testid="badge">Default</Badge>);
     const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:h-[28px]');
+    expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-largest)]');
   });
 
   it('merges custom className with component classes', () => {
@@ -177,39 +177,25 @@ describe('Badge', () => {
     expect(badge).toHaveClass('lsd:border-0');
   });
 
-  it('applies correct dot size for xs', () => {
-    render(<Badge dot size="xs" data-testid="badge" />);
-    const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:w-[8px]');
-    expect(badge).toHaveClass('lsd:h-[8px]');
-  });
-
   it('applies correct dot size for sm', () => {
     render(<Badge dot size="sm" data-testid="badge" />);
     const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:w-[10px]');
-    expect(badge).toHaveClass('lsd:h-[10px]');
+    expect(badge).toHaveClass('lsd:w-[var(--lsd-spacing-smaller)]');
+    expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-smaller)]');
   });
 
   it('applies correct dot size for md', () => {
     render(<Badge dot size="md" data-testid="badge" />);
     const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:w-[12px]');
-    expect(badge).toHaveClass('lsd:h-[12px]');
+    expect(badge).toHaveClass('lsd:w-[var(--lsd-spacing-small)]');
+    expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-small)]');
   });
 
   it('applies correct dot size for lg', () => {
     render(<Badge dot size="lg" data-testid="badge" />);
     const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:w-[14px]');
-    expect(badge).toHaveClass('lsd:h-[14px]');
-  });
-
-  it('applies correct dot size for xl', () => {
-    render(<Badge dot size="xl" data-testid="badge" />);
-    const badge = screen.getByTestId('badge');
-    expect(badge).toHaveClass('lsd:w-[16px]');
-    expect(badge).toHaveClass('lsd:h-[16px]');
+    expect(badge).toHaveClass('lsd:w-[var(--lsd-spacing-base)]');
+    expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-base)]');
   });
 
   it('handles dismiss event', () => {
@@ -247,14 +233,22 @@ describe('badgeVariants', () => {
   });
 
   it('returns correct classes for medium size', () => {
-    expect(badgeVariants({ size: 'md' })).toContain('lsd:h-[28px]');
-    expect(badgeVariants({ size: 'md' })).toContain('lsd:px-[11px]');
+    expect(badgeVariants({ size: 'md' })).toContain(
+      'lsd:h-[var(--lsd-spacing-largest)]',
+    );
+    expect(badgeVariants({ size: 'md' })).toContain(
+      'lsd:px-[var(--lsd-spacing-small)]',
+    );
     expect(badgeVariants({ size: 'md' })).toContain('lsd:text-[0.875rem]');
   });
 
   it('returns correct classes for small size', () => {
-    expect(badgeVariants({ size: 'sm' })).toContain('lsd:h-[24px]');
-    expect(badgeVariants({ size: 'sm' })).toContain('lsd:px-[7px]');
+    expect(badgeVariants({ size: 'sm' })).toContain(
+      'lsd:h-[var(--lsd-spacing-larger)]',
+    );
+    expect(badgeVariants({ size: 'sm' })).toContain(
+      'lsd:px-[var(--lsd-spacing-smaller)]',
+    );
     expect(badgeVariants({ size: 'sm' })).toContain('lsd:text-[0.75rem]');
   });
 
@@ -263,12 +257,12 @@ describe('badgeVariants', () => {
   });
 
   it('uses default size when not specified', () => {
-    expect(badgeVariants({})).toContain('lsd:h-[28px]');
+    expect(badgeVariants({})).toContain('lsd:h-[var(--lsd-spacing-largest)]');
   });
 
   it('combines variant and size correctly', () => {
     const classes = badgeVariants({ variant: 'outlined', size: 'sm' });
     expect(classes).toContain('lsd:bg-transparent');
-    expect(classes).toContain('lsd:h-[24px]');
+    expect(classes).toContain('lsd:h-[var(--lsd-spacing-larger)]');
   });
 });

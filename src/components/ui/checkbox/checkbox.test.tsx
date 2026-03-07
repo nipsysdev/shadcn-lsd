@@ -16,7 +16,7 @@ describe('Checkbox', () => {
   it('applies base classes correctly', () => {
     render(<Checkbox />);
     const checkbox = screen.getByRole('checkbox');
-    expect(checkbox).toHaveClass('lsd:size-5');
+    expect(checkbox).toHaveClass('lsd:size-(--lsd-spacing-large)');
     expect(checkbox).toHaveClass('lsd:border');
     expect(checkbox).toHaveClass('lsd:cursor-pointer');
     expect(checkbox).toHaveClass('lsd:transition-shadow');

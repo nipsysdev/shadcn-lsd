@@ -44,7 +44,7 @@ describe('ToggleGroup', () => {
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:h-10');
-    expect(item).toHaveClass('lsd:px-3');
+    expect(item).toHaveClass('lsd:px-[var(--lsd-spacing-small)]');
   });
 
   it('applies small size classes correctly', () => {
@@ -55,7 +55,7 @@ describe('ToggleGroup', () => {
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:h-8');
-    expect(item).toHaveClass('lsd:px-2');
+    expect(item).toHaveClass('lsd:px-[var(--lsd-spacing-smaller)]');
   });
 
   it('applies large size classes correctly', () => {
@@ -66,7 +66,7 @@ describe('ToggleGroup', () => {
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:h-12');
-    expect(item).toHaveClass('lsd:px-4');
+    expect(item).toHaveClass('lsd:px-[var(--lsd-spacing-base)]');
   });
 
   it('uses default size when not specified', () => {

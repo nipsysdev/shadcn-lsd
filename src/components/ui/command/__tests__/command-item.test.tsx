@@ -50,9 +50,9 @@ describe('CommandItem', () => {
     expect(item).toHaveClass('lsd:flex');
     expect(item).toHaveClass('lsd:cursor-default');
     expect(item).toHaveClass('lsd:items-center');
-    expect(item).toHaveClass('lsd:gap-2');
-    expect(item).toHaveClass('lsd:px-2');
-    expect(item).toHaveClass('lsd:py-1.5');
+    expect(item).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
+    expect(item).toHaveClass('lsd:px-(--lsd-spacing-smaller)');
+    expect(item).toHaveClass('lsd:py-(--lsd-spacing-smaller)');
     expect(item).toHaveClass('lsd:text-sm');
   });
 

@@ -31,7 +31,7 @@ describe('DialogHeader', () => {
     const header = document.querySelector('[data-slot="dialog-header"]');
     expect(header).toHaveClass('lsd:flex');
     expect(header).toHaveClass('lsd:flex-col');
-    expect(header).toHaveClass('lsd:gap-2');
+    expect(header).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
     expect(header).toHaveClass('lsd:text-center');
   });
 

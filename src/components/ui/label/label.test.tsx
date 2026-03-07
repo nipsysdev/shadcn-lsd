@@ -68,7 +68,7 @@ describe('Label', () => {
     const label = screen.getByText('Label');
     expect(label).toHaveClass('lsd:flex');
     expect(label).toHaveClass('lsd:items-center');
-    expect(label).toHaveClass('lsd:gap-2');
+    expect(label).toHaveClass('lsd:gap-[var(--lsd-spacing-smaller)]');
     expect(label).toHaveClass('lsd:select-none');
   });
 

@@ -112,9 +112,9 @@ describe('Button', () => {
   it('applies medium size classes correctly', () => {
     render(<Button size="md">Medium</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('lsd:h-[34px]');
-    expect(button).toHaveClass('lsd:px-6');
-    expect(button).toHaveClass('lsd:py-2');
+    expect(button).toHaveClass('lsd:h-10');
+    expect(button).toHaveClass('lsd:px-[var(--lsd-spacing-larger)]');
+    expect(button).toHaveClass('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(button).toHaveClass('lsd:text-base');
   });
 
@@ -122,8 +122,8 @@ describe('Button', () => {
     render(<Button size="sm">Small</Button>);
     const button = screen.getByRole('button');
     expect(button).toHaveClass('lsd:h-8');
-    expect(button).toHaveClass('lsd:px-3');
-    expect(button).toHaveClass('lsd:py-[6px]');
+    expect(button).toHaveClass('lsd:px-[var(--lsd-spacing-small)]');
+    expect(button).toHaveClass('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(button).toHaveClass('lsd:text-sm');
   });
 
@@ -132,7 +132,7 @@ describe('Button', () => {
     const button = screen.getByRole('button');
     expect(button).toHaveClass('lsd:h-12');
     expect(button).toHaveClass('lsd:px-8');
-    expect(button).toHaveClass('lsd:py-[10px]');
+    expect(button).toHaveClass('lsd:py-[var(--lsd-spacing-small)]');
     expect(button).toHaveClass('lsd:text-lg');
   });
 
@@ -150,11 +150,11 @@ describe('Button', () => {
     expect(button).toHaveClass('lsd:h-8');
   });
 
-  it('applies icon-xs size classes correctly', () => {
-    render(<Button size="icon-xs">Icon</Button>);
+  it('applies icon-md size classes correctly', () => {
+    render(<Button size="icon-md">Icon</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('lsd:w-6');
-    expect(button).toHaveClass('lsd:h-6');
+    expect(button).toHaveClass('lsd:w-10');
+    expect(button).toHaveClass('lsd:h-10');
   });
 
   it('applies icon-lg size classes correctly', () => {
@@ -162,13 +162,6 @@ describe('Button', () => {
     const button = screen.getByRole('button');
     expect(button).toHaveClass('lsd:w-12');
     expect(button).toHaveClass('lsd:h-12');
-  });
-
-  it('applies icon-xl size classes correctly', () => {
-    render(<Button size="icon-xl">Icon</Button>);
-    const button = screen.getByRole('button');
-    expect(button).toHaveClass('lsd:w-16');
-    expect(button).toHaveClass('lsd:h-16');
   });
 
   it('uses default variant when not specified', () => {
@@ -180,7 +173,7 @@ describe('Button', () => {
   it('uses default size when not specified', () => {
     render(<Button>Default</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('lsd:h-[34px]');
+    expect(button).toHaveClass('lsd:h-10');
   });
 
   it('handles click events', () => {
@@ -423,23 +416,33 @@ describe('buttonVariants', () => {
   });
 
   it('returns correct classes for medium size', () => {
-    expect(buttonVariants({ size: 'md' })).toContain('lsd:h-[34px]');
-    expect(buttonVariants({ size: 'md' })).toContain('lsd:px-6');
-    expect(buttonVariants({ size: 'md' })).toContain('lsd:py-2');
+    expect(buttonVariants({ size: 'md' })).toContain('lsd:h-10');
+    expect(buttonVariants({ size: 'md' })).toContain(
+      'lsd:px-[var(--lsd-spacing-larger)]',
+    );
+    expect(buttonVariants({ size: 'md' })).toContain(
+      'lsd:py-[var(--lsd-spacing-smaller)]',
+    );
     expect(buttonVariants({ size: 'md' })).toContain('lsd:text-base');
   });
 
   it('returns correct classes for small size', () => {
     expect(buttonVariants({ size: 'sm' })).toContain('lsd:h-8');
-    expect(buttonVariants({ size: 'sm' })).toContain('lsd:px-3');
-    expect(buttonVariants({ size: 'sm' })).toContain('lsd:py-[6px]');
+    expect(buttonVariants({ size: 'sm' })).toContain(
+      'lsd:px-[var(--lsd-spacing-small)]',
+    );
+    expect(buttonVariants({ size: 'sm' })).toContain(
+      'lsd:py-[var(--lsd-spacing-smaller)]',
+    );
     expect(buttonVariants({ size: 'sm' })).toContain('lsd:text-sm');
   });
 
   it('returns correct classes for large size', () => {
     expect(buttonVariants({ size: 'lg' })).toContain('lsd:h-12');
     expect(buttonVariants({ size: 'lg' })).toContain('lsd:px-8');
-    expect(buttonVariants({ size: 'lg' })).toContain('lsd:py-[10px]');
+    expect(buttonVariants({ size: 'lg' })).toContain(
+      'lsd:py-[var(--lsd-spacing-small)]',
+    );
     expect(buttonVariants({ size: 'lg' })).toContain('lsd:text-lg');
   });
 
@@ -453,9 +456,9 @@ describe('buttonVariants', () => {
     expect(buttonVariants({ size: 'icon-sm' })).toContain('lsd:h-8');
   });
 
-  it('returns correct classes for icon-xs size', () => {
-    expect(buttonVariants({ size: 'icon-xs' })).toContain('lsd:w-6');
-    expect(buttonVariants({ size: 'icon-xs' })).toContain('lsd:h-6');
+  it('returns correct classes for icon-md size', () => {
+    expect(buttonVariants({ size: 'icon-md' })).toContain('lsd:w-10');
+    expect(buttonVariants({ size: 'icon-md' })).toContain('lsd:h-10');
   });
 
   it('returns correct classes for icon-lg size', () => {
@@ -463,17 +466,12 @@ describe('buttonVariants', () => {
     expect(buttonVariants({ size: 'icon-lg' })).toContain('lsd:h-12');
   });
 
-  it('returns correct classes for icon-xl size', () => {
-    expect(buttonVariants({ size: 'icon-xl' })).toContain('lsd:w-16');
-    expect(buttonVariants({ size: 'icon-xl' })).toContain('lsd:h-16');
-  });
-
   it('uses default variant when not specified', () => {
     expect(buttonVariants({})).toContain('lsd:bg-primary');
   });
 
   it('uses default size when not specified', () => {
-    expect(buttonVariants({})).toContain('lsd:h-[34px]');
+    expect(buttonVariants({})).toContain('lsd:h-10');
   });
 
   it('combines variant and size correctly', () => {

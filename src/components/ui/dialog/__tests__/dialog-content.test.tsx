@@ -36,7 +36,7 @@ describe('DialogContent', () => {
     expect(content).toHaveClass('lsd:w-full');
     expect(content).toHaveClass('lsd:border');
     expect(content).toHaveClass('lsd:border-lsd-border');
-    expect(content).toHaveClass('lsd:p-6');
+    expect(content).toHaveClass('lsd:p-(--lsd-spacing-larger)');
   });
 
   it('applies data-slot attribute', () => {

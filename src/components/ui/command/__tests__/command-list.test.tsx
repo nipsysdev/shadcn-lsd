@@ -41,7 +41,7 @@ describe('CommandList', () => {
     );
     const list = document.querySelector('[data-slot="command-list"]');
     expect(list).toHaveClass('lsd:max-h-[300px]');
-    expect(list).toHaveClass('lsd:scroll-py-1');
+    expect(list).toHaveClass('lsd:scroll-py-(--lsd-spacing-smallest)');
     expect(list).toHaveClass('lsd:overflow-x-hidden');
     expect(list).toHaveClass('lsd:overflow-y-auto');
   });

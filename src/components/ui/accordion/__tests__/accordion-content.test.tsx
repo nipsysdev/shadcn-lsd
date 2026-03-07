@@ -109,6 +109,6 @@ describe('AccordionContent', () => {
       '[data-slot="accordion-content"] > div',
     );
     expect(innerDiv).toHaveClass('lsd:pt-0');
-    expect(innerDiv).toHaveClass('lsd:pb-4');
+    expect(innerDiv).toHaveClass('lsd:pb-[var(--lsd-spacing-base)]');
   });
 });

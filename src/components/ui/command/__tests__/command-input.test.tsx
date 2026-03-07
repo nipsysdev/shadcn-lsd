@@ -75,10 +75,10 @@ describe('CommandInput', () => {
     expect(wrapper).toHaveClass('lsd:flex');
     expect(wrapper).toHaveClass('lsd:h-9');
     expect(wrapper).toHaveClass('lsd:items-center');
-    expect(wrapper).toHaveClass('lsd:gap-2');
+    expect(wrapper).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
     expect(wrapper).toHaveClass('lsd:border-b');
     expect(wrapper).toHaveClass('lsd:border-lsd-border');
-    expect(wrapper).toHaveClass('lsd:px-3');
+    expect(wrapper).toHaveClass('lsd:px-(--lsd-spacing-small)');
   });
 
   it('applies base classes to input', () => {
@@ -95,7 +95,7 @@ describe('CommandInput', () => {
     expect(input).toHaveClass('lsd:h-10');
     expect(input).toHaveClass('lsd:w-full');
     expect(input).toHaveClass('lsd:bg-transparent');
-    expect(input).toHaveClass('lsd:py-3');
+    expect(input).toHaveClass('lsd:py-(--lsd-spacing-small)');
     expect(input).toHaveClass('lsd:text-sm');
   });
 

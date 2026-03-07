@@ -22,8 +22,8 @@ describe('CardContent', () => {
   it('applies default classes', () => {
     const { container } = render(<CardContent />);
     const content = queryByDataSlot(container, 'card-content');
-    expect(content).toHaveClass('lsd:px-6');
-    expect(content).toHaveClass('lsd:py-6');
+    expect(content).toHaveClass('lsd:px-(--lsd-spacing-larger)');
+    expect(content).toHaveClass('lsd:py-(--lsd-spacing-larger)');
   });
 
   it('renders children', () => {

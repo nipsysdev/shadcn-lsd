@@ -154,8 +154,8 @@ describe('tabsTriggerVariants', () => {
     expect(result).toContain('lsd:flex');
     expect(result).toContain('lsd:items-center');
     expect(result).toContain('lsd:justify-center');
-    expect(result).toContain('lsd:px-5');
-    expect(result).toContain('lsd:py-2.5');
+    expect(result).toContain('lsd:px-[var(--lsd-spacing-large)]');
+    expect(result).toContain('lsd:py-[var(--lsd-spacing-small)]');
     expect(result).toContain('lsd:text-lg');
   });
 
@@ -164,16 +164,16 @@ describe('tabsTriggerVariants', () => {
     const md = tabsTriggerVariants({ size: 'md' });
     const lg = tabsTriggerVariants({ size: 'lg' });
 
-    expect(sm).toContain('lsd:px-3');
-    expect(sm).toContain('lsd:py-1.5');
+    expect(sm).toContain('lsd:px-[var(--lsd-spacing-small)]');
+    expect(sm).toContain('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(sm).toContain('lsd:text-sm');
 
-    expect(md).toContain('lsd:px-4');
-    expect(md).toContain('lsd:py-2');
+    expect(md).toContain('lsd:px-[var(--lsd-spacing-base)]');
+    expect(md).toContain('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(md).toContain('lsd:text-base');
 
-    expect(lg).toContain('lsd:px-5');
-    expect(lg).toContain('lsd:py-2.5');
+    expect(lg).toContain('lsd:px-[var(--lsd-spacing-large)]');
+    expect(lg).toContain('lsd:py-[var(--lsd-spacing-small)]');
     expect(lg).toContain('lsd:text-lg');
   });
 

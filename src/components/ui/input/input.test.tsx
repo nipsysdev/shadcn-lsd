@@ -31,21 +31,21 @@ describe('Input', () => {
     render(<Input />);
     const input = screen.getByRole('textbox');
     expect(input).toHaveClass('lsd:text-base');
-    expect(input).toHaveClass('lsd:py-3');
+    expect(input).toHaveClass('lsd:py-[var(--lsd-spacing-small)]');
   });
 
   it('renders with large size', () => {
     render(<Input size="lg" />);
     const input = screen.getByRole('textbox');
     expect(input).toHaveClass('lsd:text-lg');
-    expect(input).toHaveClass('lsd:py-4');
+    expect(input).toHaveClass('lsd:py-[var(--lsd-spacing-base)]');
   });
 
   it('renders with small size', () => {
     render(<Input size="sm" />);
     const input = screen.getByRole('textbox');
     expect(input).toHaveClass('lsd:text-sm');
-    expect(input).toHaveClass('lsd:py-2');
+    expect(input).toHaveClass('lsd:py-[var(--lsd-spacing-smaller)]');
   });
 
   it('renders with label', () => {
@@ -171,7 +171,7 @@ describe('Input', () => {
     render(<Input />);
     const input = screen.getByRole('textbox');
     expect(input).toHaveClass('focus-visible:lsd:outline-none');
-    expect(input).toHaveClass('lsd:px-4');
+    expect(input).toHaveClass('lsd:px-(--lsd-spacing-base)');
   });
 
   it('applies base classes correctly', () => {

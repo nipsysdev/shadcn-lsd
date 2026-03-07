@@ -37,8 +37,8 @@ describe('Toggle', () => {
     const toggle = screen.getByRole('button');
     expect(toggle).toHaveClass('lsd:h-10');
     expect(toggle).toHaveClass('lsd:min-w-10');
-    expect(toggle).toHaveClass('lsd:px-3');
-    expect(toggle).toHaveClass('lsd:py-[6px]');
+    expect(toggle).toHaveClass('lsd:px-[var(--lsd-spacing-small)]');
+    expect(toggle).toHaveClass('lsd:py-[var(--lsd-spacing-smaller)]');
   });
 
   it('applies small size classes correctly', () => {
@@ -46,8 +46,8 @@ describe('Toggle', () => {
     const toggle = screen.getByRole('button');
     expect(toggle).toHaveClass('lsd:h-8');
     expect(toggle).toHaveClass('lsd:min-w-8');
-    expect(toggle).toHaveClass('lsd:px-2');
-    expect(toggle).toHaveClass('lsd:py-[6px]');
+    expect(toggle).toHaveClass('lsd:px-[var(--lsd-spacing-smaller)]');
+    expect(toggle).toHaveClass('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(toggle).toHaveClass('lsd:text-[0.75rem]');
   });
 
@@ -56,8 +56,8 @@ describe('Toggle', () => {
     const toggle = screen.getByRole('button');
     expect(toggle).toHaveClass('lsd:h-12');
     expect(toggle).toHaveClass('lsd:min-w-12');
-    expect(toggle).toHaveClass('lsd:px-4');
-    expect(toggle).toHaveClass('lsd:py-[10px]');
+    expect(toggle).toHaveClass('lsd:px-[var(--lsd-spacing-base)]');
+    expect(toggle).toHaveClass('lsd:py-[var(--lsd-spacing-small)]');
     expect(toggle).toHaveClass('lsd:text-[0.875rem]');
   });
 
@@ -127,23 +127,35 @@ describe('toggleVariants', () => {
   it('returns correct classes for medium size', () => {
     expect(toggleVariants({ size: 'md' })).toContain('lsd:h-10');
     expect(toggleVariants({ size: 'md' })).toContain('lsd:min-w-10');
-    expect(toggleVariants({ size: 'md' })).toContain('lsd:px-3');
-    expect(toggleVariants({ size: 'md' })).toContain('lsd:py-[6px]');
+    expect(toggleVariants({ size: 'md' })).toContain(
+      'lsd:px-[var(--lsd-spacing-small)]',
+    );
+    expect(toggleVariants({ size: 'md' })).toContain(
+      'lsd:py-[var(--lsd-spacing-smaller)]',
+    );
   });
 
   it('returns correct classes for small size', () => {
     expect(toggleVariants({ size: 'sm' })).toContain('lsd:h-8');
     expect(toggleVariants({ size: 'sm' })).toContain('lsd:min-w-8');
-    expect(toggleVariants({ size: 'sm' })).toContain('lsd:px-2');
-    expect(toggleVariants({ size: 'sm' })).toContain('lsd:py-[6px]');
+    expect(toggleVariants({ size: 'sm' })).toContain(
+      'lsd:px-[var(--lsd-spacing-smaller)]',
+    );
+    expect(toggleVariants({ size: 'sm' })).toContain(
+      'lsd:py-[var(--lsd-spacing-smaller)]',
+    );
     expect(toggleVariants({ size: 'sm' })).toContain('lsd:text-[0.75rem]');
   });
 
   it('returns correct classes for large size', () => {
     expect(toggleVariants({ size: 'lg' })).toContain('lsd:h-12');
     expect(toggleVariants({ size: 'lg' })).toContain('lsd:min-w-12');
-    expect(toggleVariants({ size: 'lg' })).toContain('lsd:px-4');
-    expect(toggleVariants({ size: 'lg' })).toContain('lsd:py-[10px]');
+    expect(toggleVariants({ size: 'lg' })).toContain(
+      'lsd:px-[var(--lsd-spacing-base)]',
+    );
+    expect(toggleVariants({ size: 'lg' })).toContain(
+      'lsd:py-[var(--lsd-spacing-small)]',
+    );
     expect(toggleVariants({ size: 'lg' })).toContain('lsd:text-[0.875rem]');
   });
 

@@ -40,7 +40,7 @@ describe('CommandEmpty', () => {
       </Command>,
     );
     const empty = document.querySelector('[data-slot="command-empty"]');
-    expect(empty).toHaveClass('lsd:py-6');
+    expect(empty).toHaveClass('lsd:py-(--lsd-spacing-larger)');
     expect(empty).toHaveClass('lsd:text-center');
     expect(empty).toHaveClass('lsd:text-sm');
   });

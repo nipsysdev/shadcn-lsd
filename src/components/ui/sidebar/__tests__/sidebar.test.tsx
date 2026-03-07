@@ -218,8 +218,8 @@ describe('SidebarTrigger', () => {
       </SidebarProvider>,
     );
     const trigger = queryByDataSlot(container, 'sidebar-trigger');
-    expect(trigger).toHaveClass('lsd:w-6');
-    expect(trigger).toHaveClass('lsd:h-6');
+    expect(trigger).toHaveClass('lsd:w-8');
+    expect(trigger).toHaveClass('lsd:h-8');
   });
 
   it('renders PanelLeftIcon', () => {
@@ -361,8 +361,8 @@ describe('SidebarHeader', () => {
     const header = queryByDataSlot(container, 'sidebar-header');
     expect(header).toHaveClass('lsd:flex');
     expect(header).toHaveClass('lsd:flex-col');
-    expect(header).toHaveClass('lsd:gap-2');
-    expect(header).toHaveClass('lsd:p-2');
+    expect(header).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
+    expect(header).toHaveClass('lsd:p-(--lsd-spacing-smaller)');
   });
 
   it('renders children', () => {
@@ -391,8 +391,8 @@ describe('SidebarFooter', () => {
     const footer = queryByDataSlot(container, 'sidebar-footer');
     expect(footer).toHaveClass('lsd:flex');
     expect(footer).toHaveClass('lsd:flex-col');
-    expect(footer).toHaveClass('lsd:gap-2');
-    expect(footer).toHaveClass('lsd:p-2');
+    expect(footer).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
+    expect(footer).toHaveClass('lsd:p-(--lsd-spacing-smaller)');
   });
 
   it('renders children', () => {
@@ -418,7 +418,7 @@ describe('SidebarSeparator', () => {
     const { container } = render(<SidebarSeparator />);
     const separator = queryByDataSlot(container, 'sidebar-separator');
     expect(separator).toHaveClass('lsd:bg-sidebar-border');
-    expect(separator).toHaveClass('lsd:mx-2');
+    expect(separator).toHaveClass('lsd:mx-(--lsd-spacing-smaller)');
     expect(separator).toHaveClass('lsd:w-auto');
   });
 });
@@ -480,8 +480,8 @@ describe('SidebarGroupAction', () => {
     const action = queryByDataSlot(container, 'sidebar-group-action');
     expect(action).toHaveClass('lsd:text-sidebar-foreground');
     expect(action).toHaveClass('lsd:absolute');
-    expect(action).toHaveClass('lsd:top-3.5');
-    expect(action).toHaveClass('lsd:right-3');
+    expect(action).toHaveClass('lsd:top-(--lsd-spacing-base)');
+    expect(action).toHaveClass('lsd:right-(--lsd-spacing-small)');
   });
 });
 
@@ -657,8 +657,8 @@ describe('SidebarMenuAction', () => {
     const action = queryByDataSlot(container, 'sidebar-menu-action');
     expect(action).toHaveClass('lsd:text-sidebar-foreground');
     expect(action).toHaveClass('lsd:absolute');
-    expect(action).toHaveClass('lsd:top-1.5');
-    expect(action).toHaveClass('lsd:right-1');
+    expect(action).toHaveClass('lsd:top-(--lsd-spacing-smaller)');
+    expect(action).toHaveClass('lsd:right-(--lsd-spacing-smallest)');
   });
 });
 
@@ -718,7 +718,7 @@ describe('SidebarMenuBadge', () => {
     expect(badge).toHaveClass('lsd:text-sidebar-foreground');
     expect(badge).toHaveClass('lsd:pointer-events-none');
     expect(badge).toHaveClass('lsd:absolute');
-    expect(badge).toHaveClass('lsd:right-1');
+    expect(badge).toHaveClass('lsd:right-(--lsd-spacing-smallest)');
   });
 
   it('renders children', () => {
@@ -794,7 +794,7 @@ describe('SidebarMenuSub', () => {
     const { container } = render(<SidebarMenuSub>Sub</SidebarMenuSub>);
     const sub = queryByDataSlot(container, 'sidebar-menu-sub');
     expect(sub).toHaveClass('border-sidebar-border');
-    expect(sub).toHaveClass('lsd:mx-3.5');
+    expect(sub).toHaveClass('lsd:mx-(--lsd-spacing-base)');
     expect(sub).toHaveClass('lsd:flex');
     expect(sub).toHaveClass('lsd:min-w-0');
   });
@@ -867,7 +867,7 @@ describe('SidebarMenuSubButton', () => {
     const subButton = queryByDataSlot(container, 'sidebar-menu-sub-button');
     expect(subButton).toHaveClass('lsd:text-sidebar-foreground');
     expect(subButton).toHaveClass('lsd:flex');
-    expect(subButton).toHaveClass('lsd:h-7');
+    expect(subButton).toHaveClass('lsd:h-(--lsd-spacing-largest)');
   });
 
   it('renders children', () => {

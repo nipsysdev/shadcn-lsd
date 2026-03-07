@@ -27,12 +27,12 @@ describe('CardHeader', () => {
     expect(header).toHaveClass('lsd:auto-rows-min');
     expect(header).toHaveClass('lsd:grid-rows-[auto_auto]');
     expect(header).toHaveClass('lsd:items-start');
-    expect(header).toHaveClass('lsd:gap-2');
-    expect(header).toHaveClass('lsd:px-6');
-    expect(header).toHaveClass('lsd:py-6');
+    expect(header).toHaveClass('lsd:gap-(--lsd-spacing-smaller)');
+    expect(header).toHaveClass('lsd:px-(--lsd-spacing-larger)');
+    expect(header).toHaveClass('lsd:py-(--lsd-spacing-larger)');
     expect(header).toHaveClass('lsd:border-b');
     expect(header).toHaveClass('lsd:border-lsd-border');
-    expect(header).toHaveClass('lsd:pb-6');
+    expect(header).toHaveClass('lsd:pb-(--lsd-spacing-larger)');
   });
 
   it('renders children', () => {

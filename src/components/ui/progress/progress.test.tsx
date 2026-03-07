@@ -18,7 +18,7 @@ describe('Progress', () => {
     const progress = screen.getByRole('progressbar');
     expect(progress).toHaveClass('lsd:relative');
     expect(progress).toHaveClass('lsd:w-full');
-    expect(progress).toHaveClass('lsd:h-3');
+    expect(progress).toHaveClass('lsd:h-[var(--lsd-spacing-small)]');
     expect(progress).toHaveClass('lsd:overflow-hidden');
     expect(progress).toHaveClass('lsd:bg-lsd-surface');
     expect(progress).toHaveClass('lsd:border');

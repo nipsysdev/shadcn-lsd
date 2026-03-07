@@ -53,7 +53,7 @@ describe('CommandSeparator', () => {
     );
     const separator = document.querySelector('[data-slot="command-separator"]');
     expect(separator).toHaveClass('lsd:bg-lsd-border');
-    expect(separator).toHaveClass('lsd:-mx-1');
+    expect(separator).toHaveClass('lsd:-mx-(--lsd-spacing-smallest)');
     expect(separator).toHaveClass('lsd:h-px');
   });
 
