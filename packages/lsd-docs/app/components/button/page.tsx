@@ -257,6 +257,48 @@ export default function ButtonPage() {
 
         <div className="mb-(--lsd-spacing-larger)">
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
+            asChild
+          </Typography>
+          <Typography
+            variant="body1"
+            className="text-muted-foreground mb-(--lsd-spacing-base)"
+          >
+            Use the{' '}
+            <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
+              asChild
+            </code>{' '}
+            prop to merge the button styles with a child element, such as a
+            link. This is useful when you want a button that navigates to a
+            different page.
+          </Typography>
+
+          <ComponentPreview
+            title="Button as a link"
+            code={`import Link from 'next/link';
+
+<Button asChild>
+  <Link href="/getting-started">Get Started</Link>
+</Button>
+
+<Button asChild variant="outlined">
+  <Link href="/components">View Components</Link>
+</Button>`}
+          >
+            <div className="flex gap-(--lsd-spacing-base)">
+              <LSDButton asChild>
+                <a href="/getting-started">Get Started</a>
+              </LSDButton>
+              <LSDButton asChild variant="outlined">
+                <a href="/components">View Components</a>
+              </LSDButton>
+            </div>
+          </ComponentPreview>
+        </div>
+
+        <Separator className="mb-(--lsd-spacing-larger)" />
+
+        <div className="mb-(--lsd-spacing-larger)">
+          <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Full Width
           </Typography>
           <Typography
@@ -411,6 +453,9 @@ export default function ButtonPage() {
                     <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
                       false
                     </code>
+                    <br />
+                    When true, merges the button styles with the child element.
+                    Useful for rendering buttons as links or other elements.
                   </Typography>
                 </div>
               </div>
