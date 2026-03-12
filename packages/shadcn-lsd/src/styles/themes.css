@@ -1,4 +1,4 @@
-.theme-teal {
+[data-theme="teal"] {
   --lsd-primary: #0d857c;
   --lsd-primary-foreground: #ffffff;
   --lsd-text-primary: #0a4b47;
@@ -15,7 +15,7 @@
   --lsd-info-text: #3a66c5;
 }
 
-.dark.theme-teal {
+[data-theme="teal"].dark {
   --lsd-primary: #0d9488;
   --lsd-primary-foreground: #ffffff;
   --lsd-text-primary: #f6fffd;

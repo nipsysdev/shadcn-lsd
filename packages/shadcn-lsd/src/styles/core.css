@@ -67,7 +67,8 @@
   --color-lsd-chart-5: #a855f7;
 }
 
-:root {
+:root,
+.light {
   --radius: 0.625rem;
 
   /* LSD spacing scale */
