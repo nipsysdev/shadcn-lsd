@@ -1,6 +1,4 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Select,
   SelectContent,
@@ -11,51 +9,24 @@ import {
 import { ToggleGroup, ToggleGroupItem } from '@nipsys/shadcn-lsd';
 import { MoonIcon, SunIcon } from '@phosphor-icons/react';
 
-// Type for the global theme object
-declare global {
-  interface Window {
-    lsdTheme?: {
-      applyTheme: (theme: string) => void;
-      getTheme: () => string;
-      THEMES: string[];
-    };
-  }
-}
-
 export function ThemeToggle() {
-  const [mode, setMode] = useState<'light' | 'dark'>(() => {
-    if (typeof window !== 'undefined') {
-      return document.documentElement.classList.contains('dark')
-        ? 'dark'
-        : 'light';
-    }
-    return 'light';
-  });
+  const [mode, setMode] = useState<'light' | 'dark'>('light');
 
-  const toggleTheme = (value: string | undefined) => {
+  useEffect(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    handleModeChange(prefersDark ? 'dark' : 'light');
+    document.body.style.visibility = 'visible';
+  }, []);
+
+  const handleModeChange = (value: string | undefined) => {
     if (!value) return;
 
-    // Get current accent theme (teal or none)
-    const hasTeal = document.documentElement.classList.contains('theme-teal');
-    const accent = hasTeal ? 'teal' : '';
-    
-    // Build the full theme name
-    const fullTheme = value === 'dark' 
-      ? (accent ? `dark-${accent}` : 'dark')
-      : (accent ? accent : 'light');
-
-    // Apply using the global theme function
-    if (window.lsdTheme) {
-      window.lsdTheme.applyTheme(fullTheme);
+    if (value === 'dark') {
+      document.documentElement.classList.add('dark');
     } else {
-      // Fallback to direct DOM manipulation
-      if (value === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+      document.documentElement.classList.remove('dark');
     }
-    
+
     setMode(value as 'light' | 'dark');
   };
 
@@ -63,7 +34,7 @@ export function ThemeToggle() {
     <ToggleGroup
       type="single"
       value={mode}
-      onValueChange={toggleTheme}
+      onValueChange={handleModeChange}
       aria-label="Theme toggle"
     >
       <ToggleGroupItem value="light" aria-label="Light theme">
@@ -94,31 +65,15 @@ export function ThemeAccentToggle() {
   });
 
   const toggleAccentTheme = (value: string) => {
-    // Get current mode (light or dark)
-    const isDark = document.documentElement.classList.contains('dark');
-    const mode = isDark ? 'dark' : 'light';
-    
-    // Build the full theme name
-    const fullTheme = value === 'monochrome' 
-      ? mode 
-      : (isDark ? `dark-${value}` : value);
-
-    // Apply using the global theme function
-    if (window.lsdTheme) {
-      window.lsdTheme.applyTheme(fullTheme);
-    } else {
-      // Fallback to direct DOM manipulation
-      const root = document.documentElement;
-      for (const t of Themes) {
-        if (t !== 'monochrome') {
-          root.classList.remove(`theme-${t}`);
-        }
-      }
-      if (value !== 'monochrome') {
-        root.classList.add(`theme-${value}`);
+    for (const t of Themes) {
+      if (t !== 'monochrome') {
+        document.documentElement.removeAttribute('data-theme')
       }
     }
-    
+    if (value !== 'monochrome') {
+      document.documentElement.setAttribute('data-theme', value)
+    }
+
     setTheme(value as Theme);
   };
 
