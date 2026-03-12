@@ -138,7 +138,7 @@ The design system uses CSS custom properties that you can override:
 | [Typography](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FTypography.fixture.tsx%22%7D) | Text styling components | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FTypography.fixture.tsx%22%7D) |
 
 ## Development
-M
+
 ### Prerequisites
 
 - Node.js >= 24.0.0
@@ -178,6 +178,15 @@ pnpm lint
 
 # Format code
 pnpm format
+
+# Start documentation site (Next.js)
+pnpm docs:dev
+
+# Build documentation site
+pnpm docs:build
+
+# Preview documentation build
+pnpm docs:preview
 ```
 
 ### Component Playground
@@ -187,8 +196,14 @@ The project uses React Cosmos for component development. Run `pnpm cosmos` to st
 To export a static build for deployment:
 
 ```bash
-pnpm cosmos-export
+pnpm cosmos:export
 ```
+
+### Documentation Site
+
+The documentation site is built with Next.js 16 and uses static site generation. Run `pnpm docs:dev` to start the development server at `http://localhost:3000`.
+
+The documentation is automatically deployed to GitHub Pages via the `docs/` directory.
 
 ## Tech Stack
 
@@ -199,6 +214,7 @@ pnpm cosmos-export
 - **Vite** - Build tooling
 - **Vitest** - Testing framework
 - **React Cosmos** - Component playground
+- **Next.js 16** - Documentation site framework
 
 ## Peer Dependencies
 

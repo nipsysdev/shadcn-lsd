@@ -7,11 +7,30 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# dependencies
 node_modules
 .pnpm-store
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# build outputs
 dist
 dist-ssr
 *.local
+/out/
+/build
+
+# next.js
+.next
+next-env.d.ts
+
+# testing
+coverage
 
 # Editor directories and files
 .vscode/*
@@ -24,8 +43,20 @@ dist-ssr
 *.sln
 *.sw?
 
-coverage
+# misc
+*.pem
 ai_docs
 .kilocode
 *.tgz
 plans
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+docs/dev
