@@ -13,8 +13,15 @@ export function ThemeToggle() {
   const [mode, setMode] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    handleModeChange(prefersDark ? 'dark' : 'light');
+    const storedMode = localStorage.getItem('theme-mode') as 'light' | 'dark' | null;
+    
+    if (storedMode) {
+      handleModeChange(storedMode);
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      handleModeChange(prefersDark ? 'dark' : 'light');
+    }
+    
     document.body.style.visibility = 'visible';
   }, []);
 
@@ -27,6 +34,7 @@ export function ThemeToggle() {
       document.documentElement.classList.remove('dark');
     }
 
+    localStorage.setItem('theme-mode', value);
     setMode(value as 'light' | 'dark');
   };
 
@@ -52,17 +60,15 @@ const Themes = ['monochrome', 'teal'] as const;
 type Theme = (typeof Themes)[number];
 
 export function ThemeAccentToggle() {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      for (const t of Themes) {
-        if (t === 'monochrome') continue;
-        if (document.documentElement.classList.contains(`theme-${t}`)) {
-          return t;
-        }
-      }
+  const [theme, setTheme] = useState<Theme>('monochrome');
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme-accent') as Theme | null;
+
+    if (storedTheme && Themes.includes(storedTheme)) {
+      toggleAccentTheme(storedTheme)
     }
-    return 'monochrome';
-  });
+  }, []);
 
   const toggleAccentTheme = (value: string) => {
     for (const t of Themes) {
@@ -74,6 +80,7 @@ export function ThemeAccentToggle() {
       document.documentElement.setAttribute('data-theme', value)
     }
 
+    localStorage.setItem('theme-accent', value);
     setTheme(value as Theme);
   };
 
