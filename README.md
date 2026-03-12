@@ -108,34 +108,34 @@ The design system uses CSS custom properties that you can override:
 
 ## Components
 
-| Component | Description | Playground |
-|-----------|-------------|------------|
-| [Accordion](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FAccordion.fixture.tsx%22%7D) | Vertically stacked collapsible sections | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FAccordion.fixture.tsx%22%7D) |
-| [AlertDialog](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FAlertDialog.fixture.tsx%22%7D) | Modal dialog for critical confirmations | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FAlertDialog.fixture.tsx%22%7D) |
-| [Autocomplete](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FAutocomplete.fixture.tsx%22%7D) | Input with async suggestion fetching | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FAutocomplete.fixture.tsx%22%7D) |
-| [Badge](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FBadge.fixture.tsx%22%7D) | Small label for status or categorization | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FBadge.fixture.tsx%22%7D) |
-| [Button](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FButton.fixture.tsx%22%7D) | Interactive button with multiple variants | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FButton.fixture.tsx%22%7D) |
-| [ButtonGroup](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FButtonGroup.fixture.tsx%22%7D) | Grouped buttons with optional separators | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FButtonGroup.fixture.tsx%22%7D) |
-| [Card](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FCard.fixture.tsx%22%7D) | Container for related content | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FCard.fixture.tsx%22%7D) |
-| [Checkbox](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FCheckbox.fixture.tsx%22%7D) | Boolean input control | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FCheckbox.fixture.tsx%22%7D) |
-| [Command](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FCommand.fixture.tsx%22%7D) | Command palette for keyboard navigation | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FCommand.fixture.tsx%22%7D) |
-| [Dialog](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FDialog.fixture.tsx%22%7D) | Modal overlay for focused content | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FDialog.fixture.tsx%22%7D) |
-| [Input](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FInput.fixture.tsx%22%7D) | Text input field | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FInput.fixture.tsx%22%7D) |
-| [Label](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FLabel.fixture.tsx%22%7D) | Form field label | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FLabel.fixture.tsx%22%7D) |
-| [Menubar](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FMenubar.fixture.tsx%22%7D) | Horizontal menu bar with dropdown menus | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FMenubar.fixture.tsx%22%7D) |
-| [Popover](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FPopover.fixture.tsx%22%7D) | Floating content anchored to trigger | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FPopover.fixture.tsx%22%7D) |
-| [Progress](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FProgress.fixture.tsx%22%7D) | Visual indicator of completion | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FProgress.fixture.tsx%22%7D) |
-| [ScrollArea](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FScrollArea.fixture.tsx%22%7D) | Custom scrollbar container | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FScrollArea.fixture.tsx%22%7D) |
-| [Select](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSelect.fixture.tsx%22%7D) | Dropdown selection input | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSelect.fixture.tsx%22%7D) |
-| [Separator](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSeparator.fixture.tsx%22%7D) | Visual divider between sections | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSeparator.fixture.tsx%22%7D) |
-| [Sheet](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSheet.fixture.tsx%22%7D) | Slide-out panel overlay | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSheet.fixture.tsx%22%7D) |
-| [Sidebar](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSidebar.fixture.tsx%22%7D) | Navigation sidebar component | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSidebar.fixture.tsx%22%7D) |
-| [Sonner](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSonner.fixture.tsx%22%7D) | Toast notifications | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSonner.fixture.tsx%22%7D) |
-| [Switch](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSwitch.fixture.tsx%22%7D) | Toggle switch input | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FSwitch.fixture.tsx%22%7D) |
-| [Tabs](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FTabs.fixture.tsx%22%7D) | Tabbed content navigation | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FTabs.fixture.tsx%22%7D) |
-| [Toggle](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FToggle.fixture.tsx%22%7D) | Two-state button | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FToggle.fixture.tsx%22%7D) |
-| [ToggleGroup](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FToggleGroup.fixture.tsx%22%7D) | Group of toggle buttons | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FToggleGroup.fixture.tsx%22%7D) |
-| [Typography](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FTypography.fixture.tsx%22%7D) | Text styling components | [View →](https://lsd.nipsys.dev/?fixtureId=%7B%22path%22%3A%22src%2F__cosmos__%2Ffixtures%2FTypography.fixture.tsx%22%7D) |
+| Component | Description |
+|-----------|-------------|
+| Accordion | Vertically stacked collapsible sections |
+| AlertDialog | Modal dialog for critical confirmations |
+| Autocomplete | Input with async suggestion fetching |
+| Badge | Small label for status or categorization |
+| Button | Interactive button with multiple variants |
+| ButtonGroup | Grouped buttons with optional separators |
+| Card | Container for related content |
+| Checkbox | Boolean input control |
+| Command | Command palette for keyboard navigation |
+| Dialog | Modal overlay for focused content |
+| Input | Text input field |
+| Label | Form field label |
+| Menubar | Horizontal menu bar with dropdown menus |
+| Popover | Floating content anchored to trigger |
+| Progress | Visual indicator of completion |
+| ScrollArea | Custom scrollbar container |
+| Select | Dropdown selection input |
+| Separator | Visual divider between sections |
+| Sheet | Slide-out panel overlay |
+| Sidebar | Navigation sidebar component |
+| Sonner | Toast notifications |
+| Switch | Toggle switch input |
+| Tabs | Tabbed content navigation |
+| Toggle | Two-state button |
+| ToggleGroup | Group of toggle buttons |
+| Typography | Text styling components |
 
 ## Development
 
@@ -158,9 +158,6 @@ pnpm install
 ### Scripts
 
 ```bash
-# Start component playground
-pnpm cosmos
-
 # Build the library
 pnpm build
 
@@ -189,16 +186,6 @@ pnpm docs:build
 pnpm docs:preview
 ```
 
-### Component Playground
-
-The project uses React Cosmos for component development. Run `pnpm cosmos` to start the playground at `http://localhost:5000`.
-
-To export a static build for deployment:
-
-```bash
-pnpm cosmos:export
-```
-
 ### Documentation Site
 
 The documentation site is built with Next.js 16 and uses static site generation. Run `pnpm docs:dev` to start the development server at `http://localhost:3000`.
@@ -213,7 +200,6 @@ The documentation is automatically deployed to GitHub Pages via the `docs/` dire
 - **Radix UI** - Accessible primitives
 - **Vite** - Build tooling
 - **Vitest** - Testing framework
-- **React Cosmos** - Component playground
 - **Next.js 16** - Documentation site framework
 
 ## Peer Dependencies

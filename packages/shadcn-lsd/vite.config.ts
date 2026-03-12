@@ -81,7 +81,7 @@ export default defineConfig(({ mode }) => {
         libInjectCss(),
         addUseClientDirective(),
         dts({
-          exclude: ['src/index.tsx', 'src/__cosmos__/**/*'],
+          exclude: ['src/index.tsx'],
           tsconfigPath: 'tsconfig.app.json',
         }),
       ],

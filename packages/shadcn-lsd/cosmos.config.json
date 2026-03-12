@@ -1,7 +1,0 @@
-{
-  "plugins": ["react-cosmos-plugin-vite"],
-  "fixturesDir": "src/__cosmos__/fixtures",
-  "globalImports": ["src/style.css"],
-  "exportPath": "cosmos_dist",
-  "projectId": "@nipsys/shadcn-lsd"
-}

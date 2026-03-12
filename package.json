@@ -21,9 +21,6 @@
     "test": "pnpm --filter @nipsys/shadcn-lsd test",
     "test:watch": "pnpm --filter @nipsys/shadcn-lsd test:watch",
     "test:coverage": "pnpm --filter @nipsys/shadcn-lsd test:coverage",
-    "cosmos": "pnpm --filter @nipsys/shadcn-lsd cosmos",
-    "cosmos:export": "pnpm --filter @nipsys/shadcn-lsd cosmos:export",
-    "cosmos:preview": "pnpm --filter @nipsys/shadcn-lsd cosmos:preview",
     "docs:dev": "pnpm --filter @nipsys/lsd-docs dev",
     "docs:build": "pnpm --filter @nipsys/lsd-docs build",
     "docs:preview": "pnpm --filter @nipsys/lsd-docs preview"
