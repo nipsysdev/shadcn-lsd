@@ -43,7 +43,7 @@ export default function ThemingPage() {
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-(--lsd-spacing-base)">
-            <Card>
+            <Card className="light">
               <CardHeader>
                 <CardTitle>
                   <div className="flex items-center gap-(--lsd-spacing-small)">
