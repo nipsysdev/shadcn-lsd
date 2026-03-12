@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className="w-screen h-screen overflow-hidden flex">
         <PathProvider>{children}</PathProvider>
       </body>

@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @import "@nipsys/shadcn-lsd/css";
+
+body {
+  visibility: hidden;
+}
