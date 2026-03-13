@@ -120,13 +120,13 @@ export default function ButtonPage() {
             code={`<div className="flex gap-(--lsd-spacing-base)">
   <Button>Normal</Button>
   <Button disabled>Disabled</Button>
-  <Button loading>Loading...</Button>
+  <Button loading>Loading</Button>
 </div>`}
           >
             <div className="flex gap-(--lsd-spacing-base)">
               <LSDButton>Normal</LSDButton>
               <LSDButton disabled>Disabled</LSDButton>
-              <LSDButton loading>Loading...</LSDButton>
+              <LSDButton loading>Loading</LSDButton>
             </div>
           </ComponentPreview>
         </div>

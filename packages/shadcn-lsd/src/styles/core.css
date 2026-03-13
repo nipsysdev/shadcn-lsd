@@ -5,6 +5,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-spin: spin 1.3s linear infinite;
 
   --animate-indeterminate-progress: indeterminate-progress 1.5s ease-in-out infinite;
   --animate-indeterminate-progress-slow: indeterminate-progress 3s ease-in-out infinite;
@@ -243,8 +244,4 @@ html {
   to {
     transform: rotate(360deg);
   }
-}
-
-.animate-spin {
-  animation: spin 1s linear infinite;
 }
