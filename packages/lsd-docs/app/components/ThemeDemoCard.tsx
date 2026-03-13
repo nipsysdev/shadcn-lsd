@@ -9,21 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-  Checkbox,
   Input,
-  Menubar,
-  MenubarCheckboxItem,
-  MenubarContent,
-  MenubarGroup,
-  MenubarItem,
-  MenubarLabel,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarSub,
-  MenubarSubContent,
-  MenubarSubTrigger,
-  MenubarTrigger,
-  Progress,
   Select,
   SelectContent,
   SelectItem,
@@ -32,7 +18,7 @@ import {
   Switch,
   Typography,
 } from '@nipsys/shadcn-lsd';
-import { MoonIcon, SunIcon } from '@phosphor-icons/react';
+import { UserIcon } from '@phosphor-icons/react';
 
 interface ThemeDemoCardProps {
   themeMode?: string;
@@ -47,180 +33,169 @@ export function ThemeDemoCard({
     <div data-theme={themeAccent} className={themeMode}>
       <Card>
         <CardHeader>
-          <CardTitle>
-            <div className="flex items-center gap-(--lsd-spacing-small)">
-              {themeMode === 'light' ? (
-                <SunIcon className="h-5 w-5" weight="duotone" />
-              ) : (
-                <MoonIcon className="h-5 w-5" weight="duotone" />
-              )}
-              <span className="capitalize">{themeMode}</span>
+          <div className="flex items-start gap-4">
+            {/* Avatar placeholder */}
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+              <UserIcon className="h-6 w-6" weight="duotone" />
             </div>
-          </CardTitle>
-          <CardDescription>{`The ${themeAccent} theme in ${themeMode} mode`}</CardDescription>
+            <div className="flex-1 space-y-1">
+              <CardTitle>Account Settings</CardTitle>
+              <CardDescription>
+                Manage your profile and preferences
+              </CardDescription>
+            </div>
+            {/* Status badges */}
+            <div className="flex gap-2">
+              <Badge variant="success">Verified</Badge>
+              <Badge variant="info">Premium</Badge>
+            </div>
+          </div>
         </CardHeader>
-        <CardContent className="space-y-3">
-          <Menubar>
-            <MenubarMenu>
-              <MenubarTrigger>File</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem>New</MenubarItem>
-                <MenubarItem>Open</MenubarItem>
-                <MenubarItem>Save</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem variant="destructive">Delete</MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-              <MenubarTrigger>Edit</MenubarTrigger>
-              <MenubarContent>
-                <MenubarItem>Undo</MenubarItem>
-                <MenubarItem>Redo</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem>Cut</MenubarItem>
-                <MenubarItem>Copy</MenubarItem>
-                <MenubarItem>Paste</MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-              <MenubarTrigger>View</MenubarTrigger>
-              <MenubarContent>
-                <MenubarCheckboxItem checked>Show Toolbar</MenubarCheckboxItem>
-                <MenubarCheckboxItem>Show Status Bar</MenubarCheckboxItem>
-                <MenubarSeparator />
-                <MenubarSub>
-                  <MenubarSubTrigger>Zoom</MenubarSubTrigger>
-                  <MenubarSubContent>
-                    <MenubarItem>50%</MenubarItem>
-                    <MenubarItem>100%</MenubarItem>
-                    <MenubarItem>150%</MenubarItem>
-                  </MenubarSubContent>
-                </MenubarSub>
-              </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-              <MenubarTrigger>Profile</MenubarTrigger>
-              <MenubarContent>
-                <MenubarGroup>
-                  <MenubarLabel>Account</MenubarLabel>
-                  <MenubarItem>Settings</MenubarItem>
-                  <MenubarItem>Profile</MenubarItem>
-                </MenubarGroup>
-                <MenubarSeparator />
-                <MenubarItem>Sign out</MenubarItem>
-              </MenubarContent>
-            </MenubarMenu>
-          </Menubar>
 
-          {/* Checkboxes */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <Checkbox id="option1" defaultChecked />
-              <label
-                htmlFor="option1"
-                className="text-sm cursor-pointer select-none"
-              >
-                Enable notifications
-              </label>
-            </div>
-            <div className="flex items-center gap-2">
-              <Checkbox id="option2" />
-              <label
-                htmlFor="option2"
-                className="text-sm cursor-pointer select-none"
-              >
-                Auto-save changes
-              </label>
+        <CardContent className="space-y-6">
+          {/* Profile Information */}
+          <div className="space-y-3">
+            <Typography variant="label1">Profile Information</Typography>
+            <div className="space-y-3">
+              <div className="space-y-1">
+                <label htmlFor="displayName" className="text-sm">
+                  Display Name
+                </label>
+                <Input id="displayName" placeholder="John Doe" />
+              </div>
+              <div className="space-y-1">
+                <label htmlFor="email" className="text-sm">
+                  Email Address
+                </label>
+                <Input id="email" type="email" placeholder="john@example.com" />
+              </div>
             </div>
           </div>
 
-          {/* Switch */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <Switch id="switch1" defaultChecked />
-              <label
-                htmlFor="switch1"
-                className="text-sm cursor-pointer select-none"
-              >
-                Dark mode
-              </label>
+          {/* Preferences */}
+          <div className="space-y-3">
+            <Typography variant="label1">Preferences</Typography>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <label
+                    htmlFor="notifications"
+                    className="text-sm font-medium block"
+                  >
+                    Email Notifications
+                  </label>
+                  <Typography
+                    variant="body3"
+                    color="secondary"
+                    className="block"
+                  >
+                    Receive updates about your account
+                  </Typography>
+                </div>
+                <Switch id="notifications" defaultChecked />
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <label
+                    htmlFor="darkMode"
+                    className="text-sm font-medium block"
+                  >
+                    Dark Mode
+                  </label>
+                  <Typography
+                    variant="body3"
+                    color="secondary"
+                    className="block"
+                  >
+                    Use dark theme across the app
+                  </Typography>
+                </div>
+                <Switch id="darkMode" />
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <label
+                    htmlFor="autoSave"
+                    className="text-sm font-medium block"
+                  >
+                    Auto-save Changes
+                  </label>
+                  <Typography
+                    variant="body3"
+                    color="secondary"
+                    className="block"
+                  >
+                    Automatically save your work
+                  </Typography>
+                </div>
+                <Switch id="autoSave" defaultChecked />
+              </div>
             </div>
           </div>
 
-          {/* Input */}
-          <div className="space-y-2">
-            <Input placeholder="Enter your name..." />
-          </div>
-
-          <div className="space-y-2">
-            <Select defaultValue="option2">
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="option1">Option 1</SelectItem>
-                <SelectItem value="option2">Option 2</SelectItem>
-                <SelectItem value="option3">Option 3</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
-            <Progress indeterminate />
-          </div>
-
-          {/* Badges */}
-          <div className="space-y-2">
-            <div className="flex gap-2 flex-wrap">
-              <Badge>Default</Badge>
-              <Badge variant="outlined">Outlined</Badge>
-              <Badge variant="destructive">Destructive</Badge>
-              <Badge variant="success">Success</Badge>
-              <Badge variant="warning">Warning</Badge>
-              <Badge variant="info">Info</Badge>
+          {/* Regional Settings */}
+          <div className="space-y-3">
+            <Typography variant="label1">Regional Settings</Typography>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="space-y-1">
+                <label htmlFor="language" className="text-sm">
+                  Language
+                </label>
+                <Select defaultValue="en">
+                  <SelectTrigger id="language">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="en">English</SelectItem>
+                    <SelectItem value="es">Español</SelectItem>
+                    <SelectItem value="fr">Français</SelectItem>
+                    <SelectItem value="de">Deutsch</SelectItem>
+                    <SelectItem value="ja">日本語</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-1">
+                <label htmlFor="timezone" className="text-sm">
+                  Timezone
+                </label>
+                <Select defaultValue="utc-5">
+                  <SelectTrigger id="timezone">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="utc-8">Pacific Time (UTC-8)</SelectItem>
+                    <SelectItem value="utc-5">Eastern Time (UTC-5)</SelectItem>
+                    <SelectItem value="utc+0">UTC (UTC+0)</SelectItem>
+                    <SelectItem value="utc+1">
+                      Central European (UTC+1)
+                    </SelectItem>
+                    <SelectItem value="utc+9">Japan (UTC+9)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
           </div>
 
-          {/* Text Colors */}
-          <div className="space-y-2">
-            <div className="flex gap-3 flex-wrap text-sm">
-              <Typography color="primary">Primary</Typography>
-              <Typography color="secondary">Secondary</Typography>
-              <Typography color="destructive">Destructive</Typography>
-              <Typography color="success">Success</Typography>
-              <Typography color="warning">Warning</Typography>
-              <Typography color="info">Info</Typography>
-            </div>
-          </div>
-
-          {/* Button Variants */}
-          <div className="space-y-2">
-            <div className="flex gap-2 flex-wrap">
-              <Button disabled>Disabled</Button>
-              <Button disabled loading>
-                Loading
-              </Button>
-            </div>
-            <div className="flex gap-2 flex-wrap">
-              <Button variant="destructive">Destructive</Button>
-              <Button variant="success">Success</Button>
-            </div>
-            <div className="flex gap-2 flex-wrap">
-              <Button variant="filled-icon" size="icon-sm">
-                +
-              </Button>
-              <Button variant="outlined-icon" size="icon-sm">
-                ✓
-              </Button>
-              <Button variant="ghost-icon" size="icon-sm">
-                ✕
-              </Button>
+          {/* Danger Zone */}
+          <div className="border-t pt-6">
+            <Typography variant="label1" color="destructive">
+              Danger Zone
+            </Typography>
+            <div className="mt-3 flex items-center justify-between gap-4">
+              <div className="space-y-1 flex flex-col">
+                <Typography variant="body1">Delete Account</Typography>
+                <Typography variant="body3" color="secondary">
+                  Permanently delete your account and all data
+                </Typography>
+              </div>
+              <Button variant="destructive">Delete</Button>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="justify-end gap-(--lsd-spacing-base)">
-          <Button variant="outlined">Secondary</Button>
-          <Button>Primary</Button>
+
+        <CardFooter className="justify-end gap-2">
+          <Button variant="outlined">Cancel</Button>
+          <Button>Save Changes</Button>
         </CardFooter>
       </Card>
     </div>
