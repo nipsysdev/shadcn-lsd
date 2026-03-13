@@ -1,14 +1,16 @@
 'use client';
 
 import { Typography } from '@nipsys/shadcn-lsd';
-import { useTableOfContents, TocItem } from './useTableOfContents';
+import { useStore } from '@nanostores/react';
+import { $activeId, scrollToSection } from '../../stores/tableOfContents';
+import { TocItem } from '../../stores/tableOfContents';
 
 interface TableOfContentsProps {
   items: TocItem[];
 }
 
 export function TableOfContents({ items }: TableOfContentsProps) {
-  const { activeId, scrollToSection } = useTableOfContents();
+  const activeId = useStore($activeId);
 
   if (!items || items.length === 0) {
     return null;

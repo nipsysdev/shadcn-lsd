@@ -2,7 +2,8 @@
 
 import { useEffect, ReactNode } from 'react';
 import { Typography } from '@nipsys/shadcn-lsd';
-import { useTableOfContents, TocItem } from './useTableOfContents';
+import { registerSection, unregisterSection } from '../../stores/tableOfContents';
+import { TocItem } from '../../stores/tableOfContents';
 
 interface PageSectionProps {
   id?: string;
@@ -19,7 +20,6 @@ function generateId(title: string): string {
 }
 
 export function PageSection({ id, title, level = 2, children }: PageSectionProps) {
-  const { registerSection, unregisterSection } = useTableOfContents();
   const sectionId = id || generateId(title);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export function PageSection({ id, title, level = 2, children }: PageSectionProps
     return () => {
       unregisterSection(sectionId);
     };
-  }, [sectionId, title, level, registerSection, unregisterSection]);
+  }, [sectionId, title, level]);
 
   const HeadingVariant = level === 2 ? 'h2' : level === 3 ? 'h3' : 'h4';
 

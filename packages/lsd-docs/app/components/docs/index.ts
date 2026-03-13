@@ -4,4 +4,5 @@ export { PageContent } from './PageContent';
 export { PageNavigation } from './PageNavigation';
 export { PageSection } from './PageSection';
 export { TableOfContents } from './TableOfContents';
-export { useTableOfContents, TableOfContentsProvider } from './useTableOfContents';
+export type { TocItem } from '../../stores/tableOfContents';
+export { $sections, $activeId } from '../../stores/tableOfContents';
