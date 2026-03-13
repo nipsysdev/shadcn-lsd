@@ -27,12 +27,8 @@ export default function TypographyPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Font Families
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
-            LSD uses a carefully selected font family stack for optimal
-            readability.
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+            LSD uses a carefully selected font family stack for optimal readability.
           </Typography>
 
           <Card>
@@ -82,33 +78,21 @@ export default function TypographyPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Typography Scale
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
-            The Typography component provides a consistent scale for text
-            elements.
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+            The Typography component provides a consistent scale for text elements.
           </Typography>
 
           <div className="space-y-4">
             <Card>
               <CardHeader>
                 <CardTitle>Display</CardTitle>
-                <CardDescription>
-                  Large display text for hero sections
-                </CardDescription>
+                <CardDescription>Large display text for hero sections</CardDescription>
               </CardHeader>
               <CardContent>
-                <Typography
-                  variant="display1"
-                  className="mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="display1" className="mb-(--lsd-spacing-small)">
                   Display Text
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   variant="display1"
                 </Typography>
               </CardContent>
@@ -123,10 +107,7 @@ export default function TypographyPage() {
                 <Typography variant="h1" className="mb-(--lsd-spacing-small)">
                   Heading 1
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   variant="h1"
                 </Typography>
               </CardContent>
@@ -141,10 +122,7 @@ export default function TypographyPage() {
                 <Typography variant="h2" className="mb-(--lsd-spacing-small)">
                   Heading 2
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   variant="h2"
                 </Typography>
               </CardContent>
@@ -159,10 +137,7 @@ export default function TypographyPage() {
                 <Typography variant="h3" className="mb-(--lsd-spacing-small)">
                   Heading 3
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   variant="h3"
                 </Typography>
               </CardContent>
@@ -177,10 +152,7 @@ export default function TypographyPage() {
                 <Typography variant="h4" className="mb-(--lsd-spacing-small)">
                   Heading 4
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   variant="h4"
                 </Typography>
               </CardContent>
@@ -192,18 +164,11 @@ export default function TypographyPage() {
                 <CardDescription>Standard paragraph text</CardDescription>
               </CardHeader>
               <CardContent>
-                <Typography
-                  variant="body1"
-                  className="mb-(--lsd-spacing-small)"
-                >
-                  Body text is used for most content. It provides excellent
-                  readability and is the default choice for paragraphs and
-                  longer text blocks.
+                <Typography variant="body1" className="mb-(--lsd-spacing-small)">
+                  Body text is used for most content. It provides excellent readability and is the
+                  default choice for paragraphs and longer text blocks.
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   variant="body1"
                 </Typography>
               </CardContent>
@@ -215,17 +180,10 @@ export default function TypographyPage() {
                 <CardDescription>Secondary text and labels</CardDescription>
               </CardHeader>
               <CardContent>
-                <Typography
-                  variant="label1"
-                  className="mb-(--lsd-spacing-small)"
-                >
-                  Label text is used for secondary information, captions, and
-                  labels.
+                <Typography variant="label1" className="mb-(--lsd-spacing-small)">
+                  Label text is used for secondary information, captions, and labels.
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   variant="label1"
                 </Typography>
               </CardContent>
@@ -237,16 +195,10 @@ export default function TypographyPage() {
                 <CardDescription>Code and technical content</CardDescription>
               </CardHeader>
               <CardContent>
-                <Typography
-                  variant="body1"
-                  className="font-mono mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="font-mono mb-(--lsd-spacing-small)">
                   const example = "monospace text";
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   className="font-mono"
                 </Typography>
               </CardContent>
@@ -260,26 +212,17 @@ export default function TypographyPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Font Weights
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Available font weights for text elements.
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-(--lsd-spacing-base)">
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="font-light mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="font-light mb-(--lsd-spacing-small)">
                   Light (300)
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   font-light
                 </Typography>
               </CardContent>
@@ -287,16 +230,10 @@ export default function TypographyPage() {
 
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="font-normal mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="font-normal mb-(--lsd-spacing-small)">
                   Normal (400)
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   font-normal
                 </Typography>
               </CardContent>
@@ -304,16 +241,10 @@ export default function TypographyPage() {
 
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="font-medium mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="font-medium mb-(--lsd-spacing-small)">
                   Medium (500)
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   font-medium
                 </Typography>
               </CardContent>
@@ -321,16 +252,10 @@ export default function TypographyPage() {
 
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="font-semibold mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="font-semibold mb-(--lsd-spacing-small)">
                   Semibold (600)
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   font-semibold
                 </Typography>
               </CardContent>
@@ -338,16 +263,10 @@ export default function TypographyPage() {
 
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="font-bold mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="font-bold mb-(--lsd-spacing-small)">
                   Bold (700)
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   font-bold
                 </Typography>
               </CardContent>
@@ -361,26 +280,17 @@ export default function TypographyPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Text Styles
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Common text styling utilities.
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-(--lsd-spacing-base)">
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="underline mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="underline mb-(--lsd-spacing-small)">
                   Underlined Text
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   underline
                 </Typography>
               </CardContent>
@@ -388,16 +298,10 @@ export default function TypographyPage() {
 
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="line-through mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="line-through mb-(--lsd-spacing-small)">
                   Strikethrough Text
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   line-through
                 </Typography>
               </CardContent>
@@ -405,16 +309,10 @@ export default function TypographyPage() {
 
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="italic mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="italic mb-(--lsd-spacing-small)">
                   Italic Text
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   italic
                 </Typography>
               </CardContent>
@@ -422,16 +320,10 @@ export default function TypographyPage() {
 
             <Card>
               <CardContent className="pt-(--lsd-spacing-large)">
-                <Typography
-                  variant="body1"
-                  className="uppercase mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="uppercase mb-(--lsd-spacing-small)">
                   Uppercase Text
                 </Typography>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   uppercase
                 </Typography>
               </CardContent>
@@ -445,10 +337,7 @@ export default function TypographyPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Using Typography
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Import and use the Typography component in your React application:
           </Typography>
 

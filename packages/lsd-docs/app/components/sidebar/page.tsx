@@ -3,9 +3,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
   Sidebar as LSDSidebar,
   Separator,
   SidebarContent,
@@ -71,9 +68,9 @@ export default function SidebarPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          A sidebar component that provides navigation and additional content
-          alongside the main content area. Sidebars are commonly used for
-          navigation menus, filters, and supplementary information.
+          A sidebar component that provides navigation and additional content alongside the main
+          content area. Sidebars are commonly used for navigation menus, filters, and supplementary
+          information.
         </Typography>
       </div>
 
@@ -83,10 +80,7 @@ export default function SidebarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -158,10 +152,7 @@ export default function SidebarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Basic Sidebar
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Create a sidebar with navigation items using{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             SidebarProvider
@@ -217,7 +208,7 @@ export default function SidebarPage() {
                   <SidebarGroupLabel>Application</SidebarGroupLabel>
                   <SidebarGroupContent>
                     <SidebarMenu>
-                      {items.map((item) => (
+                      {items.map(item => (
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild>
                             <a href={item.url}>
@@ -248,10 +239,7 @@ export default function SidebarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Sidebar with Header and Footer
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             SidebarHeader
@@ -343,7 +331,7 @@ export default function SidebarPage() {
                   <SidebarGroupLabel>Application</SidebarGroupLabel>
                   <SidebarGroupContent>
                     <SidebarMenu>
-                      {items.map((item) => (
+                      {items.map(item => (
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild>
                             <a href={item.url}>
@@ -384,10 +372,7 @@ export default function SidebarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Sidebar with Search
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             SidebarInput
@@ -467,7 +452,7 @@ export default function SidebarPage() {
                   <SidebarGroupLabel>Application</SidebarGroupLabel>
                   <SidebarGroupContent>
                     <SidebarMenu>
-                      {items.map((item) => (
+                      {items.map(item => (
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild>
                             <a href={item.url}>
@@ -498,10 +483,7 @@ export default function SidebarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Sidebar with Submenu
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             SidebarMenuSub
@@ -617,7 +599,7 @@ export default function SidebarPage() {
                   <SidebarGroupLabel>Application</SidebarGroupLabel>
                   <SidebarGroupContent>
                     <SidebarMenu>
-                      {items.map((item) => (
+                      {items.map(item => (
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild>
                             <a href={item.url}>
@@ -692,9 +674,7 @@ export default function SidebarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply to the sidebar
                 </Typography>
@@ -717,14 +697,10 @@ export default function SidebarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                   <br />
                   Merge props with child element
                 </Typography>
@@ -742,9 +718,7 @@ export default function SidebarPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "default"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"default"</code>
                 </Typography>
               </div>
             </div>
@@ -765,9 +739,7 @@ export default function SidebarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Placeholder text for the input
                 </Typography>
@@ -784,14 +756,13 @@ export default function SidebarPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Sidebars follow WAI-ARIA guidelines and are fully accessible. The
-          component uses proper role attributes, keyboard navigation support,
-          and screen reader announcements. The{' '}
+          Sidebars follow WAI-ARIA guidelines and are fully accessible. The component uses proper
+          role attributes, keyboard navigation support, and screen reader announcements. The{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             SidebarTrigger
           </code>{' '}
-          provides a toggle button for mobile and responsive layouts, and all
-          navigation items are properly labeled for screen readers.
+          provides a toggle button for mobile and responsive layouts, and all navigation items are
+          properly labeled for screen readers.
         </Typography>
       </div>
     </div>

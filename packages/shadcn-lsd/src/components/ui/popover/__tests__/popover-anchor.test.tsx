@@ -1,11 +1,6 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Popover,
-  PopoverAnchor,
-  PopoverContent,
-  PopoverTrigger,
-} from '../index';
+import { Popover, PopoverAnchor, PopoverContent, PopoverTrigger } from '../index';
 
 describe('PopoverAnchor', () => {
   it('renders without crashing', () => {
@@ -14,11 +9,9 @@ describe('PopoverAnchor', () => {
         <PopoverAnchor />
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
-    expect(
-      document.querySelector('[data-slot="popover-anchor"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="popover-anchor"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -27,7 +20,7 @@ describe('PopoverAnchor', () => {
         <PopoverAnchor />
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const anchor = document.querySelector('[data-slot="popover-anchor"]');
     expect(anchor).toHaveAttribute('data-slot', 'popover-anchor');
@@ -39,7 +32,7 @@ describe('PopoverAnchor', () => {
         <PopoverAnchor data-testid="test-anchor" id="anchor-1" />
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const anchor = document.querySelector('[data-slot="popover-anchor"]');
     expect(anchor).toHaveAttribute('data-testid', 'test-anchor');

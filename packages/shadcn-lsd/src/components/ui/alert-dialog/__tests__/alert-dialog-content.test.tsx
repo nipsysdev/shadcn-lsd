@@ -9,7 +9,7 @@ describe('AlertDialogContent', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByRole('alertdialog')).toBeInTheDocument();
   });
@@ -20,11 +20,9 @@ describe('AlertDialogContent', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const content = document.querySelector(
-      '[data-slot="alert-dialog-content"]',
-    );
+    const content = document.querySelector('[data-slot="alert-dialog-content"]');
     expect(content).toHaveClass('lsd:bg-lsd-surface');
     expect(content).toHaveClass('lsd:fixed');
     expect(content).toHaveClass('lsd:top-[50%]');
@@ -43,11 +41,9 @@ describe('AlertDialogContent', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const content = document.querySelector(
-      '[data-slot="alert-dialog-content"]',
-    );
+    const content = document.querySelector('[data-slot="alert-dialog-content"]');
     expect(content).toHaveAttribute('data-slot', 'alert-dialog-content');
   });
 
@@ -57,11 +53,9 @@ describe('AlertDialogContent', () => {
         <AlertDialogContent className="custom-content-class">
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const content = document.querySelector(
-      '[data-slot="alert-dialog-content"]',
-    );
+    const content = document.querySelector('[data-slot="alert-dialog-content"]');
     expect(content).toHaveClass('custom-content-class');
   });
 
@@ -71,11 +65,9 @@ describe('AlertDialogContent', () => {
         <AlertDialogContent data-testid="test-content" id="content-1">
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const content = document.querySelector(
-      '[data-slot="alert-dialog-content"]',
-    );
+    const content = document.querySelector('[data-slot="alert-dialog-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
     expect(content).toHaveAttribute('id', 'content-1');
   });
@@ -86,7 +78,7 @@ describe('AlertDialogContent', () => {
         <AlertDialogContent>
           <p>Custom content</p>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByText('Custom content')).toBeInTheDocument();
   });

@@ -12,11 +12,9 @@ describe('DialogFooter', () => {
             <button type="button">Confirm</button>
           </DialogFooter>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
-    expect(
-      document.querySelector('[data-slot="dialog-footer"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="dialog-footer"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -27,7 +25,7 @@ describe('DialogFooter', () => {
             <button type="button">Cancel</button>
           </DialogFooter>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const footer = document.querySelector('[data-slot="dialog-footer"]');
     expect(footer).toHaveClass('lsd:flex');
@@ -43,7 +41,7 @@ describe('DialogFooter', () => {
             <button type="button">Cancel</button>
           </DialogFooter>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const footer = document.querySelector('[data-slot="dialog-footer"]');
     expect(footer).toHaveAttribute('data-slot', 'dialog-footer');
@@ -57,7 +55,7 @@ describe('DialogFooter', () => {
             <button type="button">Cancel</button>
           </DialogFooter>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const footer = document.querySelector('[data-slot="dialog-footer"]');
     expect(footer).toHaveClass('custom-footer-class');

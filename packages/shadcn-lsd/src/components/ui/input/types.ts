@@ -1,7 +1,6 @@
 import type { BorderVariant, SizeVariant } from '@/lib/types';
 
-export interface InputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   variant?: BorderVariant;
   size?: SizeVariant;
   label?: React.ReactNode;

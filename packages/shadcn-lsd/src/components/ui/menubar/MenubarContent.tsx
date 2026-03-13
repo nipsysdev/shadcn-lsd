@@ -5,8 +5,7 @@ import { cn } from '@/lib/utils';
 import { MenubarPortal } from './MenubarPortal';
 import { menubarContentVariants } from './types';
 
-export interface MenubarContentProps
-  extends React.ComponentProps<typeof MenubarPrimitive.Content> {
+export interface MenubarContentProps extends React.ComponentProps<typeof MenubarPrimitive.Content> {
   align?: 'start' | 'center' | 'end';
   alignOffset?: number;
   sideOffset?: number;

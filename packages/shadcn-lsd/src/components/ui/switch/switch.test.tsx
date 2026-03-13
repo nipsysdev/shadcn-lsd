@@ -27,26 +27,19 @@ describe('Switch', () => {
   it('applies checked state classes correctly', () => {
     render(<Switch checked />);
     const switchElement = screen.getByRole('switch');
-    expect(switchElement).toHaveClass(
-      'lsd:data-[state=checked]:bg-lsd-primary',
-    );
+    expect(switchElement).toHaveClass('lsd:data-[state=checked]:bg-lsd-primary');
   });
 
   it('applies unchecked state classes correctly', () => {
     render(<Switch />);
     const switchElement = screen.getByRole('switch');
-    expect(switchElement).toHaveClass(
-      'lsd:data-[state=unchecked]:bg-lsd-surface',
-    );
+    expect(switchElement).toHaveClass('lsd:data-[state=unchecked]:bg-lsd-surface');
   });
 
   it('has a thumb element', () => {
     render(<Switch />);
     const switchElement = screen.getByRole('switch');
-    expect(switchElement.children[0]).toHaveAttribute(
-      'data-slot',
-      'switch-thumb',
-    );
+    expect(switchElement.children[0]).toHaveAttribute('data-slot', 'switch-thumb');
   });
 
   it('applies thumb classes correctly', () => {
@@ -61,9 +54,7 @@ describe('Switch', () => {
   it('applies thumb translate classes for checked state', () => {
     render(<Switch checked />);
     const thumb = screen.getByRole('switch').children[0];
-    expect(thumb).toHaveClass(
-      'lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
-    );
+    expect(thumb).toHaveClass('lsd:data-[state=checked]:translate-x-[calc(100%-2px)]');
   });
 
   it('applies thumb translate classes for unchecked state', () => {
@@ -131,17 +122,13 @@ describe('Switch', () => {
   it('applies thumb translate classes for checked state with small size', () => {
     render(<Switch size="sm" checked />);
     const thumb = screen.getByRole('switch').children[0];
-    expect(thumb).toHaveClass(
-      'lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
-    );
+    expect(thumb).toHaveClass('lsd:data-[state=checked]:translate-x-[calc(100%-2px)]');
   });
 
   it('applies thumb translate classes for checked state with large size', () => {
     render(<Switch size="lg" checked />);
     const thumb = screen.getByRole('switch').children[0];
-    expect(thumb).toHaveClass(
-      'lsd:data-[state=checked]:translate-x-[calc(100%-2px)]',
-    );
+    expect(thumb).toHaveClass('lsd:data-[state=checked]:translate-x-[calc(100%-2px)]');
   });
 
   it('applies data-slot attribute', () => {
@@ -208,9 +195,7 @@ describe('Switch', () => {
       const switchElement = screen.getByRole('switch');
       expect(switchElement).toHaveClass('lsd:h-[var(--lsd-spacing-base)]');
       expect(switchElement).toHaveClass('lsd:w-[var(--lsd-spacing-largest)]');
-      expect(switchElement).toHaveClass(
-        'lsd:data-[state=checked]:bg-lsd-primary',
-      );
+      expect(switchElement).toHaveClass('lsd:data-[state=checked]:bg-lsd-primary');
     });
 
     it('applies large size with disabled state', () => {

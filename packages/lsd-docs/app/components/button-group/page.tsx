@@ -5,9 +5,6 @@ import {
   ButtonGroupText,
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
   ButtonGroup as LSDButtonGroup,
   Separator,
   Typography,
@@ -26,9 +23,9 @@ export default function ButtonGroupPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          A button group component that groups related buttons together with
-          proper visual separation. Button groups help organize related actions
-          and improve the user interface by visually connecting related buttons.
+          A button group component that groups related buttons together with proper visual
+          separation. Button groups help organize related actions and improve the user interface by
+          visually connecting related buttons.
         </Typography>
       </div>
 
@@ -38,10 +35,7 @@ export default function ButtonGroupPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -77,10 +71,7 @@ export default function ButtonGroupPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Basic Button Group
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Group related buttons together with proper visual separation.
         </Typography>
 
@@ -104,16 +95,13 @@ export default function ButtonGroupPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           With Text Label
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             ButtonGroupText
           </code>{' '}
-          to add a text label between buttons, useful for pagination or
-          displaying additional information.
+          to add a text label between buttons, useful for pagination or displaying additional
+          information.
         </Typography>
 
         <ComponentPreview
@@ -138,10 +126,7 @@ export default function ButtonGroupPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Vertical Orientation
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             orientation
@@ -171,12 +156,9 @@ export default function ButtonGroupPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Different Button Variants
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
-          Button groups work with all button variants, allowing you to create
-          different visual styles.
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+          Button groups work with all button variants, allowing you to create different visual
+          styles.
         </Typography>
 
         <ComponentPreview
@@ -238,9 +220,7 @@ export default function ButtonGroupPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "horizontal"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"horizontal"</code>
                 </Typography>
               </div>
               <div>
@@ -251,9 +231,7 @@ export default function ButtonGroupPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply to the button group
                 </Typography>
@@ -276,9 +254,7 @@ export default function ButtonGroupPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    ReactNode
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">ReactNode</code>
                   <br />
                   The text content to display between buttons
                 </Typography>
@@ -291,9 +267,7 @@ export default function ButtonGroupPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply to the text element
                 </Typography>
@@ -310,10 +284,9 @@ export default function ButtonGroupPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Button groups follow WAI-ARIA guidelines and are fully accessible. The
-          component uses proper role attributes and keyboard navigation support.
-          When using button groups, ensure that the buttons have clear,
-          descriptive labels that indicate their purpose.
+          Button groups follow WAI-ARIA guidelines and are fully accessible. The component uses
+          proper role attributes and keyboard navigation support. When using button groups, ensure
+          that the buttons have clear, descriptive labels that indicate their purpose.
         </Typography>
       </div>
     </div>

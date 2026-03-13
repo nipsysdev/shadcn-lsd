@@ -5,16 +5,12 @@ import { Skeleton } from './index';
 describe('Skeleton', () => {
   it('renders without crashing', () => {
     render(<Skeleton />);
-    expect(
-      document.querySelector('[data-slot="skeleton"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="skeleton"]')).toBeInTheDocument();
   });
 
   it('renders as a div element', () => {
     render(<Skeleton />);
-    expect(document.querySelector('[data-slot="skeleton"]')?.tagName).toBe(
-      'DIV',
-    );
+    expect(document.querySelector('[data-slot="skeleton"]')?.tagName).toBe('DIV');
   });
 
   it('applies base classes correctly', () => {
@@ -41,7 +37,7 @@ describe('Skeleton', () => {
     render(<Skeleton />);
     expect(document.querySelector('[data-slot="skeleton"]')).toHaveAttribute(
       'data-slot',
-      'skeleton',
+      'skeleton'
     );
   });
 

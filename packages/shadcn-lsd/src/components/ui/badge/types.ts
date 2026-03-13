@@ -17,8 +17,7 @@ export const badgeVariants = cva(
       variant: {
         filled: 'lsd:bg-lsd-primary lsd:text-lsd-surface',
         outlined: 'lsd:bg-transparent lsd:text-lsd-text-primary',
-        destructive:
-          'lsd:bg-lsd-destructive lsd:text-white lsd:border-lsd-destructive',
+        destructive: 'lsd:bg-lsd-destructive lsd:text-white lsd:border-lsd-destructive',
         success: 'lsd:bg-lsd-success lsd:text-white lsd:border-lsd-success',
         warning: 'lsd:bg-lsd-warning lsd:text-white lsd:border-lsd-warning',
         info: 'lsd:bg-lsd-info lsd:text-white lsd:border-lsd-info',
@@ -34,7 +33,7 @@ export const badgeVariants = cva(
       variant: 'filled',
       size: 'md',
     },
-  },
+  }
 );
 
 export type BadgeVariants = VariantProps<typeof badgeVariants> & {

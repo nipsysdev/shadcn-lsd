@@ -11,11 +11,9 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-2">Tab 2</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
-    expect(
-      document.querySelector('[data-slot="tabs-list"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="tabs-list"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -25,7 +23,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveAttribute('data-slot', 'tabs-list');
@@ -38,7 +36,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('lsd:bg-lsd-surface');
@@ -54,7 +52,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('lsd:h-12');
@@ -67,7 +65,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('lsd:h-8');
@@ -80,7 +78,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('lsd:h-10');
@@ -93,7 +91,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('lsd:w-fit');
@@ -106,7 +104,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('lsd:w-full');
@@ -119,7 +117,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveClass('custom-list-class');
@@ -132,7 +130,7 @@ describe('TabsList', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const list = document.querySelector('[data-slot="tabs-list"]');
     expect(list).toHaveAttribute('data-testid', 'test-list');

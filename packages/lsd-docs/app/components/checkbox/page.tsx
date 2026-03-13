@@ -3,9 +3,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
   Checkbox as LSDCheckbox,
   Separator,
   Typography,
@@ -24,8 +21,7 @@ export default function CheckboxPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          A checkbox component that allows users to select one or more options
-          from a set.
+          A checkbox component that allows users to select one or more options from a set.
         </Typography>
       </div>
 
@@ -35,10 +31,7 @@ export default function CheckboxPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -74,10 +67,7 @@ export default function CheckboxPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Default Checkbox
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           A basic checkbox with a label. Always provide an{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             id
@@ -98,9 +88,7 @@ export default function CheckboxPage() {
         >
           <div className="flex items-center space-x-(--lsd-spacing-small)">
             <LSDCheckbox id="default-checkbox" />
-            <label htmlFor="default-checkbox">
-              Accept terms and conditions
-            </label>
+            <label htmlFor="default-checkbox">Accept terms and conditions</label>
           </div>
         </ComponentPreview>
       </div>
@@ -111,10 +99,7 @@ export default function CheckboxPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Controlled Checkbox
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             checked
@@ -158,10 +143,7 @@ export default function CheckboxPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Checked by Default
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             defaultChecked
@@ -189,10 +171,7 @@ export default function CheckboxPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Disabled State
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             disabled
@@ -232,12 +211,8 @@ export default function CheckboxPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Multiple Checkboxes
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
-          Group multiple checkboxes together to allow users to select multiple
-          options.
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+          Group multiple checkboxes together to allow users to select multiple options.
         </Typography>
 
         <ComponentPreview
@@ -290,10 +265,7 @@ export default function CheckboxPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Checkbox Group
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Organize related checkboxes in a group with a descriptive label.
         </Typography>
 
@@ -357,12 +329,9 @@ export default function CheckboxPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
-                  Required for accessibility. Associates the checkbox with its
-                  label.
+                  Required for accessibility. Associates the checkbox with its label.
                 </Typography>
               </div>
               <div>
@@ -373,16 +342,12 @@ export default function CheckboxPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Controlled checked state.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -393,16 +358,12 @@ export default function CheckboxPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Initial checked state (uncontrolled).
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -420,9 +381,7 @@ export default function CheckboxPage() {
                   Callback when the checked state changes.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -433,16 +392,12 @@ export default function CheckboxPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Disables the checkbox.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -453,16 +408,12 @@ export default function CheckboxPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Marks the checkbox as required.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -473,16 +424,12 @@ export default function CheckboxPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Name of the checkbox (for form submission).
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -493,16 +440,11 @@ export default function CheckboxPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Value of the checkbox (for form submission).
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "on"
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"on"</code>
                 </Typography>
               </div>
             </div>
@@ -517,8 +459,7 @@ export default function CheckboxPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Checkboxes follow WAI-ARIA guidelines and are fully accessible. Always
-          provide an{' '}
+          Checkboxes follow WAI-ARIA guidelines and are fully accessible. Always provide an{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             id
           </code>{' '}
@@ -526,8 +467,7 @@ export default function CheckboxPage() {
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             htmlFor
           </code>{' '}
-          attribute. This ensures screen readers can properly announce the
-          checkbox and its purpose.
+          attribute. This ensures screen readers can properly announce the checkbox and its purpose.
         </Typography>
       </div>
     </div>

@@ -21,7 +21,7 @@ describe('Sheet', () => {
             <SheetDescription>Description</SheetDescription>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
@@ -36,7 +36,7 @@ describe('Sheet', () => {
             <SheetDescription>Description</SheetDescription>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const sheet = document.querySelector('[data-slot="sheet-content"]');
     expect(sheet).toHaveAttribute('data-testid', 'test-sheet');
@@ -57,18 +57,14 @@ describe('Sheet', () => {
             <button type="button">Confirm</button>
           </SheetFooter>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     // Verify trigger is present (may be hidden when open)
-    expect(
-      document.querySelector('[data-slot="sheet-trigger"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="sheet-trigger"]')).toBeInTheDocument();
     // Verify dialog is present
     expect(screen.getByRole('dialog')).toBeInTheDocument();
     // Verify title is present
-    expect(
-      screen.getByRole('heading', { name: 'Sheet Title' }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Sheet Title' })).toBeInTheDocument();
     // Verify description is present
     expect(screen.getByText('Sheet Description')).toBeInTheDocument();
     // Verify content is present

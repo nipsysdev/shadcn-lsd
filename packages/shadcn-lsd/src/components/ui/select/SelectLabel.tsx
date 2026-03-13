@@ -12,7 +12,7 @@ export function SelectLabel({
       data-slot="select-label"
       className={cn(
         'lsd:text-lsd-text-secondary lsd:px-(--lsd-spacing-smaller) lsd:py-(--lsd-spacing-smaller) lsd:text-xs',
-        className,
+        className
       )}
       {...props}
     />

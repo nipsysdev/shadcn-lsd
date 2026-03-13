@@ -1,11 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  CommandDialog,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from '../index';
+import { CommandDialog, CommandInput, CommandItem, CommandList } from '../index';
 
 describe('CommandDialog', () => {
   it('renders without crashing', () => {
@@ -15,7 +10,7 @@ describe('CommandDialog', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </CommandDialog>,
+      </CommandDialog>
     );
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
@@ -27,12 +22,10 @@ describe('CommandDialog', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </CommandDialog>,
+      </CommandDialog>
     );
     expect(screen.getByText('Command Palette')).toBeInTheDocument();
-    expect(
-      screen.getByText('Search for a command to run...'),
-    ).toBeInTheDocument();
+    expect(screen.getByText('Search for a command to run...')).toBeInTheDocument();
   });
 
   it('renders with custom title and description', () => {
@@ -42,7 +35,7 @@ describe('CommandDialog', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </CommandDialog>,
+      </CommandDialog>
     );
     expect(screen.getByText('Custom Title')).toBeInTheDocument();
     expect(screen.getByText('Custom Description')).toBeInTheDocument();
@@ -55,7 +48,7 @@ describe('CommandDialog', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </CommandDialog>,
+      </CommandDialog>
     );
     const dialogContent = screen.getByRole('dialog');
     expect(dialogContent).toHaveClass('custom-dialog-class');
@@ -68,7 +61,7 @@ describe('CommandDialog', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </CommandDialog>,
+      </CommandDialog>
     );
     const dialogContent = screen.getByRole('dialog');
     expect(dialogContent).toBeInTheDocument();

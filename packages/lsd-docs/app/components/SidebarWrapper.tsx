@@ -25,10 +25,7 @@ interface SidebarWrapperProps {
   children: React.ReactNode;
 }
 
-export default function SidebarWrapper({
-  currentPath,
-  children,
-}: SidebarWrapperProps) {
+export default function SidebarWrapper({ currentPath, children }: SidebarWrapperProps) {
   return (
     <SidebarProvider>
       <Sidebar>
@@ -42,9 +39,7 @@ export default function SidebarWrapper({
                   </div>
                   <div className="flex flex-col gap-(--lsd-spacing-smaller) leading-none">
                     <span className="font-semibold">shadcn-lsd</span>
-                    <span className="text-xs text-muted-foreground">
-                      v0.2.5
-                    </span>
+                    <span className="text-xs text-muted-foreground">v0.2.5</span>
                   </div>
                 </a>
               </SidebarMenuButton>
@@ -54,12 +49,12 @@ export default function SidebarWrapper({
 
         <SidebarContent>
           <ScrollArea className="h-full">
-            {navItems.map((group) => (
+            {navItems.map(group => (
               <SidebarGroup key={group.title}>
                 <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {group.items.map((item) => (
+                    {group.items.map(item => (
                       <SidebarMenuItem key={item.title}>
                         {item.subItems ? (
                           <>
@@ -68,7 +63,7 @@ export default function SidebarWrapper({
                               <span>{item.title}</span>
                             </SidebarMenuButton>
                             <SidebarMenuSub>
-                              {item.subItems.map((subItem) => (
+                              {item.subItems.map(subItem => (
                                 <SidebarMenuSubItem key={subItem.url}>
                                   <SidebarMenuSubButton
                                     asChild
@@ -88,9 +83,7 @@ export default function SidebarWrapper({
                           <SidebarMenuButton
                             asChild
                             className={
-                              currentPath === item.url
-                                ? 'bg-accent text-accent-foreground'
-                                : ''
+                              currentPath === item.url ? 'bg-accent text-accent-foreground' : ''
                             }
                           >
                             <a href={item.url}>

@@ -1,22 +1,8 @@
 'use client';
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Badge as LSDBadge,
-  Separator,
-  Typography,
-} from '@nipsys/shadcn-lsd';
+import { Card, CardContent, Badge as LSDBadge, Separator, Typography } from '@nipsys/shadcn-lsd';
 import { CheckIcon, InfoIcon, WarningIcon } from '@phosphor-icons/react';
-import {
-  DocsLayout,
-  PageContent,
-  PageHeader,
-  PageNavigation,
-} from '../../components/docs';
+import { DocsLayout, PageContent, PageHeader, PageNavigation } from '../../components/docs';
 import { CodeExample } from '../../components/docs/CodeExample';
 import { ComponentPreview } from '../../components/docs/ComponentPreview';
 
@@ -34,10 +20,7 @@ export default function BadgePage() {
             {' '}
             Installation{' '}
           </Typography>
-          <CodeExample
-            title="Install the component"
-            code={`pnpm add @nipsys/shadcn-lsd`}
-          />
+          <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
         </div>
 
         <Separator className="mb-(--lsd-spacing-larger)" />
@@ -60,10 +43,7 @@ export default function BadgePage() {
             {' '}
             Usage{' '}
           </Typography>
-          <CodeExample
-            title="Basic badge"
-            code={`<Badge>Default Badge</Badge>`}
-          />
+          <CodeExample title="Basic badge" code={'<Badge>Default Badge</Badge>'} />
         </div>
 
         <Separator className="mb-(--lsd-spacing-larger)" />
@@ -73,10 +53,7 @@ export default function BadgePage() {
             {' '}
             Variants{' '}
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Use the{' '}
             <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
               variant
@@ -104,10 +81,7 @@ export default function BadgePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Color Variants
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Use color variants to convey different meanings and states.
           </Typography>
 
@@ -136,10 +110,7 @@ export default function BadgePage() {
             {' '}
             Sizes{' '}
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Use the{' '}
             <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
               size
@@ -170,10 +141,7 @@ export default function BadgePage() {
             {' '}
             Icon Badges{' '}
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Add icons to badges using the{' '}
             <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
               icon
@@ -241,10 +209,7 @@ export default function BadgePage() {
             {' '}
             Dot Badges{' '}
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Use the{' '}
             <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
               dot
@@ -274,10 +239,7 @@ export default function BadgePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Dot Badges with Colors
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Combine dot badges with color classes for status indicators.
           </Typography>
 
@@ -322,14 +284,11 @@ export default function BadgePage() {
                     className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                   >
                     <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                      "filled" | "outlined" | "destructive" | "success" |
-                      "warning" | "info" | "dot"
+                      "filled" | "outlined" | "destructive" | "success" | "warning" | "info" | "dot"
                     </code>
                     <br />
                     Default:{' '}
-                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                      "filled"
-                    </code>
+                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"filled"</code>
                   </Typography>
                 </div>
                 <div>
@@ -345,9 +304,7 @@ export default function BadgePage() {
                     </code>
                     <br />
                     Default:{' '}
-                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                      "md"
-                    </code>
+                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"md"</code>
                   </Typography>
                 </div>
                 <div>
@@ -378,9 +335,7 @@ export default function BadgePage() {
                     </code>
                     <br />
                     Default:{' '}
-                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                      "left"
-                    </code>
+                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"left"</code>
                   </Typography>
                 </div>
                 <div>
@@ -421,9 +376,7 @@ export default function BadgePage() {
                     variant="body1"
                     className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                   >
-                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                      string
-                    </code>
+                    <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                     <br />
                     Additional CSS classes to apply
                   </Typography>
@@ -441,9 +394,9 @@ export default function BadgePage() {
             Accessibility{' '}
           </Typography>
           <Typography variant="body1" className="text-muted-foreground">
-            Badges follow WAI-ARIA guidelines and are fully accessible. When
-            using badges to convey status, ensure the text content clearly
-            describes the meaning. For icon-only badges, provide an{' '}
+            Badges follow WAI-ARIA guidelines and are fully accessible. When using badges to convey
+            status, ensure the text content clearly describes the meaning. For icon-only badges,
+            provide an{' '}
             <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
               aria-label
             </code>{' '}

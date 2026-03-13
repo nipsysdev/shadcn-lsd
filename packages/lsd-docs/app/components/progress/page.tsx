@@ -3,10 +3,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Button as LSDButton,
   Progress as LSDProgress,
   Separator,
   Typography,
@@ -25,9 +21,8 @@ export default function ProgressPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          A progress component that displays the completion status of a task.
-          Progress bars provide visual feedback about the progress of an
-          operation.
+          A progress component that displays the completion status of a task. Progress bars provide
+          visual feedback about the progress of an operation.
         </Typography>
       </div>
 
@@ -37,10 +32,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -61,7 +53,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Usage
         </Typography>
-        <CodeExample title="Basic progress" code={`<Progress value={50} />`} />
+        <CodeExample title="Basic progress" code={'<Progress value={50} />'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -70,10 +62,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Basic Progress
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             value
@@ -105,10 +94,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Color Variants
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             variant
@@ -160,10 +146,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Sizes
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             size
@@ -208,10 +191,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Label Display
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             showLabel
@@ -256,10 +236,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Label Position
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             labelPosition
@@ -297,10 +274,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Indeterminate Progress
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             indeterminate
@@ -345,10 +319,7 @@ export default function ProgressPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Combined Features
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Combine multiple props for advanced use cases.
         </Typography>
 
@@ -384,12 +355,7 @@ export default function ProgressPage() {
               <Typography variant="body2" className="text-muted-foreground">
                 Warning with label on bottom:
               </Typography>
-              <LSDProgress
-                value={40}
-                variant="warning"
-                showLabel
-                labelPosition="bottom"
-              />
+              <LSDProgress value={40} variant="warning" showLabel labelPosition="bottom" />
             </div>
             <div className="space-y-2">
               <Typography variant="body2" className="text-muted-foreground">
@@ -421,9 +387,7 @@ export default function ProgressPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    number
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">number</code>
                   <br />
                   The progress value (0-100). Required for determinate progress.
                 </Typography>
@@ -436,14 +400,10 @@ export default function ProgressPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                   <br />
                   Whether the progress is indeterminate (loading state).
                 </Typography>
@@ -461,9 +421,7 @@ export default function ProgressPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "default"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"default"</code>
                   <br />
                   The color variant of the progress bar.
                 </Typography>
@@ -480,10 +438,7 @@ export default function ProgressPage() {
                     "sm" | "md" | "lg"
                   </code>
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "md"
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"md"</code>
                   <br />
                   The size of the progress bar.
                 </Typography>
@@ -496,14 +451,10 @@ export default function ProgressPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                   <br />
                   Whether to display the progress percentage label.
                 </Typography>
@@ -521,15 +472,11 @@ export default function ProgressPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "top"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"top"</code>
                   <br />
                   The position of the label when{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    showLabel
-                  </code>{' '}
-                  is true.
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">showLabel</code> is
+                  true.
                 </Typography>
               </div>
               <div>
@@ -545,9 +492,7 @@ export default function ProgressPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "normal"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"normal"</code>
                   <br />
                   The animation speed for indeterminate progress.
                 </Typography>
@@ -560,14 +505,10 @@ export default function ProgressPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                   <br />
                   Whether to pause the indeterminate animation.
                 </Typography>
@@ -580,9 +521,7 @@ export default function ProgressPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply.
                 </Typography>
@@ -599,8 +538,8 @@ export default function ProgressPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Progress components follow WAI-ARIA guidelines and are fully
-          accessible. The component automatically includes the appropriate{' '}
+          Progress components follow WAI-ARIA guidelines and are fully accessible. The component
+          automatically includes the appropriate{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             role="progressbar"
           </code>{' '}
@@ -608,8 +547,8 @@ export default function ProgressPage() {
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             aria-valuenow
           </code>{' '}
-          attributes. When using indeterminate progress, the component properly
-          communicates the loading state to assistive technologies.
+          attributes. When using indeterminate progress, the component properly communicates the
+          loading state to assistive technologies.
         </Typography>
       </div>
     </div>

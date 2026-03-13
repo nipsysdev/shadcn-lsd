@@ -9,12 +9,7 @@ export interface AccordionTriggerProps
   extends React.ComponentProps<typeof AccordionPrimitive.Trigger>,
     AccordionVariants {}
 
-function AccordionTrigger({
-  className,
-  children,
-  size = 'md',
-  ...props
-}: AccordionTriggerProps) {
+function AccordionTrigger({ className, children, size = 'md', ...props }: AccordionTriggerProps) {
   const getIconSize = () => {
     switch (size) {
       case 'sm':
@@ -37,7 +32,7 @@ function AccordionTrigger({
         <ChevronDownIcon
           className={cn(
             'lsd:text-lsd-icon-primary lsd:pointer-events-none lsd:shrink-0 lsd:translate-y-0.5 lsd:transition-transform lsd:duration-200',
-            getIconSize(),
+            getIconSize()
           )}
         />
       </AccordionPrimitive.Trigger>

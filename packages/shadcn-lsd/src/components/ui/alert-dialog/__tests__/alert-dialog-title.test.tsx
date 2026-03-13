@@ -1,11 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from '../index';
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle } from '../index';
 
 describe('AlertDialogTitle', () => {
   it('renders without crashing', () => {
@@ -16,7 +11,7 @@ describe('AlertDialogTitle', () => {
             <AlertDialogTitle>Title</AlertDialogTitle>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByRole('heading', { name: 'Title' })).toBeInTheDocument();
   });
@@ -29,7 +24,7 @@ describe('AlertDialogTitle', () => {
             <AlertDialogTitle>Title</AlertDialogTitle>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByRole('heading', { name: 'Title' })).toBeInTheDocument();
   });
@@ -42,7 +37,7 @@ describe('AlertDialogTitle', () => {
             <AlertDialogTitle>Title</AlertDialogTitle>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveClass('lsd:text-lg');
@@ -57,7 +52,7 @@ describe('AlertDialogTitle', () => {
             <AlertDialogTitle>Title</AlertDialogTitle>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveAttribute('data-slot', 'alert-dialog-title');
@@ -68,12 +63,10 @@ describe('AlertDialogTitle', () => {
       <AlertDialog open>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle className="custom-title-class">
-              Title
-            </AlertDialogTitle>
+            <AlertDialogTitle className="custom-title-class">Title</AlertDialogTitle>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveClass('custom-title-class');
@@ -89,7 +82,7 @@ describe('AlertDialogTitle', () => {
             </AlertDialogTitle>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveAttribute('data-testid', 'test-title');

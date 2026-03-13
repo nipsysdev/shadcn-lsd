@@ -13,7 +13,7 @@ const ButtonGroupSeparator = React.forwardRef<
       orientation={orientation}
       className={cn(
         'lsd:bg-border lsd:relative lsd:m-0! lsd:self-stretch lsd:data-[orientation=vertical]:h-auto',
-        className,
+        className
       )}
       {...props}
     />

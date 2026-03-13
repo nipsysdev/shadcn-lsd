@@ -5,18 +5,12 @@ import { SidebarContent } from '../index';
 describe('SidebarContent', () => {
   it('renders without crashing', () => {
     const { container } = render(<SidebarContent>Content</SidebarContent>);
-    expect(
-      container.querySelector('[data-slot="sidebar-content"]'),
-    ).toBeInTheDocument();
+    expect(container.querySelector('[data-slot="sidebar-content"]')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarContent className="custom-class">Content</SidebarContent>,
-    );
-    expect(
-      container.querySelector('[data-slot="sidebar-content"]'),
-    ).toHaveClass('custom-class');
+    const { container } = render(<SidebarContent className="custom-class">Content</SidebarContent>);
+    expect(container.querySelector('[data-slot="sidebar-content"]')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {

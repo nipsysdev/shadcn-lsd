@@ -2,7 +2,7 @@ import type { VariantProps } from 'class-variance-authority';
 import type { typographyVariants } from './types';
 
 export function getDefaultComponent(
-  variant?: VariantProps<typeof typographyVariants>['variant'],
+  variant?: VariantProps<typeof typographyVariants>['variant']
 ): React.ElementType {
   switch (variant) {
     // Display variants don't have default components

@@ -7,18 +7,16 @@ describe('AccordionItem', () => {
     render(
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1" />
-      </Accordion>,
+      </Accordion>
     );
-    expect(
-      document.querySelector('[data-slot="accordion-item"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="accordion-item"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
     render(
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1" />
-      </Accordion>,
+      </Accordion>
     );
     const item = document.querySelector('[data-slot="accordion-item"]');
     expect(item).toHaveClass('lsd:border-b');
@@ -29,7 +27,7 @@ describe('AccordionItem', () => {
     render(
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1" />
-      </Accordion>,
+      </Accordion>
     );
     const item = document.querySelector('[data-slot="accordion-item"]');
     expect(item).toHaveAttribute('data-slot', 'accordion-item');
@@ -39,7 +37,7 @@ describe('AccordionItem', () => {
     render(
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1" className="custom-item-class" />
-      </Accordion>,
+      </Accordion>
     );
     const item = document.querySelector('[data-slot="accordion-item"]');
     expect(item).toHaveClass('custom-item-class');
@@ -49,7 +47,7 @@ describe('AccordionItem', () => {
     render(
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1" data-testid="test-item" id="item-1" />
-      </Accordion>,
+      </Accordion>
     );
     const item = document.querySelector('[data-slot="accordion-item"]');
     expect(item).toHaveAttribute('data-testid', 'test-item');

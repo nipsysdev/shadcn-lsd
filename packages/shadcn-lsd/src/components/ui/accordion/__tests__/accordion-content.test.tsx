@@ -9,7 +9,7 @@ describe('AccordionContent', () => {
         <AccordionItem value="item-1">
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     expect(screen.getByText('Content 1')).toBeInTheDocument();
   });
@@ -20,7 +20,7 @@ describe('AccordionContent', () => {
         <AccordionItem value="item-1">
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const content = document.querySelector('[data-slot="accordion-content"]');
     expect(content).toHaveClass('lsd:overflow-hidden');
@@ -33,7 +33,7 @@ describe('AccordionContent', () => {
         <AccordionItem value="item-1">
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const content = document.querySelector('[data-slot="accordion-content"]');
     expect(content).toHaveClass('lsd:data-[state=closed]:animate-accordion-up');
@@ -46,7 +46,7 @@ describe('AccordionContent', () => {
         <AccordionItem value="item-1">
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const content = document.querySelector('[data-slot="accordion-content"]');
     expect(content).toHaveAttribute('data-slot', 'accordion-content');
@@ -56,16 +56,12 @@ describe('AccordionContent', () => {
     render(
       <Accordion type="single" collapsible defaultValue="item-1">
         <AccordionItem value="item-1">
-          <AccordionContent className="custom-content-class">
-            Content 1
-          </AccordionContent>
+          <AccordionContent className="custom-content-class">Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     // className is applied to the inner div, not the Radix content element
-    const innerDiv = document.querySelector(
-      '[data-slot="accordion-content"] > div',
-    );
+    const innerDiv = document.querySelector('[data-slot="accordion-content"] > div');
     expect(innerDiv).toHaveClass('custom-content-class');
   });
 
@@ -77,7 +73,7 @@ describe('AccordionContent', () => {
             Content 1
           </AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const content = document.querySelector('[data-slot="accordion-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
@@ -92,7 +88,7 @@ describe('AccordionContent', () => {
             <p>Nested content</p>
           </AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     expect(screen.getByText('Nested content')).toBeInTheDocument();
   });
@@ -103,11 +99,9 @@ describe('AccordionContent', () => {
         <AccordionItem value="item-1">
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
-    const innerDiv = document.querySelector(
-      '[data-slot="accordion-content"] > div',
-    );
+    const innerDiv = document.querySelector('[data-slot="accordion-content"] > div');
     expect(innerDiv).toHaveClass('lsd:pt-0');
     expect(innerDiv).toHaveClass('lsd:pb-[var(--lsd-spacing-base)]');
   });

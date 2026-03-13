@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Command,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandShortcut,
-} from '../index';
+import { Command, CommandInput, CommandItem, CommandList, CommandShortcut } from '../index';
 
 describe('CommandShortcut', () => {
   it('renders without crashing', () => {
@@ -18,11 +12,9 @@ describe('CommandShortcut', () => {
             Item 1<CommandShortcut>⌘K</CommandShortcut>
           </CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    expect(
-      document.querySelector('[data-slot="command-shortcut"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-shortcut"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -34,7 +26,7 @@ describe('CommandShortcut', () => {
             Item 1<CommandShortcut>⌘K</CommandShortcut>
           </CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const shortcut = document.querySelector('[data-slot="command-shortcut"]');
     expect(shortcut).toHaveAttribute('data-slot', 'command-shortcut');
@@ -49,7 +41,7 @@ describe('CommandShortcut', () => {
             Item 1<CommandShortcut>⌘K</CommandShortcut>
           </CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const shortcut = document.querySelector('[data-slot="command-shortcut"]');
     expect(shortcut).toHaveClass('lsd:text-lsd-text-primary');
@@ -64,13 +56,10 @@ describe('CommandShortcut', () => {
         <CommandInput placeholder="Search..." />
         <CommandList>
           <CommandItem>
-            Item 1
-            <CommandShortcut className="custom-shortcut-class">
-              ⌘K
-            </CommandShortcut>
+            Item 1<CommandShortcut className="custom-shortcut-class">⌘K</CommandShortcut>
           </CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const shortcut = document.querySelector('[data-slot="command-shortcut"]');
     expect(shortcut).toHaveClass('custom-shortcut-class');
@@ -88,7 +77,7 @@ describe('CommandShortcut', () => {
             </CommandShortcut>
           </CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const shortcut = document.querySelector('[data-slot="command-shortcut"]');
     expect(shortcut).toHaveAttribute('data-testid', 'test-shortcut');
@@ -104,7 +93,7 @@ describe('CommandShortcut', () => {
             Item 1<CommandShortcut>⌘K</CommandShortcut>
           </CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     expect(screen.getByText('⌘K')).toBeInTheDocument();
   });

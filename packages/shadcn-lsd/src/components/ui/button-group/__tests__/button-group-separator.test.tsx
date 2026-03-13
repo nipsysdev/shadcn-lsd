@@ -10,15 +10,11 @@ const queryByDataSlot = (container: HTMLElement, slot: string) => {
 describe('ButtonGroupSeparator', () => {
   it('renders without crashing', () => {
     const { container } = render(<ButtonGroupSeparator />);
-    expect(
-      queryByDataSlot(container, 'button-group-separator'),
-    ).toBeInTheDocument();
+    expect(queryByDataSlot(container, 'button-group-separator')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <ButtonGroupSeparator className="custom-class" />,
-    );
+    const { container } = render(<ButtonGroupSeparator className="custom-class" />);
     const separator = queryByDataSlot(container, 'button-group-separator');
     expect(separator).toHaveClass('custom-class');
   });
@@ -40,21 +36,14 @@ describe('ButtonGroupSeparator', () => {
   });
 
   it('applies horizontal orientation', () => {
-    const { container } = render(
-      <ButtonGroupSeparator orientation="horizontal" />,
-    );
+    const { container } = render(<ButtonGroupSeparator orientation="horizontal" />);
     const separator = queryByDataSlot(container, 'button-group-separator');
     expect(separator).toHaveAttribute('data-orientation', 'horizontal');
   });
 
   it('passes through additional props', () => {
-    render(
-      <ButtonGroupSeparator data-testid="test-separator" data-custom="value" />,
-    );
-    expect(screen.getByTestId('test-separator')).toHaveAttribute(
-      'data-custom',
-      'value',
-    );
+    render(<ButtonGroupSeparator data-testid="test-separator" data-custom="value" />);
+    expect(screen.getByTestId('test-separator')).toHaveAttribute('data-custom', 'value');
   });
 
   it('forwards ref', () => {

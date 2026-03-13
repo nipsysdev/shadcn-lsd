@@ -73,10 +73,7 @@ describe('Checkbox', () => {
 
   it('applies data-slot attribute', () => {
     render(<Checkbox />);
-    expect(screen.getByRole('checkbox')).toHaveAttribute(
-      'data-slot',
-      'checkbox',
-    );
+    expect(screen.getByRole('checkbox')).toHaveAttribute('data-slot', 'checkbox');
   });
 
   it('applies focus-visible classes', () => {

@@ -14,7 +14,7 @@ export const toggleVariants = cva(
     defaultVariants: {
       size: 'md',
     },
-  },
+  }
 );
 
 export type ToggleVariants = VariantProps<typeof toggleVariants> & {

@@ -38,9 +38,7 @@ export function SidebarContentComponent({ currentPath }: SidebarContentProps) {
                   </div>
                   <div className="flex flex-col gap-(--lsd-spacing-smaller) leading-none">
                     <span className="font-semibold">shadcn-lsd</span>
-                    <span className="text-xs text-muted-foreground">
-                      v{siteConfig.version}
-                    </span>
+                    <span className="text-xs text-muted-foreground">v{siteConfig.version}</span>
                   </div>
                 </a>
               </SidebarMenuButton>
@@ -49,12 +47,12 @@ export function SidebarContentComponent({ currentPath }: SidebarContentProps) {
         </SidebarHeader>
 
         <SidebarContent>
-          {navItems.map((group) => (
+          {navItems.map(group => (
             <SidebarGroup key={group.title}>
               <SidebarGroupLabel>{group.title}</SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
-                  {group.items.map((item) => (
+                  {group.items.map(item => (
                     <SidebarMenuItem key={item.title}>
                       {item.subItems ? (
                         <>
@@ -63,7 +61,7 @@ export function SidebarContentComponent({ currentPath }: SidebarContentProps) {
                             <span>{item.title}</span>
                           </SidebarMenuButton>
                           <SidebarMenuSub>
-                            {item.subItems.map((subItem) => (
+                            {item.subItems.map(subItem => (
                               <SidebarMenuSubItem key={subItem.url}>
                                 <SidebarMenuSubButton
                                   asChild
@@ -83,9 +81,7 @@ export function SidebarContentComponent({ currentPath }: SidebarContentProps) {
                         <SidebarMenuButton
                           asChild
                           className={
-                            currentPath === item.url
-                              ? 'bg-accent text-accent-foreground'
-                              : ''
+                            currentPath === item.url ? 'bg-accent text-accent-foreground' : ''
                           }
                         >
                           <a href={item.url}>
@@ -106,11 +102,7 @@ export function SidebarContentComponent({ currentPath }: SidebarContentProps) {
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
-                <a
-                  href={siteConfig.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={siteConfig.github} target="_blank" rel="noopener noreferrer">
                   <GithubLogoIcon weight="duotone" />
                   <span>GitHub</span>
                 </a>

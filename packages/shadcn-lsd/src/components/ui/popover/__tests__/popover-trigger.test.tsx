@@ -8,7 +8,7 @@ describe('PopoverTrigger', () => {
       <Popover>
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     expect(screen.getByRole('button', { name: 'Open' })).toBeInTheDocument();
   });
@@ -18,7 +18,7 @@ describe('PopoverTrigger', () => {
       <Popover>
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-slot', 'popover-trigger');
@@ -31,7 +31,7 @@ describe('PopoverTrigger', () => {
           Open
         </PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');

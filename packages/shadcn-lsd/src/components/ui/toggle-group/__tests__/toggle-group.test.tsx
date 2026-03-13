@@ -9,7 +9,7 @@ describe('ToggleGroup', () => {
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
         <ToggleGroupItem value="c">C</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     expect(screen.getByRole('group')).toBeInTheDocument();
   });
@@ -19,7 +19,7 @@ describe('ToggleGroup', () => {
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     expect(screen.getByRole('group')).toBeInTheDocument();
   });
@@ -28,7 +28,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const group = screen.getByRole('group');
     expect(group).toHaveClass('lsd:flex');
@@ -40,7 +40,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single" size="md">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:h-10');
@@ -51,7 +51,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single" size="sm">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:h-8');
@@ -62,7 +62,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single" size="lg">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:h-12');
@@ -73,7 +73,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:h-10');
@@ -85,7 +85,7 @@ describe('ToggleGroup', () => {
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
         <ToggleGroupItem value="c">C</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const itemA = screen.getByRole('radio', { name: 'A' });
     expect(itemA).toHaveAttribute('data-state', 'on');
@@ -97,7 +97,7 @@ describe('ToggleGroup', () => {
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
         <ToggleGroupItem value="c">C</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const itemA = screen.getByRole('button', { name: 'A' });
     const itemB = screen.getByRole('button', { name: 'B' });
@@ -113,7 +113,7 @@ describe('ToggleGroup', () => {
       <ToggleGroup type="single" onValueChange={handleValueChange}>
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     fireEvent.click(screen.getByRole('radio', { name: 'B' }));
     expect(handleValueChange).toHaveBeenCalledWith('b');
@@ -124,7 +124,7 @@ describe('ToggleGroup', () => {
       <ToggleGroup type="single" disabled>
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const itemA = screen.getByRole('radio', { name: 'A' });
     expect(itemA).toBeDisabled();
@@ -134,7 +134,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single" className="custom-group-class">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const group = screen.getByRole('group');
     expect(group).toHaveClass('custom-group-class');
@@ -142,13 +142,9 @@ describe('ToggleGroup', () => {
 
   it('passes through additional props', () => {
     render(
-      <ToggleGroup
-        type="single"
-        data-testid="test-toggle-group"
-        id="toggle-group-1"
-      >
+      <ToggleGroup type="single" data-testid="test-toggle-group" id="toggle-group-1">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const group = screen.getByRole('group');
     expect(group).toHaveAttribute('data-testid', 'test-toggle-group');
@@ -160,7 +156,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single" ref={ref}>
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     expect(ref).toHaveBeenCalled();
   });
@@ -171,7 +167,7 @@ describe('ToggleGroup', () => {
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
         <ToggleGroupItem value="c">C</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     expect(screen.getByRole('radio', { name: 'A' })).toBeInTheDocument();
     expect(screen.getByRole('radio', { name: 'B' })).toBeInTheDocument();
@@ -182,7 +178,7 @@ describe('ToggleGroup', () => {
     render(
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const group = screen.getByRole('group');
     expect(group).toHaveAttribute('data-slot', 'toggle-group');

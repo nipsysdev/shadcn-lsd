@@ -227,7 +227,7 @@ describe('Typography', () => {
     render(
       <Typography data-testid="test-typography" id="text-1">
         Text
-      </Typography>,
+      </Typography>
     );
     const element = screen.getByText('Text');
     expect(element).toHaveAttribute('data-testid', 'test-typography');
@@ -242,66 +242,42 @@ describe('Typography', () => {
 
 describe('typographyVariants', () => {
   it('returns correct classes for display1 variant', () => {
-    expect(typographyVariants({ variant: 'display1' })).toContain(
-      'lsd:text-[5.5rem]',
-    );
-    expect(typographyVariants({ variant: 'display1' })).toContain(
-      'lsd:leading-[6rem]',
-    );
+    expect(typographyVariants({ variant: 'display1' })).toContain('lsd:text-[5.5rem]');
+    expect(typographyVariants({ variant: 'display1' })).toContain('lsd:leading-[6rem]');
   });
 
   it('returns correct classes for h1 variant', () => {
-    expect(typographyVariants({ variant: 'h1' })).toContain(
-      'lsd:text-[2.5rem]',
-    );
-    expect(typographyVariants({ variant: 'h1' })).toContain(
-      'lsd:leading-[3rem]',
-    );
+    expect(typographyVariants({ variant: 'h1' })).toContain('lsd:text-[2.5rem]');
+    expect(typographyVariants({ variant: 'h1' })).toContain('lsd:leading-[3rem]');
   });
 
   it('returns correct classes for body1 variant', () => {
-    expect(typographyVariants({ variant: 'body1' })).toContain(
-      'lsd:text-[1rem]',
-    );
-    expect(typographyVariants({ variant: 'body1' })).toContain(
-      'lsd:leading-[1.5rem]',
-    );
+    expect(typographyVariants({ variant: 'body1' })).toContain('lsd:text-[1rem]');
+    expect(typographyVariants({ variant: 'body1' })).toContain('lsd:leading-[1.5rem]');
   });
 
   it('returns correct classes for primary color', () => {
-    expect(typographyVariants({ color: 'primary' })).toContain(
-      'lsd:text-lsd-text-primary',
-    );
+    expect(typographyVariants({ color: 'primary' })).toContain('lsd:text-lsd-text-primary');
   });
 
   it('returns correct classes for secondary color', () => {
-    expect(typographyVariants({ color: 'secondary' })).toContain(
-      'lsd:text-lsd-text-secondary',
-    );
+    expect(typographyVariants({ color: 'secondary' })).toContain('lsd:text-lsd-text-secondary');
   });
 
   it('returns correct classes for destructive color', () => {
-    expect(typographyVariants({ color: 'destructive' })).toContain(
-      'lsd:text-lsd-destructive-text',
-    );
+    expect(typographyVariants({ color: 'destructive' })).toContain('lsd:text-lsd-destructive-text');
   });
 
   it('returns correct classes for success color', () => {
-    expect(typographyVariants({ color: 'success' })).toContain(
-      'lsd:text-lsd-success-text',
-    );
+    expect(typographyVariants({ color: 'success' })).toContain('lsd:text-lsd-success-text');
   });
 
   it('returns correct classes for warning color', () => {
-    expect(typographyVariants({ color: 'warning' })).toContain(
-      'lsd:text-lsd-warning-text',
-    );
+    expect(typographyVariants({ color: 'warning' })).toContain('lsd:text-lsd-warning-text');
   });
 
   it('returns correct classes for info color', () => {
-    expect(typographyVariants({ color: 'info' })).toContain(
-      'lsd:text-lsd-info-text',
-    );
+    expect(typographyVariants({ color: 'info' })).toContain('lsd:text-lsd-info-text');
   });
 
   it('uses default variant when not specified', () => {

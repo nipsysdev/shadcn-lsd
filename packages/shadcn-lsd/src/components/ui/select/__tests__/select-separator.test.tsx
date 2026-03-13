@@ -21,11 +21,9 @@ describe('SelectSeparator', () => {
           <SelectSeparator />
           <SelectItem value="option-2">Option 2</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
-    expect(
-      document.querySelector('[data-slot="select-separator"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="select-separator"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -39,7 +37,7 @@ describe('SelectSeparator', () => {
           <SelectSeparator />
           <SelectItem value="option-2">Option 2</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const separator = document.querySelector('[data-slot="select-separator"]');
     expect(separator).toHaveAttribute('data-slot', 'select-separator');
@@ -56,7 +54,7 @@ describe('SelectSeparator', () => {
           <SelectSeparator />
           <SelectItem value="option-2">Option 2</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const separator = document.querySelector('[data-slot="select-separator"]');
     expect(separator).toHaveClass('lsd:bg-lsd-border');
@@ -74,7 +72,7 @@ describe('SelectSeparator', () => {
           <SelectSeparator className="custom-separator-class" />
           <SelectItem value="option-2">Option 2</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const separator = document.querySelector('[data-slot="select-separator"]');
     expect(separator).toHaveClass('custom-separator-class');

@@ -1,4 +1,3 @@
-import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import tailwindcss from '@tailwindcss/vite';
@@ -13,7 +12,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 function addUseClientDirective(): Plugin {
   return {
     name: 'add-use-client',
-    generateBundle(options, bundle) {
+    generateBundle(_options, bundle) {
       for (const [fileName, chunk] of Object.entries(bundle)) {
         if (chunk.type === 'chunk' && fileName.endsWith('.js')) {
           // Check if the chunk already has 'use client'
@@ -42,7 +41,7 @@ function addUseClientDirective(): Plugin {
             // Check for imports of client hooks (named imports)
             const importRegex = new RegExp(
               `import\\s*\\{[^}]*\\b${hook}\\b[^}]*\\}\\s*from\\s*['"]react['"]`,
-              'g',
+              'g'
             );
             // Check for usage of client hooks (e.g., s.useState where s is React)
             const usageRegex = new RegExp(`\\b\\w+\\.${hook}\\b`, 'g');
@@ -94,22 +93,18 @@ export default defineConfig(({ mode }) => {
           external: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss'],
           // https://rollupjs.org/configuration-options/#input
           input: Object.fromEntries(
-            globSync([
-              'src/components/**/*.tsx',
-              'src/style.css',
-              'src/main.ts',
-            ]).map((file) => {
+            globSync(['src/components/**/*.tsx', 'src/style.css', 'src/main.ts']).map(file => {
               // This remove `src/` as well as the file extension from each
               // file, so e.g. src/nested/foo.js becomes nested/foo
               const entryName = path.relative(
                 'src',
-                file.slice(0, file.length - path.extname(file).length),
+                file.slice(0, file.length - path.extname(file).length)
               );
               // This expands the relative paths to absolute paths, so e.g.
               // src/nested/foo becomes /project/src/nested/foo.js
               const entryUrl = fileURLToPath(new URL(file, import.meta.url));
               return [entryName, entryUrl];
-            }),
+            })
           ),
           output: {
             entryFileNames: '[name].js',

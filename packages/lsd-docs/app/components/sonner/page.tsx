@@ -1,17 +1,21 @@
 'use client';
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Button as LSDButton,
-  Separator,
-  Typography,
-} from '@nipsys/shadcn-lsd';
+import { Card, CardContent, Button as LSDButton, Separator, Typography } from '@nipsys/shadcn-lsd';
 import { CodeExample } from '../../components/docs/CodeExample';
 import { ComponentPreview } from '../../components/docs/ComponentPreview';
+
+declare global {
+  interface Window {
+    toast?: {
+      (message: string, options?: Record<string, unknown>): void;
+      success(message: string, options?: Record<string, unknown>): void;
+      error(message: string, options?: Record<string, unknown>): void;
+      info(message: string, options?: Record<string, unknown>): void;
+      warning(message: string, options?: Record<string, unknown>): void;
+      dismiss(): void;
+    };
+  }
+}
 
 export default function SonnerPage() {
   return (
@@ -24,9 +28,8 @@ export default function SonnerPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          A toast notification component that displays messages to users. Sonner
-          provides beautiful, animated toast notifications with rich content
-          support.
+          A toast notification component that displays messages to users. Sonner provides beautiful,
+          animated toast notifications with rich content support.
         </Typography>
       </div>
 
@@ -36,10 +39,7 @@ export default function SonnerPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -60,10 +60,7 @@ export default function SonnerPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Setup
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Add the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             Toaster
@@ -92,10 +89,7 @@ export default function App() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Usage
         </Typography>
-        <CodeExample
-          title="Basic toast"
-          code={`toast('Event has been created');`}
-        />
+        <CodeExample title="Basic toast" code={`toast('Event has been created');`} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -104,10 +98,7 @@ export default function App() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Basic Toasts
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             toast
@@ -154,8 +145,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast('Event has been created');
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('Event has been created');
                 }
               }}
             >
@@ -164,8 +155,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast.success('Event has been created');
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast.success('Event has been created');
                 }
               }}
             >
@@ -174,8 +165,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast.error('Event has not been created');
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast.error('Event has not been created');
                 }
               }}
             >
@@ -184,10 +175,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast.info(
-                    'This is an informational message',
-                  );
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast.info('This is an informational message');
                 }
               }}
             >
@@ -196,8 +185,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast.warning('This is a warning message');
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast.warning('This is a warning message');
                 }
               }}
             >
@@ -213,10 +202,7 @@ export default function App() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Toast with Action
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Add an action button to your toast using the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             action
@@ -246,8 +232,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast('Event has been created', {
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('Event has been created', {
                     action: {
                       label: 'Undo',
                       onClick: () => console.log('Undo'),
@@ -268,12 +254,8 @@ export default function App() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Toast with Rich Content
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
-          Pass React components as the message to create rich, custom toast
-          content.
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+          Pass React components as the message to create rich, custom toast content.
         </Typography>
 
         <ComponentPreview
@@ -303,13 +285,10 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast(
-                    'Event has been created with rich content',
-                    {
-                      duration: 5000,
-                    },
-                  );
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('Event has been created with rich content', {
+                    duration: 5000,
+                  });
                 }
               }}
             >
@@ -325,10 +304,7 @@ export default function App() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Persistent Toast
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             duration: Infinity
@@ -358,13 +334,10 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast(
-                    'This toast will not close automatically',
-                    {
-                      duration: Infinity,
-                    },
-                  );
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('This toast will not close automatically', {
+                    duration: Number.POSITIVE_INFINITY,
+                  });
                 }
               }}
             >
@@ -373,8 +346,8 @@ export default function App() {
             <LSDButton
               variant="outlined"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast.dismiss();
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast.dismiss();
                 }
               }}
             >
@@ -390,10 +363,7 @@ export default function App() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Positioned Toasts
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             position
@@ -450,8 +420,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast('Top-left toast', {
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('Top-left toast', {
                     position: 'top-left',
                   });
                 }
@@ -462,8 +432,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast('Top-right toast', {
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('Top-right toast', {
                     position: 'top-right',
                   });
                 }
@@ -474,8 +444,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast('Bottom-left toast', {
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('Bottom-left toast', {
                     position: 'bottom-left',
                   });
                 }
@@ -486,8 +456,8 @@ export default function App() {
             <LSDButton
               variant="filled"
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toast) {
-                  (window as any).toast('Bottom-right toast', {
+                if (typeof window !== 'undefined' && window.toast) {
+                  window.toast('Bottom-right toast', {
                     position: 'bottom-right',
                   });
                 }
@@ -534,21 +504,13 @@ export default function App() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    number
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">number</code>
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    4000
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">4000</code>
                   <br />
-                  The duration in milliseconds before the toast auto-dismisses.
-                  Use{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    Infinity
-                  </code>{' '}
-                  for persistent toasts.
+                  The duration in milliseconds before the toast auto-dismisses. Use{' '}
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">Infinity</code> for
+                  persistent toasts.
                 </Typography>
               </div>
               <div>
@@ -609,9 +571,7 @@ export default function App() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    () =&gt; void
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">() =&gt; void</code>
                   <br />
                   Callback function when the toast is dismissed.
                 </Typography>
@@ -646,12 +606,9 @@ export default function App() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "system"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"system"</code>
                   <br />
-                  The theme for the toaster. Automatically syncs with your app's
-                  theme.
+                  The theme for the toaster. Automatically syncs with your app's theme.
                 </Typography>
               </div>
               <div>
@@ -662,14 +619,9 @@ export default function App() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    true
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">true</code>
                   <br />
                   Whether to use rich colors for different toast types.
                 </Typography>
@@ -682,14 +634,10 @@ export default function App() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                   <br />
                   Whether to expand the toast on hover.
                 </Typography>
@@ -722,9 +670,7 @@ export default function App() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply to the toaster.
                 </Typography>
@@ -741,8 +687,8 @@ export default function App() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Sonner toasts follow WAI-ARIA guidelines and are fully accessible. The
-          component automatically includes the appropriate{' '}
+          Sonner toasts follow WAI-ARIA guidelines and are fully accessible. The component
+          automatically includes the appropriate{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             role="alert"
           </code>{' '}
@@ -750,8 +696,8 @@ export default function App() {
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             aria-live
           </code>{' '}
-          attributes. Toasts are announced to screen readers and can be
-          dismissed using keyboard navigation.
+          attributes. Toasts are announced to screen readers and can be dismissed using keyboard
+          navigation.
         </Typography>
       </div>
     </div>

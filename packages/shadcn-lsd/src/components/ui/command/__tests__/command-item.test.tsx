@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Command,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandShortcut,
-} from '../index';
+import { Command, CommandInput, CommandItem, CommandList, CommandShortcut } from '../index';
 
 describe('CommandItem', () => {
   it('renders without crashing', () => {
@@ -16,11 +10,9 @@ describe('CommandItem', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    expect(
-      document.querySelector('[data-slot="command-item"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-item"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -30,7 +22,7 @@ describe('CommandItem', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const item = document.querySelector('[data-slot="command-item"]');
     expect(item).toHaveAttribute('data-slot', 'command-item');
@@ -43,7 +35,7 @@ describe('CommandItem', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const item = document.querySelector('[data-slot="command-item"]');
     expect(item).toHaveClass('lsd:relative');
@@ -63,7 +55,7 @@ describe('CommandItem', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const item = document.querySelector('[data-slot="command-item"]');
     expect(item).toHaveClass('lsd:data-[selected=true]:bg-lsd-surface');
@@ -77,7 +69,7 @@ describe('CommandItem', () => {
         <CommandList>
           <CommandItem disabled>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const item = document.querySelector('[data-slot="command-item"]');
     expect(item).toHaveClass('lsd:data-[disabled=true]:pointer-events-none');
@@ -91,7 +83,7 @@ describe('CommandItem', () => {
         <CommandList>
           <CommandItem className="custom-item-class">Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const item = document.querySelector('[data-slot="command-item"]');
     expect(item).toHaveClass('custom-item-class');
@@ -104,7 +96,7 @@ describe('CommandItem', () => {
         <CommandList>
           <CommandItem data-testid="test-item">Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const item = document.querySelector('[data-slot="command-item"]');
     expect(item).toHaveAttribute('data-testid', 'test-item');
@@ -120,7 +112,7 @@ describe('CommandItem', () => {
             <CommandShortcut>⌘K</CommandShortcut>
           </CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     expect(screen.getByText('Item 1')).toBeInTheDocument();
     expect(screen.getByText('⌘K')).toBeInTheDocument();

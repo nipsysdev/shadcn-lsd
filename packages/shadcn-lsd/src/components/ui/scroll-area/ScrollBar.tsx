@@ -18,7 +18,7 @@ function ScrollBar({
           'lsd:h-full lsd:w-(--lsd-spacing-small) lsd:border-l lsd:border-l-transparent',
         orientation === 'horizontal' &&
           'lsd:h-(--lsd-spacing-small) lsd:flex-col lsd:border-t lsd:border-t-transparent',
-        className,
+        className
       )}
       {...props}
     >

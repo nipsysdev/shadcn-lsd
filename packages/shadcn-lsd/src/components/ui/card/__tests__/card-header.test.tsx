@@ -39,7 +39,7 @@ describe('CardHeader', () => {
     render(
       <CardHeader>
         <span>Header content</span>
-      </CardHeader>,
+      </CardHeader>
     );
     expect(screen.getByText('Header content')).toBeInTheDocument();
   });

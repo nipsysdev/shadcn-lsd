@@ -30,7 +30,7 @@ describe('CardDescription', () => {
     render(
       <CardDescription>
         <span>Card Description</span>
-      </CardDescription>,
+      </CardDescription>
     );
     expect(screen.getByText('Card Description')).toBeInTheDocument();
   });

@@ -14,7 +14,7 @@ export const accordionTriggerVariants = cva(
     defaultVariants: {
       size: 'md',
     },
-  },
+  }
 );
 
 export const accordionContentVariants = cva(
@@ -30,11 +30,9 @@ export const accordionContentVariants = cva(
     defaultVariants: {
       size: 'md',
     },
-  },
+  }
 );
 
-export type AccordionVariants = VariantProps<
-  typeof accordionTriggerVariants
-> & {
+export type AccordionVariants = VariantProps<typeof accordionTriggerVariants> & {
   size?: SizeVariant;
 };

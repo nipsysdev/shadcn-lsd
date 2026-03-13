@@ -33,7 +33,7 @@ describe('CardAction', () => {
     render(
       <CardAction>
         <button type="button">Action</button>
-      </CardAction>,
+      </CardAction>
     );
     expect(screen.getByRole('button')).toBeInTheDocument();
   });

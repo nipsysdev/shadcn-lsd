@@ -23,16 +23,10 @@ function MenubarItem({
       data-slot="menubar-item"
       data-inset={inset}
       data-variant={variant}
-      className={cn(
-        menubarItemVariants({ variant, inset }),
-        'lsd:group',
-        className,
-      )}
+      className={cn(menubarItemVariants({ variant, inset }), 'lsd:group', className)}
       {...props}
     >
-      <span className="lsd:group-hover:underline lsd:group-focus:underline">
-        {children}
-      </span>
+      <span className="lsd:group-hover:underline lsd:group-focus:underline">{children}</span>
       {shortcut && (
         <span className="lsd:text-lsd-text-secondary lsd:ml-auto lsd:text-xs lsd:tracking-widest">
           {shortcut}

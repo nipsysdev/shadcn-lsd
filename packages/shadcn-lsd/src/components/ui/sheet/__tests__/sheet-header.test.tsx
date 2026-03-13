@@ -11,11 +11,9 @@ describe('SheetHeader', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
-    expect(
-      document.querySelector('[data-slot="sheet-header"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="sheet-header"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -26,7 +24,7 @@ describe('SheetHeader', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const header = document.querySelector('[data-slot="sheet-header"]');
     expect(header).toHaveClass('lsd:flex');
@@ -43,7 +41,7 @@ describe('SheetHeader', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const header = document.querySelector('[data-slot="sheet-header"]');
     expect(header).toHaveAttribute('data-slot', 'sheet-header');
@@ -57,7 +55,7 @@ describe('SheetHeader', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const header = document.querySelector('[data-slot="sheet-header"]');
     expect(header).toHaveClass('custom-header-class');
@@ -71,7 +69,7 @@ describe('SheetHeader', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const header = document.querySelector('[data-slot="sheet-header"]');
     expect(header).toHaveAttribute('data-testid', 'test-header');

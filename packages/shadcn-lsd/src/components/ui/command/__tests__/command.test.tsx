@@ -18,7 +18,7 @@ describe('Command', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     expect(document.querySelector('[data-slot="command"]')).toBeInTheDocument();
   });
@@ -30,7 +30,7 @@ describe('Command', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const command = document.querySelector('[data-slot="command"]');
     expect(command).toHaveAttribute('data-slot', 'command');
@@ -43,7 +43,7 @@ describe('Command', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const command = document.querySelector('[data-slot="command"]');
     expect(command).toHaveClass('lsd:bg-lsd-surface');
@@ -62,7 +62,7 @@ describe('Command', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const command = document.querySelector('[data-slot="command"]');
     expect(command).toHaveClass('custom-command-class');
@@ -75,7 +75,7 @@ describe('Command', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const command = document.querySelector('[data-slot="command"]');
     expect(command).toHaveAttribute('data-testid', 'test-command');
@@ -97,29 +97,19 @@ describe('Command', () => {
           </CommandGroup>
           <CommandEmpty>No results found</CommandEmpty>
         </CommandList>
-      </Command>,
+      </Command>
     );
     // Verify parent is present
     expect(document.querySelector('[data-slot="command"]')).toBeInTheDocument();
     // Verify input is present
-    expect(
-      document.querySelector('[data-slot="command-input-wrapper"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-input-wrapper"]')).toBeInTheDocument();
     // Verify list is present
-    expect(
-      document.querySelector('[data-slot="command-list"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-list"]')).toBeInTheDocument();
     // Verify groups are present
-    expect(
-      document.querySelectorAll('[data-slot="command-group"]'),
-    ).toHaveLength(2);
+    expect(document.querySelectorAll('[data-slot="command-group"]')).toHaveLength(2);
     // Verify items are present
-    expect(
-      document.querySelectorAll('[data-slot="command-item"]'),
-    ).toHaveLength(3);
+    expect(document.querySelectorAll('[data-slot="command-item"]')).toHaveLength(3);
     // Verify separator is present
-    expect(
-      document.querySelector('[data-slot="command-separator"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-separator"]')).toBeInTheDocument();
   });
 });

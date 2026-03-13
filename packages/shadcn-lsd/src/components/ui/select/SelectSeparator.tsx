@@ -12,7 +12,7 @@ export function SelectSeparator({
       data-slot="select-separator"
       className={cn(
         'lsd:bg-lsd-border lsd:pointer-events-none lsd:-mx-(--lsd-spacing-smallest) lsd:my-(--lsd-spacing-smallest) lsd:h-px',
-        className,
+        className
       )}
       {...props}
     />

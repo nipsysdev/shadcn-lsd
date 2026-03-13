@@ -10,7 +10,7 @@ describe('AlertDialogTrigger', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByRole('button', { name: 'Open' })).toBeInTheDocument();
   });
@@ -22,7 +22,7 @@ describe('AlertDialogTrigger', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-slot', 'alert-dialog-trigger');
@@ -37,7 +37,7 @@ describe('AlertDialogTrigger', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');

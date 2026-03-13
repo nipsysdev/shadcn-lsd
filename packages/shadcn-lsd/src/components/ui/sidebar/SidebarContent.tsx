@@ -22,7 +22,7 @@ export function SidebarContent({ className, ...props }: SidebarContentProps) {
       data-sidebar="content"
       className={cn(
         'lsd:flex lsd:min-h-0 lsd:flex-1 lsd:flex-col lsd:gap-(--lsd-spacing-smaller) lsd:overflow-auto lsd:group-data-[collapsible=icon]:overflow-hidden',
-        className,
+        className
       )}
       {...props}
     />
@@ -36,7 +36,7 @@ export function SidebarHeader({ className, ...props }: SidebarHeaderProps) {
       data-sidebar="header"
       className={cn(
         'lsd:flex lsd:flex-col lsd:gap-(--lsd-spacing-smaller) lsd:p-(--lsd-spacing-smaller)',
-        className,
+        className
       )}
       {...props}
     />
@@ -50,25 +50,19 @@ export function SidebarFooter({ className, ...props }: SidebarFooterProps) {
       data-sidebar="footer"
       className={cn(
         'lsd:flex lsd:flex-col lsd:gap-(--lsd-spacing-smaller) lsd:p-(--lsd-spacing-smaller)',
-        className,
+        className
       )}
       {...props}
     />
   );
 }
 
-export function SidebarSeparator({
-  className,
-  ...props
-}: SidebarSeparatorProps) {
+export function SidebarSeparator({ className, ...props }: SidebarSeparatorProps) {
   return (
     <Separator
       data-slot="sidebar-separator"
       data-sidebar="separator"
-      className={cn(
-        'lsd:bg-sidebar-border lsd:mx-(--lsd-spacing-smaller) lsd:w-auto',
-        className,
-      )}
+      className={cn('lsd:bg-sidebar-border lsd:mx-(--lsd-spacing-smaller) lsd:w-auto', className)}
       {...props}
     />
   );
@@ -79,10 +73,7 @@ export function SidebarInput({ className, ...props }: SidebarInputProps) {
     <Input
       data-slot="sidebar-input"
       data-sidebar="input"
-      className={cn(
-        'lsd:bg-background lsd:h-8 lsd:w-full lsd:shadow-none',
-        className,
-      )}
+      className={cn('lsd:bg-background lsd:h-8 lsd:w-full lsd:shadow-none', className)}
       {...props}
     />
   );
@@ -95,18 +86,14 @@ export function SidebarInset({ className, ...props }: SidebarInsetProps) {
       className={cn(
         'lsd:bg-background lsd:relative lsd:flex lsd:w-full lsd:flex-1 lsd:flex-col',
         'lsd:md:peer-data-[variant=inset]:m-(--lsd-spacing-smaller) lsd:md:peer-data-[variant=inset]:ml-0 lsd:md:peer-data-[variant=inset]:rounded-xl lsd:md:peer-data-[variant=inset]:shadow-sm lsd:md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-(--lsd-spacing-smaller)',
-        className,
+        className
       )}
       {...props}
     />
   );
 }
 
-export function SidebarTrigger({
-  className,
-  onClick,
-  ...props
-}: SidebarTriggerProps) {
+export function SidebarTrigger({ className, onClick, ...props }: SidebarTriggerProps) {
   const { toggleSidebar } = useSidebar();
 
   return (
@@ -116,7 +103,7 @@ export function SidebarTrigger({
       variant="ghost"
       size="icon-sm"
       className={className}
-      onClick={(event) => {
+      onClick={event => {
         onClick?.(event);
         toggleSidebar();
       }}
@@ -146,7 +133,7 @@ export function SidebarRail({ className, ...props }: SidebarRailProps) {
         'hover:group-data-[collapsible=offcanvas]:bg-sidebar lsd:group-data-[collapsible=offcanvas]:translate-x-0 lsd:group-data-[collapsible=offcanvas]:after:left-full',
         'lsd:[[data-side=left][data-collapsible=offcanvas]_&]:-right-(--lsd-spacing-smaller)',
         'lsd:[[data-side=right][data-collapsible=offcanvas]_&]:-left-(--lsd-spacing-smaller)',
-        className,
+        className
       )}
       {...props}
     />

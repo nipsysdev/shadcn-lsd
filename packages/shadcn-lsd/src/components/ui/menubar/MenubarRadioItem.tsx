@@ -8,11 +8,7 @@ import { menubarRadioItemVariants } from './types';
 export interface MenubarRadioItemProps
   extends React.ComponentProps<typeof MenubarPrimitive.RadioItem> {}
 
-function MenubarRadioItem({
-  className,
-  children,
-  ...props
-}: MenubarRadioItemProps) {
+function MenubarRadioItem({ className, children, ...props }: MenubarRadioItemProps) {
   return (
     <MenubarPrimitive.RadioItem
       data-slot="menubar-radio-item"
@@ -24,9 +20,7 @@ function MenubarRadioItem({
           <CircleIcon className="lsd:size-(--lsd-spacing-smaller) lsd:fill-current" />
         </MenubarPrimitive.ItemIndicator>
       </span>
-      <span className="lsd:group-hover:underline lsd:group-focus:underline">
-        {children}
-      </span>
+      <span className="lsd:group-hover:underline lsd:group-focus:underline">{children}</span>
     </MenubarPrimitive.RadioItem>
   );
 }

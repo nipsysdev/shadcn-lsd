@@ -8,12 +8,7 @@ export interface AccordionContentProps
   extends React.ComponentProps<typeof AccordionPrimitive.Content>,
     AccordionVariants {}
 
-function AccordionContent({
-  className,
-  children,
-  size = 'md',
-  ...props
-}: AccordionContentProps) {
+function AccordionContent({ className, children, size = 'md', ...props }: AccordionContentProps) {
   const getPaddingBottom = () => {
     switch (size) {
       case 'sm':
@@ -31,9 +26,7 @@ function AccordionContent({
       className={cn(accordionContentVariants({ size }))}
       {...props}
     >
-      <div className={cn('lsd:pt-0', getPaddingBottom(), className)}>
-        {children}
-      </div>
+      <div className={cn('lsd:pt-0', getPaddingBottom(), className)}>{children}</div>
     </AccordionPrimitive.Content>
   );
 }

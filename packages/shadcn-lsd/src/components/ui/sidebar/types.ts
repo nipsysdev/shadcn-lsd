@@ -44,8 +44,7 @@ export interface SidebarGroupLabelProps extends React.ComponentProps<'div'> {
   asChild?: boolean;
 }
 
-export interface SidebarGroupActionProps
-  extends React.ComponentProps<'button'> {
+export interface SidebarGroupActionProps extends React.ComponentProps<'button'> {
   asChild?: boolean;
 }
 
@@ -64,8 +63,7 @@ export interface SidebarMenuSkeletonProps extends React.ComponentProps<'div'> {
   showIcon?: boolean;
 }
 
-export interface SidebarTriggerProps
-  extends React.ComponentProps<typeof Button> {}
+export interface SidebarTriggerProps extends React.ComponentProps<typeof Button> {}
 
 export interface SidebarRailProps extends React.ComponentProps<'button'> {}
 
@@ -77,8 +75,7 @@ export interface SidebarHeaderProps extends React.ComponentProps<'div'> {}
 
 export interface SidebarFooterProps extends React.ComponentProps<'div'> {}
 
-export interface SidebarSeparatorProps
-  extends React.ComponentProps<typeof Separator> {}
+export interface SidebarSeparatorProps extends React.ComponentProps<typeof Separator> {}
 
 export interface SidebarContentProps extends React.ComponentProps<'div'> {}
 
@@ -102,8 +99,7 @@ export const sidebarMenuButtonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'lsd:hover:bg-sidebar-accent lsd:hover:text-sidebar-accent-foreground',
+        default: 'lsd:hover:bg-sidebar-accent lsd:hover:text-sidebar-accent-foreground',
         outline:
           'lsd:bg-background shadow-[0_0_0_1px_hsl(var(--sidebar-border))] lsd:hover:bg-sidebar-accent lsd:hover:text-sidebar-accent-foreground lsd:hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]',
       },
@@ -117,9 +113,7 @@ export const sidebarMenuButtonVariants = cva(
       variant: 'default',
       size: 'default',
     },
-  },
+  }
 );
 
-export type SidebarMenuButtonVariants = VariantProps<
-  typeof sidebarMenuButtonVariants
->;
+export type SidebarMenuButtonVariants = VariantProps<typeof sidebarMenuButtonVariants>;

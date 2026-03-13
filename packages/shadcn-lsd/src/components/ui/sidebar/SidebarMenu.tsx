@@ -1,10 +1,6 @@
 import { Slot } from '@radix-ui/react-slot';
 import * as React from 'react';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { useSidebar } from './SidebarContext';
 import {
@@ -28,7 +24,7 @@ export function SidebarMenu({ className, ...props }: SidebarMenuProps) {
       data-sidebar="menu"
       className={cn(
         'lsd:flex lsd:w-full lsd:min-w-0 lsd:flex-col lsd:gap-(--lsd-spacing-smallest)',
-        className,
+        className
       )}
       {...props}
     />
@@ -114,17 +110,14 @@ export function SidebarMenuAction({
         'lsd:group-data-[collapsible=icon]:hidden',
         showOnHover &&
           'peer-data-[active=true]/menu-button:text-sidebar-accent-foreground group-focus-within/menu-item:lsd:opacity-100 group-hover/menu-item:lsd:opacity-100 lsd:data-[state=open]:opacity-100 lsd:md:opacity-0',
-        className,
+        className
       )}
       {...props}
     />
   );
 }
 
-export function SidebarMenuBadge({
-  className,
-  ...props
-}: SidebarMenuBadgeProps) {
+export function SidebarMenuBadge({ className, ...props }: SidebarMenuBadgeProps) {
   return (
     <div
       data-slot="sidebar-menu-badge"
@@ -136,7 +129,7 @@ export function SidebarMenuBadge({
         'lsd:peer-data-[size=default]/menu-button:top-(--lsd-spacing-smaller)',
         'lsd:peer-data-[size=lg]/menu-button:top-(--lsd-spacing-small)',
         'lsd:group-data-[collapsible=icon]:hidden',
-        className,
+        className
       )}
       {...props}
     />
@@ -159,7 +152,7 @@ export function SidebarMenuSkeleton({
       data-sidebar="menu-skeleton"
       className={cn(
         'lsd:flex lsd:h-8 lsd:items-center lsd:gap-(--lsd-spacing-smaller) lsd:rounded-md lsd:px-(--lsd-spacing-smaller)',
-        className,
+        className
       )}
       {...props}
     >
@@ -190,17 +183,14 @@ export function SidebarMenuSub({ className, ...props }: SidebarMenuSubProps) {
       className={cn(
         'border-sidebar-border lsd:mx-(--lsd-spacing-base) lsd:flex lsd:min-w-0 lsd:translate-x-px lsd:flex-col lsd:gap-(--lsd-spacing-smallest) lsd:border-l lsd:px-(--lsd-spacing-small) lsd:py-(--lsd-spacing-smallest)',
         'lsd:group-data-[collapsible=icon]:hidden',
-        className,
+        className
       )}
       {...props}
     />
   );
 }
 
-export function SidebarMenuSubItem({
-  className,
-  ...props
-}: SidebarMenuSubItemProps) {
+export function SidebarMenuSubItem({ className, ...props }: SidebarMenuSubItemProps) {
   return (
     <li
       data-slot="sidebar-menu-sub-item"
@@ -231,7 +221,7 @@ export function SidebarMenuSubButton({
         size === 'sm' && 'lsd:text-xs',
         size === 'md' && 'lsd:text-sm',
         'lsd:group-data-[collapsible=icon]:hidden',
-        className,
+        className
       )}
       {...props}
     />

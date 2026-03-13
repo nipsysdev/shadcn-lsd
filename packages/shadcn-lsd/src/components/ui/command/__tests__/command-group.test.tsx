@@ -1,12 +1,6 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Command,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from '../index';
+import { Command, CommandGroup, CommandInput, CommandItem, CommandList } from '../index';
 
 describe('CommandGroup', () => {
   it('renders without crashing', () => {
@@ -18,11 +12,9 @@ describe('CommandGroup', () => {
             <CommandItem>Item 1</CommandItem>
           </CommandGroup>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    expect(
-      document.querySelector('[data-slot="command-group"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-group"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -34,7 +26,7 @@ describe('CommandGroup', () => {
             <CommandItem>Item 1</CommandItem>
           </CommandGroup>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const group = document.querySelector('[data-slot="command-group"]');
     expect(group).toHaveAttribute('data-slot', 'command-group');
@@ -49,7 +41,7 @@ describe('CommandGroup', () => {
             <CommandItem>Item 1</CommandItem>
           </CommandGroup>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const group = document.querySelector('[data-slot="command-group"]');
     expect(group).toHaveClass('lsd:text-lsd-text-primary');
@@ -66,7 +58,7 @@ describe('CommandGroup', () => {
             <CommandItem>Item 1</CommandItem>
           </CommandGroup>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const group = document.querySelector('[data-slot="command-group"]');
     expect(group).toHaveClass('custom-group-class');
@@ -81,7 +73,7 @@ describe('CommandGroup', () => {
             <CommandItem>Item 1</CommandItem>
           </CommandGroup>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const group = document.querySelector('[data-slot="command-group"]');
     expect(group).toHaveAttribute('data-testid', 'test-group');

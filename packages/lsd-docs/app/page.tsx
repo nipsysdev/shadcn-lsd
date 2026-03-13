@@ -1,7 +1,6 @@
 'use client';
 
 import { Button, Typography } from '@nipsys/shadcn-lsd';
-import { ArrowRightIcon, RocketIcon } from '@phosphor-icons/react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -41,21 +40,16 @@ export default function Home() {
           className="text-muted-foreground mb-(--lsd-spacing-large) max-w-3xl mx-auto"
         >
           <blockquote className="border-l-2 pl-6 italic">
-            LSD is an open-source design system challenging conventional norms
-            in the world of digital products and experiences. Rooted in a
-            philosophy that values content over excess, we're here to
-            decentralise design and empower the message. Our minimalist approach
-            is a rebellion against the cluttered design landscape.
+            LSD is an open-source design system challenging conventional norms in the world of
+            digital products and experiences. Rooted in a philosophy that values content over
+            excess, we're here to decentralise design and empower the message. Our minimalist
+            approach is a rebellion against the cluttered design landscape.
           </blockquote>
         </Typography>
       </div>
 
       <Button asChild variant="link">
-        <Link
-          href="https://guide.logos.co"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://guide.logos.co" target="_blank" rel="noopener noreferrer">
           Learn more about the philosophy behind LSD at guide.logos.co
         </Link>
       </Button>

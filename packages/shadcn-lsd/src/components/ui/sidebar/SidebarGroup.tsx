@@ -14,7 +14,7 @@ export function SidebarGroup({ className, ...props }: SidebarGroupProps) {
       data-sidebar="group"
       className={cn(
         'lsd:relative lsd:flex lsd:w-full lsd:min-w-0 lsd:flex-col lsd:p-(--lsd-spacing-smaller)',
-        className,
+        className
       )}
       {...props}
     />
@@ -35,7 +35,7 @@ export function SidebarGroupLabel({
       className={cn(
         'lsd:text-sidebar-foreground/70 ring-sidebar-ring lsd:flex lsd:h-8 lsd:shrink-0 lsd:items-center lsd:rounded-md lsd:px-(--lsd-spacing-smaller) lsd:text-xs lsd:font-medium lsd:outline-hidden lsd:transition-[margin,opacity] lsd:duration-200 lsd:ease-linear lsd:focus-visible:ring-2 lsd:[&>svg]:size-(--lsd-spacing-base) lsd:[&>svg]:shrink-0',
         'lsd:group-data-[collapsible=icon]:-mt-8 lsd:group-data-[collapsible=icon]:opacity-0',
-        className,
+        className
       )}
       {...props}
     />
@@ -58,17 +58,14 @@ export function SidebarGroupAction({
         // Increases the hit area of the button on mobile.
         'after:lsd:absolute after:lsd:-inset-[var(--lsd-spacing-smaller)] md:after:lsd:hidden',
         'lsd:group-data-[collapsible=icon]:hidden',
-        className,
+        className
       )}
       {...props}
     />
   );
 }
 
-export function SidebarGroupContent({
-  className,
-  ...props
-}: SidebarGroupContentProps) {
+export function SidebarGroupContent({ className, ...props }: SidebarGroupContentProps) {
   return (
     <div
       data-slot="sidebar-group-content"

@@ -16,7 +16,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
         {...props}
       />
     );
-  },
+  }
 );
 
 Typography.displayName = 'Typography';

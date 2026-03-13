@@ -40,9 +40,7 @@ export function ThemeDemoCard({
             </div>
             <div className="flex-1 space-y-1">
               <CardTitle>Account Settings</CardTitle>
-              <CardDescription>
-                Manage your profile and preferences
-              </CardDescription>
+              <CardDescription>Manage your profile and preferences</CardDescription>
             </div>
             {/* Status badges */}
             <div className="flex gap-2">
@@ -78,17 +76,10 @@ export function ThemeDemoCard({
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  <label
-                    htmlFor="notifications"
-                    className="text-sm font-medium block"
-                  >
+                  <label htmlFor="notifications" className="text-sm font-medium block">
                     Email Notifications
                   </label>
-                  <Typography
-                    variant="body3"
-                    color="secondary"
-                    className="block"
-                  >
+                  <Typography variant="body3" color="secondary" className="block">
                     Receive updates about your account
                   </Typography>
                 </div>
@@ -96,17 +87,10 @@ export function ThemeDemoCard({
               </div>
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  <label
-                    htmlFor="darkMode"
-                    className="text-sm font-medium block"
-                  >
+                  <label htmlFor="darkMode" className="text-sm font-medium block">
                     Dark Mode
                   </label>
-                  <Typography
-                    variant="body3"
-                    color="secondary"
-                    className="block"
-                  >
+                  <Typography variant="body3" color="secondary" className="block">
                     Use dark theme across the app
                   </Typography>
                 </div>
@@ -114,17 +98,10 @@ export function ThemeDemoCard({
               </div>
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  <label
-                    htmlFor="autoSave"
-                    className="text-sm font-medium block"
-                  >
+                  <label htmlFor="autoSave" className="text-sm font-medium block">
                     Auto-save Changes
                   </label>
-                  <Typography
-                    variant="body3"
-                    color="secondary"
-                    className="block"
-                  >
+                  <Typography variant="body3" color="secondary" className="block">
                     Automatically save your work
                   </Typography>
                 </div>
@@ -166,9 +143,7 @@ export function ThemeDemoCard({
                     <SelectItem value="utc-8">Pacific Time (UTC-8)</SelectItem>
                     <SelectItem value="utc-5">Eastern Time (UTC-5)</SelectItem>
                     <SelectItem value="utc+0">UTC (UTC+0)</SelectItem>
-                    <SelectItem value="utc+1">
-                      Central European (UTC+1)
-                    </SelectItem>
+                    <SelectItem value="utc+1">Central European (UTC+1)</SelectItem>
                     <SelectItem value="utc+9">Japan (UTC+9)</SelectItem>
                   </SelectContent>
                 </Select>

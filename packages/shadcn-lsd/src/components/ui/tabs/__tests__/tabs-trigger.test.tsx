@@ -11,7 +11,7 @@ describe('TabsTrigger', () => {
           <TabsTrigger value="tab-2">Tab 2</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     expect(screen.getByRole('tab', { name: 'Tab 1' })).toBeInTheDocument();
     expect(screen.getByRole('tab', { name: 'Tab 2' })).toBeInTheDocument();
@@ -24,7 +24,7 @@ describe('TabsTrigger', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveAttribute('data-slot', 'tabs-trigger');
@@ -37,7 +37,7 @@ describe('TabsTrigger', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveClass('lsd:text-lsd-text-primary');
@@ -58,7 +58,7 @@ describe('TabsTrigger', () => {
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
         <TabsContent value="tab-2">Content 2</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = screen.getByRole('tab', { name: 'Tab 1' });
     expect(trigger).toHaveAttribute('data-state', 'active');
@@ -74,7 +74,7 @@ describe('TabsTrigger', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveClass('lsd:px-[var(--lsd-spacing-large)]');
@@ -91,7 +91,7 @@ describe('TabsTrigger', () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveClass('lsd:px-[var(--lsd-spacing-small)]');
@@ -108,7 +108,7 @@ describe('TabsTrigger', () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveClass('lsd:px-[var(--lsd-spacing-base)]');
@@ -123,7 +123,7 @@ describe('TabsTrigger', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).not.toHaveClass('lsd:flex-1');
@@ -138,7 +138,7 @@ describe('TabsTrigger', () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveClass('lsd:flex-1');
@@ -153,7 +153,7 @@ describe('TabsTrigger', () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveClass('custom-trigger-class');
@@ -168,7 +168,7 @@ describe('TabsTrigger', () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = document.querySelector('[data-slot="tabs-trigger"]');
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');
@@ -185,7 +185,7 @@ describe('TabsTrigger', () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const trigger = screen.getByRole('tab', { name: 'Tab 2' });
     expect(trigger).toHaveClass('lsd:disabled:opacity-34');

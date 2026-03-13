@@ -8,12 +8,7 @@ import { menubarCheckboxItemVariants } from './types';
 export interface MenubarCheckboxItemProps
   extends React.ComponentProps<typeof MenubarPrimitive.CheckboxItem> {}
 
-function MenubarCheckboxItem({
-  className,
-  children,
-  checked,
-  ...props
-}: MenubarCheckboxItemProps) {
+function MenubarCheckboxItem({ className, children, checked, ...props }: MenubarCheckboxItemProps) {
   return (
     <MenubarPrimitive.CheckboxItem
       data-slot="menubar-checkbox-item"
@@ -26,9 +21,7 @@ function MenubarCheckboxItem({
           <CheckIcon className="lsd:size-(--lsd-spacing-base)" />
         </MenubarPrimitive.ItemIndicator>
       </span>
-      <span className="lsd:group-hover:underline lsd:group-focus:underline">
-        {children}
-      </span>
+      <span className="lsd:group-hover:underline lsd:group-focus:underline">{children}</span>
     </MenubarPrimitive.CheckboxItem>
   );
 }

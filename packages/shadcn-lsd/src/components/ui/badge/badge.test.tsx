@@ -11,16 +11,17 @@ describe('Badge', () => {
   it('renders children correctly', () => {
     render(<Badge>Test Badge</Badge>);
     expect(screen.getByText('Test Badge')).toBeInTheDocument();
-    expect(
-      screen.getByText('Test Badge').closest('[data-slot="badge"]'),
-    ).toHaveAttribute('data-slot', 'badge');
+    expect(screen.getByText('Test Badge').closest('[data-slot="badge"]')).toHaveAttribute(
+      'data-slot',
+      'badge'
+    );
   });
 
   it('applies filled variant classes correctly', () => {
     render(
       <Badge variant="filled" data-testid="badge">
         Filled
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId('badge');
     expect(badge).toHaveClass('lsd:bg-lsd-primary');
@@ -31,7 +32,7 @@ describe('Badge', () => {
     render(
       <Badge variant="outlined" data-testid="badge">
         Outlined
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId('badge');
     expect(badge).toHaveClass('lsd:bg-transparent');
@@ -42,7 +43,7 @@ describe('Badge', () => {
     render(
       <Badge size="md" data-testid="badge">
         Medium
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId('badge');
     expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-largest)]');
@@ -55,7 +56,7 @@ describe('Badge', () => {
     render(
       <Badge size="sm" data-testid="badge">
         Small
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId('badge');
     expect(badge).toHaveClass('lsd:h-[var(--lsd-spacing-larger)]');
@@ -79,7 +80,7 @@ describe('Badge', () => {
     render(
       <Badge className="custom-class" data-testid="badge">
         Custom
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId('badge');
     expect(badge).toHaveClass('custom-class');
@@ -104,7 +105,7 @@ describe('Badge', () => {
     render(
       <Badge data-testid="test-badge" id="badge-1">
         Badge
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId('test-badge');
     expect(badge).toHaveAttribute('data-testid', 'test-badge');
@@ -157,7 +158,7 @@ describe('Badge', () => {
     render(
       <Badge icon={<span data-testid="icon">★</span>} iconPosition="right">
         With Icon
-      </Badge>,
+      </Badge>
     );
     expect(screen.getByTestId('icon')).toBeInTheDocument();
     const badge = screen.getByText('With Icon');
@@ -169,7 +170,7 @@ describe('Badge', () => {
     render(
       <Badge dot data-testid="badge">
         Dot
-      </Badge>,
+      </Badge>
     );
     const badge = screen.getByTestId('badge');
     expect(badge).toHaveClass('lsd:rounded-full');
@@ -204,7 +205,7 @@ describe('Badge', () => {
     render(
       <Badge onDismiss={handleDismiss} onClick={handleClick}>
         Dismissible
-      </Badge>,
+      </Badge>
     );
     const dismissButton = screen.getByLabelText('Dismiss');
     dismissButton.click();
@@ -215,40 +216,24 @@ describe('Badge', () => {
 
 describe('badgeVariants', () => {
   it('returns correct classes for filled variant', () => {
-    expect(badgeVariants({ variant: 'filled' })).toContain(
-      'lsd:bg-lsd-primary',
-    );
-    expect(badgeVariants({ variant: 'filled' })).toContain(
-      'lsd:text-lsd-surface',
-    );
+    expect(badgeVariants({ variant: 'filled' })).toContain('lsd:bg-lsd-primary');
+    expect(badgeVariants({ variant: 'filled' })).toContain('lsd:text-lsd-surface');
   });
 
   it('returns correct classes for outlined variant', () => {
-    expect(badgeVariants({ variant: 'outlined' })).toContain(
-      'lsd:bg-transparent',
-    );
-    expect(badgeVariants({ variant: 'outlined' })).toContain(
-      'lsd:text-lsd-text-primary',
-    );
+    expect(badgeVariants({ variant: 'outlined' })).toContain('lsd:bg-transparent');
+    expect(badgeVariants({ variant: 'outlined' })).toContain('lsd:text-lsd-text-primary');
   });
 
   it('returns correct classes for medium size', () => {
-    expect(badgeVariants({ size: 'md' })).toContain(
-      'lsd:h-[var(--lsd-spacing-largest)]',
-    );
-    expect(badgeVariants({ size: 'md' })).toContain(
-      'lsd:px-[var(--lsd-spacing-small)]',
-    );
+    expect(badgeVariants({ size: 'md' })).toContain('lsd:h-[var(--lsd-spacing-largest)]');
+    expect(badgeVariants({ size: 'md' })).toContain('lsd:px-[var(--lsd-spacing-small)]');
     expect(badgeVariants({ size: 'md' })).toContain('lsd:text-[0.875rem]');
   });
 
   it('returns correct classes for small size', () => {
-    expect(badgeVariants({ size: 'sm' })).toContain(
-      'lsd:h-[var(--lsd-spacing-larger)]',
-    );
-    expect(badgeVariants({ size: 'sm' })).toContain(
-      'lsd:px-[var(--lsd-spacing-smaller)]',
-    );
+    expect(badgeVariants({ size: 'sm' })).toContain('lsd:h-[var(--lsd-spacing-larger)]');
+    expect(badgeVariants({ size: 'sm' })).toContain('lsd:px-[var(--lsd-spacing-smaller)]');
     expect(badgeVariants({ size: 'sm' })).toContain('lsd:text-[0.75rem]');
   });
 

@@ -1,12 +1,6 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Command,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-} from '../index';
+import { Command, CommandInput, CommandItem, CommandList, CommandSeparator } from '../index';
 
 describe('CommandSeparator', () => {
   it('renders without crashing', () => {
@@ -18,11 +12,9 @@ describe('CommandSeparator', () => {
           <CommandSeparator />
           <CommandItem>Item 2</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    expect(
-      document.querySelector('[data-slot="command-separator"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-separator"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -34,7 +26,7 @@ describe('CommandSeparator', () => {
           <CommandSeparator />
           <CommandItem>Item 2</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const separator = document.querySelector('[data-slot="command-separator"]');
     expect(separator).toHaveAttribute('data-slot', 'command-separator');
@@ -49,7 +41,7 @@ describe('CommandSeparator', () => {
           <CommandSeparator />
           <CommandItem>Item 2</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const separator = document.querySelector('[data-slot="command-separator"]');
     expect(separator).toHaveClass('lsd:bg-lsd-border');
@@ -66,7 +58,7 @@ describe('CommandSeparator', () => {
           <CommandSeparator className="custom-separator-class" />
           <CommandItem>Item 2</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const separator = document.querySelector('[data-slot="command-separator"]');
     expect(separator).toHaveClass('custom-separator-class');

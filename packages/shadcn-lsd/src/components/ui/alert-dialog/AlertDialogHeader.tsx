@@ -2,16 +2,13 @@ import type * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
-function AlertDialogHeader({
-  className,
-  ...props
-}: React.ComponentProps<'div'>) {
+function AlertDialogHeader({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="alert-dialog-header"
       className={cn(
         'lsd:flex lsd:flex-col lsd:gap-(--lsd-spacing-smaller) lsd:text-center lsd:sm:text-left',
-        className,
+        className
       )}
       {...props}
     />

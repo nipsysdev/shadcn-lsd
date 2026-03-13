@@ -10,7 +10,7 @@ describe('TabsContent', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     expect(screen.getByText('Content 1')).toBeInTheDocument();
   });
@@ -22,7 +22,7 @@ describe('TabsContent', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const content = document.querySelector('[data-slot="tabs-content"]');
     expect(content).toHaveAttribute('data-slot', 'tabs-content');
@@ -35,7 +35,7 @@ describe('TabsContent', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const content = document.querySelector('[data-slot="tabs-content"]');
     expect(content).toHaveClass('lsd:outline-none');
@@ -50,7 +50,7 @@ describe('TabsContent', () => {
         <TabsContent value="tab-1" className="custom-content-class">
           Content 1
         </TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const content = document.querySelector('[data-slot="tabs-content"]');
     expect(content).toHaveClass('custom-content-class');
@@ -65,7 +65,7 @@ describe('TabsContent', () => {
         <TabsContent value="tab-1" data-testid="test-content" id="content-1">
           Content 1
         </TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const content = document.querySelector('[data-slot="tabs-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
@@ -82,7 +82,7 @@ describe('TabsContent', () => {
           <p>Custom content</p>
           <button type="button">Action</button>
         </TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     expect(screen.getByText('Custom content')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Action' })).toBeInTheDocument();

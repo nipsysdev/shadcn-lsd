@@ -13,7 +13,7 @@ describe('Tabs', () => {
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
         <TabsContent value="tab-2">Content 2</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     expect(document.querySelector('[data-slot="tabs"]')).toBeInTheDocument();
   });
@@ -25,7 +25,7 @@ describe('Tabs', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const tabs = document.querySelector('[data-slot="tabs"]');
     expect(tabs).toHaveAttribute('data-slot', 'tabs');
@@ -38,7 +38,7 @@ describe('Tabs', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const tabs = document.querySelector('[data-slot="tabs"]');
     expect(tabs).toHaveAttribute('data-testid', 'test-tabs');
@@ -52,7 +52,7 @@ describe('Tabs', () => {
           <TabsTrigger value="tab-1">Tab 1</TabsTrigger>
         </TabsList>
         <TabsContent value="tab-1">Content 1</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     const tabs = document.querySelector('[data-slot="tabs"]');
     expect(tabs).toHaveClass('custom-tabs-class');
@@ -69,23 +69,19 @@ describe('Tabs', () => {
         <TabsContent value="tab-1">Content 1</TabsContent>
         <TabsContent value="tab-2">Content 2</TabsContent>
         <TabsContent value="tab-3">Content 3</TabsContent>
-      </Tabs>,
+      </Tabs>
     );
     // Verify tabs is present
     expect(document.querySelector('[data-slot="tabs"]')).toBeInTheDocument();
     // Verify list is present
-    expect(
-      document.querySelector('[data-slot="tabs-list"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="tabs-list"]')).toBeInTheDocument();
     // Verify triggers are present
     expect(screen.getByRole('tab', { name: 'Tab 1' })).toBeInTheDocument();
     expect(screen.getByRole('tab', { name: 'Tab 2' })).toBeInTheDocument();
     expect(screen.getByRole('tab', { name: 'Tab 3' })).toBeInTheDocument();
     // Verify content is present (only active content is visible)
     expect(screen.getByText('Content 1')).toBeInTheDocument();
-    expect(document.querySelectorAll('[data-slot="tabs-content"]').length).toBe(
-      3,
-    );
+    expect(document.querySelectorAll('[data-slot="tabs-content"]').length).toBe(3);
   });
 });
 

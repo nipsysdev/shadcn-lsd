@@ -12,11 +12,9 @@ describe('SheetFooter', () => {
             <button type="button">Confirm</button>
           </SheetFooter>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
-    expect(
-      document.querySelector('[data-slot="sheet-footer"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="sheet-footer"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -27,7 +25,7 @@ describe('SheetFooter', () => {
             <button type="button">Cancel</button>
           </SheetFooter>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const footer = document.querySelector('[data-slot="sheet-footer"]');
     expect(footer).toHaveClass('lsd:mt-auto');
@@ -45,7 +43,7 @@ describe('SheetFooter', () => {
             <button type="button">Cancel</button>
           </SheetFooter>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const footer = document.querySelector('[data-slot="sheet-footer"]');
     expect(footer).toHaveAttribute('data-slot', 'sheet-footer');
@@ -59,7 +57,7 @@ describe('SheetFooter', () => {
             <button type="button">Cancel</button>
           </SheetFooter>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const footer = document.querySelector('[data-slot="sheet-footer"]');
     expect(footer).toHaveClass('custom-footer-class');

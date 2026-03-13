@@ -11,7 +11,7 @@ describe('DialogTitle', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     expect(screen.getByRole('heading', { name: 'Title' })).toBeInTheDocument();
   });
@@ -24,7 +24,7 @@ describe('DialogTitle', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     expect(screen.getByRole('heading', { name: 'Title' })).toBeInTheDocument();
   });
@@ -37,7 +37,7 @@ describe('DialogTitle', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveClass('lsd:text-lg');
@@ -53,7 +53,7 @@ describe('DialogTitle', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveAttribute('data-slot', 'dialog-title');
@@ -67,7 +67,7 @@ describe('DialogTitle', () => {
             <DialogTitle className="custom-title-class">Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveClass('custom-title-class');
@@ -83,7 +83,7 @@ describe('DialogTitle', () => {
             </DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveAttribute('data-testid', 'test-title');

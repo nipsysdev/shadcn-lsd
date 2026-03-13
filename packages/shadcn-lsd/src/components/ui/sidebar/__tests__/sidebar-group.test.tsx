@@ -5,18 +5,12 @@ import { SidebarGroup } from '../index';
 describe('SidebarGroup', () => {
   it('renders without crashing', () => {
     const { container } = render(<SidebarGroup>Group</SidebarGroup>);
-    expect(
-      container.querySelector('[data-slot="sidebar-group"]'),
-    ).toBeInTheDocument();
+    expect(container.querySelector('[data-slot="sidebar-group"]')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarGroup className="custom-class">Group</SidebarGroup>,
-    );
-    expect(container.querySelector('[data-slot="sidebar-group"]')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarGroup className="custom-class">Group</SidebarGroup>);
+    expect(container.querySelector('[data-slot="sidebar-group"]')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {

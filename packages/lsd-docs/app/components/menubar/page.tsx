@@ -3,9 +3,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
   Menubar as LSDMenubar,
   MenubarCheckboxItem,
   MenubarContent,
@@ -37,9 +34,9 @@ export default function MenubarPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          A horizontally stacked set of menus that provides access to a
-          consistent set of commands or actions. Menubars are commonly used in
-          desktop applications to organize commands into logical groups.
+          A horizontally stacked set of menus that provides access to a consistent set of commands
+          or actions. Menubars are commonly used in desktop applications to organize commands into
+          logical groups.
         </Typography>
       </div>
 
@@ -49,10 +46,7 @@ export default function MenubarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -109,10 +103,7 @@ export default function MenubarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Basic Usage
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Create a menubar with multiple menus, items, and keyboard shortcuts.
         </Typography>
 
@@ -175,10 +166,7 @@ export default function MenubarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           With Groups and Labels
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             MenubarGroup
@@ -243,16 +231,12 @@ export default function MenubarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Destructive Variant
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             destructive
           </code>{' '}
-          variant on menu items to indicate dangerous actions like delete or
-          remove.
+          variant on menu items to indicate dangerous actions like delete or remove.
         </Typography>
 
         <ComponentPreview
@@ -292,10 +276,7 @@ export default function MenubarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Nested Submenus
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Create nested submenus using{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             MenubarSub
@@ -384,10 +365,7 @@ export default function MenubarPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Checkbox and Radio Items
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             MenubarCheckboxItem
@@ -466,9 +444,7 @@ export default function MenubarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply to the menubar
                 </Typography>
@@ -491,14 +467,10 @@ export default function MenubarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -514,9 +486,7 @@ export default function MenubarPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "default"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"default"</code>
                 </Typography>
               </div>
               <div>
@@ -527,9 +497,7 @@ export default function MenubarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Keyboard shortcut to display
                 </Typography>
@@ -542,14 +510,10 @@ export default function MenubarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
             </div>
@@ -570,14 +534,10 @@ export default function MenubarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -613,9 +573,7 @@ export default function MenubarPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   The currently selected value
                 </Typography>
@@ -647,11 +605,10 @@ export default function MenubarPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Menubars follow WAI-ARIA guidelines and are fully accessible. The
-          component uses proper role attributes, keyboard navigation support,
-          and screen reader announcements. Users can navigate using arrow keys,
-          Enter, and Escape. Keyboard shortcuts are displayed for items that
-          have them.
+          Menubars follow WAI-ARIA guidelines and are fully accessible. The component uses proper
+          role attributes, keyboard navigation support, and screen reader announcements. Users can
+          navigate using arrow keys, Enter, and Escape. Keyboard shortcuts are displayed for items
+          that have them.
         </Typography>
       </div>
     </div>

@@ -12,7 +12,7 @@ const CardTitle = React.forwardRef<HTMLDivElement, React.ComponentProps<'div'>>(
         {...props}
       />
     );
-  },
+  }
 );
 CardTitle.displayName = 'CardTitle';
 

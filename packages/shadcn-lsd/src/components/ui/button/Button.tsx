@@ -3,9 +3,7 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 import { type ButtonVariants, buttonVariants } from './types';
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    ButtonVariants {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, ButtonVariants {
   asChild?: boolean;
   loading?: boolean;
   fullWidth?: boolean;
@@ -13,8 +11,7 @@ export interface ButtonProps
 
 const LoadingSpinner = ({ size }: { size?: string }) => {
   const getSpinnerSize = () => {
-    const md =
-      'lsd:w-[var(--lsd-spacing-large)] lsd:h-[var(--lsd-spacing-large)]';
+    const md = 'lsd:w-[var(--lsd-spacing-large)] lsd:h-[var(--lsd-spacing-large)]';
     switch (size) {
       case 'icon-sm':
         return 'lsd:w-[var(--lsd-spacing-small)] lsd:h-[var(--lsd-spacing-small)]';
@@ -69,7 +66,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       disabled,
       ...props
     },
-    ref,
+    ref
   ) => {
     const isLinkVariant = variant === 'link';
     const isGhostVariant = variant === 'ghost' || variant === 'ghost-icon';
@@ -82,7 +79,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           buttonVariants({ variant, size }),
           fullWidth && 'lsd:w-full',
           (isLinkVariant || isGhostVariant) && 'lsd:border-0',
-          className,
+          className
         )}
         ref={ref}
         disabled={disabled || loading}
@@ -98,7 +95,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       </Comp>
     );
-  },
+  }
 );
 Button.displayName = 'Button';
 

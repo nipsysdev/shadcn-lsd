@@ -20,7 +20,7 @@ describe('DialogTrigger', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     expect(screen.getByRole('button', { name: 'Open' })).toBeInTheDocument();
   });
@@ -35,7 +35,7 @@ describe('DialogTrigger', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-slot', 'dialog-trigger');
@@ -53,7 +53,7 @@ describe('DialogTrigger', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');

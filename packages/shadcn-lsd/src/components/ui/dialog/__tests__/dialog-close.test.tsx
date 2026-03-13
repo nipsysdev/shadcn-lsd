@@ -9,11 +9,9 @@ describe('DialogClose', () => {
         <DialogContent>
           <DialogClose />
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
-    expect(
-      document.querySelector('[data-slot="dialog-close"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="dialog-close"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -22,7 +20,7 @@ describe('DialogClose', () => {
         <DialogContent>
           <DialogClose />
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const close = document.querySelector('[data-slot="dialog-close"]');
     expect(close).toHaveAttribute('data-slot', 'dialog-close');
@@ -34,7 +32,7 @@ describe('DialogClose', () => {
         <DialogContent>
           <DialogClose data-testid="test-close" id="close-1" />
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const close = document.querySelector('[data-slot="dialog-close"]');
     expect(close).toHaveAttribute('data-testid', 'test-close');
@@ -48,7 +46,7 @@ describe('DialogClose', () => {
         <DialogContent>
           <DialogClose />
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const close = document.querySelector('[data-slot="dialog-close"]');
     if (close) {

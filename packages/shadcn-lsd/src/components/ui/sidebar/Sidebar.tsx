@@ -26,7 +26,7 @@ export function Sidebar({
         data-slot="sidebar"
         className={cn(
           'lsd:bg-sidebar lsd:text-sidebar-foreground lsd:flex lsd:h-full lsd:w-(--sidebar-width) lsd:flex-col',
-          className,
+          className
         )}
         {...props}
       >
@@ -54,9 +54,7 @@ export function Sidebar({
             <SheetTitle>Sidebar</SheetTitle>
             <SheetDescription>Displays the mobile sidebar.</SheetDescription>
           </SheetHeader>
-          <div className="lsd:flex lsd:h-full lsd:w-full lsd:flex-col">
-            {children}
-          </div>
+          <div className="lsd:flex lsd:h-full lsd:w-full lsd:flex-col">{children}</div>
         </SheetContent>
       </Sheet>
     );
@@ -80,7 +78,7 @@ export function Sidebar({
           'lsd:group-data-[side=right]:rotate-180',
           variant === 'floating' || variant === 'inset'
             ? 'lsd:group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4)))]'
-            : 'lsd:group-data-[collapsible=icon]:w-(--sidebar-width-icon)',
+            : 'lsd:group-data-[collapsible=icon]:w-(--sidebar-width-icon)'
         )}
       />
       <div
@@ -94,7 +92,7 @@ export function Sidebar({
           variant === 'floating' || variant === 'inset'
             ? 'lsd:p-(--lsd-spacing-smaller) lsd:group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]'
             : 'lsd:group-data-[collapsible=icon]:w-(--sidebar-width-icon) lsd:group-data-[side=left]:border-r lsd:group-data-[side=right]:border-l',
-          className,
+          className
         )}
         {...props}
       >

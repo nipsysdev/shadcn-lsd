@@ -10,11 +10,9 @@ describe('TooltipContent', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
-    expect(
-      document.querySelector('[data-slot="tooltip-content"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="tooltip-content"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -24,7 +22,7 @@ describe('TooltipContent', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     expect(content).toHaveAttribute('data-slot', 'tooltip-content');
@@ -37,7 +35,7 @@ describe('TooltipContent', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     expect(content).toHaveClass('lsd:bg-foreground');
@@ -60,7 +58,7 @@ describe('TooltipContent', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     expect(content).toHaveClass('lsd:data-[state=closed]:animate-out');
@@ -75,7 +73,7 @@ describe('TooltipContent', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     expect(content).toHaveClass('lsd:data-[side=bottom]:slide-in-from-top-2');
@@ -90,10 +88,8 @@ describe('TooltipContent', () => {
         <TooltipTrigger>
           <span>Hover me</span>
         </TooltipTrigger>
-        <TooltipContent className="custom-content-class">
-          Tooltip content
-        </TooltipContent>
-      </Tooltip>,
+        <TooltipContent className="custom-content-class">Tooltip content</TooltipContent>
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     expect(content).toHaveClass('custom-content-class');
@@ -108,7 +104,7 @@ describe('TooltipContent', () => {
         <TooltipContent data-testid="test-content" id="content-1">
           Tooltip content
         </TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
@@ -125,7 +121,7 @@ describe('TooltipContent', () => {
           <p>Tooltip content</p>
           <span>Additional info</span>
         </TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     expect(screen.getAllByText('Tooltip content')).toHaveLength(2); // One visible, one for accessibility
     expect(screen.getAllByText('Additional info')).toHaveLength(2);
@@ -138,7 +134,7 @@ describe('TooltipContent', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     const arrow = content?.querySelector('svg');

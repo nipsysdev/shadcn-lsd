@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '../index';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../index';
 
 describe('SelectItem', () => {
   it('renders without crashing', () => {
@@ -18,11 +12,9 @@ describe('SelectItem', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
-    expect(
-      screen.getByRole('option', { name: 'Option 1' }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Option 1' })).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -34,7 +26,7 @@ describe('SelectItem', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const item = document.querySelector('[data-slot="select-item"]');
     expect(item).toHaveAttribute('data-slot', 'select-item');
@@ -49,7 +41,7 @@ describe('SelectItem', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const item = document.querySelector('[data-slot="select-item"]');
     expect(item).toHaveClass('lsd:flex');
@@ -69,7 +61,7 @@ describe('SelectItem', () => {
             Option 1
           </SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const item = document.querySelector('[data-slot="select-item"]');
     expect(item).toHaveClass('custom-item-class');
@@ -86,7 +78,7 @@ describe('SelectItem', () => {
             Option 1
           </SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const item = document.querySelector('[data-slot="select-item"]');
     expect(item).toHaveAttribute('data-testid', 'test-item');
@@ -102,7 +94,7 @@ describe('SelectItem', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const item = document.querySelector('[data-slot="select-item"]');
     expect(item?.querySelector('svg')).toBeInTheDocument();

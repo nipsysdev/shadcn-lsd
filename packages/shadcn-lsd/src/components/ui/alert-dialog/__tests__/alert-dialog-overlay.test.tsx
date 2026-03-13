@@ -9,11 +9,9 @@ describe('AlertDialogOverlay', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    expect(
-      document.querySelector('[data-slot="alert-dialog-overlay"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="alert-dialog-overlay"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -22,11 +20,9 @@ describe('AlertDialogOverlay', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const overlay = document.querySelector(
-      '[data-slot="alert-dialog-overlay"]',
-    );
+    const overlay = document.querySelector('[data-slot="alert-dialog-overlay"]');
     expect(overlay).toHaveClass('lsd:fixed');
     expect(overlay).toHaveClass('lsd:inset-0');
     expect(overlay).toHaveClass('lsd:z-50');
@@ -39,11 +35,9 @@ describe('AlertDialogOverlay', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const overlay = document.querySelector(
-      '[data-slot="alert-dialog-overlay"]',
-    );
+    const overlay = document.querySelector('[data-slot="alert-dialog-overlay"]');
     expect(overlay).toHaveClass('lsd:data-[state=open]:animate-in');
     expect(overlay).toHaveClass('lsd:data-[state=closed]:animate-out');
   });
@@ -54,11 +48,9 @@ describe('AlertDialogOverlay', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const overlay = document.querySelector(
-      '[data-slot="alert-dialog-overlay"]',
-    );
+    const overlay = document.querySelector('[data-slot="alert-dialog-overlay"]');
     expect(overlay).toHaveAttribute('data-slot', 'alert-dialog-overlay');
   });
 
@@ -69,11 +61,9 @@ describe('AlertDialogOverlay', () => {
         <AlertDialogContent>
           <div>Content</div>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const overlay = document.querySelector(
-      '[data-slot="alert-dialog-overlay"]',
-    );
+    const overlay = document.querySelector('[data-slot="alert-dialog-overlay"]');
     expect(overlay).toHaveClass('custom-overlay-class');
   });
 });

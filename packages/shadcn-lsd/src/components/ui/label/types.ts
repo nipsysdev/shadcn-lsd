@@ -21,7 +21,7 @@ export const labelVariants = cva(
       variant: 'default',
       size: 'md',
     },
-  },
+  }
 );
 
 export type LabelVariants = VariantProps<typeof labelVariants> & {

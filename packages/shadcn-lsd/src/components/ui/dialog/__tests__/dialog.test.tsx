@@ -21,7 +21,7 @@ describe('Dialog', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
@@ -36,7 +36,7 @@ describe('Dialog', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const dialog = document.querySelector('[data-slot="dialog-content"]');
     expect(dialog).toHaveAttribute('data-testid', 'test-dialog');
@@ -57,18 +57,14 @@ describe('Dialog', () => {
             <button type="button">Confirm</button>
           </DialogFooter>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     // Verify trigger is present (may be hidden when dialog is open)
-    expect(
-      document.querySelector('[data-slot="dialog-trigger"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="dialog-trigger"]')).toBeInTheDocument();
     // Verify dialog is present
     expect(screen.getByRole('dialog')).toBeInTheDocument();
     // Verify title is present
-    expect(
-      screen.getByRole('heading', { name: 'Dialog Title' }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Dialog Title' })).toBeInTheDocument();
     // Verify description is present
     expect(screen.getByText('Dialog Description')).toBeInTheDocument();
     // Verify content is present

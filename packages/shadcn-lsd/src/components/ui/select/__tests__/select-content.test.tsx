@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '../index';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../index';
 
 describe('SelectContent', () => {
   it('renders without crashing when open', () => {
@@ -18,11 +12,9 @@ describe('SelectContent', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
-    expect(
-      document.querySelector('[data-slot="select-content"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="select-content"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -34,7 +26,7 @@ describe('SelectContent', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const content = document.querySelector('[data-slot="select-content"]');
     expect(content).toHaveAttribute('data-slot', 'select-content');
@@ -49,7 +41,7 @@ describe('SelectContent', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const content = document.querySelector('[data-slot="select-content"]');
     expect(content).toHaveClass('lsd:bg-lsd-surface');
@@ -67,7 +59,7 @@ describe('SelectContent', () => {
         <SelectContent>
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const content = document.querySelector('[data-slot="select-content"]');
     expect(content).toHaveClass('lsd:data-[state=open]:animate-in');
@@ -83,7 +75,7 @@ describe('SelectContent', () => {
         <SelectContent className="custom-content-class">
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const content = document.querySelector('[data-slot="select-content"]');
     expect(content).toHaveClass('custom-content-class');
@@ -98,7 +90,7 @@ describe('SelectContent', () => {
         <SelectContent data-testid="test-content" id="content-1">
           <SelectItem value="option-1">Option 1</SelectItem>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const content = document.querySelector('[data-slot="select-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
@@ -115,7 +107,7 @@ describe('SelectContent', () => {
           <SelectItem value="option-1">Option 1</SelectItem>
           <p>Custom content</p>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     expect(screen.getByText('Custom content')).toBeInTheDocument();
   });

@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '../index';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../index';
 
 describe('SheetTrigger', () => {
   it('renders without crashing', () => {
@@ -18,7 +12,7 @@ describe('SheetTrigger', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     expect(screen.getByRole('button', { name: 'Open' })).toBeInTheDocument();
   });
@@ -32,7 +26,7 @@ describe('SheetTrigger', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-slot', 'sheet-trigger');
@@ -49,7 +43,7 @@ describe('SheetTrigger', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const trigger = screen.getByRole('button', { name: 'Open' });
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');

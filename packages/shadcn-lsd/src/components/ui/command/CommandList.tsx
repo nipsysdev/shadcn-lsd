@@ -12,7 +12,7 @@ export function CommandList({
       data-slot="command-list"
       className={cn(
         'lsd:max-h-[300px] lsd:scroll-py-(--lsd-spacing-smallest) lsd:overflow-x-hidden lsd:overflow-y-auto',
-        className,
+        className
       )}
       {...props}
     />

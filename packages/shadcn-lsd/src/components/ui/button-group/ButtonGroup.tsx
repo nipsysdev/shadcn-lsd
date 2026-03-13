@@ -15,7 +15,7 @@ const ButtonGroup = React.forwardRef<HTMLFieldSetElement, ButtonGroupProps>(
         {...props}
       />
     );
-  },
+  }
 );
 ButtonGroup.displayName = 'ButtonGroup';
 

@@ -7,7 +7,7 @@ describe('ToggleGroupItem', () => {
     render(
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     expect(screen.getByRole('radio', { name: 'A' })).toBeInTheDocument();
   });
@@ -16,7 +16,7 @@ describe('ToggleGroupItem', () => {
     render(
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('lsd:min-w-0');
@@ -32,7 +32,7 @@ describe('ToggleGroupItem', () => {
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const itemA = screen.getByRole('radio', { name: 'A' });
     // First item has lsd:first:border-l (Tailwind first: variant)
@@ -44,7 +44,7 @@ describe('ToggleGroupItem', () => {
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const itemB = screen.getByRole('radio', { name: 'B' });
     expect(itemB).toHaveClass('lsd:border-l-0');
@@ -56,7 +56,7 @@ describe('ToggleGroupItem', () => {
         <ToggleGroupItem value="a" disabled>
           A
         </ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toBeDisabled();
@@ -69,7 +69,7 @@ describe('ToggleGroupItem', () => {
         <ToggleGroupItem value="a" className="custom-item-class">
           A
         </ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveClass('custom-item-class');
@@ -81,7 +81,7 @@ describe('ToggleGroupItem', () => {
         <ToggleGroupItem value="a" data-testid="test-item" id="item-1">
           A
         </ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveAttribute('data-testid', 'test-item');
@@ -95,7 +95,7 @@ describe('ToggleGroupItem', () => {
         <ToggleGroupItem ref={ref} value="a">
           A
         </ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     expect(ref).toHaveBeenCalled();
     expect(ref.mock.calls[0][0]).toBeInstanceOf(HTMLButtonElement);
@@ -105,7 +105,7 @@ describe('ToggleGroupItem', () => {
     render(
       <ToggleGroup type="single">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const item = screen.getByRole('radio', { name: 'A' });
     expect(item).toHaveAttribute('data-slot', 'toggle-group-item');
@@ -116,7 +116,7 @@ describe('ToggleGroupItem', () => {
       <ToggleGroup type="single" defaultValue="a">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const itemA = screen.getByRole('radio', { name: 'A' });
     expect(itemA).toHaveAttribute('data-state', 'on');
@@ -127,7 +127,7 @@ describe('ToggleGroupItem', () => {
       <ToggleGroup type="single" defaultValue="a">
         <ToggleGroupItem value="a">A</ToggleGroupItem>
         <ToggleGroupItem value="b">B</ToggleGroupItem>
-      </ToggleGroup>,
+      </ToggleGroup>
     );
     const itemB = screen.getByRole('radio', { name: 'B' });
     expect(itemB).toHaveAttribute('data-state', 'off');

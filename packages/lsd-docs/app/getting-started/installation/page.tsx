@@ -11,12 +11,7 @@ import {
   Typography,
 } from '@nipsys/shadcn-lsd';
 import Link from 'next/link';
-import {
-  DocsLayout,
-  PageContent,
-  PageHeader,
-  PageNavigation,
-} from '../../components/docs';
+import { DocsLayout, PageContent, PageHeader, PageNavigation } from '../../components/docs';
 
 export default function InstallationPage() {
   return (
@@ -32,10 +27,7 @@ export default function InstallationPage() {
             <Typography variant="h2" className="mb-(--lsd-spacing-base)">
               Prerequisites
             </Typography>
-            <Typography
-              variant="body1"
-              className="text-muted-foreground mb-(--lsd-spacing-base)"
-            >
+            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
               Before installing LSD, make sure you have the following:
             </Typography>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -52,10 +44,7 @@ export default function InstallationPage() {
             <Typography variant="h2" className="mb-(--lsd-spacing-base)">
               Install the package
             </Typography>
-            <Typography
-              variant="body1"
-              className="text-muted-foreground mb-(--lsd-spacing-base)"
-            >
+            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
               Install LSD using your preferred package manager:
             </Typography>
 
@@ -102,10 +91,7 @@ export default function InstallationPage() {
             <Typography variant="h2" className="mb-(--lsd-spacing-base)">
               Import the CSS
             </Typography>
-            <Typography
-              variant="body1"
-              className="text-muted-foreground mb-(--lsd-spacing-base)"
-            >
+            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
               Import the LSD styles in your main CSS file:
             </Typography>
 
@@ -126,10 +112,7 @@ export default function InstallationPage() {
             <Typography variant="h2" className="mb-(--lsd-spacing-base)">
               Configure Tailwind CSS
             </Typography>
-            <Typography
-              variant="body1"
-              className="text-muted-foreground mb-(--lsd-spacing-base)"
-            >
+            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
               Add the LSD content path to your Tailwind configuration:
             </Typography>
 
@@ -157,10 +140,7 @@ module.exports = {
             <Typography variant="h2" className="mb-(--lsd-spacing-base)">
               Next Steps
             </Typography>
-            <Typography
-              variant="body1"
-              className="text-muted-foreground mb-(--lsd-spacing-base)"
-            >
+            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
               Now that you've installed LSD, learn how to use the components:
             </Typography>
             <div className="flex gap-(--lsd-spacing-base)">

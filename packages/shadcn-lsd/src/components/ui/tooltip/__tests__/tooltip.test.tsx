@@ -1,11 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '../index';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../index';
 
 describe('Tooltip', () => {
   it('renders without crashing', () => {
@@ -15,7 +10,7 @@ describe('Tooltip', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -27,7 +22,7 @@ describe('Tooltip', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -39,7 +34,7 @@ describe('Tooltip', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -53,7 +48,7 @@ describe('Tooltip', () => {
           </TooltipTrigger>
           <TooltipContent>Tooltip content</TooltipContent>
         </Tooltip>
-      </TooltipProvider>,
+      </TooltipProvider>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -65,7 +60,7 @@ describe('Tooltip', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const trigger = document.querySelector('[data-slot="tooltip-trigger"]');
     expect(trigger).toBeInTheDocument();
@@ -79,7 +74,7 @@ describe('Tooltip', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const content = document.querySelector('[data-slot="tooltip-content"]');
     expect(content).toBeInTheDocument();

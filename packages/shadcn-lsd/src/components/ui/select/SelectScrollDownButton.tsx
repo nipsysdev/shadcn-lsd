@@ -13,7 +13,7 @@ export function SelectScrollDownButton({
       data-slot="select-scroll-down-button"
       className={cn(
         'lsd:flex lsd:cursor-default lsd:items-center lsd:justify-center lsd:py-(--lsd-spacing-smallest) lsd:text-lsd-icon-primary',
-        className,
+        className
       )}
       {...props}
     >

@@ -2,11 +2,7 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 import type { InputProps } from './types';
-import {
-  getLabelSizeClasses,
-  getTextSizeClasses,
-  getVerticalPaddingClasses,
-} from './utils';
+import { getLabelSizeClasses, getTextSizeClasses, getVerticalPaddingClasses } from './utils';
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -21,7 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       type,
       ...props
     },
-    ref,
+    ref
   ) => {
     const inputId = React.useId();
     const finalId = id || inputId;
@@ -29,10 +25,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className={cn('lsd:flex lsd:flex-col lsd:box-border', className)}>
         {label && (
-          <label
-            htmlFor={finalId}
-            className={cn('lsd:font-medium', getLabelSizeClasses(size))}
-          >
+          <label htmlFor={finalId} className={cn('lsd:font-medium', getLabelSizeClasses(size))}>
             {label}
           </label>
         )}
@@ -42,7 +35,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             variant === 'outlined'
               ? 'lsd:border lsd:border-lsd-border'
               : 'lsd:border lsd:border-transparent lsd:border-b-lsd-border',
-            error && 'lsd:border-lsd-destructive',
+            error && 'lsd:border-lsd-destructive'
           )}
         >
           <input
@@ -53,7 +46,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               'file:lsd:text-lsd-text-primary placeholder:lsd:text-lsd-text-primary placeholder:lsd:opacity-30 selection:lsd:bg-lsd-primary selection:lsd:text-lsd-surface lsd:border-none lsd:outline-none lsd:bg-transparent lsd:text-lsd-text-primary lsd:w-full lsd:h-full file:lsd:inline-flex file:lsd:h-7 file:lsd:border-0 file:lsd:bg-transparent file:lsd:font-medium lsd:disabled:pointer-events-none lsd:disabled:cursor-not-allowed lsd:disabled:opacity-34',
               'focus-visible:lsd:outline-none lsd:px-(--lsd-spacing-base)',
               getTextSizeClasses(size),
-              getVerticalPaddingClasses(size),
+              getVerticalPaddingClasses(size)
             )}
             {...props}
           />
@@ -64,7 +57,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               className={cn(
                 'lsd:text-sm',
                 size === 'lg' ? 'lsd:text-base' : 'lsd:text-sm',
-                error && 'lsd:text-lsd-destructive',
+                error && 'lsd:text-lsd-destructive'
               )}
             >
               {supportingText}
@@ -73,7 +66,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         )}
       </div>
     );
-  },
+  }
 );
 
 Input.displayName = 'Input';

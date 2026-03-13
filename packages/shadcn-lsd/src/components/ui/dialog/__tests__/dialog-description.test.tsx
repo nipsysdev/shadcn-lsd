@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '../index';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '../index';
 
 describe('DialogDescription', () => {
   it('renders without crashing', () => {
@@ -18,7 +12,7 @@ describe('DialogDescription', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     expect(screen.getByText('Description')).toBeInTheDocument();
   });
@@ -32,7 +26,7 @@ describe('DialogDescription', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveClass('lsd:text-lsd-text-primary');
@@ -48,7 +42,7 @@ describe('DialogDescription', () => {
             <DialogDescription>Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveAttribute('data-slot', 'dialog-description');
@@ -60,12 +54,10 @@ describe('DialogDescription', () => {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Title</DialogTitle>
-            <DialogDescription className="custom-description-class">
-              Description
-            </DialogDescription>
+            <DialogDescription className="custom-description-class">Description</DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveClass('custom-description-class');

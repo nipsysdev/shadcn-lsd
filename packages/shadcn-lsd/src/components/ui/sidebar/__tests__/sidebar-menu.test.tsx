@@ -5,18 +5,12 @@ import { SidebarMenu } from '../index';
 describe('SidebarMenu', () => {
   it('renders without crashing', () => {
     const { container } = render(<SidebarMenu>Menu</SidebarMenu>);
-    expect(
-      container.querySelector('[data-slot="sidebar-menu"]'),
-    ).toBeInTheDocument();
+    expect(container.querySelector('[data-slot="sidebar-menu"]')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarMenu className="custom-class">Menu</SidebarMenu>,
-    );
-    expect(container.querySelector('[data-slot="sidebar-menu"]')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarMenu className="custom-class">Menu</SidebarMenu>);
+    expect(container.querySelector('[data-slot="sidebar-menu"]')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {

@@ -13,15 +13,10 @@ const ToggleGroup = React.forwardRef<
       ref={ref}
       data-slot="toggle-group"
       data-size={size}
-      className={cn(
-        'group/toggle-group lsd:flex lsd:w-fit lsd:items-center',
-        className,
-      )}
+      className={cn('group/toggle-group lsd:flex lsd:w-fit lsd:items-center', className)}
       {...props}
     >
-      <ToggleGroupContext.Provider value={{ size }}>
-        {children}
-      </ToggleGroupContext.Provider>
+      <ToggleGroupContext.Provider value={{ size }}>{children}</ToggleGroupContext.Provider>
     </ToggleGroupPrimitive.Root>
   );
 });

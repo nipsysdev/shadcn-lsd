@@ -97,9 +97,7 @@ describe('Autocomplete', () => {
   });
 
   it('passes through additional props', () => {
-    render(
-      <Autocomplete options={mockOptions} data-testid="test-autocomplete" />,
-    );
+    render(<Autocomplete options={mockOptions} data-testid="test-autocomplete" />);
     expect(screen.getByTestId('test-autocomplete')).toBeInTheDocument();
   });
 
@@ -130,9 +128,7 @@ describe('Autocomplete', () => {
   });
 
   it('displays loading text when isLoading is true', () => {
-    render(
-      <Autocomplete options={mockOptions} isLoading loadingText="Loading..." />,
-    );
+    render(<Autocomplete options={mockOptions} isLoading loadingText="Loading..." />);
     const input = screen.getByRole('textbox');
     fireEvent.click(input);
     expect(screen.getByText('Loading...')).toBeInTheDocument();
@@ -140,9 +136,7 @@ describe('Autocomplete', () => {
 
   it('calls onValueChange when an option is selected', () => {
     const onValueChange = vi.fn();
-    render(
-      <Autocomplete options={mockOptions} onValueChange={onValueChange} />,
-    );
+    render(<Autocomplete options={mockOptions} onValueChange={onValueChange} />);
     const input = screen.getByRole('textbox');
     fireEvent.click(input);
     const option = screen.getByText('Option 1');
@@ -152,14 +146,7 @@ describe('Autocomplete', () => {
 
   it('calls onClear when clear button is clicked', () => {
     const onClear = vi.fn();
-    render(
-      <Autocomplete
-        options={mockOptions}
-        value="1"
-        clearable
-        onClear={onClear}
-      />,
-    );
+    render(<Autocomplete options={mockOptions} value="1" clearable onClear={onClear} />);
     const clearButton = screen.getByRole('button');
     fireEvent.click(clearButton);
     expect(onClear).toHaveBeenCalled();
@@ -183,9 +170,7 @@ describe('Autocomplete', () => {
   });
 
   it('supports controlled value', () => {
-    const { rerender } = render(
-      <Autocomplete options={mockOptions} value="1" />,
-    );
+    const { rerender } = render(<Autocomplete options={mockOptions} value="1" />);
     expect(screen.getByRole('textbox')).toHaveValue('Option 1');
     rerender(<Autocomplete options={mockOptions} value="2" />);
     expect(screen.getByRole('textbox')).toHaveValue('Option 2');
@@ -201,16 +186,14 @@ describe('Autocomplete', () => {
   });
 
   it('fetches options asynchronously when onOptionsFetch is provided', async () => {
-    const onOptionsFetch = vi
-      .fn()
-      .mockResolvedValue([{ value: '4', label: 'Async Option' }]);
+    const onOptionsFetch = vi.fn().mockResolvedValue([{ value: '4', label: 'Async Option' }]);
     render(<Autocomplete onOptionsFetch={onOptionsFetch} />);
     const input = screen.getByRole('textbox');
     fireEvent.click(input);
     const commandInput = screen.getAllByPlaceholderText('Search...')[1];
     fireEvent.change(commandInput, { target: { value: 'test' } });
     // Wait for debounce
-    await new Promise((resolve) => setTimeout(resolve, 350));
+    await new Promise(resolve => setTimeout(resolve, 350));
     expect(onOptionsFetch).toHaveBeenCalledWith('test');
   });
 
@@ -223,7 +206,7 @@ describe('Autocomplete', () => {
     const commandInput = screen.getAllByPlaceholderText('Search...')[1];
     fireEvent.change(commandInput, { target: { value: 'test' } });
     // Wait for debounce and fetch
-    await new Promise((resolve) => setTimeout(resolve, 350));
+    await new Promise(resolve => setTimeout(resolve, 350));
     // Note: This test verifies the fetch is called, but the component may not
     // actually update the options list with the fetched results
     expect(onOptionsFetch).toHaveBeenCalledWith('test');

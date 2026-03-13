@@ -41,17 +41,14 @@ describe('Card', () => {
 
   it('passes through additional props', () => {
     render(<Card data-testid="test-card" data-custom="value" />);
-    expect(screen.getByTestId('test-card')).toHaveAttribute(
-      'data-custom',
-      'value',
-    );
+    expect(screen.getByTestId('test-card')).toHaveAttribute('data-custom', 'value');
   });
 
   it('renders children', () => {
     render(
       <Card>
         <span>Card content</span>
-      </Card>,
+      </Card>
     );
     expect(screen.getByText('Card content')).toBeInTheDocument();
   });
@@ -78,7 +75,7 @@ describe('Card', () => {
         <CardFooter>
           <button type="button">Footer Action</button>
         </CardFooter>
-      </Card>,
+      </Card>
     );
 
     expect(queryByDataSlot(container, 'card')).toBeInTheDocument();
@@ -99,7 +96,7 @@ describe('Card', () => {
         <CardContent>
           <span>Simple Card</span>
         </CardContent>
-      </Card>,
+      </Card>
     );
 
     expect(queryByDataSlot(container, 'card')).toBeInTheDocument();

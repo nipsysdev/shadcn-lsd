@@ -23,11 +23,9 @@ describe('SelectGroup', () => {
             <SelectItem value="option-1">Option 1</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>,
+      </Select>
     );
-    expect(
-      document.querySelector('[data-slot="select-group"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="select-group"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -41,7 +39,7 @@ describe('SelectGroup', () => {
             <SelectItem value="option-1">Option 1</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const group = document.querySelector('[data-slot="select-group"]');
     expect(group).toHaveAttribute('data-slot', 'select-group');
@@ -58,7 +56,7 @@ describe('SelectGroup', () => {
             <SelectItem value="option-1">Option 1</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const group = document.querySelector('[data-slot="select-group"]');
     expect(group).toHaveAttribute('data-testid', 'test-group');

@@ -33,10 +33,7 @@ export default function UsagePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Importing Components
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Import components from the LSD package:
           </Typography>
 
@@ -57,10 +54,7 @@ export default function UsagePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Basic Button Example
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Buttons come in multiple variants and sizes:
           </Typography>
 
@@ -90,10 +84,7 @@ export default function UsagePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Card Component
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Cards are composed of multiple sub-components:
           </Typography>
 
@@ -104,8 +95,7 @@ export default function UsagePage() {
             </CardHeader>
             <CardContent>
               <Typography variant="body1">
-                This is the card content area where you can place any content
-                you need.
+                This is the card content area where you can place any content you need.
               </Typography>
             </CardContent>
           </Card>
@@ -137,10 +127,7 @@ export default function UsagePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Typography
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Use the Typography component for consistent text styling:
           </Typography>
 
@@ -175,20 +162,14 @@ export default function UsagePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Form Components
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             LSD provides various form components:
           </Typography>
 
           <Card>
             <CardContent className="pt-(--lsd-spacing-large) space-y-4">
               <div>
-                <Typography
-                  variant="body1"
-                  className="mb-(--lsd-spacing-small)"
-                >
+                <Typography variant="body1" className="mb-(--lsd-spacing-small)">
                   Input:
                 </Typography>
                 <Input placeholder="Enter text..." />
@@ -227,20 +208,14 @@ export default function UsagePage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Next Steps
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Explore more components and customization options:
           </Typography>
           <div className="flex gap-(--lsd-spacing-base)">
             <Link href="/getting-started/theming">
               <Button>
                 Explore Theming
-                <ArrowRightIcon
-                  className="ml-(--lsd-spacing-small) h-4 w-4"
-                  weight="duotone"
-                />
+                <ArrowRightIcon className="ml-(--lsd-spacing-small) h-4 w-4" weight="duotone" />
               </Button>
             </Link>
             <Link href="/design-tokens/colors">

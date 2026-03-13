@@ -1,11 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '../index';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../index';
 
 describe('Accordion', () => {
   it('renders without crashing', () => {
@@ -15,11 +10,9 @@ describe('Accordion', () => {
           <AccordionTrigger>Item 1</AccordionTrigger>
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
-    expect(
-      document.querySelector('[data-slot="accordion"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="accordion"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -29,7 +22,7 @@ describe('Accordion', () => {
           <AccordionTrigger>Item 1</AccordionTrigger>
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const accordion = document.querySelector('[data-slot="accordion"]');
     expect(accordion).toHaveAttribute('data-slot', 'accordion');
@@ -37,17 +30,12 @@ describe('Accordion', () => {
 
   it('passes through additional props', () => {
     render(
-      <Accordion
-        type="single"
-        collapsible
-        data-testid="test-accordion"
-        id="accordion-1"
-      >
+      <Accordion type="single" collapsible data-testid="test-accordion" id="accordion-1">
         <AccordionItem value="item-1">
           <AccordionTrigger>Item 1</AccordionTrigger>
           <AccordionContent>Content 1</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const accordion = document.querySelector('[data-slot="accordion"]');
     expect(accordion).toHaveAttribute('data-testid', 'test-accordion');
@@ -65,23 +53,17 @@ describe('Accordion', () => {
           <AccordionTrigger>Item 2</AccordionTrigger>
           <AccordionContent>Content 2</AccordionContent>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     // Verify parent is present
-    expect(
-      document.querySelector('[data-slot="accordion"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="accordion"]')).toBeInTheDocument();
     // Verify all items are present
-    expect(
-      document.querySelectorAll('[data-slot="accordion-item"]'),
-    ).toHaveLength(2);
+    expect(document.querySelectorAll('[data-slot="accordion-item"]')).toHaveLength(2);
     // Verify all triggers are present
     expect(screen.getByRole('button', { name: 'Item 1' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Item 2' })).toBeInTheDocument();
     // Verify content elements are present (even if hidden)
-    expect(
-      document.querySelectorAll('[data-slot="accordion-content"]'),
-    ).toHaveLength(2);
+    expect(document.querySelectorAll('[data-slot="accordion-content"]')).toHaveLength(2);
     // Verify open content is visible
     expect(screen.getByText('Content 1')).toBeInTheDocument();
   });

@@ -3,9 +3,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
   Tabs as LSDTabs,
   Separator,
   TabsContent,
@@ -27,9 +24,9 @@ export default function TabsPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          A tabs component that allows users to navigate between different
-          content sections. Tabs are useful for organizing content into logical
-          groups and reducing clutter by showing only one section at a time.
+          A tabs component that allows users to navigate between different content sections. Tabs
+          are useful for organizing content into logical groups and reducing clutter by showing only
+          one section at a time.
         </Typography>
       </div>
 
@@ -39,10 +36,7 @@ export default function TabsPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -91,10 +85,7 @@ export default function TabsPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Default Tabs
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Create a basic tabs component with multiple tabs and content sections.
         </Typography>
 
@@ -143,10 +134,7 @@ export default function TabsPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Sizes
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             size
@@ -325,10 +313,7 @@ export default function TabsPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Full Width Tabs
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             fullWidth
@@ -387,12 +372,8 @@ export default function TabsPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Tabs with Icons
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
-          Add icons to your tabs to provide visual context and improve
-          usability.
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+          Add icons to your tabs to provide visual context and improve usability.
         </Typography>
 
         <ComponentPreview
@@ -536,10 +517,7 @@ export default function TabsPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Disabled Tabs
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             disabled
@@ -610,9 +588,7 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   The value of the tab that should be active by default
                 </Typography>
@@ -625,9 +601,7 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   The controlled value of the active tab
                 </Typography>
@@ -659,10 +633,7 @@ export default function TabsPage() {
                     "sm" | "md" | "lg"
                   </code>
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "md"
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"md"</code>
                 </Typography>
               </div>
               <div>
@@ -673,14 +644,10 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -691,9 +658,7 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply to the tabs
                 </Typography>
@@ -716,9 +681,7 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   The value that identifies this tab
                 </Typography>
@@ -731,14 +694,10 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -753,10 +712,7 @@ export default function TabsPage() {
                     "sm" | "md" | "lg"
                   </code>
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "md"
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"md"</code>
                 </Typography>
               </div>
               <div>
@@ -767,14 +723,10 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
             </div>
@@ -795,9 +747,7 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   The value that identifies this content (must match a trigger)
                 </Typography>
@@ -810,9 +760,7 @@ export default function TabsPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Additional CSS classes to apply to the content
                 </Typography>
@@ -829,10 +777,9 @@ export default function TabsPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Tabs follow WAI-ARIA guidelines and are fully accessible. The
-          component uses proper role attributes, keyboard navigation support,
-          and screen reader announcements. Users can navigate between tabs using
-          arrow keys, and the active tab is properly announced to screen
+          Tabs follow WAI-ARIA guidelines and are fully accessible. The component uses proper role
+          attributes, keyboard navigation support, and screen reader announcements. Users can
+          navigate between tabs using arrow keys, and the active tab is properly announced to screen
           readers.
         </Typography>
       </div>

@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-} from '../index';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from '../index';
 
 describe('SheetDescription', () => {
   it('renders without crashing', () => {
@@ -18,7 +12,7 @@ describe('SheetDescription', () => {
             <SheetDescription>Description</SheetDescription>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     expect(screen.getByText('Description')).toBeInTheDocument();
   });
@@ -32,7 +26,7 @@ describe('SheetDescription', () => {
             <SheetDescription>Description</SheetDescription>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveClass('lsd:text-muted-foreground');
@@ -48,7 +42,7 @@ describe('SheetDescription', () => {
             <SheetDescription>Description</SheetDescription>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveAttribute('data-slot', 'sheet-description');
@@ -60,12 +54,10 @@ describe('SheetDescription', () => {
         <SheetContent>
           <SheetHeader>
             <SheetTitle>Title</SheetTitle>
-            <SheetDescription className="custom-description-class">
-              Description
-            </SheetDescription>
+            <SheetDescription className="custom-description-class">Description</SheetDescription>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveClass('custom-description-class');

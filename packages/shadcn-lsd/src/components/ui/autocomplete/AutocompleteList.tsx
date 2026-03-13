@@ -32,10 +32,7 @@ export function AutocompleteContent({
 }: AutocompleteContentProps) {
   return (
     <PopoverContent
-      className={cn(
-        'lsd:w-full lsd:p-0',
-        'lsd:bg-lsd-surface lsd:border-lsd-border',
-      )}
+      className={cn('lsd:w-full lsd:p-0', 'lsd:bg-lsd-surface lsd:border-lsd-border')}
       align="start"
       sideOffset={0}
     >
@@ -52,7 +49,7 @@ export function AutocompleteContent({
           ) : filteredOptions.length === 0 ? (
             <CommandEmpty>{emptyText}</CommandEmpty>
           ) : (
-            filteredOptions?.map((option) => {
+            filteredOptions?.map(option => {
               const inputValue = searchText;
               const matchedPart = option.label.slice(0, inputValue.length);
               const remainingPart = option.label.slice(inputValue.length);
@@ -67,9 +64,7 @@ export function AutocompleteContent({
                 >
                   <span className="lsd:block lsd:overflow-hidden lsd:whitespace-nowrap lsd:text-ellipsis">
                     {matchedPart}
-                    <span className="lsd:opacity-50 lsd:whitespace-pre">
-                      {remainingPart}
-                    </span>
+                    <span className="lsd:opacity-50 lsd:whitespace-pre">{remainingPart}</span>
                   </span>
                 </CommandItem>
               );

@@ -10,11 +10,9 @@ describe('CommandEmpty', () => {
         <CommandList>
           <CommandEmpty>No results found</CommandEmpty>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    expect(
-      document.querySelector('[data-slot="command-empty"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-empty"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -24,7 +22,7 @@ describe('CommandEmpty', () => {
         <CommandList>
           <CommandEmpty>No results found</CommandEmpty>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const empty = document.querySelector('[data-slot="command-empty"]');
     expect(empty).toHaveAttribute('data-slot', 'command-empty');
@@ -37,7 +35,7 @@ describe('CommandEmpty', () => {
         <CommandList>
           <CommandEmpty>No results found</CommandEmpty>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const empty = document.querySelector('[data-slot="command-empty"]');
     expect(empty).toHaveClass('lsd:py-(--lsd-spacing-larger)');
@@ -52,7 +50,7 @@ describe('CommandEmpty', () => {
         <CommandList>
           <CommandEmpty>No results found</CommandEmpty>
         </CommandList>
-      </Command>,
+      </Command>
     );
     expect(screen.getByText('No results found')).toBeInTheDocument();
   });

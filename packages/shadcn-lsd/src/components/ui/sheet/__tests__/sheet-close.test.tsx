@@ -9,11 +9,9 @@ describe('SheetClose', () => {
         <SheetContent>
           <SheetClose />
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
-    expect(
-      document.querySelector('[data-slot="sheet-close"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="sheet-close"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -22,7 +20,7 @@ describe('SheetClose', () => {
         <SheetContent>
           <SheetClose />
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const close = document.querySelector('[data-slot="sheet-close"]');
     expect(close).toHaveAttribute('data-slot', 'sheet-close');
@@ -34,7 +32,7 @@ describe('SheetClose', () => {
         <SheetContent>
           <SheetClose data-testid="test-close" id="close-1" />
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const close = document.querySelector('[data-slot="sheet-close"]');
     expect(close).toHaveAttribute('data-testid', 'test-close');
@@ -48,7 +46,7 @@ describe('SheetClose', () => {
         <SheetContent>
           <SheetClose />
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const close = document.querySelector('[data-slot="sheet-close"]');
     if (close) {

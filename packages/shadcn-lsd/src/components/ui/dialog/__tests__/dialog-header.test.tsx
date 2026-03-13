@@ -11,11 +11,9 @@ describe('DialogHeader', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
-    expect(
-      document.querySelector('[data-slot="dialog-header"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="dialog-header"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -26,7 +24,7 @@ describe('DialogHeader', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const header = document.querySelector('[data-slot="dialog-header"]');
     expect(header).toHaveClass('lsd:flex');
@@ -43,7 +41,7 @@ describe('DialogHeader', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const header = document.querySelector('[data-slot="dialog-header"]');
     expect(header).toHaveAttribute('data-slot', 'dialog-header');
@@ -57,7 +55,7 @@ describe('DialogHeader', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const header = document.querySelector('[data-slot="dialog-header"]');
     expect(header).toHaveClass('custom-header-class');
@@ -71,7 +69,7 @@ describe('DialogHeader', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const header = document.querySelector('[data-slot="dialog-header"]');
     expect(header).toHaveAttribute('data-testid', 'test-header');

@@ -4,12 +4,7 @@ import { cn } from '@/lib/utils';
 import type { TabsTriggerProps } from './types';
 import { tabsTriggerVariants } from './types';
 
-function TabsTrigger({
-  className,
-  size,
-  fullWidth,
-  ...props
-}: TabsTriggerProps) {
+function TabsTrigger({ className, size, fullWidth, ...props }: TabsTriggerProps) {
   return (
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"

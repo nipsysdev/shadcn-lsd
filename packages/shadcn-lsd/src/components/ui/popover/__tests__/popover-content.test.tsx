@@ -8,11 +8,9 @@ describe('PopoverContent', () => {
       <Popover open>
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
-    expect(
-      document.querySelector('[data-slot="popover-content"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="popover-content"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -20,7 +18,7 @@ describe('PopoverContent', () => {
       <Popover open>
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const content = document.querySelector('[data-slot="popover-content"]');
     expect(content).toHaveClass('lsd:bg-lsd-surface');
@@ -38,7 +36,7 @@ describe('PopoverContent', () => {
       <Popover open>
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const content = document.querySelector('[data-slot="popover-content"]');
     expect(content).toHaveClass('lsd:data-[state=open]:animate-in');
@@ -50,7 +48,7 @@ describe('PopoverContent', () => {
       <Popover open>
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const content = document.querySelector('[data-slot="popover-content"]');
     expect(content).toHaveAttribute('data-slot', 'popover-content');
@@ -60,10 +58,8 @@ describe('PopoverContent', () => {
     render(
       <Popover open>
         <PopoverTrigger>Open</PopoverTrigger>
-        <PopoverContent className="custom-content-class">
-          Content
-        </PopoverContent>
-      </Popover>,
+        <PopoverContent className="custom-content-class">Content</PopoverContent>
+      </Popover>
     );
     const content = document.querySelector('[data-slot="popover-content"]');
     expect(content).toHaveClass('custom-content-class');
@@ -76,7 +72,7 @@ describe('PopoverContent', () => {
         <PopoverContent data-testid="test-content" id="content-1">
           Content
         </PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const content = document.querySelector('[data-slot="popover-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
@@ -90,7 +86,7 @@ describe('PopoverContent', () => {
         <PopoverContent>
           <p>Custom content</p>
         </PopoverContent>
-      </Popover>,
+      </Popover>
     );
     expect(screen.getByText('Custom content')).toBeInTheDocument();
   });
@@ -100,7 +96,7 @@ describe('PopoverContent', () => {
       <Popover open>
         <PopoverTrigger>Open</PopoverTrigger>
         <PopoverContent>Content</PopoverContent>
-      </Popover>,
+      </Popover>
     );
     const content = document.querySelector('[data-slot="popover-content"]');
     expect(content).toHaveClass('lsd:data-[side=bottom]:slide-in-from-top-2');

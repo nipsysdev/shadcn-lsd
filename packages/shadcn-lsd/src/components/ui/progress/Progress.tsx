@@ -4,10 +4,7 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 import type { ProgressProps } from './types';
 
-const Progress = React.forwardRef<
-  React.ElementRef<typeof ProgressPrimitive.Root>,
-  ProgressProps
->(
+const Progress = React.forwardRef<React.ElementRef<typeof ProgressPrimitive.Root>, ProgressProps>(
   (
     {
       className,
@@ -21,7 +18,7 @@ const Progress = React.forwardRef<
       size = 'md',
       ...props
     },
-    ref,
+    ref
   ) => {
     // Color variant mapping
     const variantClasses = {
@@ -45,7 +42,7 @@ const Progress = React.forwardRef<
           'lsd:animate-indeterminate-progress',
           speed === 'slow' && 'lsd:animate-indeterminate-progress-slow',
           speed === 'fast' && 'lsd:animate-indeterminate-progress-fast',
-          paused && 'lsd:animation-paused',
+          paused && 'lsd:animation-paused'
         )
       : 'lsd:w-full';
 
@@ -65,7 +62,7 @@ const Progress = React.forwardRef<
           className={cn(
             'lsd:relative lsd:w-full lsd:overflow-hidden lsd:rounded-none lsd:bg-lsd-surface lsd:border lsd:border-lsd-border',
             sizeClasses[size],
-            className,
+            className
           )}
           {...props}
         >
@@ -75,13 +72,9 @@ const Progress = React.forwardRef<
               'lsd:h-full lsd:flex-1',
               !indeterminate && 'lsd:transition-all',
               variantClasses[variant],
-              indeterminateAnimationClasses,
+              indeterminateAnimationClasses
             )}
-            style={
-              indeterminate
-                ? undefined
-                : { transform: `translateX(-${100 - (value || 0)}%)` }
-            }
+            style={indeterminate ? undefined : { transform: `translateX(-${100 - (value || 0)}%)` }}
           />
         </ProgressPrimitive.Root>
         {showLabel && labelText && labelPosition === 'bottom' && (
@@ -91,7 +84,7 @@ const Progress = React.forwardRef<
         )}
       </div>
     );
-  },
+  }
 );
 Progress.displayName = ProgressPrimitive.Root.displayName;
 

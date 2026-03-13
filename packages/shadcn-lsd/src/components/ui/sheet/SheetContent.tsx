@@ -30,7 +30,7 @@ export function SheetContent({
             'lsd:data-[state=closed]:slide-out-to-top lsd:data-[state=open]:slide-in-from-top lsd:inset-x-0 lsd:top-0 lsd:h-auto lsd:border-b',
           side === 'bottom' &&
             'lsd:data-[state=closed]:slide-out-to-bottom lsd:data-[state=open]:slide-in-from-bottom lsd:inset-x-0 lsd:bottom-0 lsd:h-auto lsd:border-t',
-          className,
+          className
         )}
         {...props}
       >

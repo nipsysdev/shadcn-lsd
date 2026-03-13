@@ -23,7 +23,7 @@ describe('AlertDialog', () => {
             <AlertDialogDescription>Description</AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByRole('alertdialog')).toBeInTheDocument();
   });
@@ -38,11 +38,9 @@ describe('AlertDialog', () => {
             <AlertDialogDescription>Description</AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    const alertDialog = document.querySelector(
-      '[data-slot="alert-dialog-content"]',
-    );
+    const alertDialog = document.querySelector('[data-slot="alert-dialog-content"]');
     expect(alertDialog).toHaveAttribute('data-testid', 'test-alert-dialog');
   });
 
@@ -53,31 +51,23 @@ describe('AlertDialog', () => {
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Confirm Action</AlertDialogTitle>
-            <AlertDialogDescription>
-              Are you sure you want to proceed?
-            </AlertDialogDescription>
+            <AlertDialogDescription>Are you sure you want to proceed?</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction>Confirm</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     // Verify trigger is present (may be hidden when dialog is open)
-    expect(
-      document.querySelector('[data-slot="alert-dialog-trigger"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="alert-dialog-trigger"]')).toBeInTheDocument();
     // Verify dialog is present
     expect(screen.getByRole('alertdialog')).toBeInTheDocument();
     // Verify title is present
-    expect(
-      screen.getByRole('heading', { name: 'Confirm Action' }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Confirm Action' })).toBeInTheDocument();
     // Verify description is present
-    expect(
-      screen.getByText('Are you sure you want to proceed?'),
-    ).toBeInTheDocument();
+    expect(screen.getByText('Are you sure you want to proceed?')).toBeInTheDocument();
     // Verify action buttons are present
     expect(screen.getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Confirm' })).toBeInTheDocument();

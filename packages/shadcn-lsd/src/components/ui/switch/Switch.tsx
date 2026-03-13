@@ -17,7 +17,7 @@ const switchVariants = cva(
     defaultVariants: {
       size: 'md',
     },
-  },
+  }
 );
 
 const thumbVariants = cva(
@@ -33,7 +33,7 @@ const thumbVariants = cva(
     defaultVariants: {
       size: 'md',
     },
-  },
+  }
 );
 
 export interface SwitchProps
@@ -47,10 +47,7 @@ function Switch({ className, size, ...props }: SwitchProps) {
       className={cn(switchVariants({ size }), className)}
       {...props}
     >
-      <SwitchPrimitive.Thumb
-        data-slot="switch-thumb"
-        className={thumbVariants({ size })}
-      />
+      <SwitchPrimitive.Thumb data-slot="switch-thumb" className={thumbVariants({ size })} />
     </SwitchPrimitive.Root>
   );
 }

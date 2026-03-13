@@ -1,11 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '../index';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../index';
 
 describe('TooltipProvider', () => {
   it('renders without crashing', () => {
@@ -17,7 +12,7 @@ describe('TooltipProvider', () => {
           </TooltipTrigger>
           <TooltipContent>Tooltip content</TooltipContent>
         </Tooltip>
-      </TooltipProvider>,
+      </TooltipProvider>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -31,7 +26,7 @@ describe('TooltipProvider', () => {
           </TooltipTrigger>
           <TooltipContent>Tooltip content</TooltipContent>
         </Tooltip>
-      </TooltipProvider>,
+      </TooltipProvider>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -45,7 +40,7 @@ describe('TooltipProvider', () => {
           </TooltipTrigger>
           <TooltipContent>Tooltip content</TooltipContent>
         </Tooltip>
-      </TooltipProvider>,
+      </TooltipProvider>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -65,7 +60,7 @@ describe('TooltipProvider', () => {
           </TooltipTrigger>
           <TooltipContent>Tooltip content 2</TooltipContent>
         </Tooltip>
-      </TooltipProvider>,
+      </TooltipProvider>
     );
     expect(screen.getByText('Hover me 1')).toBeInTheDocument();
     expect(screen.getByText('Hover me 2')).toBeInTheDocument();

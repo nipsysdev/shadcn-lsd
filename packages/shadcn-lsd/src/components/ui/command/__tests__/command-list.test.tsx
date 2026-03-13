@@ -10,11 +10,9 @@ describe('CommandList', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    expect(
-      document.querySelector('[data-slot="command-list"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-list"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute', () => {
@@ -24,7 +22,7 @@ describe('CommandList', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const list = document.querySelector('[data-slot="command-list"]');
     expect(list).toHaveAttribute('data-slot', 'command-list');
@@ -37,7 +35,7 @@ describe('CommandList', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const list = document.querySelector('[data-slot="command-list"]');
     expect(list).toHaveClass('lsd:max-h-[300px]');
@@ -53,7 +51,7 @@ describe('CommandList', () => {
         <CommandList className="custom-list-class">
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const list = document.querySelector('[data-slot="command-list"]');
     expect(list).toHaveClass('custom-list-class');
@@ -66,7 +64,7 @@ describe('CommandList', () => {
         <CommandList data-testid="test-list">
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const list = document.querySelector('[data-slot="command-list"]');
     expect(list).toHaveAttribute('data-testid', 'test-list');

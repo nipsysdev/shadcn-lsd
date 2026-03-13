@@ -1,15 +1,6 @@
 'use client';
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Input as LSDInput,
-  Separator,
-  Typography,
-} from '@nipsys/shadcn-lsd';
+import { Card, CardContent, Input as LSDInput, Separator, Typography } from '@nipsys/shadcn-lsd';
 import { CodeExample } from '../../components/docs/CodeExample';
 import { ComponentPreview } from '../../components/docs/ComponentPreview';
 
@@ -24,8 +15,7 @@ export default function InputPage() {
           variant="body1"
           className="text-muted-foreground text-lg mb-(--lsd-spacing-base)"
         >
-          An input component that allows users to enter text data with labels
-          and supporting text.
+          An input component that allows users to enter text data with labels and supporting text.
         </Typography>
       </div>
 
@@ -35,10 +25,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -59,10 +46,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Usage
         </Typography>
-        <CodeExample
-          title="Basic input"
-          code={`<Input placeholder="Enter your text" />`}
-        />
+        <CodeExample title="Basic input" code={`<Input placeholder="Enter your text" />`} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -71,10 +55,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Variants
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             variant
@@ -97,15 +78,11 @@ export default function InputPage() {
         >
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Underlined (Default)
-              </h3>
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Underlined (Default)</h3>
               <LSDInput placeholder="Enter your text" />
             </div>
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Outlined
-              </h3>
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Outlined</h3>
               <LSDInput variant="outlined" placeholder="Enter your text" />
             </div>
           </div>
@@ -118,10 +95,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Sizes
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             size
@@ -148,21 +122,15 @@ export default function InputPage() {
         >
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Large
-              </h3>
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Large</h3>
               <LSDInput size="lg" placeholder="Large input" />
             </div>
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Medium (Default)
-              </h3>
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Medium (Default)</h3>
               <LSDInput size="md" placeholder="Medium input" />
             </div>
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Small
-              </h3>
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Small</h3>
               <LSDInput size="sm" placeholder="Small input" />
             </div>
           </div>
@@ -175,10 +143,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           With Labels
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             label
@@ -201,11 +166,7 @@ export default function InputPage() {
           <div className="space-y-6">
             <LSDInput label="Name" placeholder="Enter your name" />
             <LSDInput label="Email" placeholder="Enter your email" />
-            <LSDInput
-              label="Password"
-              type="password"
-              placeholder="Enter your password"
-            />
+            <LSDInput label="Password" type="password" placeholder="Enter your password" />
           </div>
         </ComponentPreview>
       </div>
@@ -216,10 +177,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           With Supporting Text
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             supportingText
@@ -265,10 +223,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           States
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Inputs can be disabled or show an error state.
         </Typography>
 
@@ -301,18 +256,11 @@ export default function InputPage() {
         >
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Normal
-              </h3>
-              <LSDInput
-                label="Normal state"
-                placeholder="This is a normal input"
-              />
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Normal</h3>
+              <LSDInput label="Normal state" placeholder="This is a normal input" />
             </div>
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Disabled
-              </h3>
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Disabled</h3>
               <LSDInput
                 label="Disabled state"
                 placeholder="This is disabled"
@@ -321,9 +269,7 @@ export default function InputPage() {
               />
             </div>
             <div>
-              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">
-                Error
-              </h3>
+              <h3 className="text-lg font-medium mb-(--lsd-spacing-small)">Error</h3>
               <LSDInput
                 label="Error state"
                 placeholder="This has an error"
@@ -341,10 +287,7 @@ export default function InputPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Input Types
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             type
@@ -366,21 +309,9 @@ export default function InputPage() {
 </div>`}
         >
           <div className="space-y-6">
-            <LSDInput
-              label="Email"
-              type="email"
-              placeholder="Enter your email"
-            />
-            <LSDInput
-              label="Password"
-              type="password"
-              placeholder="Enter your password"
-            />
-            <LSDInput
-              label="Number"
-              type="number"
-              placeholder="Enter a number"
-            />
+            <LSDInput label="Email" type="email" placeholder="Enter your email" />
+            <LSDInput label="Password" type="password" placeholder="Enter your password" />
+            <LSDInput label="Number" type="number" placeholder="Enter a number" />
             <LSDInput label="Search" type="search" placeholder="Search..." />
           </div>
         </ComponentPreview>
@@ -411,9 +342,7 @@ export default function InputPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "underlined"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"underlined"</code>
                 </Typography>
               </div>
               <div>
@@ -428,10 +357,7 @@ export default function InputPage() {
                     "sm" | "md" | "lg"
                   </code>
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "md"
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"md"</code>
                 </Typography>
               </div>
               <div>
@@ -442,14 +368,10 @@ export default function InputPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -460,14 +382,10 @@ export default function InputPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -478,14 +396,10 @@ export default function InputPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -496,14 +410,10 @@ export default function InputPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -515,14 +425,11 @@ export default function InputPage() {
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
                   <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "text" | "email" | "password" | "number" | "search" | "tel"
-                    | "url"
+                    "text" | "email" | "password" | "number" | "search" | "tel" | "url"
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "text"
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"text"</code>
                 </Typography>
               </div>
               <div>
@@ -533,14 +440,10 @@ export default function InputPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -551,14 +454,10 @@ export default function InputPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -574,9 +473,7 @@ export default function InputPage() {
                   </code>
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
             </div>
@@ -591,8 +488,8 @@ export default function InputPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Inputs follow WAI-ARIA guidelines and are fully accessible. When using
-          labels, they are automatically associated with the input via the{' '}
+          Inputs follow WAI-ARIA guidelines and are fully accessible. When using labels, they are
+          automatically associated with the input via the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             htmlFor
           </code>{' '}

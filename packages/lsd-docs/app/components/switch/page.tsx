@@ -1,15 +1,6 @@
 'use client';
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Switch as LSDSwitch,
-  Separator,
-  Typography,
-} from '@nipsys/shadcn-lsd';
+import { Card, CardContent, Switch as LSDSwitch, Separator, Typography } from '@nipsys/shadcn-lsd';
 import { CodeExample } from '../../components/docs/CodeExample';
 import { ComponentPreview } from '../../components/docs/ComponentPreview';
 
@@ -34,10 +25,7 @@ export default function SwitchPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Installation
         </Typography>
-        <CodeExample
-          title="Install the component"
-          code={`pnpm add @nipsys/shadcn-lsd`}
-        />
+        <CodeExample title="Install the component" code={'pnpm add @nipsys/shadcn-lsd'} />
       </div>
 
       <Separator className="mb-(--lsd-spacing-larger)" />
@@ -73,10 +61,7 @@ export default function SwitchPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Default Switch
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           A basic switch with a label. Always provide an{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             id
@@ -108,10 +93,7 @@ export default function SwitchPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Controlled Switch
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             checked
@@ -151,10 +133,7 @@ export default function SwitchPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Checked by Default
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             defaultChecked
@@ -182,10 +161,7 @@ export default function SwitchPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Disabled State
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             disabled
@@ -225,10 +201,7 @@ export default function SwitchPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Multiple Switches
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Group multiple switches together to control different settings.
         </Typography>
 
@@ -278,10 +251,7 @@ export default function SwitchPage() {
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
           Sizes
         </Typography>
-        <Typography
-          variant="body1"
-          className="text-muted-foreground mb-(--lsd-spacing-base)"
-        >
+        <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             size
@@ -343,12 +313,9 @@ export default function SwitchPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
-                  Required for accessibility. Associates the switch with its
-                  label.
+                  Required for accessibility. Associates the switch with its label.
                 </Typography>
               </div>
               <div>
@@ -359,16 +326,12 @@ export default function SwitchPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Controlled checked state.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -379,16 +342,12 @@ export default function SwitchPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Initial checked state (uncontrolled).
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -406,9 +365,7 @@ export default function SwitchPage() {
                   Callback when the checked state changes.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -419,16 +376,12 @@ export default function SwitchPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Disables the switch.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -439,16 +392,12 @@ export default function SwitchPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    boolean
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">boolean</code>
                   <br />
                   Marks the switch as required.
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    false
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">false</code>
                 </Typography>
               </div>
               <div>
@@ -459,16 +408,12 @@ export default function SwitchPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Name of the switch (for form submission).
                   <br />
                   Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    undefined
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">undefined</code>
                 </Typography>
               </div>
               <div>
@@ -479,16 +424,11 @@ export default function SwitchPage() {
                   variant="body1"
                   className="text-muted-foreground mt-(--lsd-spacing-smaller)"
                 >
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    string
-                  </code>
+                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">string</code>
                   <br />
                   Value of the switch (for form submission).
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "on"
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"on"</code>
                 </Typography>
               </div>
               <div>
@@ -505,10 +445,7 @@ export default function SwitchPage() {
                   <br />
                   Size of the switch.
                   <br />
-                  Default:{' '}
-                  <code className="px-(--lsd-spacing-smaller) bg-muted rounded">
-                    "md"
-                  </code>
+                  Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"md"</code>
                 </Typography>
               </div>
             </div>
@@ -523,8 +460,7 @@ export default function SwitchPage() {
           Accessibility
         </Typography>
         <Typography variant="body1" className="text-muted-foreground">
-          Switches follow WAI-ARIA guidelines and are fully accessible. Always
-          provide an{' '}
+          Switches follow WAI-ARIA guidelines and are fully accessible. Always provide an{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             id
           </code>{' '}
@@ -532,9 +468,9 @@ export default function SwitchPage() {
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             htmlFor
           </code>{' '}
-          attribute. This ensures screen readers can properly announce the
-          switch and its purpose. Switches are implemented as checkboxes with
-          appropriate ARIA roles for toggle functionality.
+          attribute. This ensures screen readers can properly announce the switch and its purpose.
+          Switches are implemented as checkboxes with appropriate ARIA roles for toggle
+          functionality.
         </Typography>
       </div>
     </div>

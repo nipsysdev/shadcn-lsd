@@ -9,17 +9,12 @@ interface LayoutWrapperProps {
   currentPath: string;
 }
 
-export default function LayoutWrapper({
-  children,
-  currentPath,
-}: LayoutWrapperProps) {
+export default function LayoutWrapper({ children, currentPath }: LayoutWrapperProps) {
   return (
     <SidebarWrapper currentPath={currentPath}>
       <main className="size-full flex flex-col">
         <Header className="w-full border-b" />
-        <ScrollArea className="flex-auto overflow-hidden">
-          {children}
-        </ScrollArea>
+        <ScrollArea className="flex-auto overflow-hidden">{children}</ScrollArea>
       </main>
     </SidebarWrapper>
   );

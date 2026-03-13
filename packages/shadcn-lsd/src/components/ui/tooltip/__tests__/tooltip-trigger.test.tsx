@@ -10,7 +10,7 @@ describe('TooltipTrigger', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });
@@ -22,7 +22,7 @@ describe('TooltipTrigger', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const trigger = document.querySelector('[data-slot="tooltip-trigger"]');
     expect(trigger).toHaveAttribute('data-slot', 'tooltip-trigger');
@@ -35,7 +35,7 @@ describe('TooltipTrigger', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     const trigger = document.querySelector('[data-slot="tooltip-trigger"]');
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');
@@ -49,7 +49,7 @@ describe('TooltipTrigger', () => {
           <span>Hover me</span>
         </TooltipTrigger>
         <TooltipContent>Tooltip content</TooltipContent>
-      </Tooltip>,
+      </Tooltip>
     );
     expect(screen.getByText('Hover me')).toBeInTheDocument();
   });

@@ -200,9 +200,7 @@ describe('Input', () => {
   it('renders without label when not provided', () => {
     render(<Input />);
     expect(screen.queryByRole('textbox')).toBeInTheDocument();
-    expect(
-      screen.queryByRole('textbox')?.parentElement?.querySelector('label'),
-    ).toBeNull();
+    expect(screen.queryByRole('textbox')?.parentElement?.querySelector('label')).toBeNull();
   });
 
   it('renders without supporting text when not provided', () => {

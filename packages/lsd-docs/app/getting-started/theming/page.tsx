@@ -1,16 +1,7 @@
 'use client';
 
-import {
-  Button,
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Separator,
-  Typography,
-} from '@nipsys/shadcn-lsd';
-import { DropIcon, PaletteIcon } from '@phosphor-icons/react';
+import { Button, Card, CardContent, Separator, Typography } from '@nipsys/shadcn-lsd';
+import { PaletteIcon } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { ThemeDemoCard } from '../../components/ThemeDemoCard';
 
@@ -32,8 +23,7 @@ export default function ThemingPage() {
             Available Themes
           </Typography>
           <Typography variant="body1" className="text-muted-foreground">
-            LSD comes with a few built-in themes, each with light and dark
-            variants:
+            LSD comes with a few built-in themes, each with light and dark variants:
           </Typography>
 
           <div className="flex flex-col gap-(--lsd-spacing-large)">
@@ -78,13 +68,9 @@ export default function ThemingPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Theme Switching
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
-            LSD themes are controlled by adding CSS classes to your root
-            element. Toggle between light and dark mode by adding or removing
-            the `dark` class:
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+            LSD themes are controlled by adding CSS classes to your root element. Toggle between
+            light and dark mode by adding or removing the `dark` class:
           </Typography>
 
           <Card>
@@ -108,12 +94,9 @@ document.documentElement.setAttribute('data-theme', 'teal');`}</code>
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             CSS Variables
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
-            LSD uses CSS variables for theming. You can customize these
-            variables to create your own theme:
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+            LSD uses CSS variables for theming. You can customize these variables to create your own
+            theme:
           </Typography>
 
           <Card>
@@ -156,10 +139,7 @@ document.documentElement.setAttribute('data-theme', 'teal');`}</code>
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Dark Theme Variables
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Override variables for dark mode:
           </Typography>
 
@@ -195,10 +175,7 @@ document.documentElement.setAttribute('data-theme', 'teal');`}</code>
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Custom Themes
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Create your own theme by defining CSS variables:
           </Typography>
 
@@ -229,20 +206,14 @@ document.documentElement.setAttribute('data-theme', 'teal');`}</code>
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Next Steps
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Explore the design tokens to understand all available variables:
           </Typography>
           <div className="flex gap-(--lsd-spacing-base)">
             <Link href="/design-tokens/colors">
               <Button>
                 Explore Colors
-                <PaletteIcon
-                  className="ml-(--lsd-spacing-small) h-4 w-4"
-                  weight="duotone"
-                />
+                <PaletteIcon className="ml-(--lsd-spacing-small) h-4 w-4" weight="duotone" />
               </Button>
             </Link>
             <Link href="/design-tokens/typography">

@@ -7,71 +7,59 @@ describe('ScrollBar', () => {
     render(
       <ScrollArea>
         <div>Content</div>
-      </ScrollArea>,
+      </ScrollArea>
     );
     // ScrollBar is rendered internally by ScrollArea
-    expect(
-      document.querySelector('[data-slot="scroll-area"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="scroll-area"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute when rendered', () => {
     render(
       <ScrollArea>
         <div>Content</div>
-      </ScrollArea>,
+      </ScrollArea>
     );
     // ScrollBar is rendered internally by ScrollArea
-    expect(
-      document.querySelector('[data-slot="scroll-area"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="scroll-area"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly when rendered', () => {
     render(
       <ScrollArea>
         <div>Content</div>
-      </ScrollArea>,
+      </ScrollArea>
     );
     // ScrollBar is rendered internally by ScrollArea
-    expect(
-      document.querySelector('[data-slot="scroll-area"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="scroll-area"]')).toBeInTheDocument();
   });
 
   it('applies vertical orientation by default', () => {
     render(
       <ScrollArea>
         <div>Content</div>
-      </ScrollArea>,
+      </ScrollArea>
     );
     // ScrollBar is rendered internally by ScrollArea with vertical orientation
-    expect(
-      document.querySelector('[data-slot="scroll-area"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="scroll-area"]')).toBeInTheDocument();
   });
 
   it('merges custom className with component classes', () => {
     render(
       <ScrollArea>
         <div>Content</div>
-      </ScrollArea>,
+      </ScrollArea>
     );
     // ScrollBar is rendered internally by ScrollArea
-    expect(
-      document.querySelector('[data-slot="scroll-area"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="scroll-area"]')).toBeInTheDocument();
   });
 
   it('passes through additional props', () => {
     render(
       <ScrollArea>
         <div>Content</div>
-      </ScrollArea>,
+      </ScrollArea>
     );
     // ScrollBar is rendered internally by ScrollArea
-    expect(
-      document.querySelector('[data-slot="scroll-area"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="scroll-area"]')).toBeInTheDocument();
   });
 });

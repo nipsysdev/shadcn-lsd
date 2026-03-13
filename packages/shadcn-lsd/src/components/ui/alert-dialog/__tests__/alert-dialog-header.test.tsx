@@ -11,11 +11,9 @@ describe('AlertDialogHeader', () => {
             <div>Title</div>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
-    expect(
-      document.querySelector('[data-slot="alert-dialog-header"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="alert-dialog-header"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -26,7 +24,7 @@ describe('AlertDialogHeader', () => {
             <div>Title</div>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const header = document.querySelector('[data-slot="alert-dialog-header"]');
     expect(header).toHaveClass('lsd:flex');
@@ -43,7 +41,7 @@ describe('AlertDialogHeader', () => {
             <div>Title</div>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const header = document.querySelector('[data-slot="alert-dialog-header"]');
     expect(header).toHaveAttribute('data-slot', 'alert-dialog-header');
@@ -57,7 +55,7 @@ describe('AlertDialogHeader', () => {
             <div>Title</div>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const header = document.querySelector('[data-slot="alert-dialog-header"]');
     expect(header).toHaveClass('custom-header-class');
@@ -71,7 +69,7 @@ describe('AlertDialogHeader', () => {
             <div>Title</div>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const header = document.querySelector('[data-slot="alert-dialog-header"]');
     expect(header).toHaveAttribute('data-testid', 'test-header');

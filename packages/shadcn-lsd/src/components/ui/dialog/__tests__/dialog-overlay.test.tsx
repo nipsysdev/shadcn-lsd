@@ -1,12 +1,6 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogOverlay,
-  DialogTitle,
-} from '../index';
+import { Dialog, DialogContent, DialogHeader, DialogOverlay, DialogTitle } from '../index';
 
 describe('DialogOverlay', () => {
   it('renders without crashing', () => {
@@ -17,11 +11,9 @@ describe('DialogOverlay', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
-    expect(
-      document.querySelector('[data-slot="dialog-overlay"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="dialog-overlay"]')).toBeInTheDocument();
   });
 
   it('applies base classes correctly', () => {
@@ -32,7 +24,7 @@ describe('DialogOverlay', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const overlay = document.querySelector('[data-slot="dialog-overlay"]');
     expect(overlay).toHaveClass('lsd:fixed');
@@ -49,7 +41,7 @@ describe('DialogOverlay', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const overlay = document.querySelector('[data-slot="dialog-overlay"]');
     expect(overlay).toHaveClass('lsd:data-[state=open]:animate-in');
@@ -64,7 +56,7 @@ describe('DialogOverlay', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const overlay = document.querySelector('[data-slot="dialog-overlay"]');
     expect(overlay).toHaveAttribute('data-slot', 'dialog-overlay');
@@ -79,7 +71,7 @@ describe('DialogOverlay', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const overlay = document.querySelector('[data-slot="dialog-overlay"]');
     expect(overlay).toHaveClass('custom-overlay-class');

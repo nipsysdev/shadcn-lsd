@@ -23,7 +23,7 @@ describe('SelectLabel', () => {
             <SelectItem value="option-1">Option 1</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     expect(screen.getByText('Group Label')).toBeInTheDocument();
   });
@@ -40,7 +40,7 @@ describe('SelectLabel', () => {
             <SelectItem value="option-1">Option 1</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const label = document.querySelector('[data-slot="select-label"]');
     expect(label).toHaveAttribute('data-slot', 'select-label');
@@ -58,7 +58,7 @@ describe('SelectLabel', () => {
             <SelectItem value="option-1">Option 1</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const label = document.querySelector('[data-slot="select-label"]');
     expect(label).toHaveClass('lsd:text-lsd-text-secondary');
@@ -73,13 +73,11 @@ describe('SelectLabel', () => {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectLabel className="custom-label-class">
-              Group Label
-            </SelectLabel>
+            <SelectLabel className="custom-label-class">Group Label</SelectLabel>
             <SelectItem value="option-1">Option 1</SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>,
+      </Select>
     );
     const label = document.querySelector('[data-slot="select-label"]');
     expect(label).toHaveClass('custom-label-class');

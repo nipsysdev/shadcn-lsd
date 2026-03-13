@@ -127,35 +127,23 @@ describe('toggleVariants', () => {
   it('returns correct classes for medium size', () => {
     expect(toggleVariants({ size: 'md' })).toContain('lsd:h-10');
     expect(toggleVariants({ size: 'md' })).toContain('lsd:min-w-10');
-    expect(toggleVariants({ size: 'md' })).toContain(
-      'lsd:px-[var(--lsd-spacing-small)]',
-    );
-    expect(toggleVariants({ size: 'md' })).toContain(
-      'lsd:py-[var(--lsd-spacing-smaller)]',
-    );
+    expect(toggleVariants({ size: 'md' })).toContain('lsd:px-[var(--lsd-spacing-small)]');
+    expect(toggleVariants({ size: 'md' })).toContain('lsd:py-[var(--lsd-spacing-smaller)]');
   });
 
   it('returns correct classes for small size', () => {
     expect(toggleVariants({ size: 'sm' })).toContain('lsd:h-8');
     expect(toggleVariants({ size: 'sm' })).toContain('lsd:min-w-8');
-    expect(toggleVariants({ size: 'sm' })).toContain(
-      'lsd:px-[var(--lsd-spacing-smaller)]',
-    );
-    expect(toggleVariants({ size: 'sm' })).toContain(
-      'lsd:py-[var(--lsd-spacing-smaller)]',
-    );
+    expect(toggleVariants({ size: 'sm' })).toContain('lsd:px-[var(--lsd-spacing-smaller)]');
+    expect(toggleVariants({ size: 'sm' })).toContain('lsd:py-[var(--lsd-spacing-smaller)]');
     expect(toggleVariants({ size: 'sm' })).toContain('lsd:text-[0.75rem]');
   });
 
   it('returns correct classes for large size', () => {
     expect(toggleVariants({ size: 'lg' })).toContain('lsd:h-12');
     expect(toggleVariants({ size: 'lg' })).toContain('lsd:min-w-12');
-    expect(toggleVariants({ size: 'lg' })).toContain(
-      'lsd:px-[var(--lsd-spacing-base)]',
-    );
-    expect(toggleVariants({ size: 'lg' })).toContain(
-      'lsd:py-[var(--lsd-spacing-small)]',
-    );
+    expect(toggleVariants({ size: 'lg' })).toContain('lsd:px-[var(--lsd-spacing-base)]');
+    expect(toggleVariants({ size: 'lg' })).toContain('lsd:py-[var(--lsd-spacing-small)]');
     expect(toggleVariants({ size: 'lg' })).toContain('lsd:text-[0.875rem]');
   });
 
@@ -177,9 +165,7 @@ describe('toggleVariants', () => {
 
   it('includes checked state classes', () => {
     expect(toggleVariants({})).toContain('lsd:data-[state=on]:bg-lsd-primary');
-    expect(toggleVariants({})).toContain(
-      'lsd:data-[state=on]:text-lsd-surface',
-    );
+    expect(toggleVariants({})).toContain('lsd:data-[state=on]:text-lsd-surface');
   });
 
   it('includes disabled state classes', () => {

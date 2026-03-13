@@ -27,17 +27,13 @@ describe('Progress', () => {
 
   it('renders indicator element', () => {
     render(<Progress />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toBeInTheDocument();
   });
 
   it('applies indicator base classes correctly', () => {
     render(<Progress />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveClass('lsd:h-full');
     expect(indicator).toHaveClass('lsd:w-full');
     expect(indicator).toHaveClass('lsd:flex-1');
@@ -46,48 +42,34 @@ describe('Progress', () => {
 
   it('applies transition class for determinate progress', () => {
     render(<Progress value={50} />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveClass('lsd:transition-all');
   });
 
   it('applies indeterminate animation classes', () => {
     render(<Progress indeterminate />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveClass('lsd:animate-indeterminate-progress');
   });
 
   it('applies slow speed animation class', () => {
     render(<Progress indeterminate speed="slow" />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveClass('lsd:animate-indeterminate-progress-slow');
   });
 
   it('applies fast speed animation class', () => {
     render(<Progress indeterminate speed="fast" />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveClass('lsd:animate-indeterminate-progress-fast');
   });
 
   it('applies normal speed by default', () => {
     render(<Progress indeterminate speed="normal" />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveClass('lsd:animate-indeterminate-progress');
-    expect(indicator).not.toHaveClass(
-      'lsd:animate-indeterminate-progress-slow',
-    );
-    expect(indicator).not.toHaveClass(
-      'lsd:animate-indeterminate-progress-fast',
-    );
+    expect(indicator).not.toHaveClass('lsd:animate-indeterminate-progress-slow');
+    expect(indicator).not.toHaveClass('lsd:animate-indeterminate-progress-fast');
   });
 
   it('merges custom className with component classes', () => {
@@ -118,33 +100,25 @@ describe('Progress', () => {
 
   it('applies data-slot attribute to indicator', () => {
     render(<Progress />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveAttribute('data-slot', 'progress-indicator');
   });
 
   it('does not apply indeterminate classes when determinate', () => {
     render(<Progress value={50} />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).not.toHaveClass('lsd:animate-indeterminate-progress');
   });
 
   it('applies style for determinate progress', () => {
     render(<Progress value={75} />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toHaveStyle({ transform: 'translateX(-25%)' });
   });
 
   it('applies empty style for indeterminate progress', () => {
     render(<Progress indeterminate />);
-    const indicator = document.querySelector(
-      '[data-slot="progress-indicator"]',
-    );
+    const indicator = document.querySelector('[data-slot="progress-indicator"]');
     expect(indicator).toBeInTheDocument();
     // For indeterminate, style.transform should be empty or undefined
     const style = indicator?.getAttribute('style');

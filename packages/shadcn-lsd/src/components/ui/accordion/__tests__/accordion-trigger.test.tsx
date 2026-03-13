@@ -9,7 +9,7 @@ describe('AccordionTrigger', () => {
         <AccordionItem value="item-1">
           <AccordionTrigger>Item 1</AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     expect(screen.getByRole('button', { name: 'Item 1' })).toBeInTheDocument();
   });
@@ -20,7 +20,7 @@ describe('AccordionTrigger', () => {
         <AccordionItem value="item-1">
           <AccordionTrigger>Item 1</AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     expect(screen.getByRole('button', { name: 'Item 1' })).toBeInTheDocument();
   });
@@ -31,7 +31,7 @@ describe('AccordionTrigger', () => {
         <AccordionItem value="item-1">
           <AccordionTrigger>Item 1</AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const trigger = screen.getByRole('button', { name: 'Item 1' });
     expect(trigger).toHaveClass('lsd:flex');
@@ -50,7 +50,7 @@ describe('AccordionTrigger', () => {
         <AccordionItem value="item-1">
           <AccordionTrigger>Item 1</AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const trigger = screen.getByRole('button', { name: 'Item 1' });
     expect(trigger).toHaveAttribute('data-slot', 'accordion-trigger');
@@ -60,11 +60,9 @@ describe('AccordionTrigger', () => {
     render(
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
-          <AccordionTrigger className="custom-trigger-class">
-            Item 1
-          </AccordionTrigger>
+          <AccordionTrigger className="custom-trigger-class">Item 1</AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const trigger = screen.getByRole('button', { name: 'Item 1' });
     expect(trigger).toHaveClass('custom-trigger-class');
@@ -78,7 +76,7 @@ describe('AccordionTrigger', () => {
             Item 1
           </AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const trigger = screen.getByRole('button', { name: 'Item 1' });
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');
@@ -92,7 +90,7 @@ describe('AccordionTrigger', () => {
         <AccordionItem value="item-1">
           <AccordionTrigger ref={ref}>Item 1</AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     expect(ref).toHaveBeenCalled();
     expect(ref.mock.calls[0][0]).toBeInstanceOf(HTMLButtonElement);
@@ -104,7 +102,7 @@ describe('AccordionTrigger', () => {
         <AccordionItem value="item-1">
           <AccordionTrigger>Item 1</AccordionTrigger>
         </AccordionItem>
-      </Accordion>,
+      </Accordion>
     );
     const trigger = screen.getByRole('button', { name: 'Item 1' });
     const chevron = trigger.querySelector('svg');

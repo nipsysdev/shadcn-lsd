@@ -82,7 +82,7 @@ describe('Label', () => {
     render(
       <Label data-testid="test-label" htmlFor="input-1">
         Label
-      </Label>,
+      </Label>
     );
     const label = screen.getByText('Label');
     expect(label).toHaveAttribute('data-testid', 'test-label');
@@ -103,15 +103,11 @@ describe('Label', () => {
 
 describe('labelVariants', () => {
   it('returns correct classes for default variant', () => {
-    expect(labelVariants({ variant: 'default' })).toContain(
-      'lsd:text-lsd-text-primary',
-    );
+    expect(labelVariants({ variant: 'default' })).toContain('lsd:text-lsd-text-primary');
   });
 
   it('returns correct classes for secondary variant', () => {
-    expect(labelVariants({ variant: 'secondary' })).toContain(
-      'lsd:text-lsd-text-secondary',
-    );
+    expect(labelVariants({ variant: 'secondary' })).toContain('lsd:text-lsd-text-secondary');
   });
 
   it('returns correct classes for small size', () => {

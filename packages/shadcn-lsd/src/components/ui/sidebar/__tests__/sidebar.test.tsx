@@ -46,7 +46,7 @@ describe('SidebarProvider', () => {
     const { container } = render(
       <SidebarProvider>
         <div>Content</div>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(queryByDataSlot(container, 'sidebar-wrapper')).toBeInTheDocument();
   });
@@ -55,18 +55,16 @@ describe('SidebarProvider', () => {
     const { container } = render(
       <SidebarProvider className="custom-class">
         <div>Content</div>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(queryByDataSlot(container, 'sidebar-wrapper')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-wrapper')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
     const { container } = render(
       <SidebarProvider>
         <div>Content</div>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     const wrapper = queryByDataSlot(container, 'sidebar-wrapper');
     expect(wrapper).toHaveClass('lsd:group/sidebar-wrapper');
@@ -79,19 +77,16 @@ describe('SidebarProvider', () => {
     render(
       <SidebarProvider data-testid="test-provider" data-custom="value">
         <div>Content</div>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(screen.getByTestId('test-provider')).toHaveAttribute(
-      'data-custom',
-      'value',
-    );
+    expect(screen.getByTestId('test-provider')).toHaveAttribute('data-custom', 'value');
   });
 
   it('renders children', () => {
     render(
       <SidebarProvider>
         <div>Child Content</div>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(screen.getByText('Child Content')).toBeInTheDocument();
   });
@@ -108,7 +103,7 @@ describe('Sidebar', () => {
         <Sidebar>
           <div>Sidebar Content</div>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(queryByDataSlot(container, 'sidebar')).toBeInTheDocument();
   });
@@ -119,12 +114,10 @@ describe('Sidebar', () => {
         <Sidebar className="custom-class">
           <div>Sidebar Content</div>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     // The className is applied to the sidebar-container div, not the sidebar element
-    expect(queryByDataSlot(container, 'sidebar-container')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-container')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -133,7 +126,7 @@ describe('Sidebar', () => {
         <Sidebar>
           <div>Sidebar Content</div>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     const sidebar = queryByDataSlot(container, 'sidebar');
     expect(sidebar).toHaveClass('lsd:group');
@@ -147,7 +140,7 @@ describe('Sidebar', () => {
         <Sidebar>
           <div>Sidebar Content</div>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(screen.getByText('Sidebar Content')).toBeInTheDocument();
   });
@@ -175,7 +168,7 @@ describe('Sidebar', () => {
             <div>Footer</div>
           </SidebarFooter>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(queryByDataSlot(container, 'sidebar')).toBeInTheDocument();
     expect(queryByDataSlot(container, 'sidebar-header')).toBeInTheDocument();
@@ -195,7 +188,7 @@ describe('SidebarTrigger', () => {
     const { container } = render(
       <SidebarProvider>
         <SidebarTrigger />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(queryByDataSlot(container, 'sidebar-trigger')).toBeInTheDocument();
   });
@@ -204,18 +197,16 @@ describe('SidebarTrigger', () => {
     const { container } = render(
       <SidebarProvider>
         <SidebarTrigger className="custom-class" />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(queryByDataSlot(container, 'sidebar-trigger')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-trigger')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
     const { container } = render(
       <SidebarProvider>
         <SidebarTrigger />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     const trigger = queryByDataSlot(container, 'sidebar-trigger');
     expect(trigger).toHaveClass('lsd:w-8');
@@ -226,7 +217,7 @@ describe('SidebarTrigger', () => {
     render(
       <SidebarProvider>
         <SidebarTrigger />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(screen.getByText('Toggle Sidebar')).toBeInTheDocument();
   });
@@ -241,7 +232,7 @@ describe('SidebarRail', () => {
     const { container } = render(
       <SidebarProvider>
         <SidebarRail />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(queryByDataSlot(container, 'sidebar-rail')).toBeInTheDocument();
   });
@@ -250,18 +241,16 @@ describe('SidebarRail', () => {
     const { container } = render(
       <SidebarProvider>
         <SidebarRail className="custom-class" />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(queryByDataSlot(container, 'sidebar-rail')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-rail')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
     const { container } = render(
       <SidebarProvider>
         <SidebarRail />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     const rail = queryByDataSlot(container, 'sidebar-rail');
     expect(rail).toHaveClass('lsd:absolute');
@@ -273,7 +262,7 @@ describe('SidebarRail', () => {
     render(
       <SidebarProvider>
         <SidebarRail />
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(screen.getByLabelText('Toggle Sidebar')).toBeInTheDocument();
   });
@@ -286,12 +275,8 @@ describe('SidebarInset', () => {
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarInset className="custom-class">Content</SidebarInset>,
-    );
-    expect(queryByDataSlot(container, 'sidebar-inset')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarInset className="custom-class">Content</SidebarInset>);
+    expect(queryByDataSlot(container, 'sidebar-inset')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -348,12 +333,8 @@ describe('SidebarHeader', () => {
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarHeader className="custom-class">Header</SidebarHeader>,
-    );
-    expect(queryByDataSlot(container, 'sidebar-header')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarHeader className="custom-class">Header</SidebarHeader>);
+    expect(queryByDataSlot(container, 'sidebar-header')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -378,12 +359,8 @@ describe('SidebarFooter', () => {
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarFooter className="custom-class">Footer</SidebarFooter>,
-    );
-    expect(queryByDataSlot(container, 'sidebar-footer')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarFooter className="custom-class">Footer</SidebarFooter>);
+    expect(queryByDataSlot(container, 'sidebar-footer')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -409,9 +386,7 @@ describe('SidebarSeparator', () => {
 
   it('renders with custom className', () => {
     const { container } = render(<SidebarSeparator className="custom-class" />);
-    expect(queryByDataSlot(container, 'sidebar-separator')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-separator')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -426,18 +401,14 @@ describe('SidebarSeparator', () => {
 describe('SidebarGroupLabel', () => {
   it('renders without crashing', () => {
     const { container } = render(<SidebarGroupLabel>Label</SidebarGroupLabel>);
-    expect(
-      queryByDataSlot(container, 'sidebar-group-label'),
-    ).toBeInTheDocument();
+    expect(queryByDataSlot(container, 'sidebar-group-label')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
     const { container } = render(
-      <SidebarGroupLabel className="custom-class">Label</SidebarGroupLabel>,
+      <SidebarGroupLabel className="custom-class">Label</SidebarGroupLabel>
     );
-    expect(queryByDataSlot(container, 'sidebar-group-label')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-group-label')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -456,27 +427,19 @@ describe('SidebarGroupLabel', () => {
 
 describe('SidebarGroupAction', () => {
   it('renders without crashing', () => {
-    const { container } = render(
-      <SidebarGroupAction>Action</SidebarGroupAction>,
-    );
-    expect(
-      queryByDataSlot(container, 'sidebar-group-action'),
-    ).toBeInTheDocument();
+    const { container } = render(<SidebarGroupAction>Action</SidebarGroupAction>);
+    expect(queryByDataSlot(container, 'sidebar-group-action')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
     const { container } = render(
-      <SidebarGroupAction className="custom-class">Action</SidebarGroupAction>,
+      <SidebarGroupAction className="custom-class">Action</SidebarGroupAction>
     );
-    expect(queryByDataSlot(container, 'sidebar-group-action')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-group-action')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
-    const { container } = render(
-      <SidebarGroupAction>Action</SidebarGroupAction>,
-    );
+    const { container } = render(<SidebarGroupAction>Action</SidebarGroupAction>);
     const action = queryByDataSlot(container, 'sidebar-group-action');
     expect(action).toHaveClass('lsd:text-sidebar-foreground');
     expect(action).toHaveClass('lsd:absolute');
@@ -487,29 +450,19 @@ describe('SidebarGroupAction', () => {
 
 describe('SidebarGroupContent', () => {
   it('renders without crashing', () => {
-    const { container } = render(
-      <SidebarGroupContent>Content</SidebarGroupContent>,
-    );
-    expect(
-      queryByDataSlot(container, 'sidebar-group-content'),
-    ).toBeInTheDocument();
+    const { container } = render(<SidebarGroupContent>Content</SidebarGroupContent>);
+    expect(queryByDataSlot(container, 'sidebar-group-content')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
     const { container } = render(
-      <SidebarGroupContent className="custom-class">
-        Content
-      </SidebarGroupContent>,
+      <SidebarGroupContent className="custom-class">Content</SidebarGroupContent>
     );
-    expect(queryByDataSlot(container, 'sidebar-group-content')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-group-content')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
-    const { container } = render(
-      <SidebarGroupContent>Content</SidebarGroupContent>,
-    );
+    const { container } = render(<SidebarGroupContent>Content</SidebarGroupContent>);
     const content = queryByDataSlot(container, 'sidebar-group-content');
     expect(content).toHaveClass('lsd:w-full');
     expect(content).toHaveClass('lsd:text-sm');
@@ -528,12 +481,8 @@ describe('SidebarMenuItem', () => {
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarMenuItem className="custom-class">Item</SidebarMenuItem>,
-    );
-    expect(queryByDataSlot(container, 'sidebar-menu-item')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarMenuItem className="custom-class">Item</SidebarMenuItem>);
+    expect(queryByDataSlot(container, 'sidebar-menu-item')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -560,11 +509,9 @@ describe('SidebarMenuButton', () => {
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(
-      queryByDataSlot(container, 'sidebar-menu-button'),
-    ).toBeInTheDocument();
+    expect(queryByDataSlot(container, 'sidebar-menu-button')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
@@ -573,17 +520,13 @@ describe('SidebarMenuButton', () => {
         <Sidebar>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton className="custom-class">
-                Button
-              </SidebarMenuButton>
+              <SidebarMenuButton className="custom-class">Button</SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(queryByDataSlot(container, 'sidebar-menu-button')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-menu-button')).toHaveClass('custom-class');
   });
 
   it('renders children', () => {
@@ -596,7 +539,7 @@ describe('SidebarMenuButton', () => {
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(screen.getByText('Menu Button')).toBeInTheDocument();
   });
@@ -614,11 +557,9 @@ describe('SidebarMenuAction', () => {
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(
-      queryByDataSlot(container, 'sidebar-menu-action'),
-    ).toBeInTheDocument();
+    expect(queryByDataSlot(container, 'sidebar-menu-action')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
@@ -628,17 +569,13 @@ describe('SidebarMenuAction', () => {
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton>Button</SidebarMenuButton>
-              <SidebarMenuAction className="custom-class">
-                Action
-              </SidebarMenuAction>
+              <SidebarMenuAction className="custom-class">Action</SidebarMenuAction>
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(queryByDataSlot(container, 'sidebar-menu-action')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-menu-action')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -652,7 +589,7 @@ describe('SidebarMenuAction', () => {
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     const action = queryByDataSlot(container, 'sidebar-menu-action');
     expect(action).toHaveClass('lsd:text-sidebar-foreground');
@@ -674,11 +611,9 @@ describe('SidebarMenuBadge', () => {
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(
-      queryByDataSlot(container, 'sidebar-menu-badge'),
-    ).toBeInTheDocument();
+    expect(queryByDataSlot(container, 'sidebar-menu-badge')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
@@ -688,17 +623,13 @@ describe('SidebarMenuBadge', () => {
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton>Button</SidebarMenuButton>
-              <SidebarMenuBadge className="custom-class">
-                Badge
-              </SidebarMenuBadge>
+              <SidebarMenuBadge className="custom-class">Badge</SidebarMenuBadge>
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
-    expect(queryByDataSlot(container, 'sidebar-menu-badge')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-menu-badge')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -712,7 +643,7 @@ describe('SidebarMenuBadge', () => {
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     const badge = queryByDataSlot(container, 'sidebar-menu-badge');
     expect(badge).toHaveClass('lsd:text-sidebar-foreground');
@@ -732,7 +663,7 @@ describe('SidebarMenuBadge', () => {
             </SidebarMenuItem>
           </SidebarMenu>
         </Sidebar>
-      </SidebarProvider>,
+      </SidebarProvider>
     );
     expect(screen.getByText('Badge Content')).toBeInTheDocument();
   });
@@ -741,18 +672,12 @@ describe('SidebarMenuBadge', () => {
 describe('SidebarMenuSkeleton', () => {
   it('renders without crashing', () => {
     const { container } = render(<SidebarMenuSkeleton />);
-    expect(
-      queryByDataSlot(container, 'sidebar-menu-skeleton'),
-    ).toBeInTheDocument();
+    expect(queryByDataSlot(container, 'sidebar-menu-skeleton')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarMenuSkeleton className="custom-class" />,
-    );
-    expect(queryByDataSlot(container, 'sidebar-menu-skeleton')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarMenuSkeleton className="custom-class" />);
+    expect(queryByDataSlot(container, 'sidebar-menu-skeleton')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -769,9 +694,7 @@ describe('SidebarMenuSkeleton', () => {
     const skeleton = queryByDataSlot(container, 'sidebar-menu-skeleton');
     expect(skeleton).toBeInTheDocument();
     // Check that the skeleton has the icon child
-    expect(
-      skeleton?.querySelector('[data-sidebar="menu-skeleton-icon"]'),
-    ).toBeInTheDocument();
+    expect(skeleton?.querySelector('[data-sidebar="menu-skeleton-icon"]')).toBeInTheDocument();
   });
 });
 
@@ -782,12 +705,8 @@ describe('SidebarMenuSub', () => {
   });
 
   it('renders with custom className', () => {
-    const { container } = render(
-      <SidebarMenuSub className="custom-class">Sub</SidebarMenuSub>,
-    );
-    expect(queryByDataSlot(container, 'sidebar-menu-sub')).toHaveClass(
-      'custom-class',
-    );
+    const { container } = render(<SidebarMenuSub className="custom-class">Sub</SidebarMenuSub>);
+    expect(queryByDataSlot(container, 'sidebar-menu-sub')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
@@ -807,27 +726,19 @@ describe('SidebarMenuSub', () => {
 
 describe('SidebarMenuSubItem', () => {
   it('renders without crashing', () => {
-    const { container } = render(
-      <SidebarMenuSubItem>SubItem</SidebarMenuSubItem>,
-    );
-    expect(
-      queryByDataSlot(container, 'sidebar-menu-sub-item'),
-    ).toBeInTheDocument();
+    const { container } = render(<SidebarMenuSubItem>SubItem</SidebarMenuSubItem>);
+    expect(queryByDataSlot(container, 'sidebar-menu-sub-item')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
     const { container } = render(
-      <SidebarMenuSubItem className="custom-class">SubItem</SidebarMenuSubItem>,
+      <SidebarMenuSubItem className="custom-class">SubItem</SidebarMenuSubItem>
     );
-    expect(queryByDataSlot(container, 'sidebar-menu-sub-item')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-menu-sub-item')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
-    const { container } = render(
-      <SidebarMenuSubItem>SubItem</SidebarMenuSubItem>,
-    );
+    const { container } = render(<SidebarMenuSubItem>SubItem</SidebarMenuSubItem>);
     const subItem = queryByDataSlot(container, 'sidebar-menu-sub-item');
     expect(subItem).toHaveClass('lsd:group/menu-sub-item');
     expect(subItem).toHaveClass('lsd:relative');
@@ -841,29 +752,19 @@ describe('SidebarMenuSubItem', () => {
 
 describe('SidebarMenuSubButton', () => {
   it('renders without crashing', () => {
-    const { container } = render(
-      <SidebarMenuSubButton>SubButton</SidebarMenuSubButton>,
-    );
-    expect(
-      queryByDataSlot(container, 'sidebar-menu-sub-button'),
-    ).toBeInTheDocument();
+    const { container } = render(<SidebarMenuSubButton>SubButton</SidebarMenuSubButton>);
+    expect(queryByDataSlot(container, 'sidebar-menu-sub-button')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
     const { container } = render(
-      <SidebarMenuSubButton className="custom-class">
-        SubButton
-      </SidebarMenuSubButton>,
+      <SidebarMenuSubButton className="custom-class">SubButton</SidebarMenuSubButton>
     );
-    expect(queryByDataSlot(container, 'sidebar-menu-sub-button')).toHaveClass(
-      'custom-class',
-    );
+    expect(queryByDataSlot(container, 'sidebar-menu-sub-button')).toHaveClass('custom-class');
   });
 
   it('applies default classes', () => {
-    const { container } = render(
-      <SidebarMenuSubButton>SubButton</SidebarMenuSubButton>,
-    );
+    const { container } = render(<SidebarMenuSubButton>SubButton</SidebarMenuSubButton>);
     const subButton = queryByDataSlot(container, 'sidebar-menu-sub-button');
     expect(subButton).toHaveClass('lsd:text-sidebar-foreground');
     expect(subButton).toHaveClass('lsd:flex');

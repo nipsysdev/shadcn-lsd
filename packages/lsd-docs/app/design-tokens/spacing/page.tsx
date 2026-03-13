@@ -27,12 +27,9 @@ export default function SpacingPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Spacing Scale
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
-            LSD uses a consistent spacing scale based on a 4px base unit. This
-            ensures visual harmony across all components.
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
+            LSD uses a consistent spacing scale based on a 4px base unit. This ensures visual
+            harmony across all components.
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-(--lsd-spacing-base)">
@@ -42,11 +39,8 @@ export default function SpacingPage() {
                 <CardDescription>No spacing</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                <div className="h-4 bg-muted rounded mb-(--lsd-spacing-small)" />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-smallest: 0
                 </Typography>
               </CardContent>
@@ -61,11 +55,8 @@ export default function SpacingPage() {
                 <div
                   className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"
                   style={{ width: '4px' }}
-                ></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-smaller: 4px
                 </Typography>
               </CardContent>
@@ -80,11 +71,8 @@ export default function SpacingPage() {
                 <div
                   className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"
                   style={{ width: '8px' }}
-                ></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-small: 8px
                 </Typography>
               </CardContent>
@@ -99,11 +87,8 @@ export default function SpacingPage() {
                 <div
                   className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"
                   style={{ width: '16px' }}
-                ></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-base: 16px
                 </Typography>
               </CardContent>
@@ -118,11 +103,8 @@ export default function SpacingPage() {
                 <div
                   className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"
                   style={{ width: '24px' }}
-                ></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-large: 24px
                 </Typography>
               </CardContent>
@@ -137,11 +119,8 @@ export default function SpacingPage() {
                 <div
                   className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"
                   style={{ width: '32px' }}
-                ></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-larger: 32px
                 </Typography>
               </CardContent>
@@ -150,19 +129,14 @@ export default function SpacingPage() {
             <Card>
               <CardHeader>
                 <CardTitle>Extra Large</CardTitle>
-                <CardDescription>
-                  48px - Extra extra large spacing
-                </CardDescription>
+                <CardDescription>48px - Extra extra large spacing</CardDescription>
               </CardHeader>
               <CardContent>
                 <div
                   className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"
                   style={{ width: '48px' }}
-                ></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-largest: 48px
                 </Typography>
               </CardContent>
@@ -177,11 +151,8 @@ export default function SpacingPage() {
                 <div
                   className="h-4 bg-muted rounded mb-(--lsd-spacing-small)"
                   style={{ width: '64px' }}
-                ></div>
-                <Typography
-                  variant="label1"
-                  className="text-muted-foreground font-mono"
-                >
+                />
+                <Typography variant="label1" className="text-muted-foreground font-mono">
                   --lsd-spacing-2xl: 64px
                 </Typography>
               </CardContent>
@@ -195,10 +166,7 @@ export default function SpacingPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Usage Examples
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Spacing tokens can be used for margins, padding, gaps, and more.
           </Typography>
 
@@ -246,9 +214,7 @@ export default function SpacingPage() {
             <Card>
               <CardHeader>
                 <CardTitle>Gap</CardTitle>
-                <CardDescription>
-                  Using spacing for flex/grid gaps
-                </CardDescription>
+                <CardDescription>Using spacing for flex/grid gaps</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="bg-muted p-(--lsd-spacing-base) rounded-lg font-mono text-sm overflow-x-auto">
@@ -276,10 +242,7 @@ export default function SpacingPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Visual Examples
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             See spacing in action with visual examples.
           </Typography>
 
@@ -290,9 +253,9 @@ export default function SpacingPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex gap-(--lsd-spacing-small) items-center">
-                  <div className="w-12 h-12 bg-primary rounded"></div>
-                  <div className="w-12 h-12 bg-secondary rounded"></div>
-                  <div className="w-12 h-12 bg-muted rounded"></div>
+                  <div className="w-12 h-12 bg-primary rounded" />
+                  <div className="w-12 h-12 bg-secondary rounded" />
+                  <div className="w-12 h-12 bg-muted rounded" />
                 </div>
                 <Typography
                   variant="label1"
@@ -309,9 +272,9 @@ export default function SpacingPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex gap-(--lsd-spacing-base) items-center">
-                  <div className="w-12 h-12 bg-primary rounded"></div>
-                  <div className="w-12 h-12 bg-secondary rounded"></div>
-                  <div className="w-12 h-12 bg-muted rounded"></div>
+                  <div className="w-12 h-12 bg-primary rounded" />
+                  <div className="w-12 h-12 bg-secondary rounded" />
+                  <div className="w-12 h-12 bg-muted rounded" />
                 </div>
                 <Typography
                   variant="label1"
@@ -328,9 +291,9 @@ export default function SpacingPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex gap-(--lsd-spacing-large) items-center">
-                  <div className="w-12 h-12 bg-primary rounded"></div>
-                  <div className="w-12 h-12 bg-secondary rounded"></div>
-                  <div className="w-12 h-12 bg-muted rounded"></div>
+                  <div className="w-12 h-12 bg-primary rounded" />
+                  <div className="w-12 h-12 bg-secondary rounded" />
+                  <div className="w-12 h-12 bg-muted rounded" />
                 </div>
                 <Typography
                   variant="label1"
@@ -349,10 +312,7 @@ export default function SpacingPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Best Practices
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             Guidelines for using spacing effectively.
           </Typography>
 
@@ -363,9 +323,8 @@ export default function SpacingPage() {
                   Be Consistent
                 </Typography>
                 <Typography variant="body1" className="text-muted-foreground">
-                  Stick to the spacing scale and avoid arbitrary values. This
-                  creates visual harmony and makes your design more
-                  maintainable.
+                  Stick to the spacing scale and avoid arbitrary values. This creates visual harmony
+                  and makes your design more maintainable.
                 </Typography>
               </CardContent>
             </Card>
@@ -376,9 +335,8 @@ export default function SpacingPage() {
                   Use Larger Spacing for Sections
                 </Typography>
                 <Typography variant="body1" className="text-muted-foreground">
-                  Use larger spacing values (large, larger, xl) between major
-                  sections, and smaller values (small, medium) between related
-                  elements.
+                  Use larger spacing values (large, larger, xl) between major sections, and smaller
+                  values (small, medium) between related elements.
                 </Typography>
               </CardContent>
             </Card>
@@ -389,8 +347,8 @@ export default function SpacingPage() {
                   Consider Content Density
                 </Typography>
                 <Typography variant="body1" className="text-muted-foreground">
-                  Adjust spacing based on content density. Dense content may
-                  need less spacing, while sparse content can use more.
+                  Adjust spacing based on content density. Dense content may need less spacing,
+                  while sparse content can use more.
                 </Typography>
               </CardContent>
             </Card>
@@ -401,8 +359,8 @@ export default function SpacingPage() {
                   Test on Different Screen Sizes
                 </Typography>
                 <Typography variant="body1" className="text-muted-foreground">
-                  Ensure your spacing works well across different screen sizes.
-                  You may need to adjust spacing for mobile devices.
+                  Ensure your spacing works well across different screen sizes. You may need to
+                  adjust spacing for mobile devices.
                 </Typography>
               </CardContent>
             </Card>
@@ -415,10 +373,7 @@ export default function SpacingPage() {
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
             Custom Spacing
           </Typography>
-          <Typography
-            variant="body1"
-            className="text-muted-foreground mb-(--lsd-spacing-base)"
-          >
+          <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
             You can override spacing variables to create custom spacing values.
           </Typography>
 

@@ -19,26 +19,23 @@ export const tabsVariants = cva('', {
   },
 });
 
-export const tabsListVariants = cva(
-  'lsd:bg-lsd-surface lsd:border-b lsd:flex lsd:flex-row',
-  {
-    variants: {
-      size: {
-        sm: 'lsd:h-8',
-        md: 'lsd:h-10',
-        lg: 'lsd:h-12',
-      },
-      fullWidth: {
-        true: 'lsd:w-full',
-        false: 'lsd:w-fit',
-      },
+export const tabsListVariants = cva('lsd:bg-lsd-surface lsd:border-b lsd:flex lsd:flex-row', {
+  variants: {
+    size: {
+      sm: 'lsd:h-8',
+      md: 'lsd:h-10',
+      lg: 'lsd:h-12',
     },
-    defaultVariants: {
-      size: 'lg',
-      fullWidth: false,
+    fullWidth: {
+      true: 'lsd:w-full',
+      false: 'lsd:w-fit',
     },
   },
-);
+  defaultVariants: {
+    size: 'lg',
+    fullWidth: false,
+  },
+});
 
 export const tabsTriggerVariants = cva(
   'lsd:text-lsd-text-primary lsd:cursor-pointer lsd:border lsd:border-transparent lsd:border-b-0 lsd:hover:underline lsd:data-[state=active]:border-lsd-border lsd:data-[state=active]:bg-lsd-surface lsd:data-[state=active]:font-medium lsd:disabled:opacity-34 lsd:disabled:pointer-events-none lsd:flex lsd:items-center lsd:justify-center lsd:whitespace-nowrap lsd:transition-colors',
@@ -58,16 +55,14 @@ export const tabsTriggerVariants = cva(
       size: 'lg',
       fullWidth: false,
     },
-  },
+  }
 );
 
 export type TabsVariants = VariantProps<typeof tabsVariants>;
 export type TabsListVariants = VariantProps<typeof tabsListVariants>;
 export type TabsTriggerVariants = VariantProps<typeof tabsTriggerVariants>;
 
-export interface TabsProps
-  extends React.ComponentProps<typeof TabsPrimitive.Root>,
-    TabsVariants {}
+export interface TabsProps extends React.ComponentProps<typeof TabsPrimitive.Root>, TabsVariants {}
 
 export interface TabsListProps
   extends React.ComponentProps<typeof TabsPrimitive.List>,

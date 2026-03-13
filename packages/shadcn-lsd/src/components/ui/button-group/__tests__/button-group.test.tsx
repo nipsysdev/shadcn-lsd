@@ -47,10 +47,7 @@ describe('ButtonGroup', () => {
 
   it('passes through additional props', () => {
     render(<ButtonGroup data-testid="test-group" data-custom="value" />);
-    expect(screen.getByTestId('test-group')).toHaveAttribute(
-      'data-custom',
-      'value',
-    );
+    expect(screen.getByTestId('test-group')).toHaveAttribute('data-custom', 'value');
   });
 
   it('renders children', () => {
@@ -58,7 +55,7 @@ describe('ButtonGroup', () => {
       <ButtonGroup>
         <button type="button">Button 1</button>
         <button type="button">Button 2</button>
-      </ButtonGroup>,
+      </ButtonGroup>
     );
     expect(screen.getByText('Button 1')).toBeInTheDocument();
     expect(screen.getByText('Button 2')).toBeInTheDocument();
@@ -102,7 +99,7 @@ describe('ButtonGroup composition', () => {
         <button type="button">Button 1</button>
         <button type="button">Button 2</button>
         <button type="button">Button 3</button>
-      </ButtonGroup>,
+      </ButtonGroup>
     );
 
     expect(queryByDataSlot(container, 'button-group')).toBeInTheDocument();
@@ -118,13 +115,11 @@ describe('ButtonGroup composition', () => {
         <ButtonGroupSeparator />
         <button type="button">Button 1</button>
         <button type="button">Button 2</button>
-      </ButtonGroup>,
+      </ButtonGroup>
     );
 
     expect(queryByDataSlot(container, 'button-group')).toBeInTheDocument();
-    expect(
-      queryByDataSlot(container, 'button-group-separator'),
-    ).toBeInTheDocument();
+    expect(queryByDataSlot(container, 'button-group-separator')).toBeInTheDocument();
     expect(screen.getByText('Group Label')).toBeInTheDocument();
     expect(screen.getByText('Button 1')).toBeInTheDocument();
     expect(screen.getByText('Button 2')).toBeInTheDocument();
@@ -136,7 +131,7 @@ describe('ButtonGroup composition', () => {
         <button type="button">Button 1</button>
         <button type="button">Button 2</button>
         <button type="button">Button 3</button>
-      </ButtonGroup>,
+      </ButtonGroup>
     );
 
     const group = queryByDataSlot(container, 'button-group');

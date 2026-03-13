@@ -10,12 +10,7 @@ vi.mock('next-themes', () => ({
 // Mock sonner Toaster
 vi.mock('sonner', () => ({
   Toaster: vi.fn(({ className, style, ...props }) => (
-    <div
-      data-testid="sonner-toaster"
-      className={className}
-      style={style}
-      {...props}
-    />
+    <div data-testid="sonner-toaster" className={className} style={style} {...props} />
   )),
 }));
 
@@ -35,15 +30,9 @@ describe('Toaster', () => {
   it('applies custom CSS variables via style prop', () => {
     render(<Toaster />);
     const toaster = screen.getByTestId('sonner-toaster');
-    expect(toaster.style.getPropertyValue('--normal-bg')).toBe(
-      'var(--lsd-surface)',
-    );
-    expect(toaster.style.getPropertyValue('--normal-text')).toBe(
-      'var(--lsd-text-primary)',
-    );
-    expect(toaster.style.getPropertyValue('--normal-border')).toBe(
-      'var(--lsd-border)',
-    );
+    expect(toaster.style.getPropertyValue('--normal-bg')).toBe('var(--lsd-surface)');
+    expect(toaster.style.getPropertyValue('--normal-text')).toBe('var(--lsd-text-primary)');
+    expect(toaster.style.getPropertyValue('--normal-border')).toBe('var(--lsd-border)');
   });
 
   it('passes through additional props', () => {

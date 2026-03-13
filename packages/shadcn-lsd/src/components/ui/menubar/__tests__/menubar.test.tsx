@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarTrigger,
-} from '../index';
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from '../index';
 
 describe('Menubar', () => {
   it('renders without crashing', () => {
@@ -18,7 +12,7 @@ describe('Menubar', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     expect(document.querySelector('[data-slot="menubar"]')).toBeInTheDocument();
   });
@@ -32,7 +26,7 @@ describe('Menubar', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const menubar = document.querySelector('[data-slot="menubar"]');
     expect(menubar).toHaveAttribute('data-slot', 'menubar');
@@ -47,7 +41,7 @@ describe('Menubar', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const menubar = document.querySelector('[data-slot="menubar"]');
     expect(menubar).toHaveClass('lsd:flex');
@@ -67,7 +61,7 @@ describe('Menubar', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const menubar = document.querySelector('[data-slot="menubar"]');
     expect(menubar).toHaveClass('custom-menubar-class');
@@ -83,7 +77,7 @@ describe('Menubar', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const menubar = document.querySelector('[data-slot="menubar"]');
     expect(menubar).toHaveAttribute('data-testid', 'test-menubar');
@@ -105,7 +99,7 @@ describe('Menubar', () => {
             <MenubarItem>Undo</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     expect(document.querySelector('[data-slot="menubar"]')).toBeInTheDocument();
     // Menubar triggers have role="menuitem" not "button"

@@ -10,11 +10,9 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    expect(
-      document.querySelector('[data-slot="command-input-wrapper"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="command-input-wrapper"]')).toBeInTheDocument();
   });
 
   it('applies data-slot attribute to wrapper', () => {
@@ -24,11 +22,9 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    const wrapper = document.querySelector(
-      '[data-slot="command-input-wrapper"]',
-    );
+    const wrapper = document.querySelector('[data-slot="command-input-wrapper"]');
     expect(wrapper).toHaveAttribute('data-slot', 'command-input-wrapper');
   });
 
@@ -39,7 +35,7 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const input = document.querySelector('[data-slot="command-input"]');
     expect(input).toHaveAttribute('data-slot', 'command-input');
@@ -52,11 +48,9 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    const wrapper = document.querySelector(
-      '[data-slot="command-input-wrapper"]',
-    );
+    const wrapper = document.querySelector('[data-slot="command-input-wrapper"]');
     expect(wrapper?.querySelector('svg')).toBeInTheDocument();
   });
 
@@ -67,11 +61,9 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
-    const wrapper = document.querySelector(
-      '[data-slot="command-input-wrapper"]',
-    );
+    const wrapper = document.querySelector('[data-slot="command-input-wrapper"]');
     expect(wrapper).toHaveClass('lsd:flex');
     expect(wrapper).toHaveClass('lsd:h-9');
     expect(wrapper).toHaveClass('lsd:items-center');
@@ -88,7 +80,7 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const input = document.querySelector('[data-slot="command-input"]');
     expect(input).toHaveClass('lsd:flex');
@@ -106,7 +98,7 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const input = document.querySelector('[data-slot="command-input"]');
     expect(input).toHaveClass('custom-input-class');
@@ -119,7 +111,7 @@ describe('CommandInput', () => {
         <CommandList>
           <CommandItem>Item 1</CommandItem>
         </CommandList>
-      </Command>,
+      </Command>
     );
     const input = document.querySelector('[data-slot="command-input"]');
     expect(input).toHaveAttribute('data-testid', 'test-input');

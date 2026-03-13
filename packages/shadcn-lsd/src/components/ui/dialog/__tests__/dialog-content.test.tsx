@@ -11,7 +11,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
@@ -24,7 +24,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const content = document.querySelector('[data-slot="dialog-content"]');
     expect(content).toHaveClass('lsd:bg-lsd-surface');
@@ -47,7 +47,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const content = document.querySelector('[data-slot="dialog-content"]');
     expect(content).toHaveAttribute('data-slot', 'dialog-content');
@@ -61,7 +61,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const content = document.querySelector('[data-slot="dialog-content"]');
     expect(content).toHaveClass('custom-content-class');
@@ -75,7 +75,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const content = document.querySelector('[data-slot="dialog-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
@@ -90,7 +90,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const closeButton = document.querySelector('[data-slot="dialog-close"]');
     expect(closeButton).toBeInTheDocument();
@@ -104,7 +104,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const closeButton = document.querySelector('[data-slot="dialog-close"]');
     expect(closeButton).not.toBeInTheDocument();
@@ -118,7 +118,7 @@ describe('DialogContent', () => {
             <DialogTitle>Title</DialogTitle>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     const closeButton = document.querySelector('[data-slot="dialog-close"]');
     expect(closeButton?.querySelector('svg')).toBeInTheDocument();
@@ -133,7 +133,7 @@ describe('DialogContent', () => {
             <p>Custom content</p>
           </DialogHeader>
         </DialogContent>
-      </Dialog>,
+      </Dialog>
     );
     expect(screen.getByText('Custom content')).toBeInTheDocument();
   });

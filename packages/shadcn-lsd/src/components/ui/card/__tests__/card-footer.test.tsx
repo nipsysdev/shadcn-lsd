@@ -35,7 +35,7 @@ describe('CardFooter', () => {
     render(
       <CardFooter>
         <button type="button">Footer Action</button>
-      </CardFooter>,
+      </CardFooter>
     );
     expect(screen.getByRole('button')).toBeInTheDocument();
   });

@@ -1,11 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import {
-  AlertDialog,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogFooter,
-} from '../index';
+import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogFooter } from '../index';
 
 describe('AlertDialogCancel', () => {
   it('renders without crashing', () => {
@@ -16,7 +11,7 @@ describe('AlertDialogCancel', () => {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
   });
@@ -29,7 +24,7 @@ describe('AlertDialogCancel', () => {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const cancel = screen.getByRole('button', { name: 'Cancel' });
     expect(cancel).toHaveClass('lsd:cursor-pointer');
@@ -40,12 +35,10 @@ describe('AlertDialogCancel', () => {
       <AlertDialog open>
         <AlertDialogContent>
           <AlertDialogFooter>
-            <AlertDialogCancel className="custom-cancel-class">
-              Cancel
-            </AlertDialogCancel>
+            <AlertDialogCancel className="custom-cancel-class">Cancel</AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const cancel = screen.getByRole('button', { name: 'Cancel' });
     expect(cancel).toHaveClass('custom-cancel-class');
@@ -61,7 +54,7 @@ describe('AlertDialogCancel', () => {
             </AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const cancel = screen.getByRole('button', { name: 'Cancel' });
     expect(cancel).toHaveAttribute('data-testid', 'test-cancel');
@@ -77,7 +70,7 @@ describe('AlertDialogCancel', () => {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const cancel = screen.getByRole('button', { name: 'Cancel' });
     fireEvent.click(cancel);

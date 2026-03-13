@@ -160,12 +160,11 @@ export default function ComponentsIndexPage() {
           Components
         </Typography>
         <Typography variant="body1" className="text-muted-foreground text-lg">
-          Explore our collection of 24 beautiful, accessible, and customizable
-          components
+          Explore our collection of 24 beautiful, accessible, and customizable components
         </Typography>
       </div>
 
-      {componentCategories.map((category) => (
+      {componentCategories.map(category => (
         <div key={category.name} className="mb-(--lsd-spacing-largest)">
           <div className="mb-(--lsd-spacing-large)">
             <Typography variant="h2" className="mb-(--lsd-spacing-small)">
@@ -177,20 +176,14 @@ export default function ComponentsIndexPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-            {category.components.map((component) => (
-              <Card
-                key={component.name}
-                className="hover:border-primary transition-colors"
-              >
+            {category.components.map(component => (
+              <Card key={component.name} className="hover:border-primary transition-colors">
                 <CardHeader>
                   <CardTitle className="text-base">{component.name}</CardTitle>
                   <CardDescription>{component.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Typography
-                    variant="body1"
-                    className="text-sm text-muted-foreground"
-                  >
+                  <Typography variant="body1" className="text-sm text-muted-foreground">
                     <Link
                       href={component.path}
                       className="inline-flex items-center text-primary hover:underline"

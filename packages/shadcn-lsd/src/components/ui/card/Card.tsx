@@ -10,12 +10,12 @@ const Card = React.forwardRef<HTMLDivElement, React.ComponentProps<'div'>>(
         data-slot="card"
         className={cn(
           'lsd:bg-lsd-surface lsd:text-lsd-text-primary lsd:flex lsd:flex-col lsd:border-lsd-border lsd:border lsd:shadow-sm',
-          className,
+          className
         )}
         {...props}
       />
     );
-  },
+  }
 );
 Card.displayName = 'Card';
 

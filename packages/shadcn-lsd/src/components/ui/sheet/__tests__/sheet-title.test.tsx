@@ -11,7 +11,7 @@ describe('SheetTitle', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     expect(screen.getByRole('heading', { name: 'Title' })).toBeInTheDocument();
   });
@@ -24,7 +24,7 @@ describe('SheetTitle', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     expect(screen.getByRole('heading', { name: 'Title' })).toBeInTheDocument();
   });
@@ -37,7 +37,7 @@ describe('SheetTitle', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveClass('lsd:text-foreground');
@@ -52,7 +52,7 @@ describe('SheetTitle', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveAttribute('data-slot', 'sheet-title');
@@ -66,7 +66,7 @@ describe('SheetTitle', () => {
             <SheetTitle className="custom-title-class">Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveClass('custom-title-class');
@@ -82,7 +82,7 @@ describe('SheetTitle', () => {
             </SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const title = screen.getByRole('heading', { name: 'Title' });
     expect(title).toHaveAttribute('data-testid', 'test-title');

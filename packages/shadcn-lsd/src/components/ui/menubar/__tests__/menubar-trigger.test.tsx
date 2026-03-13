@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarTrigger,
-} from '../index';
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from '../index';
 
 describe('MenubarTrigger', () => {
   it('renders without crashing', () => {
@@ -18,7 +12,7 @@ describe('MenubarTrigger', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     // Menubar triggers have role="menuitem"
     expect(screen.getByRole('menuitem', { name: 'File' })).toBeInTheDocument();
@@ -33,7 +27,7 @@ describe('MenubarTrigger', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     expect(screen.getByRole('menuitem', { name: 'File' })).toBeInTheDocument();
   });
@@ -47,7 +41,7 @@ describe('MenubarTrigger', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const trigger = screen.getByRole('menuitem', { name: 'File' });
     expect(trigger).toHaveClass('lsd:flex');
@@ -68,7 +62,7 @@ describe('MenubarTrigger', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const trigger = screen.getByRole('menuitem', { name: 'File' });
     expect(trigger).toHaveAttribute('data-slot', 'menubar-trigger');
@@ -83,7 +77,7 @@ describe('MenubarTrigger', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const trigger = screen.getByRole('menuitem', { name: 'File' });
     expect(trigger).toHaveClass('custom-trigger-class');
@@ -101,7 +95,7 @@ describe('MenubarTrigger', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     const trigger = screen.getByRole('menuitem', { name: 'File' });
     expect(trigger).toHaveAttribute('data-testid', 'test-trigger');
@@ -118,7 +112,7 @@ describe('MenubarTrigger', () => {
             <MenubarItem>New File</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>,
+      </Menubar>
     );
     expect(ref).toHaveBeenCalled();
     expect(ref.mock.calls[0][0]).toBeInstanceOf(HTMLButtonElement);

@@ -4,9 +4,7 @@ import type * as React from 'react';
 import { cn } from '@/lib/utils';
 import { type BadgeVariants, badgeVariants } from './types';
 
-export interface BadgeProps
-  extends React.ComponentProps<'span'>,
-    BadgeVariants {
+export interface BadgeProps extends React.ComponentProps<'span'>, BadgeVariants {
   asChild?: boolean;
   onDismiss?: () => void;
   onClick?: () => void;
@@ -64,8 +62,7 @@ function Badge({
 
   // Get dot size based on size prop
   const getDotSize = () => {
-    const md =
-      'lsd:w-[var(--lsd-spacing-small)] lsd:h-[var(--lsd-spacing-small)]';
+    const md = 'lsd:w-[var(--lsd-spacing-small)] lsd:h-[var(--lsd-spacing-small)]';
     switch (size) {
       case 'sm':
         return 'lsd:w-[var(--lsd-spacing-smaller)] lsd:h-[var(--lsd-spacing-smaller)]';
@@ -88,7 +85,7 @@ function Badge({
         isClickable && 'lsd:cursor-pointer',
         isDot && 'lsd:rounded-full lsd:p-0 lsd:border-0',
         dotClasses,
-        className,
+        className
       )}
       role={isClickable ? 'button' : undefined}
       tabIndex={isClickable ? 0 : undefined}
@@ -99,15 +96,11 @@ function Badge({
       {!isDot && (
         <>
           {icon && iconPosition === 'left' && (
-            <span className="lsd:flex lsd:items-center lsd:justify-center">
-              {icon}
-            </span>
+            <span className="lsd:flex lsd:items-center lsd:justify-center">{icon}</span>
           )}
           {children && <span>{children}</span>}
           {icon && iconPosition === 'right' && (
-            <span className="lsd:flex lsd:items-center lsd:justify-center">
-              {icon}
-            </span>
+            <span className="lsd:flex lsd:items-center lsd:justify-center">{icon}</span>
           )}
           {onDismiss && (
             <button

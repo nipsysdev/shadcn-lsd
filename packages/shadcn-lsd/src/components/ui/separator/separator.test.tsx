@@ -5,9 +5,7 @@ import { Separator } from './index';
 describe('Separator', () => {
   it('renders without crashing', () => {
     render(<Separator />);
-    expect(
-      document.querySelector('[data-slot="separator"]'),
-    ).toBeInTheDocument();
+    expect(document.querySelector('[data-slot="separator"]')).toBeInTheDocument();
   });
 
   it('applies horizontal orientation classes by default', () => {
@@ -62,15 +60,13 @@ describe('Separator', () => {
     render(<Separator />);
     expect(document.querySelector('[data-slot="separator"]')).toHaveAttribute(
       'data-slot',
-      'separator',
+      'separator'
     );
   });
 
   it('renders as a div element', () => {
     render(<Separator />);
-    expect(document.querySelector('[data-slot="separator"]')?.tagName).toBe(
-      'DIV',
-    );
+    expect(document.querySelector('[data-slot="separator"]')?.tagName).toBe('DIV');
   });
 
   it('applies orientation attribute', () => {

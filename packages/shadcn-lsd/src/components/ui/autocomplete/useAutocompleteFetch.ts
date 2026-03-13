@@ -20,13 +20,10 @@ export function useAutocompleteFetch({
   open,
   externalIsLoading,
 }: UseAutocompleteFetchOptions): UseAutocompleteFetchResult {
-  const [asyncOptions, setAsyncOptions] = React.useState<AutocompleteOption[]>(
-    [],
-  );
+  const [asyncOptions, setAsyncOptions] = React.useState<AutocompleteOption[]>([]);
   const [internalIsLoading, setInternalIsLoading] = React.useState(false);
 
-  const isLoading =
-    externalIsLoading !== undefined ? externalIsLoading : internalIsLoading;
+  const isLoading = externalIsLoading !== undefined ? externalIsLoading : internalIsLoading;
 
   React.useEffect(() => {
     if (onOptionsFetch && open && externalIsLoading === undefined) {

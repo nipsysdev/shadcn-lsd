@@ -38,7 +38,7 @@ describe('ButtonGroupText', () => {
     render(
       <ButtonGroupText asChild>
         <span>Text</span>
-      </ButtonGroupText>,
+      </ButtonGroupText>
     );
     const text = screen.getByText('Text');
     expect(text.tagName).toBe('SPAN');
@@ -48,12 +48,9 @@ describe('ButtonGroupText', () => {
     render(
       <ButtonGroupText data-testid="test-text" data-custom="value">
         Text
-      </ButtonGroupText>,
+      </ButtonGroupText>
     );
-    expect(screen.getByTestId('test-text')).toHaveAttribute(
-      'data-custom',
-      'value',
-    );
+    expect(screen.getByTestId('test-text')).toHaveAttribute('data-custom', 'value');
   });
 
   it('forwards ref', () => {

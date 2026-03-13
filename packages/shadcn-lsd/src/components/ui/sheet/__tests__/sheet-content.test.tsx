@@ -11,7 +11,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
@@ -24,7 +24,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveClass('lsd:bg-background');
@@ -42,7 +42,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveAttribute('data-slot', 'sheet-content');
@@ -56,7 +56,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveClass('custom-content-class');
@@ -70,7 +70,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveAttribute('data-testid', 'test-content');
@@ -86,7 +86,7 @@ describe('SheetContent', () => {
             <p>Custom content</p>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     expect(screen.getByText('Custom content')).toBeInTheDocument();
   });
@@ -99,7 +99,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveClass('lsd:inset-y-0');
@@ -117,7 +117,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveClass('lsd:inset-y-0');
@@ -135,7 +135,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveClass('lsd:inset-x-0');
@@ -152,7 +152,7 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
     const content = document.querySelector('[data-slot="sheet-content"]');
     expect(content).toHaveClass('lsd:inset-x-0');
@@ -169,11 +169,9 @@ describe('SheetContent', () => {
             <SheetTitle>Title</SheetTitle>
           </SheetHeader>
         </SheetContent>
-      </Sheet>,
+      </Sheet>
     );
-    const closeButton = document.querySelector(
-      '[data-slot="sheet-content"] button',
-    );
+    const closeButton = document.querySelector('[data-slot="sheet-content"] button');
     expect(closeButton).toBeInTheDocument();
   });
 });

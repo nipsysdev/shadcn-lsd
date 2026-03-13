@@ -21,10 +21,8 @@ export const buttonVariants = cva(
       variant: {
         filled: 'lsd:bg-primary lsd:text-primary-foreground',
         outlined: 'lsd:bg-transparent lsd:text-foreground',
-        'filled-icon':
-          'lsd:bg-primary lsd:text-primary-foreground lsd:rounded-full',
-        'outlined-icon':
-          'lsd:bg-transparent lsd:text-foreground lsd:rounded-full',
+        'filled-icon': 'lsd:bg-primary lsd:text-primary-foreground lsd:rounded-full',
+        'outlined-icon': 'lsd:bg-transparent lsd:text-foreground lsd:rounded-full',
         link: 'lsd:bg-transparent lsd:border-0 lsd:text-foreground lsd:underline',
         ghost:
           'lsd:bg-transparent lsd:text-foreground lsd:border-0 lsd:hover:bg-accent lsd:hover:text-accent-foreground',
@@ -52,7 +50,7 @@ export const buttonVariants = cva(
       variant: 'filled',
       size: 'md',
     },
-  },
+  }
 );
 
 export type ButtonVariants = VariantProps<typeof buttonVariants> & {

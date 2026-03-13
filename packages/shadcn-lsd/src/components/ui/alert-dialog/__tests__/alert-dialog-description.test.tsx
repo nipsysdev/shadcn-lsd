@@ -17,7 +17,7 @@ describe('AlertDialogDescription', () => {
             <AlertDialogDescription>Description</AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByText('Description')).toBeInTheDocument();
   });
@@ -31,7 +31,7 @@ describe('AlertDialogDescription', () => {
             <AlertDialogDescription>Description</AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveClass('lsd:text-lsd-text-secondary');
@@ -47,13 +47,10 @@ describe('AlertDialogDescription', () => {
             <AlertDialogDescription>Description</AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const description = screen.getByText('Description');
-    expect(description).toHaveAttribute(
-      'data-slot',
-      'alert-dialog-description',
-    );
+    expect(description).toHaveAttribute('data-slot', 'alert-dialog-description');
   });
 
   it('merges custom className with component classes', () => {
@@ -67,7 +64,7 @@ describe('AlertDialogDescription', () => {
             </AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const description = screen.getByText('Description');
     expect(description).toHaveClass('custom-description-class');

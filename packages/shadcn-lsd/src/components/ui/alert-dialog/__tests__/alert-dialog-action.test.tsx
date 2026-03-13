@@ -1,11 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogFooter,
-} from '../index';
+import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogFooter } from '../index';
 
 describe('AlertDialogAction', () => {
   it('renders without crashing', () => {
@@ -16,7 +11,7 @@ describe('AlertDialogAction', () => {
             <AlertDialogAction>Confirm</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     expect(screen.getByRole('button', { name: 'Confirm' })).toBeInTheDocument();
   });
@@ -29,7 +24,7 @@ describe('AlertDialogAction', () => {
             <AlertDialogAction>Confirm</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const action = screen.getByRole('button', { name: 'Confirm' });
     expect(action).toHaveClass('lsd:cursor-pointer');
@@ -40,12 +35,10 @@ describe('AlertDialogAction', () => {
       <AlertDialog open>
         <AlertDialogContent>
           <AlertDialogFooter>
-            <AlertDialogAction className="custom-action-class">
-              Confirm
-            </AlertDialogAction>
+            <AlertDialogAction className="custom-action-class">Confirm</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const action = screen.getByRole('button', { name: 'Confirm' });
     expect(action).toHaveClass('custom-action-class');
@@ -61,7 +54,7 @@ describe('AlertDialogAction', () => {
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const action = screen.getByRole('button', { name: 'Confirm' });
     expect(action).toHaveAttribute('data-testid', 'test-action');
@@ -77,7 +70,7 @@ describe('AlertDialogAction', () => {
             <AlertDialogAction>Confirm</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>,
+      </AlertDialog>
     );
     const action = screen.getByRole('button', { name: 'Confirm' });
     fireEvent.click(action);

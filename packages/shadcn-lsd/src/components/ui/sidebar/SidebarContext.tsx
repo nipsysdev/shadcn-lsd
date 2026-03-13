@@ -8,9 +8,7 @@ import {
   type SidebarProviderProps,
 } from './types';
 
-export const SidebarContext = React.createContext<SidebarContextProps | null>(
-  null,
-);
+export const SidebarContext = React.createContext<SidebarContextProps | null>(null);
 
 export function useSidebar() {
   const context = React.useContext(SidebarContext);
@@ -46,21 +44,18 @@ export function SidebarProvider({
         _setOpen(openState);
       }
     },
-    [setOpenProp, open],
+    [setOpenProp, open]
   );
 
   // Helper to toggle the sidebar.
   const toggleSidebar = React.useCallback(() => {
-    return isMobile ? setOpenMobile((open) => !open) : setOpen((open) => !open);
+    return isMobile ? setOpenMobile(open => !open) : setOpen(open => !open);
   }, [isMobile, setOpen]);
 
   // Adds a keyboard shortcut to toggle the sidebar.
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (
-        event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
-        (event.metaKey || event.ctrlKey)
-      ) {
+      if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {
         event.preventDefault();
         toggleSidebar();
       }
@@ -84,7 +79,7 @@ export function SidebarProvider({
       setOpenMobile,
       toggleSidebar,
     }),
-    [state, open, setOpen, isMobile, openMobile, toggleSidebar],
+    [state, open, setOpen, isMobile, openMobile, toggleSidebar]
   );
 
   return (
@@ -101,7 +96,7 @@ export function SidebarProvider({
           }
           className={cn(
             'lsd:group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar lsd:flex lsd:min-h-svh lsd:w-full',
-            className,
+            className
           )}
           {...props}
         >

@@ -17,7 +17,7 @@ const Toggle = React.forwardRef<HTMLButtonElement, ToggleProps>(
         {...props}
       />
     );
-  },
+  }
 );
 Toggle.displayName = 'Toggle';
 
