@@ -2,15 +2,13 @@
 
 import { Card, CardContent, Button as LSDButton, Separator, Typography } from '@nipsys/shadcn-lsd';
 import { PlusIcon } from '@phosphor-icons/react';
-import {
-  DocsLayout,
-  PageContent,
-  PageHeader,
-  PageNavigation,
-  PageSection,
-} from '../../components/docs';
 import { CodeExample } from '../../components/docs/CodeExample';
 import { ComponentPreview } from '../../components/docs/ComponentPreview';
+import { DocsLayout } from '../../components/docs/DocsLayout';
+import { PageContent } from '../../components/docs/PageContent';
+import { PageHeader } from '../../components/docs/PageHeader';
+import { PageNavigation } from '../../components/docs/PageNavigation';
+import { PageSection } from '../../components/docs/PageSection';
 
 export default function ButtonPage() {
   return (
