@@ -2,44 +2,30 @@
 
 import { useEffect, ReactNode } from 'react';
 import { Typography } from '@nipsys/shadcn-lsd';
-import { registerSection, unregisterSection } from '@/stores/tableOfContents';
-import { TocItem } from '@/stores/tableOfContents';
+import { registerSection, unregisterSection } from '@/stores/toc-store';
 
 interface PageSectionProps {
-  id?: string;
   title: string;
-  level?: 2 | 3 | 4;
+  isChild?: boolean
   children: ReactNode;
 }
 
-function generateId(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w-]/g, '');
-}
-
-export function PageSection({ id, title, level = 2, children }: PageSectionProps) {
-  const sectionId = id || generateId(title);
-
+export function PageSection({ title, isChild = false, children }: PageSectionProps) {
   useEffect(() => {
-    const tocItem: TocItem = {
-      id: sectionId,
+    registerSection({
       title,
-      level,
-    };
-
-    registerSection(tocItem);
+      isChild
+    });
 
     return () => {
-      unregisterSection(sectionId);
+      unregisterSection(title);
     };
-  }, [sectionId, title, level]);
+  }, [title, isChild]);
 
-  const HeadingVariant = level === 2 ? 'h2' : level === 3 ? 'h3' : 'h4';
+  const HeadingVariant = isChild ? 'h3' : 'h2';
 
   return (
-    <div id={sectionId} className="mb-(--lsd-spacing-larger)">
+    <div id={title} className="mb-(--lsd-spacing-larger)">
       <Typography variant={HeadingVariant} className="mb-(--lsd-spacing-base)">
         {title}
       </Typography>

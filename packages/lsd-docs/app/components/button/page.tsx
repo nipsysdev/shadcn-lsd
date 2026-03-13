@@ -255,7 +255,7 @@ export default function ButtonPage() {
         <PageSection title="API Reference">
           <Card>
             <CardContent className="p-(--lsd-spacing-large)">
-              <PageSection title="Button Props" level={3}>
+              <PageSection title="Button Props" isChild>
                 <div className="space-y-(--lsd-spacing-base)">
                   <div>
                     <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
