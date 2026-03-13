@@ -1,10 +1,10 @@
 'use client';
 
 import { Card, CardContent, Separator, Typography } from '@nipsys/shadcn-lsd';
-import { DocsLayout } from '../../components/docs/DocsLayout';
-import { PageContent } from '../../components/docs/PageContent';
-import { PageHeader } from '../../components/docs/PageHeader';
-import { PageNavigation } from '../../components/docs/PageNavigation';
+import { DocsLayout } from '@/components/docs/DocsLayout';
+import { PageContent } from '@/components/docs/PageContent';
+import { PageHeader } from '@/components/docs/PageHeader';
+import { PageNavigation } from '@/components/docs/PageNavigation';
 
 export default function ColorsPage() {
   return (

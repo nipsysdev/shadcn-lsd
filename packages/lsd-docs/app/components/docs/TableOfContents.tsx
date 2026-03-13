@@ -2,8 +2,8 @@
 
 import { Typography } from '@nipsys/shadcn-lsd';
 import { useStore } from '@nanostores/react';
-import { $activeId, scrollToSection } from '../../stores/tableOfContents';
-import { TocItem } from '../../stores/tableOfContents';
+import { $activeId, scrollToSection } from '@/stores/tableOfContents';
+import { TocItem } from '@/stores/tableOfContents';
 
 interface TableOfContentsProps {
   items: TocItem[];

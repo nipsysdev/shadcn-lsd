@@ -2,12 +2,12 @@
 
 import { Card, CardContent, Badge as LSDBadge, Separator, Typography } from '@nipsys/shadcn-lsd';
 import { CheckIcon, InfoIcon, WarningIcon } from '@phosphor-icons/react';
-import { CodeExample } from '../../components/docs/CodeExample';
-import { ComponentPreview } from '../../components/docs/ComponentPreview';
-import { DocsLayout } from '../../components/docs/DocsLayout';
-import { PageContent } from '../../components/docs/PageContent';
-import { PageHeader } from '../../components/docs/PageHeader';
-import { PageNavigation } from '../../components/docs/PageNavigation';
+import { CodeExample } from '@/components/docs/CodeExample';
+import { ComponentPreview } from '@/components/docs/ComponentPreview';
+import { DocsLayout } from '@/components/docs/DocsLayout';
+import { PageContent } from '@/components/docs/PageContent';
+import { PageHeader } from '@/components/docs/PageHeader';
+import { PageNavigation } from '@/components/docs/PageNavigation';
 
 export default function BadgePage() {
   return (

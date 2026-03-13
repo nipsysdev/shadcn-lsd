@@ -2,8 +2,8 @@
 
 import { useEffect, ReactNode } from 'react';
 import { Typography } from '@nipsys/shadcn-lsd';
-import { registerSection, unregisterSection } from '../../stores/tableOfContents';
-import { TocItem } from '../../stores/tableOfContents';
+import { registerSection, unregisterSection } from '@/stores/tableOfContents';
+import { TocItem } from '@/stores/tableOfContents';
 
 interface PageSectionProps {
   id?: string;

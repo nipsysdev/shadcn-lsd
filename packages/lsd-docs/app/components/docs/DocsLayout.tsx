@@ -2,7 +2,7 @@
 
 import { ReactNode, useEffect } from 'react';
 import { useStore } from '@nanostores/react';
-import { $sections, setupObserver, cleanup } from '../../stores/tableOfContents';
+import { $sections, setupObserver, cleanup } from '@/stores/tableOfContents';
 import { TableOfContents } from './TableOfContents';
 
 interface DocsLayoutProps {

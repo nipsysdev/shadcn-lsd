@@ -11,11 +11,11 @@ import {
   Typography,
 } from '@nipsys/shadcn-lsd';
 import Link from 'next/link';
-import { DocsLayout } from '../../components/docs/DocsLayout';
-import { PageContent } from '../../components/docs/PageContent';
-import { PageHeader } from '../../components/docs/PageHeader';
-import { PageNavigation } from '../../components/docs/PageNavigation';
-import { PageSection } from '../../components/docs/PageSection';
+import { DocsLayout } from '@/components/docs/DocsLayout';
+import { PageContent } from '@/components/docs/PageContent';
+import { PageHeader } from '@/components/docs/PageHeader';
+import { PageNavigation } from '@/components/docs/PageNavigation';
+import { PageSection } from '@/components/docs/PageSection';
 
 export default function InstallationPage() {
   return (
