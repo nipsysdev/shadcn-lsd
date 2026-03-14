@@ -21,14 +21,26 @@ export default function InstallationPage() {
     <DocsLayout>
       <PageHeader
         title="Installation"
-        description="Get started with LSD by installing it in your project."
+        description="Start building with LSD. Installation guide for adding the Logos Design System to your project."
       />
 
       <PageContent>
-        <PageSection title="Prerequisites">
-          <Typography variant="body1">
-            Before installing LSD, make sure you have the following:
+        <PageSection title="Why use LSD?">
+          <Typography variant="body1" className="block mb-(--lsd-spacing-base)">
+            The Logos technology stack is private-by-default and built for real life. LSD follows
+            the same principles: functional design that prioritises content, accessibility, and
+            usability over decoration. It's open-source, permissive, and designed for anyone
+            building tools for civil society.
           </Typography>
+
+          <Typography variant="body1" className="text-muted-foreground mt-(--lsd-spacing-base)">
+            LSD is not just another UI library. It's infrastructure for builders who are
+            constructing alternatives to captured systems — design that serves a purpose.
+          </Typography>
+        </PageSection>
+
+        <PageSection title="Getting Started">
+          <Typography variant="body1">These are the tools you need to join in:</Typography>
           <ul className="list-disc list-inside mt-(--lsd-spacing-base)">
             <li>Node.js 24 or higher</li>
             <li>A React 19 project or higher</li>
