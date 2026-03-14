@@ -12,14 +12,26 @@ export default function ColorsPage() {
   return (
     <DocsLayout>
       <PageHeader
-        title="Colors"
-        description="Explore the color palette used throughout LSD components."
+        title="Colours"
+        description="Explore the colour palette used throughout LSD components."
       />
 
       <PageContent>
-        <PageSection title="Primary Colors">
+        <PageSection title="About the Colour Palette">
           <Typography variant="body1" className="block">
-            The primary color is used for main actions and important elements.
+            Colours are tools for signalling, not branding. LSD's palette is chosen for maximum
+            contrast and accessibility across all conditions.
+          </Typography>
+
+          <Typography variant="body1" className="text-muted-foreground mt-(--lsd-spacing-base)">
+            High contrast isn't a design choice — it's a commitment to inclusivity.
+          </Typography>
+        </PageSection>
+
+        <PageSection title="Primary Colours">
+          <Typography variant="body1" className="block">
+            Primary marks essential actions and focal points — where the user needs to look to move
+            forward.
           </Typography>
 
           <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -55,9 +67,9 @@ export default function ColorsPage() {
           </div>
         </PageSection>
 
-        <PageSection title="Text Colors">
+        <PageSection title="Text Colours">
           <Typography variant="body1" className="block">
-            Text colors for primary and secondary content.
+            Text colours for primary content and supporting information, optimized for readability.
           </Typography>
 
           <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -93,9 +105,9 @@ export default function ColorsPage() {
           </div>
         </PageSection>
 
-        <PageSection title="Surface & Border Colors">
+        <PageSection title="Surface & Border Colours">
           <Typography variant="body1" className="block">
-            Surface and border colors for backgrounds and dividers.
+            Surface and border colours define structure and hierarchy across the interface.
           </Typography>
 
           <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -131,9 +143,9 @@ export default function ColorsPage() {
           </div>
         </PageSection>
 
-        <PageSection title="Icon Colors">
+        <PageSection title="Icon Colours">
           <Typography variant="body1" className="block">
-            Icon colors for primary and secondary icons.
+            Icon colours maintain visual consistency across all interactive and decorative elements.
           </Typography>
 
           <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -169,9 +181,10 @@ export default function ColorsPage() {
           </div>
         </PageSection>
 
-        <PageSection title="Semantic Colors">
+        <PageSection title="Semantic Colours">
           <Typography variant="body1" className="block">
-            Semantic colors for success, warning, destructive, and info states.
+            Semantic colours communicate state — success, warning, destructive actions, and
+            information.
           </Typography>
 
           <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -237,9 +250,9 @@ export default function ColorsPage() {
           </div>
         </PageSection>
 
-        <PageSection title="Semantic Text Colors">
+        <PageSection title="Semantic Text Colours">
           <Typography variant="body1" className="block">
-            Text colors for semantic states.
+            Text colours for semantic states.
           </Typography>
 
           <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -312,8 +325,8 @@ export default function ColorsPage() {
           href: '/getting-started/theming',
         }}
         next={{
-          title: 'Spacing',
-          href: '/design-tokens/spacing',
+          title: 'Typography',
+          href: '/design-tokens/typography',
         }}
       />
     </DocsLayout>

@@ -25,13 +25,22 @@ export default function ThemingPage() {
     <DocsLayout>
       <PageHeader
         title="Theming"
-        description="Customize the look and feel of LSD components with themes."
+        description="Adapt the presentation to your purpose. Learn about themes in the Logos Design System."
       />
 
       <PageContent>
         <PageSection title="Built-in Themes">
+          <Typography
+            variant="body1"
+            className="text-muted-foreground block mb-(--lsd-spacing-small)"
+          >
+            LSD comes with a few built-in themes, each with light and dark variants.
+          </Typography>
+
           <Typography variant="body1" className="text-muted-foreground">
-            LSD comes with a few built-in themes, each with light and dark variants:
+            Each theme maintains the core LSD principle: high contrast, clear hierarchy, and
+            content‑first presentation. Choose what works for your audience — the philosophy remains
+            consistent.
           </Typography>
 
           <div className="flex flex-col gap-(--lsd-spacing-large) mt-(--lsd-spacing-base)">
@@ -65,12 +74,10 @@ export default function ThemingPage() {
         <PageSection title="Theme Control">
           <div className="flex flex-col gap-y-(--lsd-spacing-base)">
             <Typography variant="body1" className="block">
-              Themes support both light and dark modes.
-            </Typography>
-            <Typography variant="body1" className="block">
-              The theme mode is controlled by adding or removing the `dark` class on an element.
+              Use the `dark` and `light` classes to have the element and its children displayed in
+              light or dark mode.
               <br />
-              Light mode is used by default, thus using the `light` class is optional.
+              Note: Light mode is used by default, thus using the `light` class is optional.
             </Typography>
             <Typography variant="body1" className="block">
               Themes are set using the `data-theme` attribute.
@@ -156,7 +163,7 @@ card.setAttribute('data-theme', 'nord');`}
         </PageSection>
 
         <PageSection title="Creating a custom theme">
-          <Typography variant="body1" className="text-muted-foreground">
+          <Typography variant="body1" className="mt-(--lsd-spacing-base)">
             LSD uses CSS variables for theming. You can customize these variables to create your own
             theme. Here's an example based on the built-in Nord theme:
           </Typography>
@@ -209,8 +216,8 @@ card.setAttribute('data-theme', 'nord');`}
           href: '/getting-started/installation',
         }}
         next={{
-          title: 'Colors',
-          href: '/design-tokens/colors',
+          title: 'Colours',
+          href: '/design-tokens/colours',
         }}
       />
     </DocsLayout>

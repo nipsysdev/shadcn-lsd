@@ -27,8 +27,7 @@ export default function SpacingPage() {
       <PageContent>
         <PageSection title="Spacing Scale">
           <Typography variant="body1" className="text-muted-foreground">
-            LSD uses a consistent spacing scale based on rem units. This ensures visual harmony
-            across all components and scales with the root font size.
+            LSD uses a consistent spacing scale built on rem units.
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -106,7 +105,8 @@ export default function SpacingPage() {
 
         <PageSection title="Usage Examples">
           <Typography variant="body1" className="text-muted-foreground">
-            Spacing tokens can be used for margins, padding, gaps, and more.
+            Spacing tokens provide a unified system for margins, padding, gaps, and layout
+            throughout the interface.
           </Typography>
 
           <div className="space-y-4 mt-(--lsd-spacing-base)">
@@ -172,12 +172,12 @@ export default function SpacingPage() {
 
       <PageNavigation
         previous={{
-          title: 'Colors',
-          href: '/design-tokens/colors',
-        }}
-        next={{
           title: 'Typography',
           href: '/design-tokens/typography',
+        }}
+        next={{
+          title: 'Components',
+          href: '/components/button',
         }}
       />
     </DocsLayout>

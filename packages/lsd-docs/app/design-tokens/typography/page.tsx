@@ -28,9 +28,22 @@ export default function TypographyPage() {
       />
 
       <PageContent>
+        <PageSection title="About Typography">
+          <Typography variant="body1">
+            Typography is how we speak to users. LSD's system prioritises readability,
+            accessibility, and the hierarchy of ideas over trends.
+          </Typography>
+
+          <Typography variant="body1" className="text-muted-foreground mt-(--lsd-spacing-base)">
+            The content comes first — everything else serves it. Our scale is designed for
+            real‑world reading across devices and conditions.
+          </Typography>
+        </PageSection>
+
         <PageSection title="Font Families">
           <Typography variant="body1">
-            LSD uses carefully selected font family stacks for optimal readability.
+            LSD offers three font family stacks for different use cases. Choose what serves your
+            content and context.
           </Typography>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -113,7 +126,8 @@ export default function TypographyPage() {
 
         <PageSection title="Typography Scale">
           <Typography variant="body1">
-            The Typography component provides a consistent scale for text elements.
+            The Typography component provides a consistent scale for establishing hierarchy and
+            guiding the reader through content.
           </Typography>
 
           <div className="space-y-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
@@ -264,7 +278,8 @@ export default function TypographyPage() {
 
         <PageSection title="Using Typography">
           <Typography variant="body1">
-            Import and use the Typography component in your React application:
+            Import and use the Typography component to apply consistent typography across your
+            application:
           </Typography>
 
           <Card className="mt-(--lsd-spacing-base)">
@@ -293,12 +308,12 @@ function MyComponent() {
 
       <PageNavigation
         previous={{
-          title: 'Spacing',
-          href: '/design-tokens/spacing',
+          title: 'Colours',
+          href: '/design-tokens/colours',
         }}
         next={{
-          title: 'Usage',
-          href: '/getting-started/usage',
+          title: 'Spacing',
+          href: '/design-tokens/spacing',
         }}
       />
     </DocsLayout>
