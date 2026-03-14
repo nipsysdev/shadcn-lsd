@@ -62,7 +62,9 @@ export type TabsVariants = VariantProps<typeof tabsVariants>;
 export type TabsListVariants = VariantProps<typeof tabsListVariants>;
 export type TabsTriggerVariants = VariantProps<typeof tabsTriggerVariants>;
 
-export interface TabsProps extends React.ComponentProps<typeof TabsPrimitive.Root>, TabsVariants {}
+export interface TabsProps extends React.ComponentProps<typeof TabsPrimitive.Root>, TabsVariants {
+  bordered?: boolean;
+}
 
 export interface TabsListProps
   extends React.ComponentProps<typeof TabsPrimitive.List>,
