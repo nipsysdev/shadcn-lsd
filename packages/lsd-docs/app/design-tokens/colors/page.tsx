@@ -1,10 +1,12 @@
 'use client';
 
-import { Card, CardContent, Separator, Typography } from '@nipsys/shadcn-lsd';
+import { Card, CardContent, Typography } from '@nipsys/shadcn-lsd';
 import { DocsLayout } from '@/components/docs/DocsLayout';
 import { PageContent } from '@/components/docs/PageContent';
 import { PageHeader } from '@/components/docs/PageHeader';
 import { PageNavigation } from '@/components/docs/PageNavigation';
+import { PageSection } from '@/components/docs/PageSection';
+import { ColorValue } from './ColorValue';
 
 export default function ColorsPage() {
   return (
@@ -15,451 +17,299 @@ export default function ColorsPage() {
       />
 
       <PageContent>
-        <div className="space-y-8">
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Primary Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              The primary color is used for main actions and important elements.
-            </Typography>
+        <PageSection title="Primary Colors">
+          <Typography variant="body1" className="block">
+            The primary color is used for main actions and important elements.
+          </Typography>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(222.2, 47.4%, 11.2%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Primary
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(222.2, 47.4%, 11.2%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-primary
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(210, 40%, 98%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Primary Foreground
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(210, 40%, 98%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-primary-foreground
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Secondary Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              Secondary colors are used for less prominent elements.
-            </Typography>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(210, 40%, 96.1%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Secondary
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(210, 40%, 96.1%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-secondary
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(222.2, 47.4%, 11.2%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Secondary Foreground
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(222.2, 47.4%, 11.2%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-secondary-foreground
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Background Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              Background colors define the base of your interface.
-            </Typography>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base) border"
-                    style={{ backgroundColor: 'hsl(0, 0%, 100%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Background
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(0, 0%, 100%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-background
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(222.2, 47.4%, 11.2%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Foreground
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(222.2, 47.4%, 11.2%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-foreground
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Card Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              Card colors are used for card components and containers.
-            </Typography>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base) border"
-                    style={{ backgroundColor: 'hsl(0, 0%, 100%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Card
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(0, 0%, 100%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-card
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(222.2, 47.4%, 11.2%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Card Foreground
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(222.2, 47.4%, 11.2%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-card-foreground
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Border & Input Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              Border and input colors for form elements and dividers.
-            </Typography>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base) border"
-                    style={{ backgroundColor: 'hsl(214.3, 31.8%, 91.4%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Border
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(214.3, 31.8%, 91.4%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-border
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base) border"
-                    style={{ backgroundColor: 'hsl(214.3, 31.8%, 91.4%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Input
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(214.3, 31.8%, 91.4%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-input
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Semantic Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              Semantic colors for success, warning, and destructive actions.
-            </Typography>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(142.1, 76.2%, 36.3%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Success
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(142.1, 76.2%, 36.3%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-success
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(0, 84.2%, 60.2%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Destructive
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(0, 84.2%, 60.2%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-destructive
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(47.9, 95.8%, 53.1%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Warning
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(47.9, 95.8%, 53.1%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-warning
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Muted Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              Muted colors for subtle elements and secondary text.
-            </Typography>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(210, 40%, 96.1%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Muted
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(210, 40%, 96.1%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-muted
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(215.4, 16.3%, 46.9%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Muted Foreground
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(215.4, 16.3%, 46.9%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-muted-foreground
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Accent Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              Accent colors for hover states and interactive elements.
-            </Typography>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base)">
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(210, 40%, 96.1%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Accent
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(210, 40%, 96.1%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-accent
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-(--lsd-spacing-large)">
-                  <div
-                    className="h-24 rounded-lg mb-(--lsd-spacing-base)"
-                    style={{ backgroundColor: 'hsl(222.2, 47.4%, 11.2%)' }}
-                  />
-                  <Typography variant="h3" className="mb-(--lsd-spacing-smaller)">
-                    Accent Foreground
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground">
-                    hsl(222.2, 47.4%, 11.2%)
-                  </Typography>
-                  <Typography variant="label1" className="text-muted-foreground font-mono">
-                    --lsd-accent-foreground
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          <Separator />
-
-          <section>
-            <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-              Using Colors
-            </Typography>
-            <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-              You can use these colors in your custom CSS or override them:
-            </Typography>
-
-            <Card>
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
+            <Card className="min-w-fit max-w-[250px]">
               <CardContent className="pt-(--lsd-spacing-large)">
-                <div className="bg-muted p-(--lsd-spacing-base) rounded-lg font-mono text-sm overflow-x-auto">
-                  <pre>
-                    <code>{`/* Override primary color */
-:root {
-  --lsd-primary: 270 60% 50%;
-}
-
-/* Use in custom CSS */
-.my-element {
-  background-color: hsl(var(--lsd-primary));
-  color: hsl(var(--lsd-primary-foreground));
-}`}</code>
-                  </pre>
-                </div>
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-primary)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Primary
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-primary: <ColorValue variable="--lsd-primary" />
+                </Typography>
               </CardContent>
             </Card>
-          </section>
-        </div>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-primary-foreground)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Primary Foreground
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-primary-foreground: <ColorValue variable="--lsd-primary-foreground" />
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
+        </PageSection>
+
+        <PageSection title="Text Colors">
+          <Typography variant="body1" className="block">
+            Text colors for primary and secondary content.
+          </Typography>
+
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-text-primary)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Text Primary
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-text-primary: <ColorValue variable="--lsd-text-primary" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-text-secondary)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Text Secondary
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-text-secondary: <ColorValue variable="--lsd-text-secondary" />
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
+        </PageSection>
+
+        <PageSection title="Surface & Border Colors">
+          <Typography variant="body1" className="block">
+            Surface and border colors for backgrounds and dividers.
+          </Typography>
+
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base) border"
+                  style={{ backgroundColor: 'var(--lsd-surface)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Surface
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-surface: <ColorValue variable="--lsd-surface" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-border)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Border
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-border: <ColorValue variable="--lsd-border" />
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
+        </PageSection>
+
+        <PageSection title="Icon Colors">
+          <Typography variant="body1" className="block">
+            Icon colors for primary and secondary icons.
+          </Typography>
+
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-icon-primary)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Icon Primary
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-icon-primary: <ColorValue variable="--lsd-icon-primary" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-icon-secondary)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Icon Secondary
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-icon-secondary: <ColorValue variable="--lsd-icon-secondary" />
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
+        </PageSection>
+
+        <PageSection title="Semantic Colors">
+          <Typography variant="body1" className="block">
+            Semantic colors for success, warning, destructive, and info states.
+          </Typography>
+
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-success)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Success
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-success: <ColorValue variable="--lsd-success" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-destructive)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Destructive
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-destructive: <ColorValue variable="--lsd-destructive" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-warning)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Warning
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-warning: <ColorValue variable="--lsd-warning" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-info)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Info
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-info: <ColorValue variable="--lsd-info" />
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
+        </PageSection>
+
+        <PageSection title="Semantic Text Colors">
+          <Typography variant="body1" className="block">
+            Text colors for semantic states.
+          </Typography>
+
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-(--lsd-spacing-base) mt-(--lsd-spacing-base)">
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-success-text)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Success Text
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-success-text: <ColorValue variable="--lsd-success-text" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-destructive-text)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Destructive Text
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-destructive-text: <ColorValue variable="--lsd-destructive-text" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-warning-text)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Warning Text
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-warning-text: <ColorValue variable="--lsd-warning-text" />
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card className="min-w-fit max-w-[250px]">
+              <CardContent className="pt-(--lsd-spacing-large)">
+                <div
+                  className="h-24 mb-(--lsd-spacing-base)"
+                  style={{ backgroundColor: 'var(--lsd-info-text)' }}
+                />
+                <Typography variant="h5" className="mb-(--lsd-spacing-smallest)">
+                  Info Text
+                </Typography>
+                <Typography variant="label1" className="text-nowrap">
+                  --lsd-info-text: <ColorValue variable="--lsd-info-text" />
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
+        </PageSection>
       </PageContent>
 
       <PageNavigation
         previous={{
-          title: 'Typography',
-          href: '/design-tokens/typography',
+          title: 'Theming',
+          href: '/getting-started/theming',
         }}
         next={{
           title: 'Spacing',
