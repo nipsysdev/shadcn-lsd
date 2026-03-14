@@ -228,6 +228,10 @@ html {
   }
 }
 
+[data-radix-scroll-area-viewport] > div {
+  display: block !important;
+}
+
 @keyframes indeterminate-progress {
   0% {
     transform: translateX(-100%);
