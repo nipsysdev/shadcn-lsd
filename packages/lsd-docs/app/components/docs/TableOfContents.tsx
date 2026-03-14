@@ -21,28 +21,30 @@ export function TableOfContents({ items }: TableOfContentsProps) {
   };
 
   return (
-    <div className="flex flex-col fixed">
-      <Typography variant="h6" color="secondary" className="mb-(--lsd-spacing-base)">
-        On this page
-      </Typography>
+    <div className="flex flex-col items-center absolute w-full">
+      <div className="fixed max-w-xs hidden 2xl:block">
+        <Typography variant="h6" color="secondary" className="mb-(--lsd-spacing-base)">
+          On this page
+        </Typography>
 
-      <nav className="flex flex-col gap-(--lsd-spacing-small)">
-        {items.map(item => {
-          const isActive = activeSection === item.title;
-          const paddingLeft = item.isChild ? 'pl-(--lsd-spacing-base)' : '';
+        <nav className="flex flex-col gap-(--lsd-spacing-small)">
+          {items.map(item => {
+            const isActive = activeSection === item.title;
+            const paddingLeft = item.isChild ? 'pl-(--lsd-spacing-base)' : '';
 
-          return (
-            <a
-              key={item.title}
-              href={`#${item.title}`}
-              onClick={e => handleClick(e, item.title)}
-              className={`text-sm transition-colors ${isActive ? 'underline' : 'not-hover:text-(--lsd-text-secondary)'} ${paddingLeft}`}
-            >
-              {item.title}
-            </a>
-          );
-        })}
-      </nav>
+            return (
+              <a
+                key={item.title}
+                href={`#${item.title}`}
+                onClick={e => handleClick(e, item.title)}
+                className={`text-sm transition-colors ${isActive ? 'underline' : 'not-hover:text-(--lsd-text-secondary)'} ${paddingLeft}`}
+              >
+                {item.title}
+              </a>
+            );
+          })}
+        </nav>
+      </div>
     </div>
   );
 }

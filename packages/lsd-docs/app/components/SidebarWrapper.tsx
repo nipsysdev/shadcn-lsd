@@ -118,7 +118,7 @@ export default function SidebarWrapper({ currentPath, children }: SidebarWrapper
           </SidebarMenu>
         </SidebarFooter>
       </Sidebar>
-      <SidebarInset>{children}</SidebarInset>
+      <SidebarInset className="overflow-hidden">{children}</SidebarInset>
     </SidebarProvider>
   );
 }
