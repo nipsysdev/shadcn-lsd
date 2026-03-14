@@ -92,18 +92,18 @@ export default function ProgressPage() {
 
       <div className="mb-(--lsd-spacing-larger)">
         <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-          Color Variants
+          Colour Variants
         </Typography>
         <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
           Use the{' '}
           <code className="px-(--lsd-spacing-small) py-(--lsd-spacing-smaller) bg-muted rounded text-sm">
             variant
           </code>{' '}
-          prop to change the progress bar color.
+          prop to change the progress bar colour.
         </Typography>
 
         <ComponentPreview
-          title="Progress color variants"
+          title="Progress colour variants"
           code={`<div className="space-y-4">
   <Progress value={50} variant="default" />
   <Progress value={50} variant="success" />
@@ -423,7 +423,7 @@ export default function ProgressPage() {
                   Default:{' '}
                   <code className="px-(--lsd-spacing-smaller) bg-muted rounded">"default"</code>
                   <br />
-                  The color variant of the progress bar.
+                  The colour variant of the progress bar.
                 </Typography>
               </div>
               <div>

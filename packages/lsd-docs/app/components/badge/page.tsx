@@ -82,14 +82,14 @@ export default function BadgePage() {
 
         <div className="mb-(--lsd-spacing-larger)">
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-            Color Variants
+            Colour Variants
           </Typography>
           <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-            Use color variants to convey different meanings and states.
+            Use colour variants to convey different meanings and states.
           </Typography>
 
           <ComponentPreview
-            title="Badge color variants"
+            title="Badge colour variants"
             code={`<div className="flex gap-(--lsd-spacing-base) items-center">
   <Badge variant="destructive">Destructive</Badge>
   <Badge variant="success">Success</Badge>
@@ -240,14 +240,14 @@ export default function BadgePage() {
 
         <div className="mb-(--lsd-spacing-larger)">
           <Typography variant="h2" className="mb-(--lsd-spacing-base)">
-            Dot Badges with Colors
+            Dot Badges with Colours
           </Typography>
           <Typography variant="body1" className="text-muted-foreground mb-(--lsd-spacing-base)">
-            Combine dot badges with color classes for status indicators.
+            Combine dot badges with colour classes for status indicators.
           </Typography>
 
           <ComponentPreview
-            title="Dot badges with colors"
+            title="Dot badges with colours"
             code={`<div className="flex gap-(--lsd-spacing-base) items-center">
   <Badge variant="dot" size="md" className="bg-destructive" />
   <Badge variant="dot" size="md" className="bg-success" />

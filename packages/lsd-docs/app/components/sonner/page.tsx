@@ -623,7 +623,7 @@ export default function App() {
                   <br />
                   Default: <code className="px-(--lsd-spacing-smaller) bg-muted rounded">true</code>
                   <br />
-                  Whether to use rich colors for different toast types.
+                  Whether to use rich colours for different toast types.
                 </Typography>
               </div>
               <div>

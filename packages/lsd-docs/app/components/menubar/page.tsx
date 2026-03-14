@@ -305,7 +305,7 @@ export default function MenubarPage() {
           <MenubarItem>Theme</MenubarItem>
           <MenubarItem>Font Size</MenubarItem>
           <MenubarSub>
-            <MenubarSubTrigger>Color Scheme</MenubarSubTrigger>
+            <MenubarSubTrigger>Colour Scheme</MenubarSubTrigger>
             <MenubarSubContent>
               <MenubarItem>Light</MenubarItem>
               <MenubarItem>Dark</MenubarItem>
@@ -336,7 +336,7 @@ export default function MenubarPage() {
                     <MenubarItem>Theme</MenubarItem>
                     <MenubarItem>Font Size</MenubarItem>
                     <MenubarSub>
-                      <MenubarSubTrigger>Color Scheme</MenubarSubTrigger>
+                      <MenubarSubTrigger>Colour Scheme</MenubarSubTrigger>
                       <MenubarSubContent>
                         <MenubarItem>Light</MenubarItem>
                         <MenubarItem>Dark</MenubarItem>
